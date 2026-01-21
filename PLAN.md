@@ -12,7 +12,7 @@ This project converts 1989 research code by Ellen R. McGrattan implementing **Ge
 
 ```
 matlab-project/
-├── source/                  # Original files (preserved)
+├── original/                  # Original files (preserved)
 │   ├── index.html
 │   ├── robots.txt
 │   └── data/mms/           # Original MATLAB code
@@ -40,7 +40,7 @@ Convert all MATLAB code to Python and documentation to MyST Markdown.
 
 ### 1.2 Utility Modules (Low Complexity)
 
-Source: `source/data/mms/`
+Source: `original/data/mms/`
 
 - [x] `decode.m` → `src/decode.py` — binary string to real number conversion
 - [x] `select.m` → `src/selection.py` — roulette wheel selection (renamed to avoid Python stdlib conflict)
@@ -51,7 +51,7 @@ Source: `source/data/mms/`
 
 ### 1.3 Crowding Modules (Low Complexity)
 
-Source: `source/data/mms/`
+Source: `original/data/mms/`
 
 - [x] `crowding.m` → `src/crowding.py` — find similar weak classifier to replace
 - [x] `crowding2.m` → `src/crowding.py` — variant with different strength position
@@ -60,7 +60,7 @@ Source: `source/data/mms/`
 
 ### 1.4 Genetic Algorithm Modules (Medium Complexity)
 
-Source: `source/data/mms/`
+Source: `original/data/mms/`
 
 - [x] `ga.m` → `src/ga.py` — base GA for classifier systems, single-point crossover
 - [x] `ga2.m` → `src/ga.py` — GA with proportional-used selection weighting
@@ -71,7 +71,7 @@ Source: `source/data/mms/`
 
 ### 1.5 Configuration Modules (Low-Medium Complexity)
 
-Source: `source/data/mms/`
+Source: `original/data/mms/`
 
 - [x] `initdata.m` → `src/config.py` — SGA parameter configuration
 - [x] `winitial.m` → `src/config.py` — Wicksell parameter configuration
@@ -79,14 +79,14 @@ Source: `source/data/mms/`
 
 ### 1.6 Main Programs (High Complexity)
 
-Source: `source/data/mms/`
+Source: `original/data/mms/`
 
 - [x] `sga.m` → `src/sga.py` — Simple Genetic Algorithm optimizer (~400 lines)
 - [x] `resume.m` → `src/sga.py` — resume interrupted SGA run
 
 ### 1.7 Classifier Simulations (Very High Complexity)
 
-Source: `source/data/mms/`
+Source: `original/data/mms/`
 
 - [x] `wicksell.m` → `src/classifier_simulation.py` — incorporated into ClassifierSimulation
 - [x] `wnew.m` → `src/classifier_simulation.py` — incorporated into ClassifierSimulation
@@ -98,9 +98,9 @@ Source: `source/data/mms/`
 
 ### 1.8 Documentation Conversion
 
-- [x] `source/data/mms/Readme` → `docs/readme.md` — convert to MyST format
-- [x] `source/data/mms/gdisc.tex` → `docs/algorithm.md` — GA algorithm description in MyST
-- [x] `source/index.html` → `docs/index.md` — project overview in MyST
+- [x] `original/data/mms/Readme` → `docs/readme.md` — convert to MyST format
+- [x] `original/data/mms/gdisc.tex` → `docs/algorithm.md` — GA algorithm description in MyST
+- [x] `original/index.html` → `docs/index.md` — project overview in MyST
 
 ### 1.9 Unit Tests
 
