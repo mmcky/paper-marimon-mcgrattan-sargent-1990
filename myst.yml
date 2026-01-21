@@ -21,3 +21,6 @@ project:
 
 site:
   template: article-theme
+  options:
+    favicon: favicon.ico
+  base_url: /paper-marimon-mcgrattan-sargent-1990

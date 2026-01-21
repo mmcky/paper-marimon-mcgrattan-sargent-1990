@@ -28,7 +28,7 @@ The paper studies how artificially intelligent agents using Holland's classifier
 │   └── generate_figures.py # Figure generation
 ├── tests/                  # Test suite
 ├── docs/                   # Documentation
-└── data/mms/               # Original MATLAB code
+└── original/               # Original MATLAB code
 ```
 
 ## Installation
@@ -84,7 +84,7 @@ pytest tests/ -v
 
 ## Original Code
 
-The original MATLAB code by Ellen R. McGrattan (1989) is preserved in `data/mms/` for reference.
+The original MATLAB code by Ellen R. McGrattan (1989) is preserved in `original/` for reference.
 
 ## License
 
