@@ -1,0 +1,17 @@
+popsize=50;
+lparm=[10;10];
+maxparm=[2;2];
+minparm=[0;0];
+maxgen=50;
+pcross=.6;
+pmutation=.01;
+fmultiple=2;
+printrep=1;
+nprint=1;
+reportx=[3;3];
+reportf=3;
+ncol=80;
+gradchk=1;
+agflag=0;
+typsiz=ones(2,1);
+side=2;

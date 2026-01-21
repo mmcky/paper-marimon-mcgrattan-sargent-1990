@@ -1,0 +1,1612 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" />
+<link rel="shortlink" href="https://cla.umn.edu/" />
+<link rel="canonical" href="https://cla.umn.edu/" />
+<meta name="Generator" content="Drupal 11 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script>window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};</script>
+
+    <title>College of Liberal Arts</title>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PZK38PL');</script>
+    <!-- End Google Tag Manager -->
+
+    <link rel="stylesheet" media="all" href="/sites/cla.umn.edu/files/css/css_Sqb_53CplITjwUea51N2JxKVVNobU8SHwfy9ud-SvCw.css?delta=0&amp;language=en&amp;theme=cla_folwell&amp;include=eJxlju0OwiAMRV-IwCORDrpBLB9pQcWnl-mcMf5pbs-5TQretwJ5GDiCXrnkphyBXQvdkMgsIPgD1tmQnYiM0-45oQhseLpc_HSFcSZOQPGBCu-NYr4Yz70C6WNVFRg2hhrkY75E91z7QlECeiXFRSCb0Eew-6mYf6RbwIRKhjRM7xd7ylYQ2AXjBGdtYeChrhFvYl5Tp-I74RPKA2uG&amp;t72915" />
+<link rel="stylesheet" media="all" href="/sites/cla.umn.edu/files/css/css_aEcRxASi6Kjo82zTM4hf4f2pClBOwDdv8eZb_wp0nyM.css?delta=1&amp;language=en&amp;theme=cla_folwell&amp;include=eJxlju0OwiAMRV-IwCORDrpBLB9pQcWnl-mcMf5pbs-5TQretwJ5GDiCXrnkphyBXQvdkMgsIPgD1tmQnYiM0-45oQhseLpc_HSFcSZOQPGBCu-NYr4Yz70C6WNVFRg2hhrkY75E91z7QlECeiXFRSCb0Eew-6mYf6RbwIRKhjRM7xd7ylYQ2AXjBGdtYeChrhFvYl5Tp-I74RPKA2uG&amp;t72915" />
+<link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&amp;display=swap" />
+<link rel="stylesheet" media="all" href="/sites/cla.umn.edu/files/css/css_euAsvEI64iavT85jQoZtko_6x9xhye_4KqONwatWys4.css?delta=3&amp;language=en&amp;theme=cla_folwell&amp;include=eJxlju0OwiAMRV-IwCORDrpBLB9pQcWnl-mcMf5pbs-5TQretwJ5GDiCXrnkphyBXQvdkMgsIPgD1tmQnYiM0-45oQhseLpc_HSFcSZOQPGBCu-NYr4Yz70C6WNVFRg2hhrkY75E91z7QlECeiXFRSCb0Eew-6mYf6RbwIRKhjRM7xd7ylYQ2AXjBGdtYeChrhFvYl5Tp-I74RPKA2uG&amp;t72915" />
+
+    <script src="https://use.fontawesome.com/releases/v6.7.2/js/all.js" defer crossorigin="anonymous" integrity="sha384-DsXFqEUf3HnCU8om0zbXN58DxV7Bo8/z7AbHBGd2XxkeNpdLrygNiGFr/03W0Xmt"></script>
+<script src="https://use.fontawesome.com/releases/v6.4.2/js/v4-shims.js" defer crossorigin="anonymous" integrity="sha384-qx63XMht9MNrP09QOmEVrRXzomNz1CKA/p07kyef8nQ+qC/FNDZROxdpMzpLVjeD"></script>
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/sites/cla.umn.edu/themes/custom/cla_folwell/src/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/sites/cla.umn.edu/themes/custom/cla_folwell/src/img/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/sites/cla.umn.edu/themes/custom/cla_folwell/src/img/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/sites/cla.umn.edu/themes/custom/cla_folwell/src/img/favicons/site.webmanifest">
+    <link rel="mask-icon" href="/sites/cla.umn.edu/themes/custom/cla_folwell/src/img/favicons/safari-pinned-tab.svg" color="#002a5c">
+    <meta name="msapplication-TileColor" content="#c3002b">
+    <meta name="theme-color" content="#ffffff">
+
+  </head>
+  <body class="no_sidebars path-frontpage d2d-wordmark--hidden">
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PZK38PL" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+    <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<header id="header">
+
+  <div id="masthead" class="masthead">
+
+    
+
+    <div class="region--masthead-first--wrapper">
+      <div class="region--masthead-first">
+          <div class="region region--masthead-first__left clearfix" id="masthead-first__left">
+    <div class="region__inner">
+      <div id="block-sitebranding" data-block-plugin-id="system_branding_block" class="block block-system block-system-branding-block">
+  
+    
+        <a href="https://umn.edu" title="University of Minnesota - Twin Cities (Homepage)" rel="home" class="site-logo umn-wordmark">
+            <?xml version="1.0" encoding="UTF-8"?>
+<svg class="umn-wordmark" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="wordmark-full" x="0px" y="0px" viewBox="0 0 285.87 37.96" style="enable-background:new 0 0 285.87 37.96;" xml:space="preserve">
+    <title>UMN Wordmark</title>
+    <style type="text/css">
+    .fill__maroon{fill:#7A0019;}
+    .fill__dark-gray{fill:#231F20;stroke:#000000;stroke-width:0.1;stroke-miterlimit:10;}
+    </style>
+
+	<g class="wordmark block_m">
+		<path class="fill__maroon" d="M54.65,29.11L44.43,12.12h2.82V3.26H30.24v8.85h2.82l-3.91,6.49l-3.9-6.49h2.81V3.26H11.05v8.85h2.81    L3.65,29.11H0v8.85h17.35v-8.85h-3.12l5.32-8.85l2.06,3.43h-1.98v8.85h19.02v-8.85h-1.98l2.07-3.43l5.32,8.85h-3.11v8.85H58.3    v-8.85H54.65z"></path>
+	</g>
+
+	<g class="wordmark u-of-m">
+		<path class="fill__dark-gray" d="M276.46,3.48l0.08,2.72h-0.36c-0.33-1.75-0.75-2.03-3.05-2.03v8.13c0,0.95,0.49,1.37,1.37,1.37v0.38h-4.26    v-0.38c0.89,0,1.37-0.42,1.37-1.37V4.17c-2.3,0-2.72,0.29-3.05,2.03h-0.35l0.08-2.72H276.46z"></path>
+		<path class="fill__dark-gray" d="M262.33,3.28c-2.61,0-4.72,2.15-4.72,5.48s2.11,5.48,4.72,5.48s4.72-2.14,4.72-5.48S264.94,3.28,262.33,3.28z     M262.33,13.62c-1.98,0-3.11-1.9-3.11-4.86c0-2.95,1.13-4.86,3.11-4.86c1.98,0,3.11,1.9,3.11,4.86    C265.45,11.71,264.32,13.62,262.33,13.62z"></path>
+		<path class="fill__dark-gray" d="M284.71,12.76c-0.19-0.49-3.74-9.42-3.74-9.42h-0.36c0,0-3.13,8.19-3.52,9.15c-0.39,0.96-0.85,1.2-1.22,1.2    v0.38h2.88v-0.38c-0.42,0-0.9-0.3-0.9-0.76c0-0.14,0.01-0.3,0.05-0.4c0.03-0.08,0.33-0.88,0.7-1.91h3.66    c0.37,1.02,0.66,1.8,0.67,1.84c0.05,0.14,0.11,0.33,0.11,0.47c0,0.41-0.33,0.76-0.95,0.76v0.38h3.71v-0.38    C285.37,13.68,284.9,13.25,284.71,12.76z M278.89,9.87c0.72-1.94,1.56-4.23,1.56-4.23s0.85,2.3,1.55,4.23H278.89z"></path>
+		<path class="fill__dark-gray" d="M247.09,11.31c-0.47,1.1-1.07,2.06-2.75,2.06c-0.36,0-1.1,0-1.68,0c-0.61,0-0.88-0.21-0.88-0.72    c0-0.2,0-1.94,0-3.77c0.41,0,1.67,0,2.28,0c0.88,0,1.35,0.5,1.48,1.43h0.36V6.67h-0.38c-0.05,1.02-0.58,1.51-1.37,1.51    c-0.68,0-1.98,0-2.36,0c0-1.74,0-3.37,0-3.54c0-0.39,0.25-0.47,0.58-0.47c0.33,0,1.07,0,2.03,0c1.26,0,1.7,0.52,1.98,1.7h0.36    l-0.08-2.39h-7.61v0.39c0.89,0,1.29,0.42,1.29,1.37v7.06c0,0.95-0.41,1.37-1.29,1.37v0.38h7.8l0.68-2.75H247.09z"></path>
+		<path class="fill__dark-gray" d="M255.14,3.27l0.3,3.49h-0.39c-0.52-1.72-1.4-2.78-2.66-2.78c-0.91,0-1.43,0.61-1.43,1.43    c0,0.93,0.69,1.48,1.54,2.06c0.85,0.58,1.43,0.96,1.7,1.15c0.79,0.55,1.54,1.54,1.54,2.67c0,1.72-1.29,2.99-2.99,2.99    c-1.04,0-1.7-0.52-2.23-0.52c-0.29,0-0.43,0.29-0.49,0.52h-0.36l-0.44-3.52h0.39c0.64,1.8,1.59,2.86,2.91,2.86    c0.99,0,1.73-0.68,1.73-1.78c0-1-0.53-1.48-1.15-1.92c-0.7-0.49-1.56-1.1-2.09-1.46c-0.82-0.56-1.32-1.31-1.32-2.53    c0-1.46,0.96-2.66,2.61-2.66c0.71,0,1.51,0.47,1.95,0.47c0.33,0,0.47-0.22,0.49-0.47H255.14z"></path>
+		<path class="fill__dark-gray" d="M234.12,3.48v0.39c0.82,0,1.32,0.63,1.32,1.59c0,0.65,0,3.68,0,5.56l-5.49-7.54h-2.39v0.39    c0.47,0,0.85,0.22,1.04,0.47c0.02,0.03,0.13,0.18,0.3,0.41c0,1.15,0,6.15,0,7.1c0,1.21-0.41,1.84-1.37,1.84v0.38h3.38v-0.38    c-0.83,0-1.32-0.55-1.32-1.51c0-0.78,0-4.94,0-6.49c2,2.7,6.32,8.56,6.32,8.56h0.22c0,0,0-7.45,0-8.52c0-1.35,0.55-1.84,1.37-1.84    V3.48H234.12z"></path>
+		<path class="fill__dark-gray" d="M222.39,3.48v0.39c0.83,0,1.32,0.63,1.32,1.59c0,0.65,0,3.68,0,5.56l-5.49-7.54h-2.39v0.39    c0.47,0,0.85,0.22,1.04,0.47c0.02,0.03,0.13,0.18,0.3,0.41c0,1.15,0,6.15,0,7.1c0,1.21-0.41,1.84-1.37,1.84v0.38h3.38v-0.38    c-0.83,0-1.32-0.55-1.32-1.51c0-0.78,0-4.94,0-6.49c2,2.7,6.32,8.56,6.32,8.56h0.22c0,0,0-7.45,0-8.52c0-1.35,0.55-1.84,1.37-1.84    V3.48H222.39z"></path>
+		<path class="fill__dark-gray" d="M208.21,0.44V0.05h-3.27l-4.26,11.43L196.4,0.05h-3.33v0.39c1.4,0,1.79,0.77,1.79,2.14s0,8.32,0,8.6    c0,1.99-0.56,2.5-1.81,2.5v0.38h4.31v-0.38c-1.21,0-1.79-0.52-1.79-2.5c0-1.98,0-8.98,0-8.98l4.45,11.9h0.41l4.54-12.11    c0,0,0,8.85,0,9.2c0,1.99-0.45,2.5-1.71,2.5v0.38h4.94v-0.38c-1.21,0-1.67-0.52-1.67-2.5c0-0.77,0-7.64,0-8.79    C206.54,0.79,207.39,0.44,208.21,0.44z"></path>
+		<path class="fill__dark-gray" d="M212.25,5.24c0-0.95,0.49-1.37,1.37-1.37V3.48h-4.26v0.39c0.89,0,1.37,0.42,1.37,1.37v7.06    c0,0.95-0.49,1.37-1.37,1.37v0.38h4.26v-0.38c-0.89,0-1.37-0.42-1.37-1.37V5.24z"></path>
+		<path class="fill__dark-gray" d="M173.25,3.29c-2.61,0-4.72,2.15-4.72,5.48c0,3.33,2.12,5.48,4.72,5.48c2.61,0,4.72-2.14,4.72-5.48    C177.98,5.44,175.86,3.29,173.25,3.29z M173.25,13.63c-1.98,0-3.11-1.9-3.11-4.86c0-2.96,1.13-4.86,3.11-4.86    c1.98,0,3.11,1.9,3.11,4.86C176.37,11.73,175.23,13.63,173.25,13.63z"></path>
+		<path class="fill__dark-gray" d="M187.14,3.48h-7.69v0.39c0.89,0,1.29,0.42,1.29,1.37v7.06c0,0.95-0.4,1.37-1.29,1.37v0.38h4.09v-0.38    c-0.85,0-1.35-0.41-1.35-1.37c0-0.19,0-1.75,0-3.41c0.4,0,1.59,0,2.2,0c0.88,0,1.35,0.5,1.49,1.43h0.36V6.67h-0.38    c-0.05,1.02-0.58,1.51-1.37,1.51c-0.67,0-1.91,0-2.28,0c0-1.72,0-3.36,0-3.54c0-0.39,0.25-0.47,0.58-0.47c0.33,0,1.15,0,2.12,0    c1.26,0,1.7,0.52,1.98,1.7h0.36L187.14,3.48z"></path>
+		<path class="fill__dark-gray" d="M151.82,3.5l0.08,2.72h-0.36c-0.33-1.74-0.76-2.03-3.05-2.03v8.13c0,0.95,0.49,1.37,1.37,1.37v0.38h-4.26    v-0.38c0.89,0,1.37-0.42,1.37-1.37V4.19c-2.29,0-2.72,0.29-3.05,2.03h-0.36l0.08-2.72H151.82z"></path>
+		<path class="fill__dark-gray" d="M159.98,3.88V3.5h3.24v0.38c-0.47,0-1.2,0.51-1.51,1.02c-0.34,0.56-2.61,4.34-2.61,4.34v3.08    c0,1.03,0.38,1.37,1.48,1.37v0.38h-4.48v-0.38c1.11,0,1.48-0.35,1.48-1.37V9.41c0,0-2.5-3.99-2.8-4.48    c-0.3-0.49-0.91-1.04-1.48-1.04V3.5h4.18v0.38c-0.58,0-0.99,0.26-0.99,0.56c0,0.2,0.1,0.43,0.17,0.55    c0.07,0.12,2.12,3.49,2.12,3.49s2.03-3.53,2.09-3.62c0.06-0.1,0.08-0.22,0.08-0.34C160.94,4.23,160.78,3.88,159.98,3.88z"></path>
+		<path class="fill__dark-gray" d="M134.95,3.27l0.3,3.49h-0.38c-0.52-1.72-1.4-2.78-2.66-2.78c-0.91,0-1.43,0.61-1.43,1.43    c0,0.93,0.69,1.48,1.54,2.06c0.85,0.58,1.43,0.96,1.7,1.15c0.79,0.55,1.54,1.54,1.54,2.67c0,1.72-1.29,2.99-2.99,2.99    c-1.05,0-1.7-0.52-2.23-0.52c-0.29,0-0.42,0.29-0.49,0.52h-0.36l-0.44-3.52h0.39c0.64,1.8,1.59,2.86,2.91,2.86    c0.99,0,1.73-0.68,1.73-1.78c0-1-0.53-1.48-1.15-1.92c-0.7-0.49-1.56-1.1-2.09-1.46c-0.82-0.56-1.32-1.31-1.32-2.53    c0-1.46,0.96-2.66,2.61-2.66c0.71,0,1.51,0.47,1.95,0.47c0.33,0,0.47-0.22,0.49-0.47H134.95z"></path>
+		<path class="fill__dark-gray" d="M140.78,5.26c0-0.95,0.49-1.37,1.37-1.37V3.5h-4.26v0.38c0.89,0,1.37,0.42,1.37,1.37v7.06    c0,0.95-0.49,1.37-1.37,1.37v0.38h4.26v-0.38c-0.89,0-1.37-0.42-1.37-1.37V5.26z"></path>
+		<path class="fill__dark-gray" d="M116.55,11.31c-0.47,1.1-1.07,2.06-2.75,2.06c-0.36,0-1.1,0-1.68,0c-0.61,0-0.88-0.21-0.88-0.72    c0-0.2,0-1.94,0-3.77c0.41,0,1.67,0,2.28,0c0.88,0,1.35,0.5,1.48,1.43h0.36V6.67h-0.38c-0.06,1.02-0.58,1.51-1.37,1.51    c-0.68,0-1.98,0-2.36,0c0-1.74,0-3.37,0-3.54c0-0.39,0.25-0.47,0.58-0.47c0.33,0,1.07,0,2.03,0c1.26,0,1.7,0.52,1.98,1.7h0.36    l-0.08-2.39h-7.61v0.39c0.89,0,1.29,0.42,1.29,1.37v7.06c0,0.95-0.4,1.37-1.29,1.37v0.38h7.8l0.69-2.75H116.55z"></path>
+		<path class="fill__dark-gray" d="M126.6,13.21c-0.25-0.29-2.59-3.51-3.11-4.23c1.89-0.4,2.56-1.37,2.56-2.75c0-1.65-1.24-2.75-3.49-2.75    c-0.27,0-4.23,0-4.23,0v0.39c0.89,0,1.29,0.42,1.29,1.37v7.06c0,0.95-0.41,1.37-1.29,1.37v0.38h4.09v-0.38    c-0.89,0-1.29-0.42-1.29-1.37V9.2c0.28,0,0.55-0.01,0.8-0.02l3.43,4.89h2.31v-0.33C127.29,13.73,126.88,13.54,126.6,13.21z     M121.13,8.57V4.99c0-0.73,0.15-0.91,0.96-0.91c1.79,0,2.44,0.88,2.44,2.2c0,1.62-1.23,2.28-3.05,2.28    C121.35,8.57,121.24,8.57,121.13,8.57z"></path>
+		<path class="fill__dark-gray" d="M94.13,5.24c0-0.95,0.48-1.37,1.37-1.37V3.48h-4.26v0.39c0.89,0,1.37,0.42,1.37,1.37v7.06    c0,0.95-0.49,1.37-1.37,1.37v0.38h4.26v-0.38c-0.89,0-1.37-0.42-1.37-1.37V5.24z"></path>
+		<path class="fill__dark-gray" d="M101.11,3.87V3.48h-3.87v0.39c0.47,0,0.96,0.3,1.29,1.1c0.33,0.79,3.82,9.26,3.82,9.26h0.25    c0,0,3.05-8.52,3.33-9.26c0.27-0.74,0.74-1.1,1.18-1.1V3.48h-2.99v0.39c0.66,0,1.02,0.36,1.02,0.82c0,0.14-0.04,0.29-0.08,0.41    c-0.06,0.16-2.22,6.24-2.22,6.24s-2.56-6.14-2.63-6.32c-0.06-0.14-0.09-0.32-0.09-0.48C100.09,4.12,100.44,3.87,101.11,3.87z"></path>
+		<path class="fill__dark-gray" d="M65.61,0.44c1.15,0,1.76,0.58,1.76,2.22c0,1.65,0,3.82,0,6.54c0,3.3,1.81,5.06,4.97,5.06    c2.72,0,4.81-1.65,4.81-4.84c0-2.94,0-6.04,0-7.14c0-1.1,0.33-1.84,1.65-1.84V0.05h-4.18v0.39c1.18,0,1.67,0.52,1.7,1.95    c0.03,1.43,0.11,5.17,0.11,7.39c0,2.22-1.59,3.62-3.76,3.62c-2.09,0-3.74-1.24-3.74-3.85s0-6.16,0-7.31    c0-1.08,0.41-1.81,1.65-1.81V0.05h-4.97V0.44z"></path>
+		<path class="fill__dark-gray" d="M85.67,3.48v0.39c0.82,0,1.32,0.63,1.32,1.59c0,0.65,0,3.68,0,5.56l-5.49-7.54H79.1v0.39    c0.47,0,0.85,0.22,1.05,0.47c0.02,0.03,0.13,0.18,0.3,0.41c0,1.15,0,6.15,0,7.1c0,1.21-0.41,1.84-1.37,1.84v0.38h3.38v-0.38    c-0.82,0-1.32-0.55-1.32-1.51c0-0.78,0-4.94,0-6.49c2,2.7,6.32,8.56,6.32,8.56h0.22c0,0,0-7.45,0-8.52c0-1.35,0.55-1.84,1.37-1.84    V3.48H85.67z"></path>
+	</g>
+
+	<g class="wordmark d-2-d">
+		<path class="fill__maroon" d="M93.98,24.97h3.93c3.93,0,6.73,2.61,6.73,6.39c0,3.78-2.78,6.39-6.73,6.39h-3.93V24.97z M97.78,35.44      c2.84,0,4.13-1.69,4.13-4.08c0-2.38-1.3-4.08-4.13-4.08h-1.16v8.15H97.78z"></path>
+		<path class="fill__maroon" d="M107.01,29.75h2.54l-0.04,1.45c0.58-1.32,1.52-1.62,2.35-1.62c0.53,0,0.92,0.15,1.24,0.32l-0.81,2.31      c-0.32-0.15-0.62-0.24-0.98-0.24c-1.15,0-1.77,0.53-1.77,2.24v3.55h-2.54V29.75z"></path>
+		<path class="fill__maroon" d="M115.07,26.82c0-0.92,0.75-1.58,1.62-1.58c0.86,0,1.6,0.66,1.6,1.58c0,0.94-0.73,1.6-1.6,1.6      C115.82,28.41,115.07,27.75,115.07,26.82z M115.41,29.75h2.54v8h-2.54V29.75z"></path>
+		<path class="fill__maroon" d="M120.14,29.75h2.8l1.13,2.39c0.38,0.81,0.66,2.12,0.66,2.12s0.26-1.31,0.62-2.12l1.09-2.39h2.57l-4.28,8.17      h-0.24L120.14,29.75z"></path>
+		<path class="fill__maroon" d="M135.03,35.82c0.92,0,1.62-0.36,2.01-0.64l1.45,1.56c-0.77,0.68-1.75,1.18-3.42,1.18      c-2.86,0-4.7-1.73-4.7-4.19c0-2.42,1.94-4.15,4.42-4.15c2.87,0,4.44,2.14,4.25,4.94h-6.07      C133.21,35.35,133.88,35.82,135.03,35.82z M136.48,33.05c-0.11-0.88-0.68-1.41-1.67-1.41c-1,0-1.67,0.45-1.88,1.41H136.48z"></path>
+		<path class="fill__maroon" d="M141.7,29.75h2.54l-0.06,1.31c0.49-0.96,1.43-1.48,2.54-1.48c1.75,0,3.01,1.28,3.01,3.55v4.62h-2.54V33.3      c0-0.9-0.43-1.41-1.33-1.41c-1.01,0-1.62,0.56-1.62,1.58v4.29h-2.54V29.75z"></path>
+		<path class="fill__maroon" d="M158.46,34.75v-2.9h-1.18v-2.1h1.18v-4.17h2.52v4.17h2.05v2.1h-2.05v2.97c0,0.81,0.26,0.97,0.66,0.97      c0.41,0,0.71-0.22,0.88-0.34l0.96,1.77c-0.4,0.32-1.07,0.73-2.24,0.73C159.62,37.96,158.46,37.15,158.46,34.75z"></path>
+		<path class="fill__maroon" d="M165.34,33.77c0-2.44,1.94-4.19,4.42-4.19c2.48,0,4.4,1.75,4.4,4.19c0,2.43-1.92,4.15-4.4,4.15      C167.27,37.92,165.34,36.19,165.34,33.77z M171.56,33.77c0-1.2-0.67-2.01-1.8-2.01c-1.13,0-1.82,0.81-1.82,2.01      c0,1.18,0.69,2.01,1.82,2.01C170.88,35.78,171.56,34.95,171.56,33.77z"></path>
+		<path class="fill__maroon" d="M182.23,24.97h3.93c3.93,0,6.73,2.61,6.73,6.39c0,3.78-2.78,6.39-6.73,6.39h-3.93V24.97z M186.03,35.44      c2.84,0,4.13-1.69,4.13-4.08c0-2.38-1.3-4.08-4.13-4.08h-1.16v8.15H186.03z"></path>
+		<path class="fill__maroon" d="M195.46,26.82c0-0.92,0.75-1.58,1.61-1.58c0.86,0,1.59,0.66,1.59,1.58c0,0.94-0.73,1.6-1.59,1.6      C196.21,28.41,195.46,27.75,195.46,26.82z M195.8,29.75h2.54v8h-2.54V29.75z"></path>
+		<path class="fill__maroon" d="M200.78,36.4l1.48-1.31c0.55,0.53,1.24,0.84,1.99,0.84c0.83,0,1.09-0.15,1.09-0.49      c0-0.43-0.51-0.43-1.81-0.77c-1.09-0.28-2.31-0.88-2.31-2.55c0-1.8,1.39-2.54,3.1-2.54c1.31,0,2.26,0.43,2.91,1.11l-1.35,1.45      c-0.38-0.32-0.94-0.6-1.54-0.6c-0.58,0-0.86,0.15-0.86,0.47c0,0.45,0.51,0.51,1.6,0.75c1.16,0.27,2.63,0.81,2.63,2.5      c0,1.47-0.77,2.67-3.29,2.67C202.56,37.92,201.47,37.22,200.78,36.4z"></path>
+		<path class="fill__maroon" d="M209.93,33.73c0-2.42,1.88-4.15,4.38-4.15c1.6,0,2.55,0.58,3.36,1.6l-1.8,1.47      c-0.3-0.49-0.92-0.85-1.56-0.85c-1.14,0-1.79,0.81-1.79,1.94c0,1.16,0.64,1.99,1.79,1.99c0.81,0,1.24-0.37,1.62-0.75l1.71,1.5      c-0.79,0.88-1.73,1.45-3.33,1.45C211.81,37.92,209.93,36.19,209.93,33.73z"></path>
+		<path class="fill__maroon" d="M219.64,33.77c0-2.44,1.94-4.19,4.42-4.19c2.48,0,4.4,1.75,4.4,4.19c0,2.43-1.92,4.15-4.4,4.15      C221.58,37.92,219.64,36.19,219.64,33.77z M225.87,33.77c0-1.2-0.68-2.01-1.8-2.01c-1.13,0-1.82,0.81-1.82,2.01      c0,1.18,0.7,2.01,1.82,2.01C225.19,35.78,225.87,34.95,225.87,33.77z"></path>
+		<path class="fill__maroon" d="M229.81,29.75h2.8l1.13,2.39c0.38,0.81,0.66,2.12,0.66,2.12s0.26-1.31,0.62-2.12l1.09-2.39h2.57l-4.29,8.17      h-0.24L229.81,29.75z"></path>
+		<path class="fill__maroon" d="M244.7,35.82c0.92,0,1.62-0.36,2.01-0.64l1.45,1.56c-0.77,0.68-1.75,1.18-3.42,1.18      c-2.86,0-4.7-1.73-4.7-4.19c0-2.42,1.94-4.15,4.42-4.15c2.88,0,4.44,2.14,4.25,4.94h-6.07      C242.87,35.35,243.55,35.82,244.7,35.82z M246.14,33.05c-0.11-0.88-0.68-1.41-1.67-1.41c-1,0-1.67,0.45-1.88,1.41H246.14z"></path>
+		<path class="fill__maroon" d="M251.37,29.75h2.54l-0.04,1.45c0.58-1.32,1.52-1.62,2.35-1.62c0.53,0,0.92,0.15,1.24,0.32l-0.81,2.31      c-0.32-0.15-0.62-0.24-0.97-0.24c-1.15,0-1.77,0.53-1.77,2.24v3.55h-2.54V29.75z"></path>
+		<path class="fill__maroon" d="M262.5,28.41c0.28,0.11,0.52,0.27,0.72,0.47c0.2,0.2,0.36,0.42,0.48,0.66c0.15,0.31,0.23,0.65,0.23,1.01     c0,0.4-0.1,0.79-0.3,1.15c-0.2,0.37-0.49,0.65-0.85,0.85c-0.36,0.2-0.74,0.3-1.14,0.3c-0.39,0-0.77-0.1-1.13-0.3     c-0.36-0.2-0.64-0.49-0.85-0.85c-0.2-0.36-0.3-0.75-0.3-1.15c0-0.34,0.07-0.66,0.2-0.94c0.13-0.28,0.3-0.52,0.49-0.71     c0.2-0.19,0.41-0.34,0.65-0.45c0.31-0.14,0.62-0.21,0.94-0.21C261.94,28.25,262.22,28.3,262.5,28.41z M264.12,29.43     c-0.12-0.28-0.3-0.53-0.53-0.77c-0.23-0.24-0.51-0.43-0.84-0.58c-0.33-0.16-0.7-0.23-1.1-0.23c-0.41,0-0.81,0.09-1.18,0.27     c-0.27,0.13-0.52,0.31-0.75,0.53c-0.23,0.23-0.41,0.5-0.56,0.84c-0.15,0.33-0.22,0.69-0.22,1.07c0,0.47,0.12,0.92,0.36,1.35     c0.24,0.43,0.57,0.76,1,1c0.43,0.24,0.88,0.36,1.35,0.36c0.42,0,0.81-0.09,1.18-0.27c0.29-0.14,0.55-0.33,0.78-0.57     c0.24-0.24,0.42-0.53,0.55-0.86c0.13-0.33,0.19-0.67,0.19-1.01C264.36,30.17,264.28,29.79,264.12,29.43z M261.56,30.94     c0.17,0,0.3,0.02,0.39,0.07c0.09,0.05,0.15,0.11,0.19,0.19c0.04,0.08,0.06,0.21,0.08,0.39c0.01,0.25,0.03,0.4,0.05,0.45h0.64     c-0.03-0.08-0.04-0.21-0.05-0.4c0-0.18-0.01-0.31-0.03-0.38c-0.03-0.12-0.07-0.22-0.12-0.3c-0.06-0.08-0.12-0.14-0.21-0.19     c-0.08-0.05-0.19-0.08-0.33-0.11c0.16-0.02,0.27-0.04,0.33-0.08c0.12-0.06,0.22-0.15,0.29-0.26c0.07-0.12,0.11-0.25,0.11-0.4     c0-0.15-0.03-0.29-0.1-0.41c-0.07-0.12-0.16-0.21-0.26-0.28c-0.11-0.07-0.25-0.12-0.42-0.15c-0.12-0.02-0.3-0.03-0.53-0.03h-1.07     v2.99h0.67v-1.1H261.56z M261.91,29.56c0.1,0.03,0.18,0.08,0.24,0.15c0.06,0.07,0.09,0.16,0.09,0.26c0,0.1-0.02,0.18-0.08,0.26     c-0.05,0.08-0.12,0.14-0.22,0.17c-0.1,0.04-0.21,0.06-0.32,0.06h-0.44v-0.95h0.44C261.71,29.51,261.81,29.53,261.91,29.56z"></path>
+	</g>
+
+</svg>
+    </a>
+      </div>
+
+    </div>
+  </div>
+
+          <div class="region region--masthead-first__right clearfix" id="masthead-first__right">
+    <div class="region__inner">
+      <nav role="navigation" aria-labelledby="block-universityheadermenu-menu" id="block-universityheadermenu" data-block-plugin-id="menu_block:university-header-menu" class="block block-menu navigation menu--university-header-menu">
+            
+  <h2 class="visually-hidden" id="block-universityheadermenu-menu">University Header Menu</h2>
+  
+
+        
+              <ul class="menu menu-level--1">
+              
+            <li class="menu-item menu-item--level-1">
+
+        
+        <a href="https://myu.umn.edu">          <span class="link-inner">MyU</span>
+        </a>
+              </li>
+          
+            <li class="menu-item menu-item--level-1">
+
+        
+        <a href="https://onestop.umn.edu">          <span class="link-inner">One Stop</span>
+        </a>
+              </li>
+          
+            <li class="menu-item menu-item--level-1">
+
+        
+        <a href="#umn-search">          <span class="link-inner">Search</span>
+        </a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+    </div>
+  </div>
+
+      </div>
+    </div>
+
+    <div class="region--masthead-second--wrapper">
+      <div class="region--masthead-second">
+          <div class="region region--masthead-second clearfix" id="masthead-second">
+    <div class="region__inner">
+      <div id="block-umnsearchblock" data-block-plugin-id="umn_search_block" class="block block-umn-search block-umn-search-block">
+  
+    
+      <div class="umn-search-form umn-search-form--with-placeholder">
+  <div
+    class="gcse-searchbox-only"
+            data-resultsUrl="/search"
+      ></div>
+</div>
+
+  </div>
+
+    </div>
+  </div>
+
+      </div>
+    </div>
+
+    <div class="region--masthead-third--wrapper">
+      <div class="region--masthead-third">
+          <div class="region region--masthead-third__left clearfix" id="masthead-third__left">
+    <div class="region__inner">
+      <div id="block-cla-group-home-navigation-block" data-block-plugin-id="cla_group_home_navigation_block" class="block block-cla-group block-cla-group-home-navigation-block is-home-group">
+  
+  <div class="cla-group-home-navigation-block--content-wrapper">
+          <span class="home-group-navigation-link-wrapper"><a class="home-group-navigation-link" href="/" aria-label="College of Liberal Arts, Home"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 837.1 58.1" xml:space="preserve"><style>.st0{fill:#79011a}</style><path class="st0" d="M50.6 42.3v8.2c-5.5 3-11.8 4.5-18.9 4.5-5.8 0-10.7-1.2-14.8-3.5-4-2.3-7.3-5.6-9.6-9.7-2.4-4.1-3.5-8.5-3.5-13.3 0-7.6 2.7-14 8.1-19.1 5.4-5.2 12.1-7.8 20-7.8C37.2 1.6 43.3 3 50 5.8v8c-6.1-3.4-12-5.2-17.8-5.2-6 0-10.9 1.9-14.8 5.7-3.9 3.8-5.9 8.5-5.9 14.2 0 5.7 1.9 10.4 5.8 14.1 3.9 3.7 8.8 5.5 14.9 5.5 6.2 0 12.4-1.9 18.4-5.8M82.9 8.7c-5.9 0-10.8 1.9-14.6 5.6-3.8 3.7-5.7 8.5-5.7 14.3 0 5.6 1.9 10.3 5.8 14 3.8 3.7 8.6 5.6 14.4 5.6 5.8 0 10.6-1.9 14.5-5.7 3.9-3.8 5.8-8.5 5.8-14.2 0-5.5-1.9-10.2-5.8-13.9-4-3.9-8.8-5.7-14.4-5.7m-.3-7.1c8 0 14.7 2.6 20 7.6 5.4 5.1 8 11.5 8 19.1 0 7.7-2.7 14-8.1 19.1-5.4 5-12.2 7.5-20.4 7.5-7.8 0-14.3-2.5-19.5-7.5-5.2-5-7.8-11.3-7.8-18.9 0-7.8 2.6-14.2 7.9-19.3 5.2-5.1 11.8-7.6 19.9-7.6M116.4 2.4h7.4v45.3h23.4v6.7h-30.8zM151.8 2.4h7.4v45.3h23.5v6.7h-30.9zM187.3 2.4h29.5V9h-22.1v15.9H216v6.6h-21.3v16.3h22.8v6.6h-30.2zM251.7 28.7H269v22c-6.4 2.8-12.7 4.2-19 4.2-8.6 0-15.5-2.5-20.6-7.6-5.1-5-7.7-11.2-7.7-18.6 0-7.8 2.7-14.3 8-19.4 5.3-5.2 12-7.8 20-7.8 2.9 0 5.7.3 8.3 1 2.6.6 5.9 1.8 10 3.4v7.6c-6.2-3.6-12.3-5.4-18.4-5.4-5.7 0-10.5 1.9-14.3 5.8-3.9 3.9-5.8 8.7-5.8 14.3 0 5.9 1.9 10.8 5.8 14.5 3.9 3.8 8.9 5.6 15 5.6 3 0 6.5-.7 10.7-2l.7-.2V35.3h-10v-6.6zM276.9 2.4h29.5V9h-22.1v15.9h21.3v6.6h-21.3v16.3h22.8v6.6h-30.2zM353.6 18.1c-2.8-2.7-6.5-4.1-10.8-4.1-4.3 0-7.9 1.4-10.7 4.1-2.8 2.7-4.2 6.2-4.2 10.4 0 4.1 1.4 7.5 4.2 10.2 2.8 2.7 6.3 4.1 10.5 4.1 4.4 0 8.1-1.4 10.9-4.1 2.9-2.7 4.4-6.1 4.4-10.3 0-4.1-1.4-7.6-4.3-10.3M350 35.3c-1.9 1.9-4.2 2.8-7.1 2.8-2.8 0-5.2-.9-7.1-2.8-1.9-1.9-2.8-4.1-2.8-6.9 0-2.8 1-5.2 2.8-7 1.9-1.8 4.3-2.7 7.2-2.7 2.8 0 5.1.9 7 2.8 1.9 1.8 2.8 4.1 2.8 6.8.1 2.8-.9 5.1-2.8 7M360.6 42.4h5V29.8H376v-4.5h-10.4v-6.4H376v-4.5h-15.4zM406.9 47.7V2.4h-7.4v52h30.9v-6.7zM435.1 2.4h7.4v52h-7.4zM465 31.3h-7v16.5h7.4c4.1 0 6.8-.3 8.3-1 1.5-.6 2.6-1.6 3.5-3 .9-1.3 1.3-2.8 1.3-4.3 0-1.6-.5-3.1-1.4-4.4-.9-1.3-2.3-2.3-4-2.9-1.6-.6-4.4-.9-8.1-.9M464.5 9H458v15.7h5c4 0 6.8-.7 8.5-2.3 1.7-1.5 2.5-3.5 2.5-5.9.1-5-3.1-7.5-9.5-7.5m3.8 45.4h-17.7v-52h13.7c4.3 0 7.7.6 10.1 1.7 2.4 1.1 4.2 2.7 5.5 4.8 1.3 2 1.9 4.4 1.9 7 0 5.1-2.7 8.8-8 11 3.8.7 6.8 2.3 9.1 4.7 2.2 2.4 3.4 5.3 3.4 8.6 0 2.7-.7 5-2 7.1-1.4 2.1-3.4 3.8-6 5.1-2.7 1.3-6 2-10 2M491.7 2.4h29.4V9h-22v15.9h21.3v6.6h-21.3v16.3h22.7v6.6h-30.1zM537.7 8.7h-2.2v16.5h2.8c3.8 0 6.3-.3 7.8-1 1.4-.6 2.5-1.6 3.3-2.9.8-1.3 1.2-2.8 1.2-4.5 0-1.6-.5-3.1-1.3-4.5-.8-1.3-2.1-2.3-3.7-2.8-1.6-.6-4.2-.8-7.9-.8m-9.6 45.7v-52h13c5.2 0 9.4 1.3 12.5 3.9 3.1 2.6 4.6 6.1 4.6 10.6 0 3-.8 5.7-2.3 7.9-1.5 2.2-3.7 3.9-6.5 5 1.7 1.1 3.3 2.6 4.9 4.5 1.6 1.9 3.8 5.2 6.7 9.9 1.8 3 3.3 5.2 4.4 6.7l2.8 3.7h-8.9L557 51c-.1-.1-.2-.3-.4-.6l-1.5-2-2.3-3.8-2.5-4.1c-1.5-2.1-2.9-3.9-4.2-5.1-1.3-1.3-2.4-2.2-3.5-2.7-1-.6-2.8-.8-5.2-.8h-1.9v22.6l-7.4-.1z"/><path class="st0" d="M599.6 32.3l-8.5-18.8-7.8 18.8h16.3zM588.5 2h5.2L617 54.4h-7.6l-6.9-15.5h-22.1l-6.5 15.5h-7.7L588.5 2zM620.9 2.4h7.5v45.3h23.4v6.7h-30.9zM705.6 32.3l-8.5-18.8-7.8 18.8h16.3zM694.5 2h5.2L723 54.4h-7.6l-6.9-15.5h-22.1l-6.5 15.5h-7.6L694.5 2zM736.8 8.7h-2.2v16.5h2.8c3.8 0 6.4-.3 7.8-1 1.4-.6 2.5-1.6 3.3-2.9.8-1.3 1.2-2.8 1.2-4.5 0-1.6-.4-3.1-1.3-4.5-.9-1.3-2.1-2.3-3.7-2.8-1.7-.6-4.3-.8-7.9-.8m-9.6 45.7v-52h13c5.2 0 9.4 1.3 12.5 3.9 3.1 2.6 4.6 6.1 4.6 10.6 0 3-.8 5.7-2.3 7.9-1.5 2.2-3.7 3.9-6.6 5 1.7 1.1 3.3 2.6 4.9 4.5 1.6 1.9 3.8 5.2 6.7 9.9 1.8 3 3.3 5.2 4.4 6.7l2.8 3.7h-8.9l-2.3-3.4c-.1-.1-.2-.3-.5-.6l-1.5-2-2.3-3.8-2.5-4.1c-1.5-2.1-2.9-3.9-4.2-5.1-1.3-1.3-2.4-2.2-3.4-2.7-1-.6-2.8-.8-5.2-.8h-1.9v22.6l-7.3-.3zM759.8 2.4h43.6V9h-18.2v45.4h-7.5V9h-17.9zM821.2 32.6l-5.7-3.5c-3.6-2.2-6.1-4.3-7.6-6.4-1.5-2.1-2.3-4.5-2.3-7.3 0-4.1 1.4-7.4 4.3-10 2.8-2.6 6.5-3.8 11-3.8 4.3 0 8.3 1.2 11.9 3.7v8.4c-3.7-3.6-7.8-5.4-12.1-5.4-2.4 0-4.4.6-6 1.7-1.6 1.1-2.3 2.5-2.3 4.3 0 1.5.6 3 1.7 4.4 1.2 1.4 3 2.8 5.6 4.3l5.7 3.4c6.3 3.8 9.5 8.6 9.5 14.5 0 4.2-1.4 7.6-4.2 10.2-2.8 2.6-6.4 3.9-10.9 3.9-5.1 0-9.8-1.6-14-4.9v-9.4c4 5.2 8.7 7.8 13.9 7.8 2.3 0 4.3-.6 5.8-2 1.6-1.3 2.3-2.9 2.3-4.9.3-3.2-2-6.2-6.6-9"/></svg></a></span>
+      
+  </div>
+</div>
+
+    </div>
+  </div>
+
+          <div class="region region--masthead-third__right clearfix" id="masthead-third__right">
+    <div class="region__inner">
+      <div class="views-element-container block block-views block-views-block--units-block-header-give-button" id="block-cla-folwell-views-block-units-block-header-give-button" data-block-plugin-id="views_block:units-block_header_give_button">
+  
+    
+      <div><div class="view view-units view-id-units view-display-id-block_header_give_button js-view-dom-id-59adcd4912c88bce893e8000ca197ea7746efd11033ab7941f88524e812f3714">
+  
+    
+      
+      <div class="view-content">
+          <div class="views-row"><div class="views-field views-field-field-give-link"><div class="field-content"><a href="/alumni-friends/give" id="header-give-button" class="btn-primary" data-unit-name="cla">Give</a></div></div></div>
+
+    </div>
+  
+          </div>
+</div>
+
+  </div>
+
+    </div>
+  </div>
+
+      </div>
+    </div>
+
+    <div class="region--masthead-fourth--wrapper">
+          <div class="region region--masthead-fourth clearfix" id="masthead-fourth">
+    <div class="region__inner">
+      
+<nav role="navigation" aria-labelledby="block-unitmenus-menu" id="block-unitmenus" data-block-plugin-id="group_content_menu:unit_menu" class="block block-menu navigation menu--unit-menu header-menu groupmenu--header-menu">
+            
+  <h2 class="visually-hidden" id="block-unitmenus-menu">Unit Menu</h2>
+  
+
+        
+    <div class="header-menu--toggle">
+    <span class="header-menu--toggle--label">Menu</span>
+    <span class="header-menu--toggle--accent fas fa-bars"></span>
+  </div>
+
+  <div class="header-menu--menu-wrapper">
+        
+              <ul class="menu menu-level--1">
+              
+            <li class="menu-item menu-item--level-1">
+
+        
+        <a href="/students" data-drupal-link-system-path="node/1991">          <span class="link-inner">Students</span>
+        </a>
+              </li>
+          
+            <li class="menu-item menu-item--collapsed menu-item--level-1">
+
+        
+        <a href="/academics" data-drupal-link-system-path="node/1916">          <span class="link-inner">Academics</span>
+        </a>
+              </li>
+          
+            <li class="menu-item menu-item--collapsed menu-item--level-1">
+
+        
+        <a href="/research-creative-work" data-drupal-link-system-path="node/2476">          <span class="link-inner">Research &amp; Creative Work</span>
+        </a>
+              </li>
+          
+            <li class="menu-item menu-item--collapsed menu-item--level-1">
+
+        
+        <a href="/alumni-friends" data-drupal-link-system-path="node/1981">          <span class="link-inner">Alumni &amp; Friends</span>
+        </a>
+              </li>
+          
+            <li class="menu-item menu-item--collapsed menu-item--level-1">
+
+        
+        <a href="/community-employer-partners" data-drupal-link-system-path="node/272777">          <span class="link-inner">Community &amp; Employer Partners</span>
+        </a>
+              </li>
+          
+            <li class="menu-item menu-item--collapsed menu-item--level-1">
+
+        
+        <a href="/news-events" data-drupal-link-system-path="node/4966">          <span class="link-inner">News &amp; Events</span>
+        </a>
+              </li>
+          
+            <li class="menu-firstchild menu-item menu-item--collapsed menu-item--level-1">
+
+        
+        <a href="/about/about-college-liberal-arts">          <span class="link-inner">About</span>
+        </a>
+              </li>
+        </ul>
+  
+
+
+    
+  </div>
+
+</nav>
+    </div>
+  </div>
+
+    </div>
+
+    
+
+  </div>
+
+</header>
+
+<div class="section-content">
+
+  
+  <main id="main" class="main-content">
+    <span id="main-content" tabindex="-1"></span>    <div class="layout-content">
+          <div class="region region--content clearfix" id="content">
+    <div class="region__inner">
+      <div id="block-cla-folwell-content" data-block-plugin-id="system_main_block" class="block block-system block-system-main-block">
+  
+    
+      <div class="group group--full group--unit">
+
+    
+        
+
+    <div>
+        
+
+
+  <div class="layout--full-width layout layout-container layout--onecol">
+    <div class="layout__region layout__region--content region-full">
+      
+<div data-block-plugin-id="inline_block:homepage_hero_animation" data-inline-block-uuid="d1fd90ad-3afd-4dd7-a302-f7d523fec3a2" class="block block-layout-builder block-inline-block--homepage-hero-animation">
+		
+
+	        
+        
+		<div class="homepage-hero-animation">
+
+			<div class="homepage-hero-animation--background" 
+                 style="background-image: url('/sites/cla.umn.edu/files/2022-08/homepage_only-hero_background_2.jpg');">
+            </div>
+			
+            <div class="homepage-hero-animation--collage-overlay">
+
+                <div class="collage-overlay--image">
+                    
+            <div class="field field--name-field-image-2 field--type-entity-reference field--label-hidden field__item"><article class="media media--type-image media--view-mode-hero-image-slice">
+        
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="/sites/cla.umn.edu/files/styles/hero_image_slice/public/homepage_only-1-2024.jpg?h=2d235432&amp;itok=sn4tZc0Y" width="480" height="500" alt="Student in front of bookcases" typeof="foaf:Image" class="image-style-hero-image-slice" />
+
+
+</div>
+      
+  </article>
+</div>
+      
+                </div>
+                <div class="collage-overlay--image">            
+                    
+            <div class="field field--name-field-image-3 field--type-entity-reference field--label-hidden field__item"><article class="media media--type-image media--view-mode-hero-image-slice">
+        
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="/sites/cla.umn.edu/files/styles/hero_image_slice/public/homepage_only-2-2024.jpg?h=2d235432&amp;itok=U6p4yrmo" width="480" height="500" alt="Student in front of books" typeof="foaf:Image" class="image-style-hero-image-slice" />
+
+
+</div>
+      
+  </article>
+</div>
+      
+                </div>
+                <div class="collage-overlay--image">            
+                    
+            <div class="field field--name-field-image-4 field--type-entity-reference field--label-hidden field__item"><article class="media media--type-image media--view-mode-hero-image-slice">
+        
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="/sites/cla.umn.edu/files/styles/hero_image_slice/public/homepage_only-3-2024.jpg?h=2d235432&amp;itok=8UPlCVHl" width="480" height="500" alt="Student in front of ivy column" typeof="foaf:Image" class="image-style-hero-image-slice" />
+
+
+</div>
+      
+  </article>
+</div>
+      
+                </div>
+			</div>
+
+			<div class="homepage-hero-animation--svg-overlay">
+				<svg id="homepage-hero-animation--svg-overlay" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 1408.67 246.58" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+					<g id="we-are-liberal">
+						<g id="we-are-liberal--g1" transform="matrix(1 0 0 1 0 -60.790818)">
+							<path id="we-are-liberal--path1" d="M133.23,254.7L99.43,254.7L89.29,208.59Q88.57,205.71,87.01,197.09Q85.45,188.47,84.73,182.68Q84.16,187.39,82.85,194.37Q81.54,201.35,80.28,207.22Q79,213.08,69.75,254.7L36,254.7L9.74,148.88L37.32,148.88L48.83,201.94Q52.74,219.52,54.19,229.94Q55.12,222.56,57.55,209.94Q59.98,197.32,62.08,188.94L71.41,148.94L97.91,148.94L106.91,188.94Q109.24,198.55,111.62,211.16Q114,223.77,114.85,230Q115.78,222,119.98,202.13L131.71,148.93L159.29,148.93Z" transform="matrix(1 0 0 1 -9.74 -21.900035)" fill="rgb(255,255,255)" stroke="rgb(255,205,54)" stroke-width="3" stroke-linecap="round"/>
+							<path id="we-are-liberal--path2" d="M210.9,256.15Q190.41,256.15,179.09,245.26Q167.77,234.37,167.76,214.26Q167.76,193.48,178.25,182.38Q188.74,171.28,208.25,171.26Q226.78,171.26,236.88,180.93Q246.98,190.6,247,208.74L247,221.33L196.4,221.33C196.380365,225.49099,198.212665,229.445094,201.4,232.12Q206.12,236,214.3,236C218.903547,236.045815,223.498072,235.583009,228,234.62C232.681187,233.498174,237.230021,231.882449,241.57,229.8L241.57,250.14C237.241045,252.372522,232.608605,253.959344,227.82,254.85C222.229996,255.786574,216.567467,256.221639,210.9,256.15ZM209.23,190.5C206.13765,190.410519,203.1344,191.542126,200.87,193.65Q197.51,196.8,196.93,203.53L221.25,203.53Q221.1,197.59,217.88,194.05C215.66162,191.648452,212.49587,190.349213,209.23,190.5Z" transform="matrix(1 0 0 1 -9.74 -21.900035)" fill="rgb(255,255,255)" stroke="rgb(255,205,54)" stroke-width="3" stroke-linecap="round"/>
+							<path id="we-are-liberal--path3" d="M354.94,254.7L349.51,243.85L348.94,243.85Q343.21,250.95,337.28,253.54Q331.35,256.13,321.94,256.15Q310.34,256.15,303.7,249.2Q297.06,242.25,297,229.66Q297,216.55,306.12,210.15Q315.24,203.75,332.54,202.95L346.22,202.51L346.22,201.36Q346.22,191.22,336.22,191.22Q327.22,191.22,313.42,197.3L305.24,178.63Q319.56,171.25,341.43,171.24Q357.21,171.24,365.86,179.06Q374.51,186.88,374.51,200.92L374.51,254.7ZM333.94,236.17C337.179257,236.241342,340.324697,235.079674,342.74,232.92C345.155816,230.780024,346.493584,227.675668,346.39,224.45L346.39,218.08L339.88,218.37Q325.88,218.86,325.88,228.64Q325.92,236.17,334,236.17Z" transform="matrix(1 0 0 1 -9.74 -21.900035)" fill="rgb(255,255,255)" stroke="rgb(255,205,54)" stroke-width="3" stroke-linecap="round"/>
+							<path id="we-are-liberal--path4" d="M443.32,171.24C445.665479,171.236457,448.007089,171.430476,450.32,171.82L451.91,172.11L449.37,198.82C446.208156,198.156355,442.979605,197.864375,439.75,197.95Q430.48,197.95,426.28,202.19Q422.08,206.43,422.09,214.38L422.09,254.7L393.81,254.7L393.81,172.7L414.88,172.7L419.29,185.8L420.67,185.8C422.996301,181.493935,426.400683,177.865581,430.55,175.27C434.329033,172.723439,438.763793,171.323902,443.32,171.24Z" transform="matrix(1 0 0 1 -9.74 -21.900035)" fill="rgb(255,255,255)" stroke="rgb(255,205,54)" stroke-width="3" stroke-linecap="round"/>
+							<path id="we-are-liberal--path5" d="M503,256.15Q482.51,256.15,471.19,245.26Q459.87,234.37,459.86,214.26Q459.86,193.48,470.35,182.38Q480.84,171.28,500.35,171.26Q518.87,171.26,528.98,180.93Q539.09,190.6,539,208.74L539,221.33L488.4,221.33C488.380365,225.49099,490.212665,229.445094,493.4,232.12Q498.14,236.03,506.32,236.03C510.931338,236.067434,515.532664,235.594557,520.04,234.62C524.721187,233.498174,529.270021,231.882449,533.61,229.8L533.61,250.14C529.281045,252.372522,524.648605,253.959344,519.86,254.85C514.28974,255.783015,508.647449,256.218067,503,256.15ZM501.3,190.5C498.20765,190.410519,495.2044,191.542126,492.94,193.65Q489.58,196.8,489,203.53L513.32,203.53Q513.17,197.59,509.95,194.05C507.73162,191.648452,504.56587,190.349213,501.3,190.5Z" transform="matrix(1 0 0 1 -9.74 -21.900035)" fill="rgb(255,255,255)" stroke="rgb(255,205,55)" stroke-width="3" stroke-linecap="round"/>
+							<path id="we-are-liberal--path6" d="M621.82,254.7L593.52,254.7L593.52,142.07L621.82,142.07Z" transform="matrix(1 0 0 1 -9.74 -21.900035)" fill="rgb(255,204,51)" stroke="rgb(255,255,255)" stroke-width="3" stroke-linecap="round"/>
+							<path id="we-are-liberal--path7" d="M640.86,152.28Q640.86,145.91,644.41,142.8Q647.96,139.69,655.84,139.69Q663.73,139.69,667.35,142.87Q670.97,146.05,670.97,152.28Q670.97,164.73,655.84,164.73Q640.87,164.73,640.86,152.28ZM669.86,254.7L641.58,254.7L641.58,172.7L669.89,172.7Z" transform="matrix(1 0 0 1 -9.74 -21.900035)" fill="rgb(255,204,51)" stroke="rgb(255,255,255)" stroke-width="3" stroke-linecap="round"/>
+							<path id="we-are-liberal--path8" d="M739.74,171.24Q753.12,171.24,760.98,182.46Q768.84,193.68,768.84,213.52Q768.84,233.52,760.91,244.82Q752.98,256.12,738.91,256.15C736.173908,256.184514,733.445755,255.84812,730.8,255.15C728.569372,254.559498,726.43689,253.64654,724.47,252.44C722.065869,250.801967,719.887245,248.855326,717.99,246.65L716.25,246.65L711.76,254.65L689.65,254.65L689.65,142.07L718,142.07L718,167.55Q718,172.11,717,183.26L718,183.26C720.319382,179.420294,723.600891,176.252534,727.52,174.07C731.302167,172.14581,735.497008,171.174337,739.74,171.24ZM729.39,193.47Q723.45,193.47,720.7,197.59Q717.95,201.71,717.95,210.59L717.95,214.59Q717.95,224.66,720.7,229.03Q723.45,233.4,729.7,233.41Q734.7,233.41,737.37,228.31Q740.04,223.21,740.05,213.31Q740,193.46,729.39,193.47Z" transform="matrix(1 0 0 1 -9.74 -21.900035)" fill="rgb(255,204,51)" stroke="rgb(255,255,255)" stroke-width="3" stroke-linecap="round"/>
+							<path id="we-are-liberal--path9" d="M824.57,256.15Q804.08,256.15,792.76,245.26Q781.44,234.37,781.43,214.26Q781.43,193.48,791.93,182.38Q802.43,171.28,821.93,171.26Q840.47,171.26,850.56,180.93Q860.65,190.6,860.66,208.76L860.66,221.35L810,221.35C809.980365,225.51099,811.812665,229.465094,815,232.14Q819.79,236,828,236C832.611362,236.037925,837.212741,235.565043,841.72,234.59C846.401596,233.469553,850.950574,231.853777,855.29,229.77L855.29,250.11C850.961045,252.342522,846.328605,253.929344,841.54,254.82C835.934449,255.769599,830.255047,256.214714,824.57,256.15ZM822.91,190.5C819.817468,190.409434,816.81382,191.541191,814.55,193.65Q811.18,196.8,810.6,203.53L834.92,203.53Q834.77,197.59,831.56,194.05C829.340019,191.650757,826.17539,190.351979,822.91,190.5Z" transform="matrix(1 0 0 1 -9.74 -21.900035)" fill="rgb(255,204,51)" stroke="rgb(255,255,255)" stroke-width="3" stroke-linecap="round"/>
+							<path id="we-are-liberal--path10" d="M926.13,171.24C928.47552,171.235457,930.817214,171.429483,933.13,171.82L934.72,172.11L932.19,198.82C929.02469,198.156933,925.792896,197.864964,922.56,197.95Q913.29,197.95,909.1,202.19Q904.91,206.43,904.9,214.38L904.9,254.7L876.61,254.7L876.61,172.7L897.68,172.7L902.09,185.8L903.47,185.8C905.799285,181.496086,909.203019,177.868422,913.35,175.27C917.131875,172.721601,921.570373,171.321981,926.13,171.24Z" transform="matrix(1 0 0 1 -9.74 -21.900035)" fill="rgb(255,204,51)" stroke="rgb(255,255,255)" stroke-width="3" stroke-linecap="round"/>
+							<path id="we-are-liberal--path11" d="M999.67,254.7L994.24,243.85L993.66,243.85Q987.95,250.95,982.01,253.54Q976.07,256.13,966.66,256.15Q955.08,256.15,948.42,249.2Q941.76,242.25,941.76,229.66Q941.76,216.55,950.88,210.15Q960,203.75,977.3,203L990.98,202.56L990.98,201.41Q990.98,191.27,980.98,191.27Q971.98,191.27,958.18,197.35L950,178.63Q964.34,171.25,986.19,171.24Q1001.97,171.24,1010.62,179.06Q1019.27,186.88,1019.27,200.92L1019.27,254.7ZM978.67,236.17C981.905998,236.239795,985.047764,235.078164,987.46,232.92C989.881847,230.783589,991.223893,227.677817,991.12,224.45L991.12,218.08L984.6,218.37Q970.6,218.86,970.6,228.64Q970.64,236.17,978.68,236.17Z" transform="matrix(1 0 0 1 -9.74 -21.900035)" fill="rgb(255,204,51)" stroke="rgb(255,255,255)" stroke-width="3" stroke-linecap="round"/>
+							<path id="we-are-liberal--path12" d="M1066.84,254.7L1038.54,254.7L1038.54,142.07L1066.84,142.07Z" transform="matrix(1 0 0 1 -9.74 -21.900035)" fill="rgb(255,204,51)" stroke="rgb(255,255,255)" stroke-width="3" stroke-linecap="round"/>
+							<path id="we-are-liberal--path13" d="M1178.46,254.7L1173,243.85L1172.42,243.85Q1166.71,250.95,1160.76,253.54Q1154.81,256.13,1145.42,256.15Q1133.84,256.15,1127.18,249.2Q1120.52,242.25,1120.52,229.66Q1120.52,216.55,1129.64,210.15Q1138.76,203.75,1156.06,202.95L1169.74,202.51L1169.74,201.36Q1169.74,191.22,1159.74,191.22Q1150.74,191.22,1136.94,197.3L1128.76,178.63Q1143.1,171.25,1164.95,171.24Q1180.73,171.24,1189.38,179.06Q1198.03,186.88,1198.03,200.92L1198.03,254.7ZM1157.46,236.17C1160.695998,236.239795,1163.837764,235.078164,1166.25,232.92C1168.669304,230.78255,1170.007816,227.676469,1169.9,224.45L1169.9,218.08L1163.39,218.37Q1149.39,218.86,1149.39,228.64Q1149.43,236.17,1157.47,236.17Z" transform="matrix(1 0 0 1 -6.582941 -21.900035)" fill="rgb(255,204,51)" stroke="rgb(255,255,255)" stroke-width="3" stroke-linecap="round"/>
+							<path id="we-are-liberal--path14" d="M1266.84,171.24C1269.18552,171.235457,1271.527214,171.429483,1273.84,171.82L1275.43,172.11L1272.9,198.82C1269.73469,198.156933,1266.502896,197.864964,1263.27,197.95Q1254,197.95,1249.81,202.19Q1245.62,206.43,1245.61,214.38L1245.61,254.7L1217.31,254.7L1217.31,172.7L1238.37,172.7L1242.79,185.8L1244.16,185.8C1246.49225,181.498225,1249.895343,177.871244,1254.04,175.27C1257.827559,172.717921,1262.273535,171.318134,1266.84,171.24Z" transform="matrix(1 0 0 1 -6.582941 -21.900035)" fill="rgb(255,204,51)" stroke="rgb(255,255,255)" stroke-width="3" stroke-linecap="round"/>
+							<path id="we-are-liberal--path15" d="M1327.06,233.78C1331.745099,233.607344,1336.368566,232.654261,1340.74,230.96L1340.74,251.59C1337.240111,253.130717,1333.590863,254.306921,1329.85,255.1C1325.849575,255.832814,1321.786426,256.16778,1317.72,256.1Q1303.47,256.1,1297.17,249.1Q1290.87,242.1,1290.87,227.63L1290.87,193.9L1281,193.9L1281,182.39L1293.6,173.49L1300.91,156.26L1319.44,156.26L1319.44,172.69L1339.56,172.69L1339.56,193.9L1319.44,193.9L1319.44,225.82Q1319.39,233.79,1327.06,233.78Z" transform="matrix(1 0 0 1 -6.582941 -21.900035)" fill="rgb(255,204,51)" stroke="rgb(255,255,255)" stroke-width="3" stroke-linecap="round"/>
+							<path id="we-are-liberal--path16" d="M1418.41,229.51Q1418.41,242.7,1409.41,249.42Q1400.41,256.14,1383.65,256.15C1378.346209,256.196843,1373.045904,255.86265,1367.79,255.15C1363.092944,254.446362,1358.483808,253.24631,1354.04,251.57L1354.04,228.93C1358.698873,230.956747,1363.532015,232.556638,1368.48,233.71C1373.057459,234.880096,1377.756016,235.511045,1382.48,235.59Q1391.68,235.59,1391.67,231.4Q1391.67,229.22,1389.1,227.52Q1386.53,225.82,1374.1,220.9Q1362.82,216.26,1358.32,210.37Q1353.82,204.48,1353.84,195.37Q1353.84,183.94,1362.67,177.56Q1371.5,171.18,1387.67,171.19C1392.834785,171.164266,1397.983226,171.772138,1403,173C1408.072381,174.296003,1413.023947,176.025706,1417.8,178.17L1410.13,196.41C1406.256254,194.688673,1402.262372,193.251544,1398.18,192.11C1394.846254,191.06828,1391.389914,190.469809,1387.9,190.33Q1380.96,190.33,1380.96,193.74C1380.96,195.14,1381.76,196.33,1383.38,197.32C1385,198.31,1389.67,200.32,1397.38,203.32Q1405.99,206.88,1410.23,210.32C1412.927913,212.436335,1415.063971,215.183675,1416.45,218.32C1417.859733,221.87727,1418.526744,225.685358,1418.41,229.51Z" transform="matrix(1 0 0 1 -6.582941 -21.900035)" fill="rgb(255,204,51)" stroke="rgb(255,255,255)" stroke-width="3" stroke-linecap="round"/>
+						</g>
+					</g>
+					<g id="we-are-driven">
+						<g id="we-are-driven--g1">
+							<path id="we-are-driven--path1" d="M301.65,125.36L267.65,125.36L257.45,78.94Q256.71,76.03,255.15,67.36Q253.59,58.69,252.86,52.86Q252.27,57.6,250.96,64.62Q249.65,71.64,248.38,77.56Q247.1,83.45,237.77,125.36L203.77,125.36L177.34,18.83L205.1,18.83L216.68,72.24Q220.62,89.94,222.08,100.44Q223,93,225.46,80.26Q227.92,67.52,230,59.12L239.4,18.83L266.07,18.83L275.18,59.12Q277.5,68.81,279.91,81.49Q282.32,94.17,283.12,100.49Q284.06,92.4,288.29,72.49L300.1,18.93L327.86,18.93Z" transform="matrix(1 0 0 1 -9.74 48.076465)" fill="rgb(255,255,255)" stroke="rgb(255,204,51)" stroke-width="3" stroke-linecap="round"/>
+							<path id="we-are-driven--path2" d="M379.83,126.82Q359.22,126.82,347.83,115.82Q336.44,104.82,336.43,84.6Q336.43,63.69,346.99,52.5Q357.55,41.31,377.16,41.31Q395.8,41.31,405.98,51.04Q416.16,60.77,416.14,79.04L416.14,91.77L365.19,91.77C365.183906,95.960992,367.037266,99.938756,370.25,102.63Q375.02,106.56,383.25,106.56C387.891716,106.599572,392.523461,106.123317,397.06,105.14C401.772525,104.012605,406.351656,102.386779,410.72,100.29L410.72,120.77C406.360907,123.012723,401.698764,124.60944,396.88,125.51C391.246701,126.450931,385.54092,126.889323,379.83,126.82ZM378.16,60.73C375.045377,60.636514,372.019644,61.775656,369.74,63.9Q366.35,67.07,365.74,73.84L390.22,73.84C390.307092,70.352192,389.103477,66.955007,386.84,64.3C384.608057,61.897769,381.436214,60.593221,378.16,60.73Z" transform="matrix(1 0 0 1 -10.415 48.076465)" fill="rgb(255,255,255)" stroke="rgb(255,204,51)" stroke-width="3" stroke-linecap="round"/>
+							<path id="we-are-driven--path3" d="M524.84,125.36L519.38,114.43L518.79,114.43Q513.03,121.57,507.06,124.19Q501.09,126.81,491.61,126.82Q479.95,126.82,473.25,119.82Q466.55,112.82,466.55,100.15Q466.55,86.96,475.73,80.51Q484.91,74.06,502.32,73.26L516.1,72.82L516.1,71.66Q516.1,61.46,506.04,61.46Q497.04,61.46,483.04,67.58L474.8,48.78Q489.23,41.34,511.24,41.34Q527.12,41.34,535.83,49.21Q544.54,57.08,544.54,71.21L544.54,125.35ZM503.71,106.71C506.969092,106.777847,510.132334,105.605482,512.56,103.43C514.996423,101.277062,516.345652,98.149637,516.24,94.9L516.24,88.49L509.68,88.78Q495.62,89.29,495.62,99.13Q495.62,106.71,503.71,106.71Z" transform="matrix(1 0 0 1 -9.74 48.076465)" fill="rgb(255,255,255)" stroke="rgb(255,205,54)" stroke-width="3" stroke-linecap="round"/>
+							<path id="we-are-driven--path4" d="M613.81,41.34C616.179287,41.332017,618.544808,41.529423,620.88,41.93L622.48,42.22L619.93,69.11C616.745762,68.437176,613.49335,68.141807,610.24,68.23Q600.91,68.23,596.69,72.5Q592.47,76.77,592.46,84.77L592.46,125.36L564,125.36L564,42.8L585.2,42.8L589.62,56L591,56C593.358416,51.659773,596.804398,48.007032,601,45.4C604.791111,42.843755,609.238563,41.43418,613.81,41.34Z" transform="matrix(1 0 0 1 -9.74 48.076465)" fill="rgb(255,255,255)" stroke="rgb(255,204,51)" stroke-width="3" stroke-linecap="round"/>
+							<path id="we-are-driven--path5" d="M673.85,126.82Q653.24,126.82,641.85,115.82Q630.46,104.82,630.45,84.6Q630.45,63.69,641.01,52.5Q651.57,41.31,671.18,41.31Q689.83,41.31,700,51.04Q710.17,60.77,710.16,79.04L710.16,91.77L659.21,91.77C659.203906,95.960992,661.057266,99.938756,664.27,102.63Q669.04,106.56,677.27,106.56C681.911693,106.599077,686.543383,106.122828,691.08,105.14C695.792525,104.012605,700.371656,102.386779,704.74,100.29L704.74,120.77C700.380907,123.012723,695.718764,124.60944,690.9,125.51C685.266701,126.450931,679.56092,126.889323,673.85,126.82ZM672.18,60.73C669.065377,60.636514,666.039644,61.775656,663.76,63.9Q660.37,67.07,659.76,73.84L684.24,73.84C684.327092,70.352192,683.123477,66.955007,680.86,64.3C678.628057,61.897769,675.456214,60.593221,672.18,60.73Z" transform="matrix(1 0 0 1 -9.74 48.076465)" fill="rgb(255,255,255)" stroke="rgb(255,204,51)" stroke-width="3" stroke-linecap="round"/>
+							<path id="we-are-driven--path6" d="M790.66,126.82C785.1074,126.932442,779.678816,125.171059,775.25,121.82Q768.65,116.82,765.05,107.03C762.507055,99.700021,761.28478,91.977001,761.44,84.22Q761.44,64.11,769.53,52.74Q777.62,41.37,791.75,41.37C795.963055,41.27927,800.133273,42.230794,803.89,44.14Q809.1,46.92,813.4,53.47L814,53.47C813.074633,47.051464,812.610112,40.574899,812.61,34.09L812.61,12L841.3,12L841.3,125.36L819.81,125.36L813.69,114.94L812.59,114.94Q805.24,126.82,790.66,126.82ZM802.32,104.3Q809.17,104.3,811.97,100Q814.77,95.7,814.97,86.74L814.97,84.48Q814.97,73.56,811.84,68.92Q808.71,64.28,802,64.3Q796.39,64.3,793.29,69.58Q790.19,74.86,790.19,84.58Q790.19,94.2,793.33,99.22C795.152982,102.449209,798.613231,104.4045,802.32,104.3Z" transform="matrix(1 0 0 1 -9.74 48.076465)" fill="rgb(255,204,51)" stroke="rgb(255,255,255)" stroke-width="3" stroke-linecap="round"/>
+							<path id="we-are-driven--path7" d="M910.82,41.34C913.189263,41.332618,915.554732,41.530019,917.89,41.93L919.49,42.22L916.94,69.11C913.755762,68.437176,910.50335,68.141807,907.25,68.23Q897.92,68.23,893.7,72.5Q889.48,76.77,889.47,84.77L889.47,125.36L861,125.36L861,42.8L882.2,42.8L886.63,56L888,56C890.358416,51.659773,893.804398,48.007032,898,45.4C901.793955,42.841924,906.245141,41.432266,910.82,41.34Z" transform="matrix(1 0 0 1 -9.74 48.076465)" fill="rgb(255,204,51)" stroke="rgb(255,255,255)" stroke-width="3" stroke-linecap="round"/>
+							<path id="we-are-driven--path8" d="M930.42,22.25Q930.42,15.85,933.99,12.71Q937.56,9.57,945.5,9.57Q953.45,9.57,957.09,12.78Q960.73,15.99,960.73,22.25Q960.73,34.79,945.5,34.79Q930.43,34.79,930.42,22.25ZM959.64,125.36L931.15,125.36L931.15,42.8L959.64,42.8Z" transform="matrix(1 0 0 1 -9.74 48.076465)" fill="rgb(255,204,51)" stroke="rgb(255,255,255)" stroke-width="3" stroke-linecap="round"/>
+							<path id="we-are-driven--path9" d="M1001.17,125.36L969.7,42.8L999.43,42.8L1013.43,91.62C1013.43,91.87,1013.57,92.28,1013.72,92.86C1013.87,93.44,1014.01,94.14,1014.16,94.94C1014.31,95.74,1014.43,96.59,1014.56,97.49C1014.675082,98.321803,1014.735212,99.160287,1014.74,100L1015.25,100C1015.293264,97.208346,1015.73437,94.437122,1016.56,91.77L1031.21,42.77L1060.86,42.77L1029.38,125.33Z" transform="matrix(1 0 0 1 -9.74 48.076465)" fill="rgb(255,204,51)" stroke="rgb(255,255,255)" stroke-width="3" stroke-linecap="round"/>
+							<path id="we-are-driven--path10" d="M1110.55,126.82Q1089.93,126.82,1078.55,115.82Q1067.17,104.82,1067.15,84.6Q1067.15,63.69,1077.71,52.5Q1088.27,41.31,1107.88,41.31Q1126.54,41.31,1136.7,51.04Q1146.86,60.77,1146.87,79.04L1146.87,91.77L1095.9,91.77C1095.897769,95.96232,1097.754661,99.939805,1100.97,102.63Q1105.74,106.56,1113.97,106.56C1118.611744,106.60015,1123.243552,106.123889,1127.78,105.14C1132.492979,104.014138,1137.07227,102.388255,1141.44,100.29L1141.44,120.77C1137.080907,123.012723,1132.418764,124.60944,1127.6,125.51C1121.966777,126.451561,1116.26094,126.889957,1110.55,126.82ZM1108.87,60.73C1105.758076,60.634807,1102.734823,61.774368,1100.46,63.9Q1097.07,67.07,1096.46,73.84L1121,73.84C1121.079597,70.351645,1119.872948,66.955941,1117.61,64.3C1115.366655,61.877945,1112.167534,60.57121,1108.87,60.73Z" transform="matrix(1 0 0 1 -9.74 48.076465)" fill="rgb(255,204,51)" stroke="rgb(255,255,255)" stroke-width="3" stroke-linecap="round"/>
+							<path id="we-are-driven--path11" d="M1215,125.36L1215,80.36Q1215,72.13,1212.63,67.93C1211.12014,65.176123,1208.154454,63.543242,1205.02,63.74Q1197.81,63.74,1194.6,69.5Q1191.39,75.26,1191.39,89.25L1191.39,125.39L1162.9,125.39L1162.9,42.8L1184.4,42.8L1188,53L1189.67,53C1192.075626,49.136347,1195.592689,46.089853,1199.76,44.26C1204.438636,42.240556,1209.495026,41.244962,1214.59,41.34Q1228.3,41.34,1235.91,49.29Q1243.52,57.24,1243.52,71.66L1243.52,125.36Z" transform="matrix(1 0 0 1 -9.74 48.076465)" fill="rgb(255,204,51)" stroke="rgb(255,255,255)" stroke-width="3" stroke-linecap="round"/>
+						</g>
+					</g>
+				</svg>
+			</div>
+
+		</div>
+
+	</div>
+
+    </div>
+  </div>
+
+
+
+
+
+
+  <div class="layout-white-box layout--narrow layout layout-container layout--onecol">
+    <div class="layout__region layout__region--content region-full">
+      <div data-block-plugin-id="entity_view:group" class="block block-ctools block-entity-view--group">
+  
+    
+      
+<div class="group group--title-block group--unit group--view-mode-title-block">
+            <h1>
+            
+            <div class="field field--name-field-display-name field--type-string field--label-hidden field__item">College of Liberal Arts</div>
+      
+        </h1>
+    
+    <div class="group--title-block--positioning-statement">
+        
+            <div class="clearfix text-formatted field field--name-field-body field--type-text-with-summary field--label-hidden field__item"><p>We’re a liberal arts college in a top-ranked research university, located in the heart of the Twin Cities business and non-profit communities, driven by a purpose to do the most good we can for others.</p>
+</div>
+      
+    </div>
+
+</div>
+
+  </div>
+
+    </div>
+  </div>
+
+
+
+  <div class="layout--narrow layout layout-container layout--onecol">
+    <div class="layout__region layout__region--content region-full">
+      
+<div data-block-plugin-id="inline_block:super_block" data-inline-block-uuid="e230656b-3248-4860-bb16-d250b79481ac" class="block block-layout-builder block-inline-block--super-block remove-gold-bar">
+    
+
+      
+          
+    
+    
+          
+      <div class="field field--name-field-block-components field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">  <div class="paragraph paragraph--type--button-set paragraph--view-mode--default">
+          
+      <div class="field field--name-field-links field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">  <div class="paragraph paragraph--type--button-row paragraph--view-mode--default">
+          
+      <div class="field field--name-field-link field--type-link field--label-hidden field__items">
+              <div class="field__item"><a href="/future-undergrads">Future Undergrads</a></div>
+              <div class="field__item"><a href="/undergraduate-students">Undergraduate Students</a></div>
+              <div class="field__item"><a href="/graduate-students">Graduate Students</a></div>
+          </div>
+  
+      </div>
+</div>
+          </div>
+  
+      </div>
+</div>
+          </div>
+  
+    
+          
+    
+  </div>
+
+
+
+<div data-block-plugin-id="inline_block:cta" data-inline-block-uuid="55bc761c-cd00-4ddb-9303-3bfaba94b1b4" class="block block-layout-builder block-inline-block--cta block-inline-block--cta--view-mode--cta-image-right">
+	
+			<div
+			class="inline-block--cta--wrapper">
+										<div class="inline-block--cta--image">
+					
+            <div class="field field--name-field-image field--type-entity-reference field--label-hidden field__item"><article class="media media--type-image media--view-mode-teaser-landscape">
+        
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="/sites/cla.umn.edu/files/styles/teaser_image/public/DeanAvilez-AD-19-870x580%20%281%29.jpg?h=2d235432&amp;itok=xQKTycIp" width="570" height="380" alt="Dean GerShun Avilez" typeof="foaf:Image" class="image-style-teaser-image" />
+
+
+</div>
+      
+  </article>
+</div>
+      
+				</div>
+			
+			<div class="inline-block--cta--body">
+
+							<h2>Meet GerShun Avilez, Dean of the College of Liberal Arts</h2>
+			
+			
+            <div class="clearfix text-formatted field field--name-field-body field--type-text-long field--label-hidden field__item"><p>GerShun Avilez is a pre-eminent cultural studies scholar who specializes in contemporary African American and Black Diasporic literature and visual culture.</p>
+<p><a class="btn-primary" href="/about/college-leadership/deans-corner" data-entity-type="node" data-entity-uuid="856ce25f-14ed-4557-a16f-2fd5ff5a1570" data-entity-substitution="canonical" title="Dean's Corner">Learn more about Dean Avilez</a></p>
+</div>
+      
+
+			</div>
+
+		</div>
+	</div>
+
+<div data-block-plugin-id="inline_block:super_block" data-inline-block-uuid="e724be63-86ed-40c8-aca0-285ed865f38c" class="block block-layout-builder block-inline-block--super-block">
+    
+
+      
+          
+      <div class="field field--name-field-header-components field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">  <div class="paragraph paragraph--type--hero-image paragraph--view-mode--default">
+          
+            <div class="field field--name-field-image field--type-entity-reference field--label-hidden field__item"><article class="media media--type-hero-image media--view-mode-hero-image">
+        
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="/sites/cla.umn.edu/files/styles/hero_image/public/2021-08/sara_algeri_videoframegrab-hero.jpg?h=57013b68&amp;itok=lOi3S22G" width="1440" height="500" alt="Closeup of Professor Sara Algeri drawing formulas on glass board" typeof="foaf:Image" class="image-style-hero-image" />
+
+
+</div>
+      
+  </article>
+</div>
+      
+      </div>
+</div>
+              <div class="field__item">  <div class="paragraph paragraph--type--statistic-set paragraph--view-mode--default">
+          
+      <div class="field field--name-field-paragraph-reference field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">  <div class="paragraph paragraph--type--statistic-item paragraph--view-mode--default">
+          
+            <div class="field field--name-field-title field--type-string field--label-hidden field__item">1,000s</div>
+      
+            <div class="field field--name-field-textbox-plain-long field--type-string-long field--label-hidden field__item">internships and research opportunities</div>
+      
+      </div>
+</div>
+              <div class="field__item">  <div class="paragraph paragraph--type--statistic-item paragraph--view-mode--default">
+          
+            <div class="field field--name-field-title field--type-string field--label-hidden field__item">60+</div>
+      
+            <div class="field field--name-field-textbox-plain-long field--type-string-long field--label-hidden field__item">undergraduate majors</div>
+      
+      </div>
+</div>
+              <div class="field__item">  <div class="paragraph paragraph--type--statistic-item paragraph--view-mode--default">
+          
+            <div class="field field--name-field-title field--type-string field--label-hidden field__item">30+</div>
+      
+            <div class="field field--name-field-textbox-plain-long field--type-string-long field--label-hidden field__item">graduate and professional degrees</div>
+      
+      </div>
+</div>
+          </div>
+  
+      </div>
+</div>
+          </div>
+  
+    
+          <h2>Diverse Interests, Common Mission</h2>
+    
+          
+      <div class="field field--name-field-block-components field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">
+  <div class="paragraph paragraph--type--content-summary-set paragraph--view-mode--float-image-left">
+          
+      <div class="field field--name-field-paragraph-reference field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">  <div class="paragraph paragraph--type--content-summary paragraph--view-mode--float-image-left">
+          
+            <div class="content-summary--body--center">
+                
+            <div class="clearfix text-formatted field field--name-field-body field--type-text-long field--label-hidden field__item"><p>With a major for every interest and faculty ready to inspire your thinking, the College of Liberal Arts at the University of Minnesota Twin Cities is your opportunity to move beyond what you know. And to discover what you don't.</p>
+</div>
+            
+      </div>
+      </div>
+</div>
+          </div>
+  
+      </div>
+</div>
+          </div>
+  
+    
+          
+      <div class="field field--name-field-footer-component field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">  <div class="paragraph paragraph--type--text-block paragraph--view-mode--default">
+          
+            <div class="clearfix text-formatted field field--name-field-body field--type-text-long field--label-hidden field__item"><h2>What will you study?</h2>
+</div>
+      
+      </div>
+</div>
+              <div class="field__item">  <div class="paragraph paragraph--type--button-set paragraph--view-mode--default">
+          
+      <div class="field field--name-field-links field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">  <div class="paragraph paragraph--type--button-row paragraph--view-mode--default">
+          
+      <div class="field field--name-field-link field--type-link field--label-hidden field__items">
+              <div class="field__item"><a href="/academics/majors-minors-programs">Majors, Minors &amp; Programs</a></div>
+          </div>
+  
+      </div>
+</div>
+          </div>
+  
+      </div>
+</div>
+          </div>
+  
+    
+  </div>
+
+<div data-block-plugin-id="inline_block:super_block" data-inline-block-uuid="a64a9b18-ade7-4dc9-85de-a7162d5d2fca" class="block block-layout-builder block-inline-block--super-block remove-gold-bar">
+    
+
+      
+          
+      <div class="field field--name-field-header-components field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">  <div class="paragraph paragraph--type--hero-image paragraph--view-mode--default">
+          
+            <div class="field field--name-field-image field--type-entity-reference field--label-hidden field__item"><article class="media media--type-hero-image media--view-mode-hero-image">
+        
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="/sites/cla.umn.edu/files/styles/hero_image/public/2023-07/CChero2023_1.png?h=57013b68&amp;itok=9l5vDWDI" width="1440" height="500" alt="Core Competencies wheel" typeof="foaf:Image" class="image-style-hero-image" />
+
+
+</div>
+      
+  </article>
+</div>
+      
+      </div>
+</div>
+          </div>
+  
+    
+          <h2>The Liberal Arts Advantage</h2>
+    
+          
+      <div class="field field--name-field-block-components field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">
+  <div class="paragraph paragraph--type--content-summary-set paragraph--view-mode--text-only">
+          
+      <div class="field field--name-field-paragraph-reference field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">  <div class="paragraph paragraph--type--content-summary paragraph--view-mode--text-only">
+          
+            <div class="content-summary--body--center">
+                
+            <div class="clearfix text-formatted field field--name-field-body field--type-text-long field--label-hidden field__item"><p>A liberal arts education never stops being relevant to today — or to tomorrow!</p>
+<p>The <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="9bb1be26-c82c-4f8c-9d0b-e15b66a7c928" href="/undergraduate-students/cla-core-competencies" title="CLA Core Competencies"><strong>10 Core Competencies</strong></a>&nbsp;students develop in CLA are learning outcomes that prepare them to thrive in their career and in life, even during uncertain and dynamic times. CLA specializes in making sure every student knows exactly why their core competencies are so attractive to employers.</p>
+<p>It's what makes CLA a national leader in career readiness for liberal arts students.</p>
+</div>
+            
+      </div>
+      </div>
+</div>
+          </div>
+  
+      </div>
+</div>
+              <div class="field__item">  <div class="paragraph paragraph--type--button-set paragraph--view-mode--default">
+          
+      <div class="field field--name-field-links field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">  <div class="paragraph paragraph--type--button-row paragraph--view-mode--default">
+          
+      <div class="field field--name-field-link field--type-link field--label-hidden field__items">
+              <div class="field__item"><a href="/undergraduate-students/cla-core-competencies">Core Competencies</a></div>
+              <div class="field__item"><a href="/undergraduate-students/cla-core-competencies/cla-career-hub">CLA Career Hub</a></div>
+              <div class="field__item"><a href="https://cla.umn.edu/career-readiness">Career Readiness Initiative</a></div>
+          </div>
+  
+      </div>
+</div>
+          </div>
+  
+      </div>
+</div>
+          </div>
+  
+    
+          
+    
+  </div>
+
+<div data-block-plugin-id="inline_block:super_block" data-inline-block-uuid="0152c0ff-48e0-4654-9662-e35e3fd5ffd7" class="block block-layout-builder block-inline-block--super-block">
+    
+
+      
+          
+    
+          <h2>Diversity, Equity, and Inclusion</h2>
+    
+          
+      <div class="field field--name-field-block-components field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">
+  <div class="paragraph paragraph--type--content-summary-set paragraph--view-mode--float-image-right">
+          
+      <div class="field field--name-field-paragraph-reference field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">  <div class="paragraph paragraph--type--content-summary paragraph--view-mode--float-image-right">
+          
+              <div class="content-summary--image">
+          
+            <div class="field field--name-field-image field--type-entity-reference field--label-hidden field__item"><article class="media media--type-image media--view-mode-teaser-landscape">
+        
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="/sites/cla.umn.edu/files/styles/teaser_image/public/unsorted/images/lam_8186_0.jpg?h=2d235432&amp;itok=qwRmU0F8" width="570" height="380" alt="RIGS Research Circle with 7 people gathered around a table" typeof="foaf:Image" class="image-style-teaser-image" />
+
+
+</div>
+      
+  </article>
+</div>
+      
+        </div>
+            <div class="content-summary--body">
+                
+            <div class="clearfix text-formatted field field--name-field-body field--type-text-long field--label-hidden field__item"><p>CLA is&nbsp;a destination for curious, compassionate individuals who are committed to making our increasingly interdependent and diverse global community work for everyone.</p>
+<p><a class="btn-primary" data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="6e5ebb5f-f6a3-4406-8c52-2cd499d46e3d" href="/about/diversity-equity-inclusion-cla" title="Diversity, Equity &amp; Inclusion in CLA">Read more about&nbsp;Diversity, Equity, and Inclusion in CLA</a></p>
+</div>
+            
+      </div>
+      </div>
+</div>
+          </div>
+  
+      </div>
+</div>
+          </div>
+  
+    
+          
+    
+  </div>
+
+<div data-block-plugin-id="inline_block:super_block" data-inline-block-uuid="51adb7e1-073c-4cc1-ac60-69adfb39951e" class="block block-layout-builder block-inline-block--super-block remove-gold-bar">
+    
+
+      
+          
+    
+    
+          
+    
+          
+      <div class="field field--name-field-footer-component field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">  <div class="paragraph paragraph--type--text-block paragraph--view-mode--default">
+          
+            <div class="clearfix text-formatted field field--name-field-body field--type-text-long field--label-hidden field__item"><h2>Undergraduate Admissions Next Steps</h2>
+</div>
+      
+      </div>
+</div>
+              <div class="field__item">  <div class="paragraph paragraph--type--button-set paragraph--view-mode--default">
+          
+      <div class="field field--name-field-links field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">  <div class="paragraph paragraph--type--button-row paragraph--view-mode--default">
+          
+      <div class="field field--name-field-link field--type-link field--label-hidden field__items">
+              <div class="field__item"><a href="https://admissions.tc.umn.edu/visit/visit-us">Visit</a></div>
+              <div class="field__item"><a href="http://admissions.tc.umn.edu/apply">Apply</a></div>
+              <div class="field__item"><a href="http://z.umn.edu/contactadmissions">Request Information</a></div>
+          </div>
+  
+      </div>
+</div>
+          </div>
+  
+      </div>
+</div>
+          </div>
+  
+    
+  </div>
+
+    </div>
+  </div>
+
+
+
+  <div class="layout--narrow layout layout-container layout--onecol">
+    <div class="layout__region layout__region--content region-full">
+      <div class="views-element-container block block-views block-views-block--articles-block-recent" data-block-plugin-id="views_block:articles-block_recent">
+  
+      <h2>Recent News</h2>
+    
+      <div><div class="view view-articles view-id-articles view-display-id-block_recent js-view-dom-id-0ca5576a7882d9ff9d12d1a3f9c5f969c24fb8de08891735a5279a440cdff774">
+  
+    
+      
+      <div class="view-content">
+          <div class="views-row">
+<article about="/psychology/news-events/story/psychologys-capstone-borine-awards-fall-2025" class="node node--type-article node--view-mode-content-teaser-listing">
+
+  <div class="node__content">
+
+        <div class="content-teaser-listing--image">
+              
+            <div class="field field--name-field-teaser-image field--type-entity-reference field--label-hidden field__item"><article class="media media--type-image media--view-mode-teaser-landscape">
+        
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="/sites/cla.umn.edu/files/styles/teaser_image/public/Fall%202025%20Borine%20Recipients.png?h=8abcec71&amp;itok=RKuBlWSM" width="570" height="380" alt="(From left to right) Andrew Ramirez, Audrey Ronan, and Shaye O’Neil " typeof="foaf:Image" class="image-style-teaser-image" />
+
+
+</div>
+      
+  </article>
+</div>
+            
+          </div>
+
+    <div class="content-teaser-listing--body">
+      
+              
+      <h3>
+        <a href="/psychology/news-events/story/psychologys-capstone-borine-awards-fall-2025" rel="bookmark"><span class="field field--name-title field--type-string field--label-hidden">Psychology’s Capstone Borine Awards Fall 2025</span>
+</a>
+      </h3>
+
+      
+            <div class="field field--name-field-teaser-text field--type-string-long field--label-hidden field__item">  <p>Congratulations to the Fall 2025 recipients of the Sharon Borine Award!</p>
+
+
+</div>
+      
+
+    </div>
+
+  </div>
+
+</article>
+</div>
+    <div class="views-row">
+<article about="/english/news-events/profile/meet-assistant-professor-tosin-gbogi" class="node node--type-article node--view-mode-content-teaser-listing">
+
+  <div class="node__content">
+
+        <div class="content-teaser-listing--image">
+              
+            <div class="field field--name-field-teaser-image field--type-entity-reference field--label-hidden field__item"><article class="media media--type-image media--view-mode-teaser-landscape">
+        
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="/sites/cla.umn.edu/files/styles/teaser_image/public/Gbogi_Tosin_870.jpg?h=a328976e&amp;itok=xAlNqqFL" width="570" height="380" alt="ENGLISH: Tosin Gbogi" typeof="foaf:Image" class="image-style-teaser-image" />
+
+
+</div>
+      
+  </article>
+</div>
+            
+          </div>
+
+    <div class="content-teaser-listing--body">
+      
+              
+      <h3>
+        <a href="/english/news-events/profile/meet-assistant-professor-tosin-gbogi" rel="bookmark"><span class="field field--name-title field--type-string field--label-hidden">Meet Assistant Professor Tosin Gbogi</span>
+</a>
+      </h3>
+
+      
+            <div class="field field--name-field-teaser-text field--type-string-long field--label-hidden field__item">  <p>The literary scholar, linguist, and poet just published a book about Nigerian hip-hop.</p>
+
+
+</div>
+      
+
+    </div>
+
+  </div>
+
+</article>
+</div>
+    <div class="views-row">
+<article about="/english/news-events/profile/meet-assistant-professor-beatrice-bradley" class="node node--type-article node--view-mode-content-teaser-listing">
+
+  <div class="node__content">
+
+        <div class="content-teaser-listing--image">
+              
+            <div class="field field--name-field-teaser-image field--type-entity-reference field--label-hidden field__item"><article class="media media--type-image media--view-mode-teaser-landscape">
+        
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="/sites/cla.umn.edu/files/styles/teaser_image/public/Bradley%20Beatrice.jpg?h=a328976e&amp;itok=nhDmENQS" width="570" height="380" alt="ENGLISH: Beatrice Bradley" typeof="foaf:Image" class="image-style-teaser-image" />
+
+
+</div>
+      
+  </article>
+</div>
+            
+          </div>
+
+    <div class="content-teaser-listing--body">
+      
+              
+      <h3>
+        <a href="/english/news-events/profile/meet-assistant-professor-beatrice-bradley" rel="bookmark"><span class="field field--name-title field--type-string field--label-hidden">Meet Assistant Professor Beatrice Bradley</span>
+</a>
+      </h3>
+
+      
+            <div class="field field--name-field-teaser-text field--type-string-long field--label-hidden field__item">  <p>The new faculty member is writing a book on early modern writers and “the erotics of sweat.&quot;</p>
+
+
+</div>
+      
+
+    </div>
+
+  </div>
+
+</article>
+</div>
+    <div class="views-row">
+<article about="/english/news-events/profile/kathryn-nuernberger-her-lyric-essay-collection-held" class="node node--type-article node--view-mode-content-teaser-listing">
+
+  <div class="node__content">
+
+        <div class="content-teaser-listing--image">
+              
+            <div class="field field--name-field-teaser-image field--type-entity-reference field--label-hidden field__item"><article class="media media--type-image media--view-mode-teaser-landscape">
+        
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="/sites/cla.umn.edu/files/styles/teaser_image/public/Nuernberger%20Held%20Banner.jpg?h=2d235432&amp;itok=o6NzQUcZ" width="570" height="380" alt="Prof Kathryn Nuernberger next to book cover of Held: Essays in Belonging" typeof="foaf:Image" class="image-style-teaser-image" />
+
+
+</div>
+      
+  </article>
+</div>
+            
+          </div>
+
+    <div class="content-teaser-listing--body">
+      
+              
+      <h3>
+        <a href="/english/news-events/profile/kathryn-nuernberger-her-lyric-essay-collection-held" rel="bookmark"><span class="field field--name-title field--type-string field--label-hidden">Kathryn Nuernberger on Her Lyric Essay Collection HELD</span>
+</a>
+      </h3>
+
+      
+            <div class="field field--name-field-teaser-text field--type-string-long field--label-hidden field__item">  <p>The professor’s sixth book juxtaposes symbiotic mutualisms and grief around climate change.</p>
+
+
+</div>
+      
+
+    </div>
+
+  </div>
+
+</article>
+</div>
+    <div class="views-row">
+<article about="/english/news-events/news/bringing-literature-life" class="node node--type-article node--view-mode-content-teaser-listing">
+
+  <div class="node__content">
+
+        <div class="content-teaser-listing--image">
+              
+            <div class="field field--name-field-teaser-image field--type-entity-reference field--label-hidden field__item"><article class="media media--type-image media--view-mode-teaser-landscape">
+        
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="/sites/cla.umn.edu/files/styles/teaser_image/public/ENG_Abdurraqib_winners_870.jpg?h=2d235432&amp;itok=I-rzBW-Q" width="570" height="380" alt="Author Hanif Abdurraqib with two poetry contest winners" typeof="foaf:Image" class="image-style-teaser-image" />
+
+
+</div>
+      
+  </article>
+</div>
+            
+          </div>
+
+    <div class="content-teaser-listing--body">
+      
+              
+      <h3>
+        <a href="/english/news-events/news/bringing-literature-life" rel="bookmark"><span class="field field--name-title field--type-string field--label-hidden">Bringing Literature to Life</span>
+</a>
+      </h3>
+
+      
+            <div class="field field--name-field-teaser-text field--type-string-long field--label-hidden field__item">  <p>Twin Cities high school students meet a celebrated writer through the College in the Schools Literature Program.</p>
+
+
+</div>
+      
+
+    </div>
+
+  </div>
+
+</article>
+</div>
+
+    </div>
+  
+            <div class="view-footer">
+      <p><a class="more-link" href="/news-events/news">More News</a></p>
+
+    </div>
+    </div>
+</div>
+
+  </div>
+<div class="views-element-container block block-views block-views-block--events-block-upcoming" data-block-plugin-id="views_block:events-block_upcoming">
+  
+      <h2>Upcoming Events</h2>
+    
+      <div><div class="view view-events view-id-events view-display-id-block_upcoming js-view-dom-id-b6b0d878740cbf07343cbd50fceadad221e651ac1e191cace19ace6cf589d6b1">
+  
+    
+      
+      <div class="view-content">
+          <div class="views-row">
+<article about="https://www.northrop.umn.edu/events/sounds-of-the-season-relaxed-matinee-greg-zelek-2025" class="node node--type-event node--view-mode-content-teaser-listing">
+
+  <div class="node__content">
+
+        <div class="content-teaser-listing--image">
+              
+            <div class="field field--name-field-teaser-image field--type-entity-reference field--label-hidden field__item"><article class="media media--type-image media--view-mode-teaser-landscape">
+        
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="/sites/cla.umn.edu/files/styles/teaser_image/public/Screenshot%202025-08-22%20at%2012.59.50%E2%80%AFPM.png?h=78c624aa&amp;itok=-ZoFioyn" width="570" height="380" alt="Organist Greg Zelek performs on his organ with an image of a tree covered in snow. " typeof="foaf:Image" class="image-style-teaser-image" />
+
+
+</div>
+      
+  </article>
+</div>
+            
+          </div>
+
+    <div class="content-teaser-listing--body">
+      
+              <div class="content-teaser-listing--event-details">
+        
+            <div class="field field--name-field-event-type field--type-entity-reference field--label-hidden field__item">In-Person</div>
+       <span class="visually-hidden">Event, </span>
+        
+            <div class="field field--name-field-event-date-range field--type-smartdate field--label-hidden field__item"><time datetime="2025-12-20T15:00:00-06:00" class="datetime">December 20, 2025</time>
+</div>
+       
+      </div>
+          
+      <h3>
+        <a href="https://www.northrop.umn.edu/events/sounds-of-the-season-relaxed-matinee-greg-zelek-2025" rel="bookmark"><span class="field field--name-title field--type-string field--label-hidden">Northrop Presents Sounds of the Season: Relaxed Matinee With Organist Greg Zelek</span>
+</a>
+      </h3>
+
+      
+            <div class="field field--name-field-teaser-text field--type-string-long field--label-hidden field__item">  <p>Tickets required. Gather your family and friends to experience the magic of the season! Northrop Organist Greg Zelek will fill the air with joy, performing beloved holiday…</p>
+
+
+</div>
+      
+
+    </div>
+
+  </div>
+
+</article>
+</div>
+    <div class="views-row">
+<article about="/theatre/news-events/events/energy-u-0" class="node node--type-event node--view-mode-content-teaser-listing">
+
+  <div class="node__content">
+
+        <div class="content-teaser-listing--image">
+              
+            <div class="field field--name-field-teaser-image field--type-entity-reference field--label-hidden field__item"><article class="media media--type-image media--view-mode-teaser-landscape">
+        
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="/sites/cla.umn.edu/files/styles/teaser_image/public/Event_generic-870x580px_6.png?h=02eed7a7&amp;itok=tQWFSVI0" width="570" height="380" alt="Santino Fontana Q&amp;A" typeof="foaf:Image" class="image-style-teaser-image" />
+
+
+</div>
+      
+  </article>
+</div>
+            
+          </div>
+
+    <div class="content-teaser-listing--body">
+      
+              <div class="content-teaser-listing--event-details">
+        
+            <div class="field field--name-field-event-type field--type-entity-reference field--label-hidden field__item">In-Person</div>
+       <span class="visually-hidden">Event, </span>
+        
+            <div class="field field--name-field-event-date-range field--type-smartdate field--label-hidden field__item"><time datetime="2026-01-10T14:00:00-06:00" class="datetime">January 10, 2026</time>
+</div>
+       
+      </div>
+          
+      <h3>
+        <a href="/theatre/news-events/events/energy-u-0" rel="bookmark"><span class="field field--name-title field--type-string field--label-hidden">Energy &amp; U</span>
+</a>
+      </h3>
+
+      
+            <div class="field field--name-field-teaser-text field--type-string-long field--label-hidden field__item">  <p>A high-energy educational collaboration between the UMN Departments of Chemistry and Theater Arts &amp; Dance</p>
+
+
+</div>
+      
+
+    </div>
+
+  </div>
+
+</article>
+</div>
+    <div class="views-row">
+<article about="/liberal-arts-engagement-hub/news-events/events/2026-27-residency-info-session" class="node node--type-event node--view-mode-content-teaser-listing">
+
+  <div class="node__content">
+
+        <div class="content-teaser-listing--image">
+              
+            <div class="field field--name-field-teaser-image field--type-entity-reference field--label-hidden field__item"><article class="media media--type-image media--view-mode-teaser-landscape">
+        
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="/sites/cla.umn.edu/files/styles/teaser_image/public/CLA%20Event%20Page%20870x580%20%283%29.jpg?h=2d235432&amp;itok=OOZoyk5y" width="570" height="380" alt="Text on a mint blue background reads: 2026-27 Hub Residencies, Deadline to Apply March 6" typeof="foaf:Image" class="image-style-teaser-image" />
+
+
+</div>
+      
+  </article>
+</div>
+            
+          </div>
+
+    <div class="content-teaser-listing--body">
+      
+              <div class="content-teaser-listing--event-details">
+        
+            <div class="field field--name-field-event-type field--type-entity-reference field--label-hidden field__item">Online</div>
+       <span class="visually-hidden">Event, </span>
+        
+            <div class="field field--name-field-event-date-range field--type-smartdate field--label-hidden field__item"><time datetime="2026-01-13T12:00:00-06:00" class="datetime">January 13, 2026</time>
+</div>
+       
+      </div>
+          
+      <h3>
+        <a href="/liberal-arts-engagement-hub/news-events/events/2026-27-residency-info-session" rel="bookmark"><span class="field field--name-title field--type-string field--label-hidden">2026-27 Residency Info Session</span>
+</a>
+      </h3>
+
+      
+            <div class="field field--name-field-teaser-text field--type-string-long field--label-hidden field__item">  <p>Applications for 2026-2027 Hub Residencies are now open. Info sessions will be held for those who would like to learn more about Hub Residencies and the application criteria…</p>
+
+
+</div>
+      
+
+    </div>
+
+  </div>
+
+</article>
+</div>
+    <div class="views-row">
+<article about="/jewish-studies/news-events/events/jack-zipes-university-minnesota-emeritus-presents-never-ending-tales-antisemitism-jewish-creative" class="node node--type-event node--view-mode-content-teaser-listing">
+
+  <div class="node__content">
+
+        <div class="content-teaser-listing--image">
+              
+            <div class="field field--name-field-teaser-image field--type-entity-reference field--label-hidden field__item"><article class="media media--type-image media--view-mode-teaser-landscape">
+        
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="/sites/cla.umn.edu/files/styles/teaser_image/public/JackZipes.jpg?h=e0f37a88&amp;itok=mpywUHcJ" width="570" height="380" alt="Jack Zipes Headshot" typeof="foaf:Image" class="image-style-teaser-image" />
+
+
+</div>
+      
+  </article>
+</div>
+            
+          </div>
+
+    <div class="content-teaser-listing--body">
+      
+              <div class="content-teaser-listing--event-details">
+        
+            <div class="field field--name-field-event-type field--type-entity-reference field--label-hidden field__item">In-Person</div>
+       <span class="visually-hidden">Event, </span>
+        
+            <div class="field field--name-field-event-date-range field--type-smartdate field--label-hidden field__item"><time datetime="2026-01-21T19:30:00-06:00" class="datetime">January 21, 2026</time>
+</div>
+       
+      </div>
+          
+      <h3>
+        <a href="/jewish-studies/news-events/events/jack-zipes-university-minnesota-emeritus-presents-never-ending-tales-antisemitism-jewish-creative" rel="bookmark"><span class="field field--name-title field--type-string field--label-hidden">Jack Zipes, (University of Minnesota Emeritus) Presents: Never-Ending Tales: Antisemitism, Jewish Creative Resistance, and a Literature of Hope</span>
+</a>
+      </h3>
+
+      
+            <div class="field field--name-field-teaser-text field--type-string-long field--label-hidden field__item">  <p>This lecture will demonstrate how Jewish folk narratives and fantasy writing between 1870 and the 1930s, a period in which Jewish and especially Yiddish literature blossomed…</p>
+
+
+</div>
+      
+
+    </div>
+
+  </div>
+
+</article>
+</div>
+    <div class="views-row">
+<article about="/music/news-events/events/university-minnesota-twin-cities-high-school-honor-band-concert" class="node node--type-event node--view-mode-content-teaser-listing">
+
+  <div class="node__content">
+
+        <div class="content-teaser-listing--image">
+              
+            <div class="field field--name-field-teaser-image field--type-entity-reference field--label-hidden field__item"><article class="media media--type-image media--view-mode-teaser-landscape">
+        
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="/sites/cla.umn.edu/files/styles/teaser_image/public/high%20school%20honor%20band.jpg?h=c44fcfa1&amp;itok=9vqwFTLC" width="570" height="380" alt="University of Minnesota Twin Cities High School Honor Band performs on Ted Mann Concert Hall stage. " typeof="foaf:Image" class="image-style-teaser-image" />
+
+
+</div>
+      
+  </article>
+</div>
+            
+          </div>
+
+    <div class="content-teaser-listing--body">
+      
+              <div class="content-teaser-listing--event-details">
+        
+            <div class="field field--name-field-event-type field--type-entity-reference field--label-hidden field__item">In-Person</div>
+       <span class="visually-hidden">Event, </span>
+        
+            <div class="field field--name-field-event-date-range field--type-smartdate field--label-hidden field__item"><time datetime="2026-01-25T13:30:00-06:00" class="datetime">January 25, 2026</time>
+</div>
+       
+      </div>
+          
+      <h3>
+        <a href="/music/news-events/events/university-minnesota-twin-cities-high-school-honor-band-concert" rel="bookmark"><span class="field field--name-title field--type-string field--label-hidden">University of Minnesota - Twin Cities High School Honor Band Concert</span>
+</a>
+      </h3>
+
+      
+            <div class="field field--name-field-teaser-text field--type-string-long field--label-hidden field__item">  <p>Approximately 100 high school musicians from the Midwest will experience a weekend of music-making on the stage of Ted Mann Concert Hall.</p>
+
+
+</div>
+      
+
+    </div>
+
+  </div>
+
+</article>
+</div>
+    <div class="views-row">
+<article about="https://z.umn.edu/Jan27" class="node node--type-event node--view-mode-content-teaser-listing">
+
+  <div class="node__content">
+
+        <div class="content-teaser-listing--image">
+              
+            <div class="field field--name-field-teaser-image field--type-entity-reference field--label-hidden field__item"><article class="media media--type-image media--view-mode-teaser-landscape">
+        
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="/sites/cla.umn.edu/files/styles/teaser_image/public/Small%20Image%20for%20Transgender%20Jews%20and%20the%20Holocaust.png?h=2d235432&amp;itok=rwnVFYQE" width="570" height="380" alt="Charlotte Charlaque" typeof="foaf:Image" class="image-style-teaser-image" />
+
+
+</div>
+      
+  </article>
+</div>
+            
+          </div>
+
+    <div class="content-teaser-listing--body">
+      
+              <div class="content-teaser-listing--event-details">
+        
+            <div class="field field--name-field-event-type field--type-entity-reference field--label-hidden field__item">In-Person</div>
+       <span class="visually-hidden">Event, </span>
+        
+            <div class="field field--name-field-event-date-range field--type-smartdate field--label-hidden field__item"><time datetime="2026-01-27T18:00:00-06:00" class="datetime">January 27, 2026</time>
+</div>
+       
+      </div>
+          
+      <h3>
+        <a href="https://z.umn.edu/Jan27" rel="bookmark"><span class="field field--name-title field--type-string field--label-hidden">Transgender Jews and the Holocaust: The Story of Charlotte Charlaque</span>
+</a>
+      </h3>
+
+      
+            <div class="field field--name-field-teaser-text field--type-string-long field--label-hidden field__item">  <p>This talk tells Charlaque&#039;s story as a way to explore the remarkable trans world of Weimar Berlin, destroyed in 1933, and the ways in which the fascists persecuted trans…</p>
+
+
+</div>
+      
+
+    </div>
+
+  </div>
+
+</article>
+</div>
+    <div class="views-row">
+<article about="/linguistics/news-events/events/naclo-2026-north-american-computational-linguistics-olympiad" class="node node--type-event node--view-mode-content-teaser-listing">
+
+  <div class="node__content">
+
+        <div class="content-teaser-listing--image">
+              
+            <div class="field field--name-field-teaser-image field--type-entity-reference field--label-hidden field__item"><article class="media media--type-image media--view-mode-teaser-landscape">
+        
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="/sites/cla.umn.edu/files/styles/teaser_image/public/NACLO_logo.png?h=2d235432&amp;itok=hd2avm4A" width="570" height="380" alt="NACLO Logo" title="NACLO Logo" typeof="foaf:Image" class="image-style-teaser-image" />
+
+
+</div>
+      
+  </article>
+</div>
+            
+          </div>
+
+    <div class="content-teaser-listing--body">
+      
+              <div class="content-teaser-listing--event-details">
+        
+            <div class="field field--name-field-event-type field--type-entity-reference field--label-hidden field__item">In-Person</div>
+       <span class="visually-hidden">Event, </span>
+        
+            <div class="field field--name-field-event-date-range field--type-smartdate field--label-hidden field__item"><time datetime="2026-01-29T09:00:00-06:00" class="datetime">January 29, 2026</time>
+</div>
+       
+      </div>
+          
+      <h3>
+        <a href="/linguistics/news-events/events/naclo-2026-north-american-computational-linguistics-olympiad" rel="bookmark"><span class="field field--name-title field--type-string field--label-hidden">NACLO 2026: North American Computational Linguistics Olympiad</span>
+</a>
+      </h3>
+
+      
+            <div class="field field--name-field-teaser-text field--type-string-long field--label-hidden field__item">  <p>The North American Computational Linguistics Olympiad is a contest in which high-school students solve linguistic problems.</p>
+
+
+</div>
+      
+
+    </div>
+
+  </div>
+
+</article>
+</div>
+
+    </div>
+  
+            <div class="view-footer">
+      <p><a class="more-link" href="/news-events/events">More Events</a></p>
+
+    </div>
+    </div>
+</div>
+
+  </div>
+
+    </div>
+  </div>
+
+    </div>
+
+</div>
+
+  </div>
+
+    </div>
+  </div>
+
+    </div>
+  </main>
+
+  
+</div>
+
+<footer id="footer">
+
+      <div class="region--college-footer-wrapper">
+      <div class="college-footer layout-container">
+          <div class="region region--college-footer clearfix" id="college-footer">
+    <div class="region__inner">
+      <div class="views-element-container block block-views block-views-block--units-block-footer-branding" id="block-views-block-units-block-footer-branding" data-block-plugin-id="views_block:units-block_footer_branding">
+  
+    
+      <div><div class="view view-units view-id-units view-display-id-block_footer_branding js-view-dom-id-9e1c37f6b4d174382a5d6ab2e0bc8ca1a61addb5837045607f99b9a52f8ceba3">
+  
+    
+      
+      <div class="view-content">
+          <div class="views-row"><div class="group group--branding group--unit">
+  <div>
+    <div class="group--unit--branding--wordmark">
+      <a href="/" alt="College of Liberal Arts' Homepage">
+        <img
+          src="/sites/cla.umn.edu/themes/custom/cla_folwell/dist/img/branding/cla-wordmark_grey-xdark.svg"
+          alt="College of Liberal Arts' wordmark"
+          width="250"
+          height="18" />
+      </a>
+    </div>
+    
+
+            <div class="field field--name-field-campus-address field--type-entity-reference field--label-hidden field__item"><div class="unit">
+  
+            <div class="field field--name-name field--type-string field--label-hidden field__item">215 Johnston Hall</div>
+      
+            <div class="field field--name-field-campus-building field--type-entity-reference field--label-hidden field__item"><div about="/taxonomy/term/112" id="taxonomy-term-112" class="taxonomy-term vocabulary-campus-building">
+  <div class="content">
+    
+            <div class="field field--name-field-address field--type-address field--label-hidden field__item"><p class="address" translate="no">
+      <span class="address-line1">101 Pleasant St. S.E.</span> <br>
+          <span class="locality">Minneapolis</span>, 
+         <span class="administrative-area">MN</span>
+        <span class="postal-code">55455</span>
+  </p>
+</div>
+      
+  </div>
+</div>
+</div>
+      </div>
+</div>
+      
+            <div class="field field--name-field-intranet-link field--type-link field--label-hidden field__item"><a href="https://neighborhood.cla.umn.edu">Intranet</a></div>
+      
+  </div>
+</div></div>
+
+    </div>
+  
+          </div>
+</div>
+
+  </div>
+<div class="views-element-container block block-views block-views-block--units-block-footer-connect" id="block-views-block-units-block-footer-connect" data-block-plugin-id="views_block:units-block_footer_connect">
+  
+      <h2>Connect</h2>
+    
+      <div><div class="view view-units view-id-units view-display-id-block_footer_connect js-view-dom-id-a084a1ad9bfb94b7d8037635e5b59f37f0c6950c34790720bf5f67272f7787cb">
+  
+    
+      
+      <div class="view-content">
+          <div class="views-row"><div class="group group--connect group--unit">
+  <div>
+    
+            <div class="field field--name-field-email field--type-email field--label-hidden field__item"><a href="/cdn-cgi/l/email-protection#5d3e313c1d28303373383928"><span class="__cf_email__" data-cfemail="6b08070a2b1e0605450e0f1e">[email&#160;protected]</span></a></div>
+      
+            <div class="field field--name-field-phone-number field--type-telephone field--label-hidden field__item"><a href="tel:612-625-2020">612-625-2020</a></div>
+      
+
+<ul class="social-media-links--platforms platforms inline horizontal">
+      <li>
+      <a class="social-media-link-icon--facebook" href="https://www.facebook.com/umncla"  target="_self" rel="nofollow" aria-label="Find / Follow us on Facebook" title="Find / Follow us on Facebook" >
+        <span class='fab fa-facebook fa-fw'></span>
+      </a>
+
+          </li>
+      <li>
+      <a class="social-media-link-icon--twitter" href="https://x.com/umncla"  target="_self" rel="nofollow" aria-label="Find / Follow us on Twitter" title="Find / Follow us on Twitter" >
+        <span class='fab fa-x-twitter fa-fw'></span>
+      </a>
+
+          </li>
+      <li>
+      <a class="social-media-link-icon--youtube" href="https://www.youtube.com/umncla"  target="_self" rel="nofollow" aria-label="Find / Follow us on YouTube" title="Find / Follow us on YouTube" >
+        <span class='fab fa-youtube fa-fw'></span>
+      </a>
+
+          </li>
+      <li>
+      <a class="social-media-link-icon--linkedin" href="https://www.linkedin.com/company/college-of-liberal-arts-at-the-university-of-minnesota"  target="_self" rel="nofollow" aria-label="Find / Follow us on LinkedIn" title="Find / Follow us on LinkedIn" >
+        <span class='fab fa-linkedin fa-fw'></span>
+      </a>
+
+          </li>
+      <li>
+      <a class="social-media-link-icon--instagram" href="https://www.instagram.com/umncla"  target="_self" rel="nofollow" aria-label="Find / Follow us on Instagram" title="Find / Follow us on Instagram" >
+        <span class='fab fa-instagram fa-fw'></span>
+      </a>
+
+          </li>
+      <li>
+      <a class="social-media-link-icon--bluesky" href="https://bsky.app/profile/umncla.bsky.social"  target="_self" rel="nofollow" >
+        <span class='fab fa-bluesky fa-fw'></span>
+      </a>
+
+          </li>
+  </ul>
+
+  </div>
+</div>
+</div>
+
+    </div>
+  
+          </div>
+</div>
+
+  </div>
+<div class="views-element-container block block-views block-views-block--units-block-footer-giving" id="block-views-block-units-block-footer-giving" data-block-plugin-id="views_block:units-block_footer_giving">
+  
+      <h2>Make a Gift</h2>
+    
+      <div><div class="view view-units view-id-units view-display-id-block_footer_giving js-view-dom-id-e10f0c971bc17b6ef5bda68e596ce26789d14bc82a98ab0ef6cb6664246ffd17">
+  
+    
+      
+      <div class="view-content">
+          <div class="views-row">
+<div class="group group--giving group--unit">
+  <div>
+    
+      <div class="field field--name-field-give-link field--type-link field--label-hidden field__item">
+      <div class="giving-text-wrapper">
+        Find information on ways to give to the College of Liberal Arts
+      </div>
+      <a href="/alumni-friends/give">Give</a>
+    </div>
+  
+  </div>
+</div></div>
+
+    </div>
+  
+          </div>
+</div>
+
+  </div>
+
+    </div>
+  </div>
+
+      </div>
+    </div>
+  
+      <div class="region--university-footer-wrapper">
+      <div class="university-footer layout-container">
+          <div class="region region--university-footer clearfix" id="university-footer">
+    <div class="region__inner">
+      <div id="block-cla-footer-block" data-block-plugin-id="cla_footer_block" class="block block- block-cla-footer-block">
+  
+    
+      <div class="university-footer"><span class="copyright-wrapper">© 2025 Regents of the University of Minnesota. All rights reserved. The <a href="https://system.umn.edu">University of Minnesota</a> is an equal opportunity educator and employer.</span> <span class="privacy-wrapper"><a href="https://twin-cities.umn.edu/privacy">Privacy Statement</a></span> <span class="accessibility-wrapper">CLA is committed to making its digital resources accessible. <a href="https://z.umn.edu/report-accessibility-issue">Report Web Disability-Related Issue</a></span> </div>
+
+  </div>
+
+    </div>
+  </div>
+
+      </div>
+    </div>
+  
+</footer>
+
+  </div>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>window.dataLayer = window.dataLayer || []; window.dataLayer.push({"drupalLanguage":"en","drupalCountry":"US","siteName":"College of Liberal Arts","entityCreated":"1627510159","entityLangcode":"en","entityStatus":"1","entityUid":"1","entityUuid":"f10c0b20-8bd6-473b-a7eb-e56b8fda8f5c","entityName":"oitadmin","entityType":"group","entityBundle":"unit","entityId":"1","entityTitle":"CLA","entityTaxonomy":{"unit_category":{"656":"CLA"},"unit_type":{"94":"College"}},"userUid":0});</script>
+
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"group\/1","currentPathIsAdmin":false,"isFront":true,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"dataLayer":{"defaultLang":"en","languages":{"en":{"id":"en","name":"English","direction":"ltr","weight":0}}},"data":{"extlink":{"extTarget":false,"extTargetAppendNewWindowDisplay":true,"extTargetAppendNewWindowLabel":"(opens in a new window)","extTargetNoOverride":false,"extNofollow":true,"extTitleNoOverride":false,"extNoreferrer":true,"extFollowNoOverride":true,"extClass":"0","extLabel":"(link is external)","extImgClass":false,"extSubdomains":true,"extExclude":"","extInclude":"","extCssExclude":"","extCssInclude":"","extCssExplicit":"","extAlert":false,"extAlertText":"This link will take you to an external web site. We are not responsible for their content.","extHideIcons":false,"mailtoClass":"0","telClass":"","mailtoLabel":"(link sends email)","telLabel":"(link is a phone number)","extUseFontAwesome":false,"extIconPlacement":"append","extPreventOrphan":false,"extFaLinkClasses":"fa fa-external-link","extFaMailtoClasses":"fa fa-envelope-o","extAdditionalLinkClasses":"","extAdditionalMailtoClasses":"","extAdditionalTelClasses":"","extFaTelClasses":"fa fa-phone","allowedDomains":[],"extExcludeNoreferrer":""}},"umn_search":{"cx":"002834015805923805805:c-0k--9bdkk","placeholder_text":null},"ajax":[],"user":{"uid":0,"permissionsHash":"eca505afc323ec0fca89f6fb7a120463a9054248e0e2e4c7493d0dfdcd78419f"}}</script>
+<script src="/core/assets/vendor/jquery/jquery.min.js?v=4.0.0-rc.1"></script>
+<script src="/sites/cla.umn.edu/files/js/js_sJzP9JVQ3TXAvdqpvdKpbjVBvVm1bBgJZvhVWK4A-fc.js?scope=footer&amp;delta=1&amp;language=en&amp;theme=cla_folwell&amp;include=eJx9jDEOAyEMBD-E8JPQAiagGIhs7i78PimuSJVuRiMNcl4TYxNu8EXnWC4JQplysQhFGLuMBcFmpcgVZ5tqjt9L2nhS1uMF8be68h3gYpud6Ye9nY9_zVtt3R19BGNoqpSMg7So0P0BhMlBzQ&amp;v=1.0.1"></script>
+<script src="https://static.addtoany.com/menu/page.js" defer></script>
+<script src="/sites/cla.umn.edu/files/js/js_xKFMgmANMUioBppZfawNT9_Qx05stK7DfI50Vx6a6RY.js?scope=footer&amp;delta=3&amp;language=en&amp;theme=cla_folwell&amp;include=eJx9jDEOAyEMBD-E8JPQAiagGIhs7i78PimuSJVuRiMNcl4TYxNu8EXnWC4JQplysQhFGLuMBcFmpcgVZ5tqjt9L2nhS1uMF8be68h3gYpud6Ye9nY9_zVtt3R19BGNoqpSMg7So0P0BhMlBzQ&amp;v=11.2.8"></script>
+
+  </body>
+</html>

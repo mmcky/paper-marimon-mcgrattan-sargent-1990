@@ -1,0 +1,21 @@
+The files for the simple genetic algorithm are:
+
+decode.m 
+initdata.m   
+objfunc.m
+scalepop.m   
+select.m
+sga.m
+statistics.m 
+
+The files for Wicksell:
+
+create.m
+crowding.m
+ga.m
+scalestr.m
+select.m
+statistics.m
+wicksell.m
+wtinit.m
+

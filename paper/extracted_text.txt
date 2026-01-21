@@ -1,0 +1,5663 @@
+
+
+=== PAGE 1 ===
+
+Journal of Economic Dynamics and Control 14 (1990) 329-373. North-Holland 
+MONEY AS A MEDIUM OF EXCHANGE IN AN ECONOMY 
+WITH ARTIFICIALLY INTELLIGENT AGENTS* 
+Ramon MARIMON 
+Universi@ of Minnesotu, 
+Minneapolis, 
+MN 55455, USA 
+Ellen McGRATTAN 
+Duke Universi[v, 
+Durham, 
+NC 27706, USA 
+Thomas J. SARGENT 
+Hoover Institution, 
+Stanford, 
+CA 94305, USA 
+Received August 1989, final version received December 1989 
+We study the exchange economies of Kiyotaki and Wright (1989) in which agents must use a 
+commodity or fiat money as a medium of exchange if trade is to occur. Our agents are artificially 
+intelligent and are modeled as using classifier systems to make decisions. In the assignment of 
+credit within the classifier systems, we introduce some innovations designed to study sequential 
+decision problems in a multi-agent environment. For most economies that we have simulated, 
+trading and consumption patterns converge to a stationary Nash equilibrium even if agents start 
+with random rules. In economies with multiple equilibria, the only equilibrium that emerges in our 
+simulations is the one in which goods with low storage costs play the role of medium of exchange 
+(i.e., the ‘fundamental equilibrium’ of Riyotaki and Wright). 
+1. Introduction 
+Kiyotaki and Wright (1989) studied how three classes of rational agents 
+would interact within a Nash-Markov 
+equilibrium in a world of repeated 
+‘Wicksell triangles’. This paper studies how a collection of artificially intelli- 
+gent agents would learn to coordinate their activities if they were thrust into 
+the economic environment described by Kiyotaki and Wright. Our agents’ 
+*This research began with visits by Marimon and Sargent to the Santa Fe Institute. We thank 
+Brian Arthur and John Holland for several helpful discussions about genetic algorithms at the 
+Santa Fe Institute. We also thank Randall Wright and Nancy Stokey for helpful comments on an 
+earlier draft. Sargent’s research was supported by a grant from the National Science Foundation 
+to the National Bureau of Economic Research. Marimon’s research was supported by a grant from 
+the National Science Foundation and by the National Fellows Program at the Hoover Institution. 
+This paper is an abbreviated version of a Hoover Institution working paper with the same title, 
+which is available from the authors upon request. 
+0165-1889/90/$3.5001990, 
+Elsevier Science Publishers B.V. (North-Holland) 
+
+
+=== PAGE 2 ===
+
+behavior 
+is determined 
+by Holland 
+(1975) 
+classifier 
+systems.’ 
+Thus, 
+while 
+Kiyotaki 
+and 
+Wright 
+studied 
+stationary 
+equilibria 
+in which 
+beliefs 
+about 
+‘media 
+of exchange’ 
+are consistent 
+with trading 
+patterns, 
+we study economies 
+in which particular 
+commodities 
+emerge as media of exchange. 
+We also study 
+an economy 
+(Economy 
+C) in which a good from which no agent derives utility 
+emerges 
+as fiat money. 
+We want 
+to learn 
+whether 
+our artificially 
+intelligent 
+agents can learn to play a Markovian 
+Nash equilibrium 
+of the Kiyotaki-Wright 
+model. 
+When 
+there are multiple 
+Nash equilibria 
+(e.g., the ‘fundamental’ 
+and 
+‘speculative’ 
+equilibria 
+of Kiyotaki 
+and Wright), 
+we want to know whether 
+the 
+system might converge 
+to some but not others of these equilibria. 
+In addition, 
+if classifier 
+systems 
+do converge 
+to Nash-Markov 
+equilibria, 
+they might 
+be 
+used to compute 
+equilibria 
+in other economies 
+for which it is difficult to obtain 
+analytic 
+solutions. 
+To this 
+end, 
+we also 
+study 
+enlarged 
+versions 
+of the 
+Kiyotaki-Wright 
+model. 
+A clussiJier system is a collection 
+of potential 
+decision 
+rules, together 
+with an 
+accounting 
+system 
+for selecting 
+which rules to use. The accounting 
+system 
+credits 
+rules generating 
+good outcomes 
+and debits 
+rules generating 
+bad out- 
+comes. The system is designed 
+to select a ‘co-adaptive’ 
+set of rules that work 
+well over the range 
+of situations 
+that an agent 
+typically 
+encounters. 
+In a 
+multiple-agent 
+environment 
+like Kiyotaki 
+and Wright’s, 
+the range of situations 
+encountered 
+by one agent depends 
+on the actions 
+taken by other agents. This 
+means 
+that the collections 
+of rules used by the collection 
+agents must co-adapt 
+jointly. 
+We study two sorts of classifier 
+systems, with the distinction 
+between 
+them 
+being 
+induced 
+by the fact that for many 
+problems 
+enumerating 
+all possible 
+rules would require 
+a very long list. The first kind of classifier 
+system is one in 
+which a complete 
+enumeration 
+of all possible 
+rules is carried along. For many 
+problems, 
+it is not feasible 
+to use a complete 
+enumeration 
+classifier 
+system 
+because 
+the state and action spaces are so large that the set of all possible 
+rules 
+is much 
+too big. For us, a complete 
+enumeration 
+is tractable 
+because 
+the 
+Kiyotaki-Wright 
+model has low-dimensional 
+state and action 
+spaces. 
+The second 
+kind of classifier system is designed 
+for situations 
+in which it is 
+not efficient 
+to carry along a complete 
+enumeration 
+of decision 
+rules. In this 
+case, a modified 
+version of the genetic algorithm 
+of Holland 
+is used as a device 
+‘The way in which we model agents as searching 
+for rewarding 
+decision 
+rules attributes 
+much 
+less knowledge 
+and rationality 
+to them than is typical in the literature 
+on least-squares 
+learning 
+in 
+the context 
+of linear 
+rational-expectations 
+models 
+[see Bray 
+(1982), 
+Bray 
+and 
+Savin 
+(1986). 
+Fourgeaud, 
+Gourieroux, 
+and Pradel (1986). and Marcet 
+and Sargent 
+(1989)]. In the least-squares 
+learning 
+literature, 
+agents 
+are posited 
+to be almost 
+fully rational 
+and knowledgeable 
+about 
+the 
+system they operate 
+within, lacking knowledge 
+only about particular 
+parameters 
+in laws of motion 
+of a set of variables 
+exogenous 
+to their own decisions, 
+which 
+they learn 
+about 
+through 
+the 
+recursive 
+application 
+of least squares. 
+But given their estimates, 
+agents 
+are supposed 
+to compute 
+optimal 
+decision 
+rules by using dynamic 
+programming 
+or the calculus 
+of variations. 
+
+
+=== PAGE 3 ===
+
+R. Marimon, Money as a medium of exchange 
+331 
+for periodically 
+eliminating some rules and injecting new rules into the 
+population of rules to be operated on by the accounting system. The genetic- 
+algorithm version of the classifier models learning in the face of unforeseen 
+contingencies. When an unprecedented state arises which is not covered by the 
+existing set of rules, the system contains a procedure for manufacturing 
+and 
+experimenting with new rules that apply in the new situation. Even though it is 
+feasible for us to work with a complete enumeration of rules, we also study the 
+genetic-algorithm 
+version of the classifier.2 
+In this paper, we set up classifier systems for the Kiyotaki-Wright 
+environ- 
+ment and simulate them on a computer. We also formulate definitions of 
+equilibrium 
+and stability for classifier systems, and pose some convergence 
+questions. Although we suggest possible convergence theorems, we prove no 
+theorems in this paper. Section 2 describes the Kiyotaki-Wright 
+environment. 
+Section 3 describes the classifier systems without genetics. Section 4 describes 
+behavior in the stationary equilibria of Kiyotaki and Wright and also the types 
+of classifier systems that could support that behavior. 
+Section 5 defines 
+stability criteria for sets of classifier systems, and discusses how these defini- 
+tions can be used to formulate questions about whether systems of classifier 
+systems converge to a stationary equilibrium. Section 6 describes classifier 
+systems operating with genetics. Section 7 describes our simulations of systems 
+of classifier systems. In addition to the economies studied by Kiyotaki and 
+Wright (including one with fiat money), we study an economy with five types 
+of agents and five goods. Section 8 concludes the paper. 
+2. The Kiyotaki-Wright environment 
+There are three types of agents, with types being indexed by i = 1,2,3. Type 
+i agents get utility only from consuming type i good. Type i agent has access 
+to a technology for producting type i* good, where i* f 
+i. We initially specify 
+‘When the state and action spaces are small, as in the Kiyotaki-Wright 
+model, the list of all 
+possible rules mapping states into actions is not too long. In such a situation, one can follow 
+Axelrod (1986) and model an agent’s strategy as a single binary bit string. A pure genetic 
+algorithm can then be applied, as in Axelrod (1986). This approach has been applied to the 
+Kiyotaki-Wright 
+model by Marimon and Miller (1989) and by Knez and Litterman (1989). While 
+much easier to implement than classifier systems, this pure genetic approach also has some 
+drawbacks. First, it is difhcult to extend to situations involving ‘unforeseen contingencies’ and in 
+which it is not practical to enumerate all of the histories that might be encountered in the course 
+of play. Second, relative to the classifier, the pure genetic algorithm encodes information 
+wastefully in the sense that an entire strategy is encoded, while the experience of play will 
+typically throw up observations only on a small subset of the possible states. While the classifier 
+system concentrates ‘effort’ on learning rules to use in frequently encountered states, the pure 
+genetic algorithm purports to be learning about entire strategies. Third, classifiers can learn 
+general rules that apply to several states and that offer potential informational economies. 
+
+
+=== PAGE 4 ===
+
+332 
+R. Manmon, Monqv as u medium of exchange 
+(i, i*) according 
+to Kiyotak-Wright’s 
+‘model A’, namely, 
+as follows: 
+i 
+1 
+2 
+3 
+i* 
+2 
+3 
+1 
+This specification 
+assumes no ‘double 
+coincidence 
+of wants’ and seems to call 
+for a multilateral 
+trading 
+arrangement. 
+All goods are indivisible. 
+Each agent 
+can store one and only one unit of only one good from one period to the next. 
+When an agent of type i consumes 
+good i at time t, he immediately 
+produces 
+good i*, which he carries over to the next period. The net utility 
+to an agent of 
+type i of consuming 
+good y and producing 
+good i* is given by ui(y). 
+We 
+assume 
+that an agent of type i does not know his utility 
+function, 
+but does 
+recognize 
+utility 
+when he experiences 
+it. The goods are costly to store. Storing 
+good 
+k (k = 1,2,3) 
+from 
+t to t + 1 imposes 
+costs 
+at t of sk. Following 
+Kiyotaki 
+and Wright, 
+we assume that ss > sZ > si > 0. We summarize 
+this cost 
+function 
+by saying that s(y) is the one-period 
+cost of storing 
+one unit of good 
+y. We assume that individuals 
+do not know this cost function, 
+but that they do 
+recognize 
+costs when they bear them. 
+The economy 
+and each agent 
+within 
+it live forever. 
+There 
+are large and 
+equal 
+numbers 
+of agents 
+of each type. We modify 
+Kiyotaki 
+and 
+Wright’s 
+model 
+by assuming 
+that each agent cares about 
+his long-run 
+average 
+level of 
+utility. 
+(Kiyotaki 
+and Wright assumed 
+that agents have preferences 
+ordered 
+by 
+expected 
+discounted 
+future utilities.) 
+Each period, 
+there is a random 
+matching 
+process 
+that assigns each and every agent in the economy 
+to a pair with one 
+and only one other agent in the economy. 
+The random 
+matching 
+technology 
+matches 
+agents without 
+regard to type. Only pairs of agents matched 
+together 
+can trade at a point in time. 
+The economy 
+begins at t = 0 with agents being endowed 
+with an arbitrary 
+and randomly 
+generated 
+initial distribution 
+of holdings 
+of goods. At each date 
+t 2 0, each agent 
+i has to make two decisions 
+sequentially. 
+First, 
+given 
+the 
+good he is holding 
+and given the good held by the partner 
+with whom he is 
+matched 
+at t, he must decide whether to propose 
+to trade. Trade occurs only if 
+both parties propose 
+to do so. Second, the agent must decide whether or not to 
+consume 
+the good 
+with which 
+he exits the trading 
+process. 
+If he doesn’t 
+consume, 
+he simply carries the good into period 
+t + 1, experiencing 
+cost sk. If 
+an agent of type i does consume 
+good y, at t, he experiences 
+net utility 
+u,(y,), 
+produces 
+good i*, and experiences 
+carrying 
+costs si.. We assume that ui( k) = 0 
+if k f i and ui(i) = ui > 0. We follow Kiyotaki 
+and Wright 
+both in adopting 
+their specification 
+of the physical environment 
+and in considering 
+only Markov 
+strategies, 
+but we drop the assumption 
+of rational 
+agents. 
+Instead, 
+our agents 
+are assumed 
+to be ‘artifically 
+intelligent’, 
+in the sense that they use versions 
+of 
+the clussij%r system introduced 
+by Holland 
+(1986). 
+
+
+=== PAGE 5 ===
+
+R. Marimon, Money as a medium 01 exchange 
+333 
+Before describing the classifier systems used by our agents, we introduce 
+some notation for naming agents and for describing the state of each individ- 
+ual agent in the economy. There is a collection of agents JS?= { 1,2,. . . , A}. A 
+typical element of SS? is denoted a. Kiyotaki and Wright assumed that there 
+was a continuum of each type of agent, while we assume that there is a finite 
+number of each type. The first A, agents are of type I, the next A, are of type 
+II, and the following A, are of type III. Here A = 34. 
+At the beginning of time t, agent u is carrying good x,~. The variable x,( 
+characterizes 
+the pre-match state of agent a at time t. There is a random 
+matching process which each period matches each agent a E SS? with a distinct 
+agent p,(a) ES’. For each agent in each period, the matching process induces 
+a function p,(a): I+&. 
+After the matching process, the pre-trade state of 
+agent a is (x,,, x,,(+). 
+The pair (xot, x~,(~)~) = z,, records what agent a is 
+carrying and what the agent p,(u) with whom u is matched at I is carrying. 
+At r, after being matched with agent p,(u), agent a decides whether or not 
+to propose to trade. We let X,, denote the trading decision of agent a at time 
+t, where 
+x,t= 
+1 
+if 
+a proposes to trade xat for xp,(=),, 
+0 
+if 
+a refuses to trade. 
+(I) 
+Similarly, &,(.), summarizes the trading decision of the agent p,(u) with 
+whom a is patred at t. Trade takes place if and only if X,,. XP,(,,),= 1. 
+Let xz, denote the post-trade (but pre-consuming 
+decision) holdings of 
+agent a at t. We then have that 
+(2) 
+After leaving the trading process with holdings x;I:, agent u must decide 
+whether to consume xzt or to carry it into the next period. We let y,, denote 
+the consumption decision of agent a at t where 
+1 
+Yet = 
+if 
+a decides to consume XL,, 
+0 
+if 
+a decides not to consume. 
+(3) 
+If agent a decides to consume, he automatically produces good f(u), which he 
+carries into (t + 1). From the specification of i* as a function of i described 
+above for Kiyotaki and Wright’s model A, we have that f(u) is a good of type 
+2 if a is a type I agent, f(u) is a good of type 3 if a is a type II agent, and 
+f(u) is a good of type 1 if a is a type III agent. It follows that beginning-of- 
+
+
+=== PAGE 6 ===
+
+334 
+R. Murimon, 
+Monqv 
+(IS (I medium 
+of exchmge 
+period 
+holdings 
+of a at time t + 1 are described 
+by3 
+x at+1 =u,*fb) 
++ (1 -va,)(O 
+-h,l-hp,(a)l)*ol+hor.Xp,(a)rXp,(o)l). 
+(4) 
+3. Classifier systems for the Kiyotaki-Wright 
+environment 
+We now describe 
+the classiJer systems that agents use to make their trading 
+and consumption 
+decisions.4 
+Agents 
+sequentially 
+use two interconnected 
+clas- 
+sifier systems 
+each period. A first trading 
+classifier system receives input in the 
+form of the pre-trade 
+state z,~ = (x,,, xp,(=), ). This classifier system determines 
+the trading 
+decision 
+A,,, which interacts 
+with the trading 
+decision 
+hp,(a)f of 
+the agent 
+p,(a) 
+with whom 
+a is paired 
+at t to determine 
+x,: 
+[see eq. 
+(2)]. A second consumption 
+classifier system takes x,: as input and determines 
+the consumption 
+decision 
+ya,. The two classifier 
+systems 
+are used sequentially 
+in this way each period, 
+and their accounting 
+systems 
+are interconnected 
+in 
+ways to be described 
+below. 
+A 
+(i) 
+(ii) 
+classifier system consists 
+of the following 
+objects: 
+(iii) 
+A collection 
+of trinary 
+strings, called ‘classifiers’. 
+A system for interpreting 
+or decoding 
+the strings or classifiers 
+as instruc- 
+tions mapping 
+states into decisions. 
+The first part of a string encodes 
+a 
+particular 
+state or condition, while the second 
+part encodes 
+a particular 
+action. 
+Thus, 
+an individual 
+classifier 
+or string 
+is just 
+an encoding 
+of a 
+single (state, action) pair. For a given state, there can be many classifiers 
+present 
+in a classifier system. 
+A list of ‘strengths’ 
+attached 
+to each classifier 
+at each point 
+in time 
+t=O,l,... 
+‘A pure genetic 
+algorithm 
+could be applied 
+to the trading 
+decision 
+as follows. 
+For each agent, 
+there are 3 x 3 = 9 possible 
+values that his current 
+state prior to trade can attain. 
+There are two 
+possible 
+actions. 
+trade or don’t trade. Letting 
+1 mean trade and 0 mean don’t trade, a binary 
+string 
+of length 
+9 can be used to encode 
+a Markovian 
+strategy. 
+This is done by numbering 
+the set of 
+possible 
+states .I = 1.. 
+,9 and then letting the 1 th entry in the bit string denote the decision 
+to be 
+made when the ,jth state is encountered. 
+The genetic algorithm 
+is then applied 
+to select the best 
+binary 
+string (i.e.. the best strategy). 
+This approach. 
+whichhas 
+been appliedto 
+the Kiyotak-Wright 
+model [see Marimon 
+and Miller (1989) and Knez and Litterman 
+(1989tl. 
+has shortcomines 
+as a 
+. . 
+starting 
+point 
+for studying 
+more complex 
+systems. 
+Because 
+the optimization 
+is done over entire 
+strategies, 
+which include 
+descriptions 
+of decisions 
+to be made in o/l possible 
+states, 
+even rarely 
+visited 
+ones, 
+the encoding 
+of information 
+is wasteful 
+and does not 
+facilitate 
+more 
+intensive 
+learning 
+about 
+frequently 
+visited states. 
+4See Goldberg 
+(1989) for a description 
+of classitier 
+systems 
+and a survey 
+of some of their 
+applications. 
+
+
+=== PAGE 7 ===
+
+R. Marimon, Money as a medium of exchange 
+335 
+Table 1 
+Encoding 
+of goods in classifiers. 
+1 
+0 
+0 
+0 
+# 
+# 
+Code 
+0 
+1 
+0 
+# 
+0 
+# 
+Meaning 
+Good 1 
+Good 2 
+Good3 
+Not good 1 
+Not good 2 
+Not good 3 
+(iv) 
+w 
+(vi) 
+A system for reading in external messages or ‘states’ and for determining 
+the set of classifiers that are pertinent, i.e., the set of classifiers whose 
+‘conditions’ are satisfied or ‘matched’ at that state. For a given state, the 
+system can sometimes contain several classifiers with distinct actions. 
+An ‘auction system’ for determining which of the pertinent classifiers is 
+allowed to make a decision at t. Among all classifiers whose condition 
+part matches the actual state at t, the ‘highest bidder’ in the auction 
+actually ‘makes the decision’ in real time.5 
+An accounting system for updating the strengths of the collection of 
+classifiers in response to the net rewards that flow into the system as a 
+result of the decisions that are made. 
+and possibly: 
+(vii) A genetic algorithm for introducing new strings and extinguishing old 
+strings. This algorithm will be called whenever states are encountered for 
+which no existing classifiers have their conditions met. The algorithm 
+may also be applied from time to time as a device to promote experimen- 
+tation. 
+We now describe each of these elements as applied to the Kiyotaki-Wright 
+environment. We first consider an exchange classifier system, which maps the 
+pre-trade state z,, into a trading decision. This classifier system consists of a 
+list of trinary strings of length 7. The first three digits represent own storage, 
+the next three represent trading partner’s storage, and the seventh represents 
+the trading decision. Table 1 displays the encoding of the goods stored. The 
+coding is written in the trinary alphabet (l,O, #), where # means ‘don’t care’. 
+For the trading decision, the code is in the binary alphabet (l,O), where 1 
+means trade, while 0 means don’t trade. To illustrate how the codes in table 1 
+5This rule could easily be modified 
+to permit 
+a ‘stochastic 
+auction’ 
+in which the probability 
+of 
+winning 
+the auction 
+varies directly with strength. 
+
+
+=== PAGE 8 ===
+
+are applied 
+to encode particular 
+trading 
+classifiers, 
+we consider 
+the following 
+two classifiers: 
+Own storage 
+Partner 
+storage 
+Trading 
+decision 
+1 
+0 
+0 
+0 
+0 
+1 
+1 
+1 
+0 
+0 
+# 
+# 
+0 
+0 
+The 
+first classifier 
+instructs 
+an agent 
+who is carrying 
+good 
+1 and 
+who is 
+matched 
+with someone 
+carrying 
+good 3 to offer to trade. The second classifier 
+instructs 
+an agent who is carrying 
+good 1 not to trade if he is matched 
+with 
+someone 
+who is not carrying 
+good 3. 
+The exchange 
+classifier system of agent a consists 
+of a list of such classifiers. 
+Let e = 1,2,. . . , E, index this collection 
+of classifiers. 
+A given classifier 
+system 
+has a fixed number 
+of classifiers. 
+For the exchange 
+classifier system, how many 
+distinct 
+classifiers 
+are possible? 
+Evidently, 
+33 x 33 X 2 = 1458. However, 
+most 
+of these classifiers 
+are redundant 
+in the sense that only a subset 
+of them is 
+needed 
+to represent 
+all possible 
+trading 
+decision 
+rules defined 
+on the state 
+space zUI = (x,,, 
+xp,(+ ) when there are three goods. All rules can be written 
+in 
+terms 
+of pairs 
+of conditions 
+drawn 
+from table 
+1. Thus, 
+only 6 X 6 X 2 = 72 
+strings 
+are required 
+to represent 
+the complete 
+set of possible 
+rules 
+for this 
+system. 
+Assigned 
+to each exchange 
+classifier e E { 1,2,. . . , E,} is a strength, denoted 
+S,“(t). 
+The 
+strength 
+S,“(t) 
+evolves 
+over time in a way determined 
+by the 
+accounting 
+system. The strengths 
+attached 
+to classifiers 
+are used to determine 
+the decisions 
+made by the classifier system at t. For a given state or ‘condition’ 
+_ 
+‘at = (X,V xp (a)t ), there is a collection 
+of classifiers 
+within 
+the classifier 
+system 
+whose condiiions 
+are satisfied. We denote the set of such classifiers 
+by M,( za,), 
+defined 
+as 
+w.(zar) = {e: zat matches the condition 
+part of classifier 
+e } . 
+(5) 
+The members 
+of MJ z,,) form a class of potential 
+‘bidders’ 
+in an ‘auction’ 
+whose purpose 
+is to determine 
+which classifier 
+makes the decision 
+of agent 
+a 
+at time t. When 
+state z,, is encountered 
+at time t by agent 
+a, the classifier 
+belonging 
+to M,(z,,) 
+that has the highest 
+strength 
+makes 
+the decision. 
+Let 
+e,(z,,) 
+denote 
+the index 
+of the classifier 
+to be used in deciding 
+whether 
+to 
+trade at t. Then, 
+e,(z,,) 
+=argmax{S,“(t): 
+eEM,(z,()}. 
+We denote 
+the action (trade or no trade) taken by classifier 
+e,(z,,) 
+as X,,. Eqs. 
+(5) and (6) describe 
+the ‘auction 
+system’ by which the highest 
+strength 
+rule 
+that applies 
+in a given state is given the right to decide for agent 
+a at t. 
+
+
+=== PAGE 9 ===
+
+R. Marimon, 
+Money as a me&m 
+of exchange 
+337 
+Because the trade and consumption classifier systems will be making pay- 
+ments to one another, we have to describe the consumption classifier system 
+before describing the accounting system that updates strengths of the trade 
+classifier system. The consumption classifier system is a collection of trinary 
+strings of length 4. The first three positions encode xz, using the same code 
+that was described in table 1. The condition part of the strings is written in 
+terms of the trinary alphabet (O,l, a). The fourth position of a consumption 
+string is the ‘action’ part, taking values of 1 (meaning consume) and 0 
+(meaning don’t consume). 
+We let consumption classifier strings be indexed by c E { 1,2, . . . , C, }. The 
+strength assigned to classifier c of agent a is S,“(t). By virture of eq. (2), the 
+state x,: can be expressed in terms of x,~ = (x~~,x~,(~),). Therefore it suffices 
+to denote the set of ‘matched’ classifiers by Me(.rO,), where 
+M,( z,,) = { c: XL, matches the condition part of classifier c} . 
+(7) 
+Let c,(z,,) denote the classifier that makes the consumption decision at t. 
+The highest-strength classifier gets to make the decision: 
+c,(z,,) 
+=argmax{ 
+S:(t): 
+cEM,(z,,)}. 
+(8) 
+Given the decisions determined by (6) and (8), x,* evolves according to the 
+law of motion (4). 
+We attach to each exchange classifier e a ‘counter’ r,(t) which records the 
+cumulative number of times that classifier e has won the auction as of date t. 
+We shall change the strength of classifier e only when it actually wins the 
+auction and thereby gets to make the exchange decision, which is why we need 
+the counter 7,(t). The counter 7,(t) for classifier e is defined recursively in 
+terms of the indicator I,“(t), which records whether classifier e wins the 
+auction: 
+1 if 
+e wins the auction ( unless classifier 
+I,“( 1) = 
+e sets A,, = 1 while hp,(=), = 0, so that 
+the offer to trade is not reciprocated), 
+0 
+otherwise, 
+T,“(f) = i Ii(s) 
++1. 
+(9) 
+s-0 
+Notice that we initialize the counter of each classifier at unity. The strength of 
+
+
+=== PAGE 10 ===
+
+338 
+R. Murimon, Money as u medium of exchange 
+classifier 
+e at t will be represented 
+as 
+Similarly, 
+we attach 
+to each consumption 
+classifier 
+c a ‘counter’ 
+r,(t) 
+which 
+records the cumulative 
+number 
+of times that classifier c has won the auction 
+as 
+of date f. The counter 
+r,(f) is defined by 
+z,“(r) = 
+; 
+i 
+if 
+c wins the auction, 
+otherwise, 
+T,“(t) = i: z,“(s) +1 
+v = 0 
+(10) 
+The strength 
+of classifier 
+c at t will be represented 
+as 
+The counters 
+T,(r) and T,(r) induce a transformation 
+of time in terms of which 
+the strengths 
+of classifiers 
+c and e are updated. 
+At date r, a strength 
+SJ&~) is 
+attached 
+to classifier 
+c, while a strength 
+S$C1j is attached 
+to classifier 
+e of 
+agent 
+a. At date r, if classifier 
+e’s condition’ 
+is matched 
+[i.e., if e E M=(z,~)], 
+then classifier 
+e makes a bid of b,(e)S,“(r), 
+where b,(e) is a positive 
+fraction 
+that can depend 
+on e. If classifier 
+e wins the auction, 
+its bid will be deducted 
+from its strength. 
+The winning 
+bid will be allocated 
+to augment 
+the strength 
+of 
+other classifiers 
+whose actions 
+drove the system to the state that satisfied 
+e’s 
+condition. 
+We choose the particular 
+bid function 
+where b,, and b,, are positive constants 
+adding 
+up to less than one, and ae is 
+a fraction 
+which is proportional 
+to the specificity 
+of a particular 
+classifier. 
+In 
+particular, 
+we choose 
+ue = l/(1 
++ number 
+of #‘s in the string). 
+Similarly, 
+we 
+define a function 
+b2(c) as 
+b,(c) = b,, + b,,ac> 
+(lib) 
+where uC = l/(1 
++ number 
+of #‘s in the string). 
+By the above choices of b,(e) 
+and b2( c), we favor specific rules over more general rules that can be activated 
+by a particular 
+state. When c E M,( z,~), classifier c makes a bid of b2( c)Sf( r). 
+Only winning 
+classifiers 
+pay their bids by having 
+them deducted 
+from their 
+strengths. 
+The 
+bid of the winning 
+exchange 
+classifier 
+at r is paid 
+to the 
+
+
+=== PAGE 11 ===
+
+R. Marimon, Money OS u medium of exchange 
+339 
+winning consumption 
+classifier at I - 1, which is the classifier that is to be 
+credited with setting the time t state to I,,. The bid of the winning consump- 
+tion classifier at t is paid to the winning exchange classifier at time I, which is 
+to be credited with setting the post-exchange state at t at x;I:, thereby giving 
+the winning consumption classifier a chance to bid. 
+We represent these payments in terms of the following difference equations: 
+In (12), U,(y,4) is the external payoff when the winning consumption classifier 
+c makes final consumption decision y,“,. If the post-exchange state at t is x,:, 
+then we have 
+V,(YZ> 
+=YZ[“i(xO:) 
+-S(f(a))l + (l-YZ)s(xit). 
+(14) 
+There are several features of (12) and (13) that bear emphasizing. First, eqs. 
+(12) and (13) are recursive formulas that make S$oj 
+and S&70j averages of 
+past payoffs (external 
+rewards plus bids received from other classifiers) 
+minus payments (bids made to other classifiers). Use of cumulative average 
+net payoffs in this way (as opposed to total payoffs) is a departure 
+from 
+the 
+existing 
+literature 
+on 
+classifiers. 
+Second, 
+notice 
+how 
+the 
+term 
+~,C(~)bl(4S~,~(~) 
+expresses the condition that only the winning exchange 
+classifier at t pays the winning consumption classifier at t - 1. Use of the term 
+~,CV)b&)%:(,, 
+achieves an analogous purpose in (13). Third, notice how 
+the use of the counters r:(f) and $(t) 
+causes changes to be made only to the 
+strengths attached to the winning classifiers. 
+Fig. 1 illustrates how the exchange and consumption 
+classifier systems 
+interact for an individual of type I. Suppose that the state at time t is encoded 
+010 100. This means that the type I individual is storing good 2 and has been 
+matched with someone who is storing good 1. The individual has two classi- 
+fiers whose conditions are matched, one with strength 50, the other with 
+strength 10. The strength 50 classifier makes the decision, which is ‘l’, namely, 
+offer to trade. If the individual’s trading partner also offers to trade, the 
+
+
+=== PAGE 12 ===
+
+340 
+R. Murimon, 
+Monqv LIS 0 medium of exchunge 
+state at t 
+to consumption 
+classifier system 
+Exchange classifier system 
+100 
+#Ol 
+1 
+20 
+-- 
+010 
+OKI 
+0 
+4 
+-- 
+otwl 
+I#0 
+0 
+10 
+-- 
+010 
+001 
+0 
+0 
+-__ 
+-- 
+Ol# 
+100 
+1 
+50 
++ 
+3 ii 
+Ye 
+no 
+strength 1 
+100 
+010 
+Consumption 
+classifier system 
+o## 
+c 
+state 
+0 
+40 
+-- 
+lO# 
+1 
+80 
+/ 
+-- 
+010 
+loo\ 
+-0 1 
+-- 
+100 
+0 
+-1 
+-- 
+Exchange classifier for 
+matched agent 
+0 
+100 
+50 
+40 
+50 
+External Payoff 
+state at t + 1 
+010 . . . . . . . . . 
+Fig. 1. Example 
+of flow of payments 
+in classifier 
+systems 
+for type I agent: 
+transfer 
+payments 
+denoted 
+in bold lines, decision 
+flows denoted 
+in thin lines. 
+
+
+=== PAGE 13 ===
+
+R. Marimon, Monqv as a medium of exchange 
+341 
+individual exits the trading process with state 100, which is the input into type 
+I’s consumption 
+classifier. With this input, there are two consumption 
+classi- 
+fiers whose conditions are matched, one with strength 80 that says ‘consume’, 
+the other with strength - 1 that says ‘don’t consume’. The individual con- 
+sumes, initiating an external payoff. The bold lines indicate the flows of 
+payoffs. 
+In addition 
+to the external payoff to the winning consumption 
+classifier, there is a payment from the winning consumption classifier at t to 
+the winning exchange classifier at t, and a payment from the winning ex- 
+change classifier at t to the winning consumption classifier at t - 1. 
+With (12), (13), and (14), we have completed our description of the classifier 
+system for agent a when that classifier system contains a complete enumera- 
+tion of possible rules. Our version of the Kiyotaki-Wright 
+model is formed by 
+assuming that each agent a of type i uses the same classifier system to make 
+decisions.6 Thus, we can replace a superscripts and subscripts in the descrip- 
+tions of strengths by i’s. We start with a set of initial strengths S’(0) for 
+i = 1,2,3. We temporarily introduce the index T to index calendar time, while 
+t now temporarily 
+indexes the cumulative number of matches which have 
+occurred rather than calendar time. Our artificially intelligent agents then 
+interact as follows for each T = 1,2,. . . , L, where L is the length of our 
+simulation. All A agents are randomly matched into A/2 pairs. For each pair 
+(a, a’), the exchange and classifier systems for agents whose types are a and 
+Q’, respectively, are used mutually to determine the trading and consumption 
+decisions of agents a and u’. After the consumption decisions have been made 
+for the pair, the counters and the strengths of the classifier systems for both 
+types of agents are updated according to (lo), (ll), (12), and (13). Also, after 
+each pair has played, the synthetic time counter t is augmented by one. After 
+all A/2 pairs have played, the counter T is augmented by one, and the entire 
+process is repeated. The counter T records the passage of physical time, while 
+the counter t records the cumulative number of matches that have occurred. 
+The outcomes of all matches t E [(T - 1X A/2) + 1, T( A/2)] are interpreted as 
+having occurred during period T. 
+In section 7, we shall be interested in recording various frequency distribu- 
+tions across agents as a function of calendar time. That is, there will be 
+distinct frequency distributions of, e.g., holdings of goods across agents for 
+each date in calendar time. At the risk of confusion, we choose to index 
+calendar time by t (rather than T) in subsequent sections. 
+6We make this specification 
+in order to economize 
+on computer time and space. It is possible 
+that this specification 
+speeds convergence relative to a setting in which each agent a ESB uses his 
+own classifier system. However, relative to a setup in which each agent uses his own classifier 
+system and so can experiment individually, 
+the common classifier setup causes all type i agents to 
+experiment 
+simultaneously. 
+This feature might delay convergence. 
+
+
+=== PAGE 14 ===
+
+342 
+Fig. 2. Exchange 
+patterns 
+in fundamental 
+equilibrium 
+of model A. 
+4. Classifier systems for supporting Kiyotaki and Wright’s 
+stationary equilibria 
+4.1. The fundamental 
+equilibrium 
+For their model A, Kiyotaki 
+and Wright 
+define as the fundamental 
+equilib- 
+rium 
+the trading 
+pattern 
+defined 
+by the triangle 
+depicted 
+in fig 2. In this 
+trading 
+pattern, 
+good 1, which has the lowest storage cost, serves as the general 
+medium 
+of exchange. 
+In terms of storage, agents of type I only store good 2, 
+which 
+they exchange 
+only for good 1; agents 
+of type III only store good 1, 
+which they exchange 
+only for good 3; and agents of type II half of the time 
+store good 1, which they exchange 
+for good 2, and half of the time good 3, 
+which they exchange 
+for good 1. 
+We can characterize 
+equilibria 
+in terms of a set of probabilities 
+that describe 
+holding 
+and exchanging 
+patterns. 
+We define 
+r;;(k) 
+= probability 
+that a type i agent is holding 
+k 
+at t. 
+n,hW) 
+= probability 
+that a randomly 
+selected 
+agent is 
+ri;(kj) 
+= 
+ri;( kjlk) = 
+q;(k) 
+= 
+C(klk) 
+= 
+q(ilk) 
+= 
+holding 
+k at t. 
+probability 
+that a type i agent exchanges 
+k 
+for j at t. 
+probability 
+that a type i agent exchanges 
+k 
+for j given that i is holding 
+k at the 
+beginning 
+of t. 
+probability 
+that a type i agent consumes 
+k 
+at 1, 
+(15) 
+probability 
+that a type i agent consumes 
+k 
+at t given that he holds k after trading 
+at t, 
+probability 
+that an agent is of type i given 
+that he holds k at t. 
+We use the notation 
+i;,T(kjlk) 
+to denote 
+the probability 
+that a type i agent 
+is 
+willing 
+to exchange 
+good 
+k for j whenever 
+i is holding 
+k. Note 
+also that 
+Tt(ilk) 
+= vrii:(k)/fCi,ri!:(k), 
+ri:(kj) 
+= mi:(kjIk)?ri:(k), 
+and 
+rrh(k) 
+= 
+fc,~i~i:< k). 
+We denote 
+by 17, the entire set of probabilities 
+defined in (15) for all i, k, j. 
+Associated 
+with 
+Kiyotaki 
+and 
+Wright’s 
+stationary 
+equilibrium 
+is a time- 
+
+
+=== PAGE 15 ===
+
+R. Marimon, Money as a medium of exchange 
+343 
+Table 2 
+Behavior of type I agent in a fundamental equilibrium. 
+state at t, E.t z (Z.*,Cp(+) : 
+L&11 
+P, -11 
+J 
+exchange classifier, et(+) 
+: 
+eL,l 
+4,-I,0 
+1 
+does trade occur, i.e. is Ap(,,jt. X.t = l? 
+yes 
+\I 
+no 
+1 
+consumption state, rzt : 
+PI 
+PI 
+consumption classifier, ct(2.t): 
+Cl,1 
+C-1,0 
+payoff at the end of period t : 
+(w 
+- 
+82) 
+-32 
+matching process 
+state at t + l,z,t+l 
+: 
+invariant 
+II, = II. In table 5b we display the II’s for the fundamental 
+equilibria of Kiyotaki and Wright’s model A. 
+We now describe how the strategies that support Kiyotaki and Wright’s 
+‘fundamental 
+equilibrium’ can be represented as a classifier system. For the 
+classifiers we introduce the following additional notation. Let e& j,d denote 
+the exchange classifier for a type i agent that reads ‘If I am stormg good k 
+and I meet an agent with good j, then my exchange decision is d ‘; d E (0, l}. 
+Similarly, specific consumption classifiers for type i agents are of the form c:,~ 
+for ‘If, at the end of the exchange subperiod, I am storing good k, then my 
+consumption 
+action is d ‘. For more general rules, we use the subindex -j to 
+denote ‘not good j’ and # to denote ‘any good’. That is, ei,_i,a 
+is the 
+classifier for type I agents that reads ‘If I am storing good 2 and I meet an 
+agent not carrying good 1, then do not trade’, and ci,e is a classifier for type I 
+that reads ‘No matter what I am storing at the end of the exchange subperiod, 
+do not consume’. 
+We can simplify the study of classifiers systems by considering only a small 
+complete set of rules. For type I agents these rules are: ei,,,,; 
+eBz,,; e’,,,,,; 
+4,s.r; 4, -I,o; 
+4,l.C 
+4, 
+-I,o; 
+$I; 
+and 
+kl,o. 
+If 
+{ei,,,,; 
+ei,-l 
+o; &; 
+cLl,o} 
+or 
+alternatively 
+{ei,,,,; 
+&,o; 
+&,o; 
+4,,; 
+~‘_~,o} 
+are the only classifiers being used 
+by agents of type I, we can say that type I agents support the fundamental 
+equilibrium. We can also describe classifiers for type II and type III agents 
+
+
+=== PAGE 16 ===
+
+344 
+R. Murimon, Money as u medium of exchunge 
+that 
+support 
+the fundamental 
+equilibrium. 
+These 
+are, 
+for type 
+II: 
+e:.,,; 
+2 
+2 
+2 
+2 
+cl,-2,$ 
+e3,1,1; 
+e3,2,1; 
+e3,3,0; 
+’ 
+, ) 
+2’ 1’ and c& 
+and for type III: e:,,,,; 
+e:, -3,0; &‘l; 
+It is useful to define formally 
+the sense in which these fixed lists of classifiers 
+support 
+Kiyotaki 
+and Wright’s fundamental 
+equilibrium. 
+Let D, be a fixed set 
+of classifiers 
+(exchange 
+and consumption 
+classifiers) 
+for agent a. Let the set D, 
+have 
+no redundancies 
+in the sense 
+that 
+for every 
+state 
+z,,, 
+D, 
+uniquely 
+determines 
+actions. 
+Then the fixed set of classifiers 
+D, represents 
+a strategy 
+for 
+agent 
+a defined 
+on z,,. We use the following 
+definition 
+of optimality 
+for a 
+fixed set of classifiers: 
+Definition. 
+Given 
+the probability 
+distributions 
+II and fixed sets of classifiers 
+of the other agents 
+D,, for all a’ f a, a fixed set of classifiers 
+D, is said to be 
+optimal for agent a if there exists no other set fia which yields higher long-run 
+average 
+utility 
+for agent u. 
+A stationary 
+Nash equilibrium 
+can then be defined 
+as follows: 
+Definition. 
+A stationary 
+Nash equilibrium 
+is a set of probability 
+distributions 
+II and fixed sets of classifiers 
+D,, a = 1,. . , A, such that: 
+(1) Given 
+II and D,, for u’ # a, D, is optimal 
+for agent 
+a. 
+(2) {D,,u= 
+I,..., 
+A } and the random 
+matching 
+technology 
+imply that II, = II 
+for all t. 
+This definition 
+is just an alternative 
+representation 
+of Kiyotaki 
+and Wright’s 
+definition 
+in terms of fixed lists of classifiers. 
+Table 
+2 illustrates 
+the sequence 
+of events 
+under 
+the circumstance 
+that the 
+only active (i.e., auction-winning) 
+classifiers 
+are those that support 
+the funda- 
+mental 
+equilibrium 
+for agents 
+of type I. A natural 
+question 
+is whether 
+the 
+classifier 
+systems 
+of the three 
+types 
+of agents 
+will actually 
+converge 
+to a 
+situation 
+in which 
+the fundamental 
+equilibrium 
+of Kiyotaki 
+and 
+Wright 
+is supported. 
+Before 
+introducing 
+some 
+concepts 
+that 
+will 
+help 
+us think 
+about 
+this question, 
+we shall briefly 
+describe 
+another 
+kind 
+of equilibrium 
+of Kiyotaki 
+and Wright’s 
+model and the kind of classifier 
+system 
+that could 
+support 
+it. 
+4.2. Kiyotaki 
+and Wright’s ‘speculative equilibrium’ 
+Kiyotaki 
+and 
+Wright 
+show that 
+for their 
+model 
+A the trading 
+pattern 
+associated 
+with 
+a fundamental 
+equilibrium, 
+which 
+was described 
+in fig. 2 
+
+
+=== PAGE 17 ===
+
+R. Marimon, Money as a medium of exchange 
+345 
+II”‘_ 
+-s-III 
+Fig. 3. Exchange patterns in speculative equilibrium of Economy A. 
+Table 3 
+Behavior of type I agent in a speculative equilibrium. 
+Probability 
+z,t : 
+4z.t): 
+4,1,1 
+does trade occur, 
+I\ 
+above, is not the only possible one in equilibrium. They show that there can 
+occur a speculative equilibrium with a trading pattern depicted in fig. 3.’ 
+In the speculative equilibrium, table 3 depicts the flow of events in the 
+stationary rational-expectations 
+equilibrium for a classifier system of a type I 
+agent using a subset of rules. Notice that the flows depicted in table 3 reduce 
+to a set of fundamental classifiers if the dotted link (* ) replaces its alternative 
+link (* * ), i.e., if type I agents decide not to trade good 2 for good 3. 
+‘Kiyotaki and Wright establish a condition under which the unique stationary rational-expecta- 
+tions equilibrium is a fundamental equilibria. The condition, for the limiting case as the discount 
+rate converges to zero, is that the following inequality is satisfied: 
+Ss-S*> 
+($(3) 
+-&2))$11. 
+(16) 
+[Notice that this condition involves both parameter 
+values (ss,ss, ur) and the quantities 
+(r{(3), n:(2)) which are endogenous variables that are determined in equilibrium.] Kiyotaki and 
+Wright show that when the above inequality is reversed, then the unique stationary rational- 
+expectations equilibrium is a speculative equilibrium. Vis-Bvis the fundamental equilibrium, the 
+only change in trading patterns is that agents of type I ‘speculate’ by holding good 3, which is not 
+too costly because in equilibrium inequality (16) is reversed (see fig. 3.) 
+
+
+=== PAGE 18 ===
+
+In section 
+7 we shall provide 
+an example 
+of a simulated 
+classifier 
+economy 
+where (16) is not satisfied (ut is too high), but where nevertheless 
+when agents 
+start 
+with 
+a complete 
+set of classifiers 
+(with 
+homogeneous 
+strengths), 
+the 
+classifier 
+systems 
+converge 
+to the fundamental 
+equilibrium 
+and 
+not to the 
+speculative 
+equilibrium. 
+Before turning 
+to these simulations, 
+we define 
+some 
+notions 
+of stability 
+that are designed 
+to distinguish 
+alternative 
+senses in which 
+a set of classifier 
+systems may be said to converge. 
+5. Concepts of convergence for classifier systems playing games 
+Given 
+the decision 
+rules being 
+employed 
+by other 
+agents, 
+(12)-(13) 
+for 
+agent 
+a forms 
+a system 
+of stochastic 
+difference 
+equations 
+in the strengths 
+s”(t). 
+Since the classifier 
+systems 
+of the three types of agents 
+i = 1,2,3 
+are 
+operating 
+simultaneously, 
+the behavior 
+of the entire 
+system 
+is determined 
+by 
+the system 
+of difference 
+equations 
+(12)-(13) 
+for agent 
+types 
+i = 1,2,3. 
+Let 
+s’(t) 
+denote 
+the strengths 
+for an agent 
+of type 
+i. It is natural 
+to inquire 
+whether 
+the system 
+formed 
+by (12)-(13) 
+for a = i = 1,2,3 
+converges 
+to a 
+stationary 
+point 
+in the space of strengths, 
+and if it does so, whether 
+that 
+stationary 
+point supports 
+the fundamental 
+equilibrium 
+of Kiyotaki 
+and Wright. 
+Although 
+we have not yet carried out an analysis 
+of the convergence 
+of this 
+system, 
+it seems useful at this point 
+to report 
+our ideas about 
+how such an 
+analysis 
+could be structured. 
+In this section 
+we indicate 
+how ideas from the 
+stochastic-approximation 
+literature 
+might be used to study convergence 
+in the 
+space of strengths.8 
+From 
+the stochastic-approximation 
+literature,’ 
+we know 
+that 
+any 
+limit 
+points 
+(Sf, S:) of (12)-(13) 
+must satisfy 
+(17) 
+(1 +b,(e))S,“- 
+~I,“(t)b2(c)S~ 
+=O, 
+C’ 
+1 
+for all c and 
+e. For a given 
+a we define the solutions 
+(S,“, Sz) of (17) as a 
+stationary 
+set of strengths 
+for agent 
+a. Given 
+a stationary 
+set of strengths 
+for 
+agent 
+a, one can determine 
+the set of classifiers 
+{e, c} = W~(zar) that would 
+‘It was considerations 
+from the stochastic-approximation 
+literature 
+that let us to alter Holland’s 
+specification 
+of the laws of motion of strengths 
+so that they measure 
+cumulative 
+uoerclge past net 
+rewards, 
+not total rewards. 
+The use of average rewards 
+makes it possible 
+for strengths 
+to converge. 
+Arthur 
+(1989) uses average 
+rewards 
+for strengths 
+for the same reason. 
+‘Llung 
+and Soderstrom 
+(1983) is a useful reference 
+on stochastic 
+approximation 
+and on the 
+‘ordinary 
+differential-equations 
+approach’ 
+to proving 
+almost 
+sure convergence. 
+See Marcet 
+and 
+Sargent 
+(1989a. b) for some applications 
+in economics. 
+
+
+=== PAGE 19 ===
+
+R. Marimon, Money as a medium of exchange 
+347 
+win the auction for each z,,. If a has the fixed set of classifiers Wa(zar) = D,, 
+where D, is the fixed set of classifiers that supports a’s behavior in a Nash 
+equilibrium, then the stationary set of strengths associated with W,( z,,) can be 
+said to support the stationary Nash equilibrium behavior of agent a. 
+These definitions inspire several questions. First, given stationary sets of 
+strengths for agents of types 1,2,3, is it true that W,( z,,) = D, for a type i 
+agent, for each i = 1,2,3? That is, does a stationary set of strengths for the 
+classifier systems for agents of type i = 1,2,3 support a stationary 
+Nash 
+equilibrium? 
+Second, given fixed sets of classifiers D, for a of type i = 1,2,3 that support 
+a stationary Nash equilibrium, do these sets of classifiers imply the existence 
+of a set of strengths S, for a of type i = 1,2,3 that solve (17)? That is, is every 
+Nash equilibrium supported as a stationary point in strengths? 
+Third, if we let the classifier systems of agents of type i = 1,2,3 run in real 
+time, does the joint system formed by (12)-(13) 
+for agents of each type 
+converge almost surely, and if so, to which solution of (17) does it converge? 
+We know from the theory of stochastic approximation 
+that if it converges, it 
+must converge to solutions of (17). 
+Associated with the third of these questions is the notion of global asymp- 
+totic stability. In future work, we plan to apply results from the stochastic 
+approximation 
+literature to study the global asymptotic stability of versions of 
+our interacting classifier systems. 
+We also intend to study a form of stability that is distinct from and weaker 
+than global asymptotic stability. This form of stability is summarized in the 
+following: 
+Nash-like stability test. Take a stationary equilibrium fixed by II. Place a 
+single-agent 
+of a given type i in the environment 
+formed by the fixed 
+probabilities 
+II. Let a classifier system for that single agent operate until it 
+converges. Check to see whether it converges to imply the collection 
+of 
+classifiers D, for an agent a of type i which are required to support the 
+equilibrium probabilities. In this experiment, in running the classifier system 
+for the single agent, the decision rules of all other agents of his type are being 
+held fixed at their equilibrium values. This experiment is to be repeated for a 
+single agent of each type. 
+In the remainder of this paper, we shall not pursue the formal analysis of 
+the stability and convergence questions formulated above.” Instead, we shall 
+report computer simulations. In these computer simulations, convergence can 
+‘“Brian Arthur and Carl Simon have used stochastic approximation 
+arguments to establish 
+convergence of strengths for a fixed system of two classifiers playing a two-armed bandit. Their 
+arguments do not apply to our system because their system is one in which there are competing 
+classifiers with distinct actions, whose condition parts are identical and are always met. 
+
+
+=== PAGE 20 ===
+
+34x 
+R. Mcrrimon, Monqv as a medium of exchange 
+be based either on the limiting 
+behavior 
+of the strengths, 
+as indicated 
+above, 
+or on the convergence 
+of key aspects of the empirical 
+frequency 
+distribution 
+of 
+holdings 
+II,, which we defined in section 4. 
+6. Incomplete enumeration classifiers and the ‘genetic algorithm’ 
+We now describe 
+how the classifier 
+system is modified 
+when we deal with 
+systems 
+in which 
+there is not a complete 
+enumeration 
+of rules. In order 
+to 
+complete 
+the system, 
+two aspects must be added 
+to the above description 
+of 
+the classifier 
+system 
+under 
+complete 
+enumeration. 
+The 
+first is a way 
+of 
+generating 
+an initial 
+population 
+of rules. The second is a way of deleting 
+old 
+rules from the system 
+and adding 
+new rules to the system. 
+To generate 
+the 
+initial 
+population 
+of rules, 
+we simply 
+use a random 
+number 
+generator 
+to 
+generate 
+bit strings by choosing 
+successive 
+bits independently. 
+The process 
+of adding 
+new rules and deleting 
+old ones is accomplished 
+by 
+adding 
+four major 
+operations 
+to the previous 
+description 
+of the workings 
+of 
+the classifier 
+system. We call these steps ‘creation’, 
+‘diversification’, 
+‘specializa- 
+tion’, 
+and 
+‘generalization’, 
+respectively. 
+The 
+creation operation 
+is activated 
+when 
+there 
+is no classifier 
+matching 
+the current 
+state 
+z,~, i.e., 
+M,(z,~) 
+is 
+empty. 
+In this case, a new classifier 
+is created 
+with its condition 
+part defined 
+by the current 
+state and its action part randomly 
+selected. 
+A ‘weak’ classifier 
+from 
+the set of all classifiers 
+is deleted 
+to keep the number 
+of classifiers 
+constant. 
+The diversijication operation 
+is designed 
+to inject sufficient 
+diversity 
+into the range of actions 
+called for by different 
+classifiers 
+in a given situation. 
+For the exchange 
+classifier, 
+this step occurs at the stage at which z,~ has been 
+observed 
+and the set M,( z,,) has been constructed. 
+Recall that M,( z,,) is the 
+set of exchange 
+classifiers 
+whose condition 
+parts match 
+z,~. If all e E MJz,*) 
+have the same action (0 or l), the diversification 
+operation 
+creates 
+a classifier 
+encoding 
+the specific state z,( and an action 
+opposite 
+to that taken 
+by the 
+other classifiers 
+in M,( z,~). The strength 
+of the winning 
+classifier is assigned 
+to 
+this new classifier. 
+This new classifier is added to the system, while simultane- 
+ously a ‘weak’ classifier 
+from the set Me(zar) is deleted 
+from the system. 
+The 
+weakness 
+of a classifier is measured 
+in terms of a combination 
+of strength 
+and 
+cumulated 
+number 
+of times the classifier has won the bidding 
+in the past. The 
+diversification 
+operation 
+is used each time the classifier 
+system is called upon. 
+Notice 
+that if this step were to be added to a complete 
+enumeration 
+system, it 
+would have no effect on the population 
+of rules because 
+sufficient 
+diversity 
+is 
+present 
+from the beginning. 
+The specialization operation 
+is called 
+randomly 
+with a probability 
+that we choose to be diminishing 
+over time. The random 
+variable 
+governing 
+specialization 
+calls 
+this step into 
+action 
+just 
+after 
+the 
+winning 
+bid has been determined. 
+The winning 
+classifier 
+is checked 
+to deter- 
+mine 
+whether 
+there 
+are any 
+#‘s 
+in its condition 
+part. 
+A new classifier 
+is 
+synthesized 
+by exposing 
+each # in the condition 
+part to a probability 
+of being 
+
+
+=== PAGE 21 ===
+
+R. Murimon, 
+Monqv as u medium of exchunge 
+349 
+parent 
+1: 
+1 
+; 
+# 
+1 
+0 
+0 
+0 
+parent 
+2: 
+0 
+0 
+1 
+1 
+1 
+1 
+offspring 
+1: 
+1 
+; 
+# 
+1 
+: 
+0 
+0 
+offspring 
+2: 
+0 
+0 
+1 
+1 
+1 
+Fig. 4. The mating process for exchange 
+classifiers who have drawn ‘3.6’ and ‘in’ 
+switched to a 0 or a 1, whichever one specifically encodes the particular z,~ 
+that was just observed or matched. This new and (probably) more specific rule 
+is then used to replace a weak rule from the set e E M,( z,~) [or c E M,( z,,) in 
+the case of the consumption 
+classifier], where weakness is measured by a 
+combination 
+of strengths and cumulative number of times the auction has 
+been won. 
+The fourth step, which we call generalization 
+is a version of a ‘genetic 
+algorithm’. This step is called randomly, according to a probability 
+that we 
+specify to be declining through time. At a point when the step is called, the 
+process is initiated 
+by generating two distinct populations 
+of classifiers: 
+‘potential 
+parents’ and ‘potential exterminants’. The potential parents are 
+chosen to be a population of classifiers of specified size. They are chosen 
+according to a ‘fitness criterion’ that weights strength and cumulative number 
+of times that the classifier won the auction. The potential exterminants 
+are 
+chosen to be a population of specified size, whose members are of low fitness 
+as measured by a fitness criterion weighting strengths and cumulative victories 
+in past bidding. 
+From the population of potential parents, a specified number of pairs of 
+parents are randomly drawn to engage in ‘mating’ for the purpose of creating 
+children. How a pair of parents mates can be illustrated for two exchange 
+classifiers, which are bit strings of length 7, is depicted in fig. 4. 
+The pair mates in two steps. First the pair draws two random integers 
+uniformly distributed on [l, 71. The two integers signify the positions between 
+bits depicted in fig. 4. In fig. 4, we have drawn lines in between bit positions 2 
+and 3 and between positions 5 and 6 to signify that this couple has drawn a 3 
+and 6. Next, a Bernoulli random variable with probability 
+0.5 is drawn, 
+assuming values of ‘in’ or ‘out’. If ‘in’ is drawn, we focus on the bits between 
+the two lines, i.e., the bits inside the randomly drawn interval. (In fig. 4, we 
+have drawn an ‘in’.) If ‘out’ is drawn, we focus on the bits outside 
+the 
+randomly drawn interval. Within the interval of focus, we complete the mating 
+process 
+via the following 
+version 
+of genetic 
+crossover. 
+For 
+each of 
+the parent strings in the area of focus, we change to a # any bits for which the 
+parent strings disagree. (Here, # agrees with either 0 or 1, while 0 disagrees 
+with 1). This process produces two children. The children are each assigned 
+strengths that are the average of their parents’ strengths. The children are 
+
+
+=== PAGE 22 ===
+
+350 
+R. Marimon. Money (1.~ ~1 medium cfexchonge 
+Table 4 
+Description 
+of the economies. 
+I 
+Production 
+Storage cost 
+2 
+3 
+4 
+Al.1 
+2 
+Al.2 
+2 
+A2.1 
+2 
+AZ.2 
+2 
+B.l 
+3 
+B.2 
+3 
+c 
+2 
+D 
+3 
+Utility 
+5 
+a 
+U, 
+100 
+100 
+500 
+500 
+100 
+100 
+100 
+30 
+200 
+Initial 
+Equil. 
+CSbJ 
+type’ 
+F 
+F 
+S 
+S 
+F/S 
+F/S 
+F 
+‘Utility 
+levels u, are set equal for I = 1.2,3. 
+bCS denotes 
+‘classifier 
+system’. 
+“F’ implies fixed enumeration 
+and ‘R’ implies randomly 
+generated 
+rules. 
+introduced 
+into 
+the population 
+of classifiers. 
+For each child 
+added 
+to the 
+population, 
+a randomly 
+selected 
+individual 
+from the population 
+of ‘potential 
+exterminants’ 
+is deleted from the population. 
+This completes 
+our description 
+of the algorithm 
+to be used for updating 
+the 
+classifier 
+system 
+when 
+we deal 
+with 
+an incomplete 
+enumeration 
+classifier 
+system. 
+In the simulations 
+to be reported 
+in section 
+7, we shall employ 
+both 
+complete 
+and incomplete 
+enumeration 
+classifier 
+systems. 
+7. Simulation results 
+The sets of parameters 
+defining 
+the economies 
+under 
+study are summarized 
+in table 
+4. The last column 
+reports 
+whether 
+the Nash-Markov 
+stationary 
+equilibrium 
+of Kiyotaki 
+and Wright 
+is speculative 
+or fundamental 
+for our 
+parameter 
+settings. 
+Our 
+economies 
+differ 
+from 
+one 
+another 
+in parameter 
+settings, 
+and whether initial classifier systems contain 
+a complete 
+enumeration 
+of states and actions 
+or whether 
+they are randomly 
+generated, 
+in which case 
+the genetic 
+algorithm 
+described 
+in section 6 is active. For all the simulations, 
+we keep the number 
+of exchange 
+classifiers 
+fixed at 72 for each type of agent, 
+and the number 
+of consumption 
+classifiers 
+fixed at 12 for each type of agent. 
+We now briefly discuss the results. 
+Economy AI 
+Table 5 reports 
+various probabilities 
+that characterize 
+the stationary 
+equilib- 
+rium 
+of Economy 
+Al. 
+These 
+probabilities 
+are to be compared 
+with 
+the 
+empirical 
+frequencies 
+from our simulations, 
+to appear 
+in tables 
+6 and 7. In 
+table 
+5d, we report 
+the conditional 
+exchange 
+probabilities, 
+7~,f(jklj) 
+= the 
+
+
+=== PAGE 23 ===
+
+R. Murimon, 
+Money 
+as a medium 
+of exchange 
+351 
+Table 5 
+q’(i) 
+j=l 
+j-2 
+J.- 
+3 
+i=l 
+0 
+1 
+0 
+i=2 
+0.5 
+0 
+0.5 
+i=3 
+1 
+0 
+0 
+(b) The probability that i holds j, in the stationary equilibrium of Economy Al. 
+$(jk) 
+j=l 
+j=2 
+j-3 
+i=l 
+(0, 090) 
+(0.167,[0,0.333],0) 
+(0. 0, 0) 
+i=2 
+([0,0.25],0.167.0) 
+(0,O.O) 
+(0.167,0,[0,0.083]) 
+i=3 
+([0,0.5],0,0.167) 
+(0,O. 0) 
+(O,O,O) 
+(c) The probability that i holds j, meets k, and trades in the stationary equilibrium of 
+Economy Al. The (i. j) entry in the table is the triple ($( jl), $( j2), $( j3)). 
+?;,‘(jkl_i) 
+j=l 
+j=2 
+j=3 
+i=l 
+(LO, 11.0, O)? 
+(l,fO,ll,O) 
+(LLiO, ll)? 
+i=2 
+([O.ll.l,O) 
+(0. [O. 11,ov 
+(1.LK411) 
+i=3 
+(IO, ll,O,l) 
+(1, [O, 11, l)? 
+(0.0, LO. ll)? 
+(d) Equilibrium exchange strategies for Economy Al. (A question mark denotes sequential 
+equilibrium strategies for events of zero probability.) The (i. j) entry in the table is the 
+triple ($( ill j), $( j21 j), $( j3] j)). 
+rF(jlj) 
+j=l 
+j=2 
+j=3 
+i=l 
+1 
+0 
+0 
+i=2 
+0 
+1 
+0 
+i=3 
+0 
+0 
+1 
+(e) Equilibrium consumption strategies for Economies Al, A2. B, and C. 
+probability 
+that a type i agent trades good j for good k, given that i is 
+holding j at the beginning of the period. When an interval appears in this list 
+of probabilities, it means that any probability in the interval is in equilibrium 
+value. When a question mark appears behind a list of probabilities, it denotes 
+that the event being conditioned upon has zero probability 
+in equilibrium. 
+Given the way that classifier systems learn from experience, it is too much to 
+expect a classifier’s system to learn the correct sequential equilibrium behavior 
+for zero probability events. 
+Table 6 and fig. 5 report the results of a long simulation of Economy Al.1 
+(Economy Al with complete enumeration of classifiers). In table 6, and in all 
+subsequent tables of empirical frequencies, the frequencies reported are ten- 
+period moving averages ending at the indicated time periods.ll 
+The tables 
+l1 When ‘-’ appears in the table, it means that the event in question occurred so rarely in our 
+simulation that no reliable frequency can be computed. 
+
+
+=== PAGE 24 ===
+
+Table 6 
+No. of agents 
+4, = 50 
+No. of classifiers 
+E = 12, c, = 12 
+Storage 
+costs 
+ip= 0.1. s* = 1. ss = 20 
+Utility 
+II, = 100, vr 
+Initial strengths 
+G<(O) = 0, ~c”,co, = 0 
+Bids 
+h,, = 0.025, h,, = 0.025. ha, = 0.25, h,, = 0.25 
+(a) Parameter 
+values used for Economy 
+Al.l. 
+&W( .I ) 
+/=1 
+J=2 
+.I = 3 
+r=l 
+0 
+1 
+0 
+r=2 
+0.502 
+0 
+0.498 
+r=3 
+1 
+0 
+0 
+&xl ( .I ) 
+/=1 
+j=2 
+.I = 3 
+i=l 
+0 
+1 
+0 
+r=2 
+0.506 
+0 
+0.494 
+1=3 
+1 
+0 
+0 
+(b) The frequency 
+with which r holds 
+J at I = 500 and t = 1000. vL( j), for Economy 
+Al.l. 
+$,,(jk) 
+/=1 
+j=2 
+j=3 
+_. ._____~~~~. 
+/=1 
+(O.O,O) 
+(0.16,0,0) 
+(0.0.0) 
+r=2 
+(0.26.0.16,O) 
+(0.0.0) 
+(0.17,O.O) 
+I=3 
+(0.52.0.0.17) 
+(O.O,O) 
+(O.O,O) 
+Gioo( 1x ) 
+/=I 
+/=2 
+/=3 
+i=l 
+(0.0.0) 
+(0.17,O.O) 
+(O.O,O) 
+1=2 
+(0.27.0.17.0) 
+(O,O*O) 
+(0.19,0,0) 
+r=3 
+(0.51,0.0.19) 
+(O,O,O) 
+(O.O,O) 
+(c) The frequency 
+with which I holds 
+J, meets someone 
+with X, and trades, 
+v,:( jk), 
+for 
+Economy 
+Al.l. 
+at t = 500 and t = 1000. 
++&co( jk/ j) 
+/=1 
+j=2 
+j=3 
+r=l 
+(l.O,O) 
+i=2 
+(l,l%O) 
+(1,l.O) 
+r=3 
+(1.0-l) 
+(d) Actions 
+of winning 
+classifiers for I with condition 
+(J, k), 7i,:(jkl 
+j). for Economy 
+Al-l. 
+at 
+/ = 1000. 
+______~ 
+__ 
+~_ .-. 
+Iteration 
+Classifier 
+Strength 
+1000 
+I 
+0 
+0 
+1 
+45.8 
+# 
+# 
+0 
+0 
+- 0.47 
+0 
+# 
+# 
+1 
+- 9.16 
+(f) Highest-strength 
+consumption 
+classifiers 
+that are activated 
+for an agent of type I at 
+iteration 
+I = 1000 in Economy 
+Al.l. 
+
+
+=== PAGE 25 ===
+
+R. Murimon. 
+Monqv as (I medium of exchunge 
+353 
+Table 6 (continued ) 
+Iteration 
+Classifier 
+Strength 
+1000 
+0 
+# 
+# 
+1 
+0 
+0 
+1 
+11.22 
+0 
+# 
+# 
+0 
+1 
+0 
+0 
+- 0.08 
+# 
+# 
+0 
+0 
+0 
+1 
+0 
+- 0.08 
+(g) Highest-strength exchange classifiers that are activated for an agent of type I at iteration 
+t = 1000 in Economy Al.l. 
+Iteration 
+Classifier 
+Strength 
+1000 
+1 
+0 
+0 
+0 
+0.0089 
+0 
+1 
+0 
+1 
+49.04 
+# 
+0 
+# 
+0 
+- 10.90 
+(h) Highest-strength consumption classifiers that are activated for an agent of type II at 
+iteration t = 1000 in Economy All. 
+Iteration 
+Classifier 
+Strength 
+1000 
+# 
+# 
+0 
+# 
+# 
+0 
+1 
+4.86 
+# 
+# 
+0 
+# 
+# 
+0 
+1 
+4.86 
+# 
+# 
+0 
+# 
+0 
+# 
+0 
+0.002 
+0 
+0 
+1 
+1 
+0 
+0 
+1 
+0.002 
+0 
+# 
+# 
+0 
+1 
+0 
+1 
+12.72 
+0 
+# 
+# 
+0 
+# 
+# 
+0 
+- 1.79 
+(i) Highest-strength exchange classifiers that are activated for an agent of type II at iteration 
+t = 1000 in Economy Al.l. 
+Iteration 
+Classifier 
+Strength 
+1000 
+# 
+0 
+# 
+0 
+- 0.024 
+# 
+# 
+0 
+0 
+- 0.412 
+0 
+0 
+1 
+1 
+31.62 
+0) Highest-strength consumption classifiers that are activated for an agent of type III at 
+iteration t = 1000 in Economy Al.l. 
+Iteration 
+Classifier 
+Strength 
+1000 
+# 
+0 
+# 
+# 
+0 
+# 
+1 
+- 0.01 
+# 
+0 
+# 
+0 
+1 
+0 
+0 
+- 0.01 
+# 
+0 
+# 
+0 
+0 
+1 
+1 
+7.78 
+(k) Highest-strength exchange classifiers that are activated for an agent of type III at iteration 
+t = 1000 in Economy Al .l. 
+
+
+=== PAGE 26 ===
+
+354 
+R. Murrmon, 
+Monqv as II medium of exhutlge 
+Table 7 
+No. of agents 
+No. of classifiers 
+Storage 
+costs 
+Utility 
+Initial strengths 
+Bids 
+Specialization’ 
+Generalization* 
+A, = 50 
+& = 72. c, = 12 
+sr = 0.1, sz = 1. ss = 20 
+11, = 100, vi 
+S&co, = 0, SC” (0) = 0 
+h,, = 0.025, h,; = 0.025. ha1 = 0.25. hzz = 0.25 
+J,(f) = 1/2J;, 
+ps = 0.01 
+f*(r)=1/2fi, 
+pr=o.2. 
+pz=o.7, 
+ps=O.2, 
+p,=o.5 
+S = 0. N, = 8. NC = 4 
+‘A(t) 
+is the probability 
+that specialization 
+occurs 
+in period 
+f. Each ‘# 
+in the winning 
+classifier 
+has probability 
+ps of being switched 
+to a zero or one depending 
+on zoI. 
+*fg( t) is the probability 
+that generalization 
+occurs in period 
+t. The proportion 
+of a classifier 
+system 
+that can be altered 
+is pr. A proportion 
+pa of classifiers 
+forms the population 
+of potential 
+parents: 
+they are chosen 
+randomly 
+in accordance 
+with strength 
+and frequency. 
+Potential 
+exterminants 
+are 
+those classifiers 
+i such that Sp( I) < S and q’(t) 
+<ps 
+maxj$‘(r). 
+To select a classifier 
+from the 
+set of potential 
+exterminants 
+to be replaced 
+by an offspring, 
+we find that classifier 
+which is most 
+similar in condition 
+and most dissimilar 
+in action. 
+For each offspring, 
+we determine 
+a classifier 
+to 
+extinguish 
+via the following 
+process. 
+For a number 
+of N, (where 
+i = c or e) times, we draw 
+a 
+proportion 
+p., of the extinguishable 
+classifiers. 
+For each such sample, 
+we find the classifier 
+with 
+lowest strength, 
+count the total number 
+of bits in its condition 
+matching 
+corresponding 
+bits in the 
+offspring, 
+and add one to that total if the action of the offspring 
+and the classifier 
+in hand do not 
+match. 
+Of the N, classifiers, 
+the one with the highest count is eliminated 
+from the system, 
+to be 
+replaced 
+by an offspring. 
+(a) Parameter 
+values used for Economy 
+A1.2. 
+4am(J) 
+j=l 
+J=2 
+i=3 
+&oo(~) 
+j=l 
+J=2 
+J=3 
+r=l 
+0 
+0.992 
+0.008 
+r=l 
+0 
+0.98 
+0.02 
+i=2 
+0.226 
+0 
+0.774 
+r=2 
+0.318 
+0 
+0.682 
+i=3 
+1 
+0 
+0 
+r=3 
+1 
+0 
+0 
+(b) The frequency 
+with which I holds 
+J at I = 1000 and t = 2000, n,:(j), 
+for Economy 
+A1.2. 
+I&@) 
+.I = 1 
+J=2 
+J=3 
+r=l 
+(0.0.0) 
+(0.08,0.14,0.01) 
+(0.0.0) 
+r=2 
+(0,0.08,0) 
+(O,O,O) 
+(0.28,0.01,0.09) 
+i=3 
+(0.0,0.28) 
+(O,O% 0) 
+((IO, 0) 
+“&aa($) 
+___ 
+_ 
+/=I 
+j=2 
+J=3 
+r=l 
+(0.0.0) 
+(0.09,0.19,0.03) 
+(0,O.O) 
+1=2 
+(0,0.08.0) 
+(O,O, 0) 
+(0.2,0.03,0.06) 
+i=3 
+(0.0.01 ,0.2) 
+(0.0.0) 
+(O,O, 0) 
+(c) The frequency 
+with which I holds J, meets k, and trades at t = 1000 and t = 2000, n$(jk), 
+for Economy 
+Al .2. 
++&,,(jkjj) 
+_________ 
+J=l 
+y-- 
+J=3 
+i=l 
+(0. - . ~ ) 
+(1.1.0) 
+(1.1.0) 
+r=2 
+(0.1.0) 
+(-,-.-) 
+(1.0.1) 
+i=3 
+(0,O.l) 
+(-.-.I) 
+(-. 
+- .I) 
+
+
+=== PAGE 27 ===
+
+R. Marimon, 
+Money 
+us 
+a medium of exchange 
+Table 7 (continued) 
+355 
+liieumo(jkl_i) 
+j-l 
+j-2 
+j=3 
+i=l 
+(z 
+b;’ 
+(l,O,l) 
+(1,Ll) 
+i=2 
+(0:l:l) 
+t-,-.-J 
+(LL1) 
+i=3 
+(O.l,l) 
+(-, 
+- .l) 
+(d) Actions of winning classifiers for i with condition (j, k), I;i:( j.41 j), for Economy A1.2. 
+Ilif000(il.i) 
+j=l 
+j=2 
+j=3 
+lliiooo(jlj) 
+j=l 
+j=2 
+j=3 
+i=l 
+1 
+0.011 
+0.049 
+i-l 
+1 
+0 
+0.69 
+i=2 
+0.45 
+1 
+0.366 
+i-2 
+0.23 
+1 
+0.641 
+i=3 
+0.033 
+- 
+1 
+i=3 
+0.84 
+1 
+1 
+(e) The frequency with which i consumes j at r given j is held after the trading period, 
+t = 1000 and t = 2000, nif( jl j), for Economy A1.2. 
+Iteration 
+Classifier 
+Strength 
+1000 
+1 
+0 
+0 
+1 
+38.11 
+0 
+1 
+# 
+0 
+-0.44 
+0 
+0 
+1 
+1 
+- 4.26 
+2000 
+1 
+0 
+0 
+1 
+41.65 
+0 
+1 
+0 
+0 
+- 0.43 
+0 
+0 
+1 
+0 
+- 8.86 
+(f) Highest-strength 
+consumption classifiers that are activated for an agent of type I at 
+iteration t in Economy A1.2. 
+Iteration 
+Classifier 
+Strength 
+1000 
+0 
+1 
+0 
+1 
+0 
+0 
+1 
+8.27 
+0 
+1 
+0 
+0 
+1 
+0 
+1 
+- 0.09 
+0 
+1 
+0 
+0 
+0 
+1 
+0 
+-0.10 
+2000 
+0 
+1 
+0 
+1 
+0 
+0 
+1 
+9.05 
+0 
+1 
+0 
+0 
+1 
+0 
+0 
+-0.10 
+0 
+1 
+0 
+0 
+0 
+1 
+1 
+-0.10 
+(g) I+&estYstrength exchange classitiers that are activated for an agent of type I at iteration f 
+in Economy A1.2. 
+Iteration 
+Classifier 
+Strength 
+1000 
+# 
+# 
+0 
+0 
+1.88 
+0 
+# 
+0 
+1 
+11.48 
+0 
+0 
+1 
+1 
+- 9.29 
+2000 
+# 
+# 
+0 
+0 
+8.05 
+0 
+# 
+0 
+1 
+38.40 
+0 
+0 
+1 
+1 
+- 9.01 
+(h) Highest-strength 
+consumption classifiers that are activated for an agent of type II at 
+iteration t in Economy Al.2. 
+
+
+=== PAGE 28 ===
+
+356 
+R. Murrmon, 
+Monqv us ~1 medium of exchuqe 
+Table 7 (continued) 
+_ 
+Iteration 
+Classifier 
+Strength 
+1000 
+1 
+0 
+0 
+1 
+0 
+0 
+0 
+0.29 
+1 
+0 
+0 
+0 
+1 
+0 
+1 
+1.67 
+1 
+0 
+0 
+0 
+0 
+1 
+0 
+0.28 
+0 
+0 
+1 
+# 
+# 
+0 
+1 
+2.23 
+0 
+# 
+1 
+0 
+1 
+0 
+0 
+4.08 
+0 
+0 
+1 
+0 
+0 
+1 
+1 
+- 2.08 
+2000 
+1 
+0 
+0 
+1 
+0 
+0 
+0 
+1.32 
+1 
+0 
+0 
+0 
+1 
+0 
+1 
+6.15 
+1 
+0 
+0 
+0 
+0 
+1 
+0 
+1.25 
+0 
+0 
+1 
+I 
+0 
+0 
+1 
+1.34 
+0 
+# 
+1 
+0 
+1 
+0 
+1 
+2.9X 
+0 
+0 
+1 
+0 
+0 
+1 
+1 
+- 1.99 
+(i) Highest-strength 
+exchange 
+classifiers 
+that are activated 
+for an agent of type II at iteration 
+I 
+in Economy 
+Al.2. 
+Iteration 
+Classifier 
+Strength 
+1000 
+1 
+0 
+0 
+0 
+0.00 
+0 
+0 
+1 
+1 
+30.94 
+2000 
+1 
+0 
+0 
+1 
+8.97 
+0 
+0 
+1 
+1 
+30.55 
+(j) Highest-strength 
+consumption 
+classifiers 
+that 
+are activated 
+for an agent 
+of type III at 
+iteration 
+I in Economy 
+A1.2. 
+Iteration 
+Classifier 
+Strength 
+1000 
+1 
+0 
+0 
+ti 
+# 
+# 
+0 
+0.28 
+1 
+0 
+0 
+0 
+* 
+# 
+0 
+1.77 
+1 
+it 
+# 
+0 
+* 
+1 
+1 
+7.39 
+2000 
+1 
+0 
+0 
+1 
+#t 
+0 
+0 
+0.14 
+1 
+0 
+0 
+0 
+1 
+0 
+1 
+0.42 
+1 
+# 
+fF 
+0 
+# 
+1 
+1 
+7.25 
+(k) Highest-strength 
+exchange 
+classifiers 
+that are activated 
+for an agent of type III at iteration 
+/ in Economy 
+A1.2. 
+____- 
+report 
+frequencies 
+for the middle 
+and the ending 
+time periods. 
+Table 
+6d is 
+constructed 
+from the winning 
+classifiers 
+at period 1000, and is to be compared 
+with the theoretical 
+predictions 
+from table 5d. Finally, 
+tables f to k show the 
+highest-strength 
+classifiers 
+of each type of agent 
+that 
+are activated 
+at the 
+indicated 
+iteration 
+t. The listed classifiers 
+form a system 
+that is sufficient 
+to 
+determine 
+decisions 
+in all states that are visited with nonnegligible 
+frequency 
+at iteration 
+t. Comparison 
+of the results 
+in table 
+6 and 
+fig. 5 with 
+the 
+theoretical 
+predictions 
+of table 
+5 shows 
+that 
+the distribution 
+of holdings 
+rapidly 
+converges 
+to the stationary 
+equilibrium 
+distributions. 
+Similarly, 
+the 
+exchange 
+and consumption 
+strategies 
+implemented 
+by the system 
+of winning 
+classifiers 
+virtually 
+coincide 
+with the equilibrium 
+strategies. 
+For example, 
+table 
+
+
+=== PAGE 29 ===
+
+R. 
+Murimon, 
+Money 
+us a medium 
+of exchange 
+357 
+_” 
+I 
+-- 
+40 
+30 
+20 
+l0 
+0 I 
+_ 
+lLP. 1 
+-good1 
+---good2 
+-gQod3 
+-10’ 
+’ 
+’ 
+’ 
+’ 
+’ 
+’ 
+’ 
+’ 
+’ 
+J 
+0 
+20 
+40 
+60 
+80 
+100 
+._ I- 
+I 
+30 
+20 
+0 1 
+_____l___l-__.l___l-_----I 
+-10- 
+0 
+20 
+40 
+80 
+80 
+lO0 
+L 
+I 
+20 
+10 
+0 
+20 
+40 
+60 
+80 
+lO0 
+the (in period8 of l0) 
+Fig. 5. Distribution of holdings for Economy Al.l. 
+6d is to be read as follows. When a type I agent has 1 in storage after 
+exchange, he eats it; for both the first and second classifier in the list have 
+their conditions matched (‘good 1’ and ‘not good 3’) but the first has higher 
+strength and therefore determines the decisions. When the agent is storing 2, 
+he does not eat (the second and third classifiers have their conditions matched, 
+but the second has higher strength). When the agent is storing 3, he eats (the 
+third classifier is the only pertinent one). This last decision is wrong, but the 
+
+
+=== PAGE 30 ===
+
+358 
+R. Murimon, 
+Monqs us u medium of exchange 
+60 _ 
+50 -__“‘v___._.._...Y_.___--_.__~., 
+40 
+- 
+Type I 
+30 
+- 
+- 
+good 
+1 
+-.-- 
+20 
+- 
+good 2 
+- 
+good 3 
+10 - 
+O- 
+* 
+-._i. 
+U 
+-10 
+I 
+I 
+I 
+I 
+I 
+I 
+I 
+1 
+I 
+‘. 
+0 
+20 
+40 
+60 
+80 
+100 
+0 
+20 
+40 
+60 
+80 
+IO0 
+80 
+-10 
+I 
+I 
+I 
+I 
+I 
+1 
+I 
+I 
+I 
+0 
+20 
+40 
+60 
+80 
+100 
+time (in periods 
+of 20) 
+Fig. 6. Distribution 
+of holdings 
+for Economy 
+Al.2 
+frequency with which agent I brings good 3 into the state for the consumption 
+decision is negligible, so that being wrong is not costly. 
+Economy Al.2 is identical to Economy Al.l, except that we use a randomly 
+generated list of rules initially, and rely on a genetic algorithm to inject new 
+rules into the classifier’s system. Economy Al.2 thus provides our first test for 
+the genetic algorithm of section 6. i2 It is important to notice that while the size 
+12More 
+standard 
+Holland 
+algorithms 
+were first tried without 
+much 
+success, 
+prompting 
+us to 
+produce 
+the modified 
+algorithm 
+described 
+in section 6. 
+
+
+=== PAGE 31 ===
+
+R. Marimon, 
+Money as a medium of exchange 
+359 
+of the exchange and consumption classifier systems is 72 and 12, respectively, 
+the set of possible classifiers is 36 X 2 = 1458 and 33 x 2 = 54, respectively. At 
+any one time, only a small subset of possible classifiers is in the system. The 
+results for Economy Al.2 are summarized in table 7 and fig. 6. 
+As we can see from fig. 6 and table 7, the distribution of holdings for agents 
+of type I and III rapidly converge to their equilibrium levels. Type II agents 
+only hold goods 1 and 3 as predicted but it takes longer to converge to the 
+equilibrium values. The exchange decisions are the correct ones (even in period 
+lOOO), except for a couple of events of very small probability (type I agents 
+trade good 2 for 3 and type III agents trade good 1 for 2). 
+Consumption decisions are basically correct, except that II consumes 3 and 
+III consumes 1. Overeating has been a minor problem in several of our 
+economies. In most such cases that we have encountered, such wrong behavior 
+has been associated with low-frequency states for which it is difficult for the 
+classifier system to acquire the experience required to reward better classifiers 
+and ‘right’ actions. In our economies there are no production costs, and it is 
+difficult for classifiers with low-frequency states to gain the adequate strength. 
+In summary, both with complete enumeration and without it, our simula- 
+tions of Economy Al seem to be converging to the stationary equilibrium, 
+although this convergence is lower when initial classifiers are randomly gener- 
+ated and new classifiers are synthesized. 
+Economy A2 
+Economy A2 differs from Economy Al only in that agents receive 500 utils 
+from consuming 
+their desired good instead of 100. With this change of 
+parameters, for high enough discount factors the unique stationary equilibrium 
+of Kiyotaki and Wright’s economy is the so-called speculative equilibrium 
+previously described. The probabilities that characterize the speculative equi- 
+librium 
+are summarized 
+in table 8. Our simulation 
+is summarized 
+in 
+table 9. 
+Table 9 depicts a pattern of holdings characteristic 
+of a fundamental 
+equilibrium, 
+not a speculative one. Compare tables 9b and 9c with the 
+theoretical predictions of tables 8b-8c and tables 5b-5c. Recall that a crucial 
+difference between a speculative and a fundamental equilibrium is that in the 
+former, type I agents are willing to exchange good 2 for good 3, while in the 
+latter they are not. Table 9d shows that type I agents are willing to exchange 
+good 2 for 3. That is, 7iic(jk12) = (l,O, 1) for i = I. This is to be compared with 
+the situation for economy Al, in which I;:( jk12) = (l,O, 0) (see table 5d or 6d). 
+Then how is it that the distribution of holding patterns fails to support a 
+speculative 
+equilibrium? 
+The answer is to be found in the consumption 
+classifiers of type I agents, which are too general (have too many # signs) to 
+
+
+=== PAGE 32 ===
+
+360 
+R. Murrmo~t, 
+Mary 
+us ~1 ntediutn 
+of exchange 
+Table X 
+T,h( 
+I ) 
+/=1 
+j=2 
+j=3 
+/=1 
+0 
+0.707 
+0.293 
+I=2 
+0.586 
+0 
+0.414 
+r=3 
+1 
+0 
+0 
+(b) The probability 
+that I holds .j in the speculative 
+equilibrium 
+of Economy 
+AZ. 
+q=t Ik ) 
+/=1 
+j=2 
+j=3 
+I=1 
+(0.0.0) 
+(0.13X,[0,0.167].0.097) 
+(0.097.0. [0,0.029]) 
+1=2 
+([0,0.269],0.13X,O.O57) 
+(O.O,O) 
+(0.138.0.098, 
+[0,09X]) 
+/=3 
+([0.0.528].0.0.235) 
+(O.O,O) 
+(0.0.0) 
+(c) The probability 
+that I hold 
+j. meets 
+L, and 
+trades 
+in the speculative 
+equilibrium 
+of 
+Economy 
+AZ. 
+G,e(,/W) 
+j=1 
+I=2 
+,j = 3 
+i=l 
+([O, ll,O.O)? 
+(1.[0.11.1) 
+(1,0,[0,11) 
+r=2 
+([O. 11,l. 0) 
+(0, [O, 11, O? 
+(l,l,[O,ll) 
+;=3 
+([0.11.0.1) 
+(l.[O,ll.l)? 
+(O.O,[O, ll)? 
+(d) Speculative 
+equilibrium 
+exchange 
+strategies 
+for Economy 
+A2. 
+distinguish 
+among 
+goods stored. i3 To support 
+the speculative 
+equilibrium, 
+it is 
+necessary 
+that 
+the winning 
+consumption 
+classifiers 
+be specific 
+enough 
+to 
+permit 
+distinguishing 
+sufficiently 
+among 
+the goods stored so that the exchange 
+classifiers 
+can be properly 
+compensated. 
+It happens 
+that the winning 
+classifiers 
+embody 
+levels of generality 
+that result in overconsumption 
+of good 3 and a 
+failure 
+to transmit 
+the information 
+from 
+the consumption 
+classifier 
+to the 
+exchange 
+classifier 
+that would 
+be required 
+to support 
+a speculative 
+equilib- 
+rium. 
+We shall only briefly summarize 
+the results for Economy 
+A2.2 with random 
+generation 
+of initial 
+classifiers, 
+and refer the reader to our working 
+paper 
+for 
+tables giving the numerical 
+results. After 1000 iterations 
+the economy 
+had not 
+converged 
+to a steady state. Trading 
+patterns 
+were closer to the fundamental 
+equilibria 
+than to the speculative 
+equilibrium 
+in period 1000. (The reverse was 
+true 
+in period 
+500.) However, 
+the classifier 
+system 
+of Type 
+I agents 
+did 
+distinguish 
+between 
+storage of different 
+good for consumption, 
+and the classi- 
+fier ci,e was slowly gaining 
+strength 
+over time. Nevertheless, 
+our simulations 
+provided 
+no support 
+for a hope 
+that the economy 
+would 
+converge 
+to the 
+speculative 
+equilibrium 
+if it were to last longer. 
+While the results for Economy 
+A2 are fairly inconclusive, 
+they illustrate 
+two 
+interesting 
+points. 
+First, they expose some deficiencies 
+of the genetic algorithm 
+13To conserve 
+space, 
+these classifiers 
+are not reported 
+here. They are contained 
+in a longer 
+version 
+of this paper which is available 
+from the authors 
+as a working 
+paper. 
+
+
+=== PAGE 33 ===
+
+R. Murimon, 
+Monqv us (I medium of exchange 
+Table 9 
+361 
+No. of agents 
+No. of classifiers 
+Storage costs 
+Utility 
+Initial strengths 
+Bids 
+A, = 50 
+E, = 12, C, = 12 
+s1 = 0.1, sa = 1. sj = 20 
+ui = 500, vi 
+%t.(O) = 0. x$(O) = 0 
+h,, = 0.025, h,, = 0.025, 4, = 0.25. hsa = 0.25 
+(a) Parameter values used for Economy A2.1. 
+&o(j) 
+j=l 
+j=2 
+j=3 
+t&&j) 
+j=l 
+j=2 
+j=3 
+i-1 
+0 
+1 
+0 
+i=l 
+0 
+1 
+0 
+i=2 
+0.504 
+0 
+0.496 
+i=2 
+0.466 
+0 
+0.534 
+i-3 
+1 
+0 
+0 
+i=3 
+1 
+0 
+0 
+(b) The frequency with which i holds j at r = 500 and r = 1000, rrz( j), for Economy A2.1. 
+l);‘&,,J 
+jk ) 
+j=l 
+j=2 
+j=3 
+i=l 
+(0.0.0) 
+(0.16.0.17.0.15) 
+(O,O, 0) 
+i-2 
+(0.0.16.0) 
+(0,O. 0) 
+(0.17,0.15,0.04) 
+i-3 
+(0.34.0.0.17) 
+(O.O,O) 
+(O,O,O) 
+q&d .ik ) 
+j=l 
+,j = 2 
+j=3 
+i-l 
+(0.0.0) 
+(0.18,0.13,0.19) 
+(0. 0, 0) 
+i==2 
+(0,0.18,0) 
+(O.O,O) 
+(0.18,0.19,0.04 
+i=3 
+(0.34,0,0.18) 
+(0,O.O) 
+(0.0.0) 
+(c) The frequency with which i holds j, meets someone with k, and trades at t = 500 and 
+r = 1000, rrl( jk ), for Economy A2.1. 
+li,c,(.ikli) 
+j=l 
+j=2 
+j=3 
+%djW 
+j=l 
+j=2 
+j=3 
+i-l 
+(0,O. 0) 
+(1,O.l) 
+(O.O,O) 
+i=l 
+(0.0.0) 
+(l,O,l) 
+(0.0.0) 
+i==2 
+(O.l,O) 
+(O,l,O) 
+(l.l,O) 
+i=2 
+(O,l,O) 
+(O,l,O) 
+(1.1.0) 
+i=3 
+(1.0.1) 
+(1.1.1) 
+(l*O,l) 
+i=3 
+(1,O.l) 
+(1.1.1) 
+(1.0.1) 
+(d) Actions of winning classifiers for i with condition 
+(j, 
+k), 
+I;i:( jkl j), 
+at 
+I= 
+5~ 
+and 
+f = 100% for Economy A2.1. 
+which we have used (we return to this in section 8). Second, they raise the issue 
+of whether our artificially intelligent agents are too impatient. 
+Patience requires experience. 
+The transfer system inside the classifier system 
+is designed to converge to a set of long-run average strengths. In the limit, the 
+artificially intelligent agents should behave as long-run average payoff maxi- 
+mizers, since the steady-state strengths weight payoffs by their relative fre- 
+quencies. It takes time, however, for optimal rules to achieve the desired 
+strengths. The behavior of our artificially intelligent agents can be very myopic 
+at the beginning. In economies, such as Economy A2, in which the nature of 
+
+
+=== PAGE 34 ===
+
+362 
+R. Marimon, 
+Money as u medium of exchange 
+(Fundamental 
+Equili briurn) 
+(Speculative 
+Equilibrium) 
+Fig. 7. Exchange 
+pattern 
+in Economy 
+B. 
+the equilibrium 
+changes with the discount 
+rate, this early myopia 
+might have a 
+perverse 
+effect in diverting 
+the economy 
+towards 
+a low discount-factor 
+station- 
+ary equilibrium, 
+such as the fundamental 
+equilibrium.14 
+The underlying 
+algo- 
+rithm has to provide 
+enough experimentation 
+to avoid an early ‘lock in’.15 The 
+present 
+algorithm 
+seems defective 
+in that it has too little experimentation 
+to 
+support 
+the speculative 
+equilibrium 
+even in the long simulations 
+we have run. 
+Economy B 
+Stability 
+tests based on classifier 
+systems 
+are potentially 
+useful as selection 
+criteria 
+in economies 
+with multiple 
+equilibria. 
+While Economy 
+A has a unique 
+equilibrium, 
+Economy 
+B has two equilibria 
+if the discount 
+factor 
+is not too 
+low. 
+Economy 
+B has a different 
+production 
+pattern 
+than Economy 
+A (I produces 
+3, II produces 
+1, and III produces 
+2). For the specified parameters 
+(see table 4) 
+two stationary 
+equilibria 
+are possible 
+whose trading 
+patterns 
+are described 
+by 
+fig. 7. In the fundamental 
+equilibrium, 
+goods 
+1 and 
+2 serve as media 
+of 
+exchange, 
+while in the speculative 
+equilibrium 
+goods 2 and 3 are the media of 
+exchange 
+[see Kiyotaki 
+and Wright 
+(1989)]. Tables 
+10 and 11 summarize 
+the 
+trading 
+patterns 
+for the fundamental 
+and the speculative 
+equilibrium, 
+respec- 
+tively. 
+14A fundamental 
+equilibrium 
+exists for Economy 
+A2 only if the discount 
+factor 
+is sufficiently 
+IOW. 
+“Marimon 
+and Miller (1989) report that in their experiments 
+with the genetic algorithm 
+25 out 
+of 30 runs of Economy 
+A2 converged 
+to the speculative 
+equilibrium. 
+
+
+=== PAGE 35 ===
+
+R. Murimon, 
+Monqv 
+as (I medium 
+of exchunge 
+363 
+Table 10 
+r;“(j) 
+j=l 
+j=2 
+j=3 
+i=l 
+0 
+0.293 
+0.707 
+i=2 
+1 
+0 
+0 
+i=3 
+0.586 
+0.414 
+0 
+(b) The probability that i holds j in the fundamental equilibrium of Economy B. 
+$(jk) 
+j=l 
+j=2 
+j=3 
+i=l 
+(0, 0, 0) 
+(0.098, [0,0.069], 0) 
+(0.138.0.098,[0,0.167]) 
+i=2 
+([O. 0.529].0.236.0) 
+(O,O,O) 
+(0.0.0) 
+i=3 
+([0,0.310],0,0.138) 
+(0.138,[0,0.098],0.098) 
+(0.0.0) 
+(c) The probability that i hold j, meets k. and trades in the fundamental equilibrium of 
+Economy B. 
+$‘( jk1.j) 
+j=l 
+j=2 
+j=3 
+i=l 
+i=2 
+i=3 
+(LO. 11.0. O)? 
+(l.[O, 11,O) 
+(l.l.[O,ll) 
+([O,ll.l,O) 
+(0, [O. II, O)? 
+(l,l,[O,l])? 
+([0,11,0.1) 
+(l.[O.ll.l) 
+(0.0. [O. ll)? 
+(d) Fundamental equilibrium exchange strategies for Economy B. 
+Table 11 
+rrih(.j) 
+j=l 
+j=2 
+j=3 
+i=l 
+0 
+0.586 
+0.414 
+i=2 
+0.707 
+0 
+0.293 
+i=3 
+0 
+1 
+0 
+(b) The probability that i holds j in the speculative equilibrium of Economy B. 
+$( jk) 
+j=l 
+j=2 
+j-3 
+i=l 
+(0.0.0) 
+(0.138,[0,0.310],0) 
+(0.098,0.138, [0,0.098]) 
+i=2 
+([0,0.167].0.138,0.098) 
+(0,O.O) 
+(0.0.098, [0,0X%9]) 
+i=3 
+(0, 0, 0) 
+(0,[0,0.529],0.138) 
+(0.0.0) 
+(c) The probability that i holds j, meets k, and trades in the speculative equilibrium of 
+Economy B. 
+$‘( jklj) 
+i=l 
+i-2 
+i=3 
+j-1 
+j=2 
+j=3 
+([0.11,0,0)? 
+(l,P*ll,O) 
+(l,l,[O,ll) 
+([O.ll,l.l) 
+(0,[0,11,0)? 
+(O.l,P,ll) 
+(IO. 11.0. l)? 
+(0. to, 11.1) 
+(0, 0, ]O, ll)? 
+(d) Speculative equilibrium exchange strategies for Economy B. 
+
+
+=== PAGE 36 ===
+
+Table I2 
+No. of agents 
+No. of classifiers 
+storage costs 
+Utility 
+Initial strengths 
+Bids 
+A, = 50 
+I$ = 72, c, = 12 
+Y1 =l. 
+s2=4. 
+.\3=9 
+Ii1 = 100, vr 
+%t<(,, = 0. s:~C(,) = 0 
+h,, = 0.25, h,, = 0.25, h,, = 0.25, I>,, = 0.25 
+(a) Parameter 
+values used for Economy 
+B.l. 
+dooo( / ) 
+/=1 
+/=2 
+/=3 
+/=I 
+I=2 
+/=3 
+r=l 
+0 
+0.464 
+0.536 
+/=I 
+0 
+0.28 
+0.72 
+j=2 
+0.994 
+0 
+0.006 
+i=2 
+0.994 
+0 
+0.006 
+I=3 
+0 
+1 
+0 
+,=3 
+0.526 
+0.474 
+0 
+(b) The frequency 
+with which I holds j at I = 500 and I = 1000, n,:(,j), 
+for Economy 
+B.l. 
+q’,,( 
+j!- ) 
+/=1 
+j=2 
+/=3 
+/=1 
+(0,O.O) 
+(0.16,0.05,0.01) 
+(0.01.0.19,0.04) 
+I=2 
+(0.0.16,O.Ol) 
+(0.0.0) 
+(0, 0,O) 
+r=3 
+(0.0.0) 
+(0.0.0.18) 
+(0,O.O) 
+God IX ) 
+j=l 
+j=2 
+/=3 
+r=l 
+(0.0.0) 
+(0.08.0.02,0.01) 
+(0.15,0.11.0.07) 
+1=2 
+(0.41,0.25,0.01) 
+(0.0.0) 
+(O,O, 0) 
+r=3 
+(0.11.0.01.0.15) 
+(0.1x,0.03.0.1()) 
+(O.O,O) 
+(c) The frequency 
+with which I holds 
+j, meets someone 
+with k. and trades 
+at I = 500 and 
+t = 1000. r,‘;( jl‘ ). for Economy 
+B.l. 
+7j&( /Xl/) 
+.I = 1 
+/=2 
+/=3 
+7j,;ooo( /A I I) 
+/=1 
+/=2 
+/=3 
+i=l 
+(1.0.0) 
+(1.1.1) 
+(1.1.1) 
+,=l 
+(l,(),O) 
+0.0.0) 
+(1.1.1) 
+;=2 
+(0,l.O) 
+(1.1.0) 
+(1.1.1) 
+1=2 
+(1.1.1) 
+(1. LO) 
+(1,l.O) 
+r=3 
+(0.0.1) 
+(0.0.1) 
+(0,O.O) 
+r=3 
+(1.0.1) 
+(1.1-l) 
+(0,O.O) 
+(d) Actions 
+of winning 
+classitiers 
+for I with condition 
+( j, k). +,;( jkl j ). for Economy 
+B.1. 
+G3oo( /Ii) 
+/=1 
+/=2 
+/=3 
+r=l 
+1 
+0.07 
+0.508 
+1=2 
+0.009 
+1 
+0.998 
+/=3 
+0.050 
+0.632 
+1 
+(e) The frequency 
+with which I consumes 
+j at f given 
+j is held after 
+the trading 
+period. 
+$( jI j). for Economy 
+B.l. 
+
+
+=== PAGE 37 ===
+
+R. Marimon, Monqv us (I medium of exchunge 
+365 
+Table 13 
+No. of agents 
+No. of classifiers 
+Storage costs 
+Utility 
+Initial strengths 
+Bids 
+A, = 50 
+E, = 72, C, = 12 
+s,=1,sz=4,sg=9 
+ui = 100, vi 
+S&O) = 0. S&(O) = 0 
+h,, = 0.025, h,, = 0.025, &, = 0.25, hzz = 0.25 
+Specializatiod 
+Generalizatiot? 
+‘See footnote 1 of table 7. 
+‘See footnote 2 of table 7. 
+f,(f) = 1/2fi. 
+p, = 0.01 
+/&=;/~~*,P1=43.2, 
+p2 = 0.7. p3 = 0.2, pg = 0.5, 
+*c 
+*e 
+(a) Parameter values used for Economy B.2. 
+&N3(j) 
+j=l 
+j=2 
+j=3 
+&a0(j) 
+j=l 
+j=2 
+j=3 
+i=l 
+0 
+0.434 
+0.566 
+i=l 
+0 
+0.354 
+0.646 
+i=2 
+0.89 
+0 
+0.11 
+i=2 
+0.996 
+0 
+0.004 
+i=3 
+0.088 
+0.912 
+0 
+i=3 
+0.268 
+0.732 
+0 
+(b) The frequency with which i holds j at r = 1000 and t = 2000, qi( j), for Economy B.2. 
+Gx,, ( .ik ) 
+j=l 
+j=2 
+j=3 
+i=l 
+(0.0.0) 
+(0.14,0.08,0.02) 
+(0.18,0.18,0.05) 
+i=2 
+(0.14.0.41.0.19) 
+(O,O,O) 
+(0.03.0.05.0.1) 
+i=3 
+(0.01,0,0.02) 
+(0.26,0.16,0.20) 
+(0,O.O) 
+j=l 
+j=2 
+j=3 
+i=l 
+(0.0.0) 
+(0.14,0.04,0.01) 
+(0.06.0.16,0.07) 
+i=2 
+(0.13,0.36,0) 
+(0,O. 0) 
+(O.O,O) 
+i=3 
+(0.04.0,0.06) 
+(0.22.0.12.0.16) 
+(0.0.0) 
+(c) The frequency with which i holds j, meets someone with k, and trades at I = 1000 and 
+t = 2000, n,T( ,jk), for Economy B.2. 
+j=l 
+j=2 
+j=3 
+i=l 
+(X0? 
+(1.1.1) 
+(1.1.0) 
+i=2 
+i=3 
+(1X1) 
+(-,-,-) 
+(1.1.1) 
+(0.1.1) 
+(-,-,l) 
+ljie2ooo( 
+jklj) 
+j=2 
+j=3 
+i=l 
+(Xl? 
+(1.1.0) 
+(1.1.0) 
+i=2 
+c1:o: 1) 
+(-,-.-) 
+(1.1.1) 
+i=3 
+(LO. 1) 
+(1. - -1) 
+(d) Actions of winning classifiers for i with condition (j, k), +i( jkl j), for Economy B.2. 
+
+
+=== PAGE 38 ===
+
+366 
+R. Munmon, Money us u medium of exchunge 
+We simulated 
+Economy 
+B. Table 
+12 summarizes 
+the results 
+for Economy 
+B.l with complete 
+enumeration 
+of rules. Table 
+13 summarizes 
+the results 
+for 
+Economy 
+B.2 with random 
+initial 
+classifiers. 
+Economy 
+B.l displays 
+an interesting 
+pattern 
+of evolution. 
+At iteration 
+500 
+the distribution 
+of holdings 
+and, especially, 
+the trading 
+patterns 
+correspond 
+to 
+the speculative 
+equilibrium 
+(except in some very low probability 
+events, as II’s 
+unwillingness 
+to trade good 1 for good 2). However, 
+the economy 
+moves away 
+from this state and by iteration 
+1000 has practically 
+converged 
+to the funda- 
+mental 
+equilibrium 
+(with the same exception 
+now of reverse sign but still of 
+low probability). 
+Economy 
+B.2 with random 
+initial 
+classifiers 
+had not converged 
+after 2000 
+periods. 
+Nevertheless, 
+as can be seen from table 13. the economy 
+seems to be 
+moving 
+towards 
+the fundamental 
+equilibrium. 
+In particular, 
+with the exception 
+of a zero-frequency 
+event (II is willing 
+to trade 1 for 3) the trading 
+patterns 
+correspond 
+to the fundamental 
+equilibrium. 
+These 
+two simulations 
+for Economy 
+B provide 
+examples 
+in which 
+the 
+classifier 
+systems 
+seem to select the fundamental 
+equilibrium 
+over the specula- 
+tive equilibrium. 
+l6 Furthermore, 
+the results for Economy 
+B.l indicate 
+that this 
+is not been the result of myopic behavior. 
+Economy C 
+In Economy 
+C a new good, good 0, with the characteristics 
+of ‘fiat money’ is 
+introduced. 
+No agent derives 
+utility 
+from consuming 
+good 0. There 
+are no 
+storage 
+costs associated 
+with good C, although 
+storing 
+it uses up the storage 
+capacity 
+of each agent. 
+Fiat money 
+is introduced 
+into the system by forcing 
+some agents 
+to store 
+good 0 in period 0. In particular, 
+48 units of good 0 are randomly 
+allocated 
+to 
+48 agents. 
+To avoid 
+fluctuations 
+in the quantity 
+of money, 
+agents 
+are not 
+allowed 
+to consume 
+good 0. A modified 
+setup, not pursued 
+here, would 
+give 
+agents 
+the opportunity 
+to learn not to eat money. 
+The production 
+technologies 
+are as in Economy 
+A (see table 4). Table 
+14 
+provides 
+the probabilities 
+that characterize 
+the unique 
+(fundamental) 
+equilib- 
+rium of Economy 
+C. The equilibrium 
+trading 
+patterns 
+are depicted 
+in fig. 8. 
+Table 
+15 describes 
+the results 
+for Economy 
+C with random 
+generation 
+of 
+initial 
+classifiers. 
+The exchange 
+classifier systems have 150 classifiers, 
+while the 
+population 
+of possible 
+classifiers 
+has 13,122 strings. 
+The economy 
+converges 
+remarkably 
+fast to the fundamental 
+equilibrium 
+and, with minor 
+fluctuations, 
+the distribution 
+of holdings 
+remains 
+stationary. 
+The final exchange 
+actions 
+are 
+161n Marimon 
+and 
+Miller (1989) 30 out of 30 experiments 
+resulted 
+in convergence 
+to the 
+fundamental 
+equilibrium. 
+
+
+=== PAGE 39 ===
+
+R. Murimon, 
+Money 
+us a medium 
+of exchange 
+367 
+Table 14 
+$(j) 
+i=l 
+i=2 
+i==3 
+j = 1 
+0 
+0.26 
+0.62 
+J’ = 2 
+0.74 
+0 
+0 
+j-3 
+0 
+0.42 
+0 
+j=O 
+0.26 
+0.32 
+0.38 
+(b) The probability that i holds j in the fundamental equilibrium of Economy C. 
+rie( .jk ) 
+i=l 
+i=2 
+i-3 
+j=l 
+(0, 0, 0.0) 
+([0.0.08], 
+0.064,0,0.023) 
+([0,0.18],0,0.087,0.034) 
+J’ = 2 
+(0.064. [0,0.08], 0,0.079) 
+(0.0.0.0) 
+(0,O. 0,O) 
+j=3 
+(O.O,O,O) 
+(0.08730, [0,0.06],0.053) 
+(0,O. 0,O) 
+j=O 
+(0.076,0,0,[0,0.08]) 
+(0,0.079,0, [O, 0.11) 
+(0.0,0.053, [O, 0.121) 
+(c) The probability that i holds j, meets k. and trades in the fundamental equilibrium of 
+Economy C. 
+C(jklj) 
+i=l 
+i=2 
+i==3 
+j = 1 
+j=2 
+j== 3 
+j=O 
+(-,o,o,w 
+(-,l.O,l) 
+(-,O,l,l) 
+(1, - .O,l) 
+(0. - ,O,O)? 
+(1. - ,l.l)? 
+(1.1. - , I)? 
+(1.1, - ,l) 
+(0.0, - .O)? 
+(1.0.0, - ) 
+(O.l,O, -) 
+(O,O,l, -) 
+(d) Fundamental equilibrium exchange strategies for Economy C. 
+Fig. 8. Exchange pattern in Economy C. 
+the correct ones with only two exceptions, each one occurring with a frequency 
+of 0.002 in the last ten periods (agents of type II give up good 1 for good 3, 
+and agents of type III do not accept good 0 for good 1; see tables 15d and 
+1%). 
+Given the complexity of the exchange patterns with fiat money, the results 
+for Economy C indicate the ability of our artificially intelligent agents to set 
+up complex social arrangements like fiat money.” 
+“A version of Economy C with the storage costs of Economy A did not converge. probably 
+because the low cost of storing good 1 (0.1) made this good too good a substitute for fiat money. 
+These results for Economy C have been successfully replicated in Marimon and Miller (1989). 
+
+
+=== PAGE 40 ===
+
+368 
+R. Marimon, Monq as a medium of exchange 
+Table 15 
+No. of agents 
+No. of classifiers 
+Storage costs 
+Utility 
+Initial strengths 
+Bids 
+Specializatiot? 
+Generalization’ 
+‘See footnote 
+1 of table 7. 
+*See footnote 
+2 of table 7. 
+A, = 50 
+I?, = 150, c, = 20 
+sr = 9, .~a = 14, ss = 29, se = 0 
+u,=lOO.Vi 
+%r~(O, = 0, S&,(O) = 0 
+h,, = 0.025, b,, = 0.025, bzl = 0.025, bz2 = 0.25 
+f,(f) 
+= 1/2J;, 
+p, = 0.01 
+/,(I)=1/2& 
+p1=o.2, 
+p*=o.7, 
+p3=0.2, 
+p,=o.5, 
+S=O. 
+N,= 8. N, =4 
+(a) Parameter 
+values used for Economy 
+C. 
+d50( i) 
+i=l 
+i=2 
+r=3 
+4:250( 
+J ) 
+i=l 
+i=2 
+i=3 
+j=l 
+0 
+0.18 
+0.58 
+J=l 
+0 
+0.18 
+0.77 
+j=2 
+0.68 
+0 
+0.01 
+j=2 
+0.54 
+0 
+0.01 
+j=3 
+0 
+0.58 
+0 
+J=3 
+0 
+0.53 
+0 
+j=O 
+0.32 
+0.23 
+0.41 
+j=O 
+0.46 
+0.28 
+0.21 
+(b) The frequency 
+with which I holds j at I = 750 and t = 1250, n,f( j), for Economy 
+C. 
+?;50 ( .ik ) 
+1=1 
+r=2 
+i=3 
+=l 
+(O.O,O, 0) 
+(0,0.052,0.004,0.008) 
+(0.008,0.008,0.112,0.06) 
+2 
+(0.06,O.O. 0.062) 
+(0,O.O.O) 
+(O,O, 0.002,0.004) 
+=3 
+(0,O.O. 0) 
+(0.116,,0.002,0.052,0.048) 
+(O,O, 0.0) 
+0 
+(0.064,O.O. 0) 
+(0.0.058,0,0) 
+(0.004,0.008,0.048,0.044) 
+(c-i) The frequency 
+with which I holds J, meets k. and trades at t = 750. $( jk), for 
+Economy 
+C. 
+$,.d .ik ) 
+i=l 
+/=2 
+i=3 
+J=l 
+(O,O,O. 0) 
+(0.016.0.028,0.002,0.028) 
+(0,0.016,0.028,0.002) 
+j=2 
+(0.044,O.O. 0.066) 
+(O,O,O, 0) 
+(O,O, 0.0) 
+J=3 
+(0. 0. 0, 0) 
+(0.014,0,0.044,0.044) 
+(O,O. 0,O) 
+j=O 
+(0.06,O.O. 0) 
+(0,0.066,0.0) 
+(0, 0,0.044,0) 
+(c-ii) The frequency 
+with which 1 holds j. meets k, and trades at t = 1250, $( jk), for 
+Economy 
+C. 
+4’7dikl.i) 
+j=l 
+j=2 
+J=3 
+j=O 
+I=1 
+i=2 
+i=3 
+(-,-.-.-) 
+(l.l.O,l) 
+(O,O,l,O) 
+(1.0.0.1) 
+(FYY-) 
+(O,O, 1,l) 
+(O,O,O. 0) 
+(1.1,0,1) 
+(O,O.O,l) 
+0,0,0,0) 
+(0.1.0.0) 
+(O,O,l.l) 
+7iiE250( 
+Jklj) 
+i=l 
+I=2 
+i=3 
+j=l 
+(-.-.-,-) 
+(L1,l.l) 
+(O,O,l,O) 
+j=2 
+(l,O,O.l) 
+(-.--.-,-) 
+(O.O,O,O) 
+j=3 
+(O,l.O,O) 
+(l,l,O,l) 
+(-,->->-) 
+j=O 
+(l.O,O,O) 
+(0.1,O.O) 
+(0.0.110) 
+(d) Actions 
+of winning classifiers 
+for i with condition 
+(j, k), 4;( jkl j), for Economy 
+C. 
+
+
+=== PAGE 41 ===
+
+R. Ma&non, 
+Money as a medium of exchange 
+369 
+I 
+II 
+74 
+V 
+III 
+IV 
+Fig. 9. Production patterns in Economy D; an arrow shows that the agent at the origin of the 
+arrow produces the good at the point of the arrow. 
+Economy D 
+In Economy D we enhance complexity by considering five goods and five 
+types. The production 
+technologies are described by fig. 9. That is, type I 
+produces good 3, and so on. As before, each type of agent only derives utility 
+from consuming the good of the same number. Storage costs are ranked in 
+increasing order (see table 4). For this economy we do not start with any 
+characterization 
+of a stationary equilibrium. With enough work, one could 
+obtain an analytic solution for the fundamental equilibrium for such economy, 
+but here our purpose is to let our artificially intelligent agents suggest to us 
+what an equilibrium might be. Given this suggestion, we could then presum- 
+ably verify whether it is an equilibrium. Our simulation is reported in table 16. 
+From the results in table 16, we can see that the trading patterns nearly 
+seem to describe a fundamental equilibrium in which agents are only willing to 
+trade for commodities of lower cost than the one currently in storage, except 
+that they always accept the commodity 
+of their type. These fundamental 
+trading patterns are shown in fig. 10. Some speculative moves can be detected. 
+An example of this is that agents of type II accept (from I) good 3 for good 1 
+in order to trade 3 for 2 with type III. We do not pursue here a full analysis of 
+partially speculative equilibria for this economy. 
+8. Conclusions 
+The work described above is presented as the first steps of our project to use 
+the classifier systems of Holland to model learning in multi-agent environ- 
+ments. Classifier systems have previously been applied to solve some complex 
+optimization 
+problems [see Machine Learning (1988)]. Our application 
+has 
+involved 
+some extensions to handle the fact that ours is a multi-agent 
+environment 
+in which agents are solving Markovian dynamic decision prob- 
+lems. 
+The work described in this paper has accomplished two objectives that are 
+parts of our broader project. First, our simulations have demonstrated 
+by 
+
+
+=== PAGE 42 ===
+
+Table 16 
+No. of agents 
+A, = 50 
+2 
+No. 
+of classifiers 
+E, = 180, c, = 20 
+Storage costs 
+s,=l,s*=4,ss=Y 
+Utility 
+u, = 200, v’r 
+Initial strengths 
+%#*(a) = 0, %~,(a) = 0 
+Bids 
+h,, = 0.025, h,, = 0.025. h2, = 0.25. ha, = 0.25 
+Speciahzationt 
+k(t) 
+= 1/2fi, 
+p, = 0.01 
+Generalization2 
+4WW~~. 
+QI402. 
+ps = 0.7. p3 = 0.2, p4 = 0.5. 
+‘See footnote 
+1 of table 7. 
+*See footnote 
+2 of table 7. 
+$ 
+(a) Parameter 
+values used for Economy 
+D. 
+-. 
+- 
+3 
+?2(/) 
+J=l 
+j=2 
+J=3 
+~~~ ~~~~~ 
+/_= 4 
+J=5 
+9 
+I=1 
+0 
+0.336 
+0.626 
+0.032 
+0.006 
+- 
+% 
+i=2 
+0.322 
+0 
+S 
+0.038 
+0.614 
+0.026 
+,+ 
+i=3 
+0.118 
+0.180 
+0 
+0.054 
+0.648 
+i=4 
+B 
+0.922 
+0.044 
+0.002 
+0 
+0.032 
+1=5 
+0.210 
+0.720 
+0.038 
+0.032 
+0 
+$ 
+B 
+(b-r) The frequency with which I holds 
+J at f = 500. $( 
+J), 
+for Economy 
+D. 
+S 
+‘&so(J) 
+j=l 
+j=2 
+j=3 
+j=4 
+J=5 
+% 
+i=l 
+0 
+0.832 
+0.158 
+0.004 
+0.006 
+2 
+r=2 
+0.096 
+0 
+0.004 
+5 
+0.870 
+0.030 
+c 
+i=3 
+0.048 
+0.418 
+0 
+0.052 
+0.482 
+Q 
+r=4 
+0.988 
+0.008 
+0.002 
+0 
+0.002 
+i=5 
+0 
+0.974 
+0.024 
+0.002 
+0 
+(b-ii) The frequency 
+with which i holds j at t = 1750, $(j). 
+for Economy 
+D. 
+$m( 
+jk) 
+j=l 
+j=2 
+J=3 
+J=4 
+j=5 
+i=l 
+(O,O,O,O,O) 
+(0.03.0.02,0.01,~.01.0) 
+(0.06,0.05,0.03,0,0) 
+(0.01,0,0,0,0) 
+(0, 0, 0, 0, 0) 
+i=2 
+(0.08,0.11,0.04,0.01,0.02) 
+(0,0,0,0,0) 
+(0, 0,O. 0.0) 
+(0.17,0.04,0.01,0.03,0.03) 
+(0, 0. 0, 0,O) 
+i=3 
+(0.04,0,0.02,0.02,0) 
+(0.03,0,0.01,0.02,0.01) 
+(0, 0, 0, 0,O) 
+(0.01,0,0,0.01,0) 
+(0.09,0.09,0.01,0.03,0.03) 
+i=4 
+(0.24,0.04,0,0.14,0.03) 
+(0, 0, 0, 0, 0.01) 
+(0, 0, 0. 0, 0) 
+(O,O.O.O, 0) 
+(0,O. 0, 0, 0) 
+i=5 
+(0.03,0,0,0.03.0.03) 
+(0.09,0.02.0.03,0,0.08) 
+(O.O,O, 0.01,0.01) 
+(0.01,0.0,0,0) 
+(0,O. 0, 0, 0) 
+(c-i) The frequency 
+with which i holds j, meets someone 
+with k. and trades, 
+v&,( jk ), for Economy 
+D. 
+
+
+=== PAGE 43 ===
+
+4djk) 
+j=l 
+j=2 
+j=3 
+j=4 
+j=S 
+i=l 
+(O.O,O,O,O) 
+(0.03,0.17,0.01,0.01,0) 
+(0,0.05,0,0,0) 
+(0, 0, 0, 0,O) 
+(0, 0, 0.0.0) 
+i=2 
+(0.01,0.04,0,0,0) 
+(0. 0, 0. 0,O) 
+(0, 0, O,O, 0) 
+(0.18,0.04,0,0.10,0.03) 
+(O.O,O,O,O) 
+i=3 
+(0.01.0.01,0,0.01,0) 
+(0.01,0.05,0.02,0.04,0.02) 
+(ROY 0, 0,O) 
+(0.01 , 0, 0, 0,O) 
+(0,0.1,0,0.03,0.03) 
+i=4 
+(0.09,0.03,0,0.19,0) 
+(0,0,0,0,0) 
+(0.0.0.0.0) 
+(0,0,0,0,0) 
+(0, 0, 0, 070) 
+i=5 
+(O.O,O,O,O) 
+(0.03,0.26,0.04,0,0.07) 
+(0.01,0,0,0.0) 
+(0,O. 0, O-0) 
+(0, O,O, 070) 
+(c-ii) The frequency with which holds j, meets someone with k, and trades, qT& jk), 
+for Economy D. 
+riie,(jk) 
+j=l 
+j=2 
+j = 3 
+j=4 
+j=5 
+i=l 
+(1 - - -0) 
+(11100) 
+(10100) 
+(1111 - ) 
+(0 - - 01) 
+i=2 
+(11110) 
+(111 - -) 
+(11100) 
+(11100) 
+(1111 - ) 
+i=3 
+(10110) 
+(10111) 
+(l-11-) 
+(1 - 111) 
+(11110) 
+i=4 
+(10011) 
+(1 - 011) 
+(1 - 11 - ) 
+(1 - 11- 
+) 
+(0111 - ) 
+i=5 
+(10011) 
+(10001) 
+(10011) 
+(11111) 
+(----I) 
+(d-i) Actions of winning classifiers i with condition (j, k), $&,,( j&l j), for Economy D. 
+Ijl;,&jk) 
+j=l 
+j=2 
+j=3 
+j-4 
+j=5 
+i=l 
+(1- 
+- -0) 
+(11010) 
+(11000) 
+(11111) 
+(01110) 
+i=2 
+(11100) 
+(__-__) 
+(110 - 1) 
+(11100) 
+(11111) 
+i=3 
+(1011 - ) 
+(01100) 
+(-----) 
+(0010 - ) 
+(11110) 
+i=4 
+(00010) 
+(10110) 
+(OtJolO) 
+(-----) 
+(11111) 
+i=5 
+(10 - 01) 
+(11101) 
+(01011) 
+(10 - 11) 
+(_----) 
+(d-ii) Actions of winning classifiers for i with condition (j, k), &,,( 
+j&l j), for Economy D. 
+
+
+=== PAGE 44 ===
+
+372 
+R. Mrrrimon, Monqv us a medrum of exchange 
+Fig. 10. Exchange 
+patterns 
+in Economy 
+D. exhibited 
+by classifier systems 
+example 
+that multi-agent 
+systems 
+of classifiers 
+can exhibit 
+interesting 
+behav- 
+ior, and can eventually 
+learn 
+to play Nash-Markov 
+equilibria. 
+Second, 
+the 
+process 
+of making 
+classifier 
+systems 
+cope with the Kiyotaki-Wright 
+environ- 
+ment has prompted 
+us to formalize 
+a variety 
+of concepts 
+and definitions 
+that 
+our subsequent 
+work shall build 
+on. These 
+definitions 
+will facilitate 
+formal 
+analyses 
+of systems 
+of multi-agent 
+classifier 
+systems, 
+which 
+we intend 
+to 
+pursue. 
+Among 
+the 
+unfinished 
+aspects 
+which 
+we leave 
+for 
+future 
+papers, 
+two 
+interrelated 
+ones are quite important. 
+First, our experiments 
+with the genetic- 
+type algorithms 
+in our incomplete-enumeration 
+classifier 
+systems 
+have con- 
+vinced 
+us that 
+existing 
+algorithms 
+can be improved. 
+These 
+improvements, 
+which will increase 
+the amount 
+of experimentation 
+that is done at the ‘right 
+times’, will have the effect of improving 
+the capacity 
+of the classifier systems to 
+settle upon optimal 
+outcomes 
+more rapidly, 
+and to avoid becoming 
+locked in 
+to suboptimal 
+patterns 
+of interaction. 
+The improved 
+algorithms 
+will also help 
+with a second 
+major piece of unfinished 
+business, 
+which is to develop 
+analyti- 
+cal results on the convergence 
+of classifier systems. The new algorithms 
+will be 
+set up in such a way that we can apply the stochastic 
+approximation 
+approach 
+to convergence 
+analysis 
+which we alluded 
+to in section 
+5. 
+References 
+Arthur, 
+Brian, 1989. The dynamics 
+of classitier 
+competitions, 
+Mimeo., 
+March. 
+Axelrod, 
+Robert, 
+1987, The evolution 
+of strategies 
+in the iterated 
+prisoner’s 
+dilemma, 
+in: Lawrence 
+Davis, ed.. Genetic 
+algorithms 
+and simulated 
+annealing 
+(Morgan 
+Kaufman, 
+Los Altos, CA). 
+Bray, 
+Margaret, 
+1982. Learning, 
+estimation, 
+and stability 
+of rational 
+expectations, 
+Journal 
+of 
+Economic 
+Theory 
+26, 318-339. 
+Bray, M.M. and N.E. Savin, 1986, Rational 
+expectations 
+equilibria, 
+learning 
+and model specifica- 
+tion. Econometrica 
+54. 1129-1160. 
+Fourgeaud. 
+C., C. Gourieroux. 
+and J. Pradel. 
+1986, Learning 
+procedure 
+and convergence 
+to 
+rationality, 
+Econometrica 
+54, 845-868. 
+Goldberg, 
+D.E., 
+1989, 
+Genetic 
+algorithms 
+in 
+search 
+optimization 
+and 
+machine 
+learning 
+(Addison-Wesley, 
+Menlo Park, CA). 
+Grefenstette, 
+J.J., 1988, Credit assignment 
+in rule discovery 
+systems based on genetic 
+algorithms, 
+Machine 
+Learning 
+3, 225-245. 
+
+
+=== PAGE 45 ===
+
+R. Marimon, Money as a medium of exchange 
+373 
+Holland, J.H., 1986, Escaping brittleness: The possibilities of general-purpose learning algorithms 
+applied to parallel rule-based systems, in: R.S. Michalski, J.G. Carbonell, and T.M. Mitchell, 
+eds., Machine 
+learning: An artiticial intelligence approach, Vol. 2 (Morgan Kaufmamr, Los 
+Altos, CA). 
+Holland, J.H., 1975, Adaptation in natural and artificial systems (University of Michigan Press, 
+Ann Arbor, MI). 
+Holland, J.H., K.J. Holyoak, R.E. Nisbett, and P.R. Thagard, 1986, Induction: 
+Processes of 
+inference, learning, and discovery (MIT Press, Cambridge, MA). 
+Kiyotaki, N. and R. Wright, 1989, On money as a medium of exchange, Journal of Political 
+Economy 97,927-954. 
+Kna, Peter and R. Litterman, 1989, Description of results in telephone conversations, May-July. 
+Ljung, L. and T. Soderstrom, 1983, Theory and practice of recursive identification (MIT Press, 
+Cambridge, MA). 
+Machine Learning, 1988, Special issue on genetic algorithms 3, no. 2/3. 
+Marcet, Albert and T.J. Sargent, 1989a, Convergence of least squares learning mechanisms in self 
+referential linear stochastic models, Journal of Economic Theory 48, 337-368. 
+Marcet, Albert and T.J. Sargent, 1989b. Convergence of least squares learning in environments 
+with private information 
+and hidden state variables, Journal of Political Economy 97, 
+1306-1322. 
+Marimon. R.. 1989, A genetic algorithm for classifier systems, forthcoming. 
+Marimon, R. and J. Miller, 1989, Money as a medium of exchange in an economy with genetically 
+reproduced decision rules, forthcoming. 
+Marimon, R.E., E. McGrattan, and T.J. Sargent, 1989, Money as a medium of exchange in an 
+economy 
+with artilicially intelligent agents, Working paper, Oct. (Hoover Institution, Stanford, 
+CA). 
+Simon, Carl, 1989, Talk given at Santa Fe Institute, March. 
+Wilson, S.W., 1987, Classifier systems and the animat problem, Machine Learning 2, 199-228. 

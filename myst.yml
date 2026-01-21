@@ -1,0 +1,23 @@
+version: 1
+project:
+  title: "Genetic Algorithms for Classifier Systems: Wicksell's Model of Commodity Money"
+  authors:
+    - name: Ramon Marimon
+    - name: Ellen McGrattan
+    - name: Thomas Sargent
+  date: 1990-01-01
+  keywords:
+    - genetic algorithms
+    - classifier systems
+    - commodity money
+    - agent-based simulation
+  bibliography:
+    - paper/references.bib
+  toc:
+    - file: docs/index.md
+    - file: docs/readme.md
+    - file: docs/algorithm.md
+    - file: paper/paper.md
+
+site:
+  template: article-theme
