@@ -21,6 +21,8 @@ The paper studies how artificially intelligent agents using Holland's classifier
 │   ├── ga.py               # Genetic algorithm variants
 │   ├── sga.py              # Simple Genetic Algorithm
 │   └── ...
+├── jupyter/                # Companion Jupyter notebooks
+│   └── companion-notebook-1.ipynb  # Full replication (all 8 economies)
 ├── paper/                  # MyST paper source
 │   ├── paper.md            # Main paper in MyST Markdown
 │   └── figures/            # Generated figures
