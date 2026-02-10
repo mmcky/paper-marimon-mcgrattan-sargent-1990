@@ -41,19 +41,11 @@ In this paper, we set up classifier systems for the Kiyotaki-Wright environment 
 
 There are three types of agents, with types being indexed by $i = 1, 2, 3$. Type $i$ agents get utility only from consuming type $i$ good. Type $i$ agent has access to a technology for producing type $i^*$ good, where $i^* \neq i$. We initially specify $(i, i^*)$ according to Kiyotaki-Wright's 'model A', namely, as follows:
 
-```{list-table} Production Technology (Model A)
-:header-rows: 1
-:name: tbl-production-model-a
-
-* - $i$
-  - $i^*$
-* - 1
-  - 2
-* - 2
-  - 3
-* - 3
-  - 1
-```
+| $i$ | $i^*$ |
+|-----|-------|
+| 1   | 2     |
+| 2   | 3     |
+| 3   | 1     |
 
 This specification assumes no 'double coincidence of wants' and seems to call for a multilateral trading arrangement. All goods are indivisible. Each agent can store one and only one unit of only one good from one period to the next. When an agent of type $i$ consumes good $i$ at time $t$, he immediately produces good $i^*$, which he carries over to the next period. The net utility to an agent of type $i$ of consuming good $y$ and producing good $i^*$ is given by $u_i(y)$. We assume that an agent of type $i$ does not know his utility function, but does recognize utility when he experiences it. The goods are costly to store. Storing good $k$ ($k = 1, 2, 3$) from $t$ to $t+1$ imposes costs at $t$ of $s_k$. Following Kiyotaki and Wright, we assume that $s_3 > s_2 > s_1 > 0$. We summarize this cost function by saying that $s(y)$ is the one-period cost of storing one unit of good $y$. We assume that individuals do not know this cost function, but that they do recognize costs when they bear them.
 
@@ -224,16 +216,13 @@ The strength of classifier $c$ at $t$ will be represented as $S_c^a(t) = S_{c\ta
 The counters $\tau_e^a(t)$ and $\tau_c^a(t)$ induce a transformation of time in terms of which the strengths of classifiers $c$ and $e$ are updated. At date $t$, a strength $S_{c\tau_c^a(t)}^a$ is attached to classifier $c$, while a strength $S_{e\tau_e^a(t)}^a$ is attached to classifier $e$ of agent $a$. At date $t$, if classifier $e$'s condition is matched [i.e., if $e \in M_e(z_{at})$], then classifier $e$ makes a *bid* of $b_1(e)S_e^a(t)$, where $b_1(e)$ is a positive fraction that can depend on $e$. If classifier $e$ wins the auction, its bid will be deducted from its strength. The winning bid will be allocated to augment the strength of other classifiers whose actions drove the system to the state that satisfied $e$'s condition. We choose the particular bid function
 
 $$
-b_1(e) = b_{11} + b_{12}\sigma_e
-$$ (eq-bid-exchange)
+\begin{aligned}
+b_1(e) &= b_{11} + b_{12}\sigma_e \\
+b_2(c) &= b_{21} + b_{22}\sigma_c
+\end{aligned}
+$$ (eq-bid-functions)
 
-where $b_{11}$ and $b_{12}$ are positive constants adding up to less than one, and $\sigma_e$ is a fraction which is proportional to the specificity of a particular classifier. In particular, we choose $\sigma_e = 1/(1 + \text{number of } \#\text{'s in the string})$. Similarly, we define a function $b_2(c)$ as
-
-$$
-b_2(c) = b_{21} + b_{22}\sigma_c
-$$ (eq-bid-consumption)
-
-where $\sigma_c = 1/(1 + \text{number of } \#\text{'s in the string})$. By the above choices of $b_1(e)$ and $b_2(c)$, we favor specific rules over more general rules that can be activated by a particular state. When $c \in M_c(z_{at})$, classifier $c$ makes a bid of $b_2(c)S_c^a(t)$.
+where $b_{11}$ and $b_{12}$ are positive constants adding up to less than one, and $\sigma_e$ is a fraction which is proportional to the specificity of a particular classifier. In particular, we choose $\sigma_e = 1/(1 + \text{number of } \#\text{'s in the string})$. Similarly, we define a function $b_2(c)$ with $\sigma_c = 1/(1 + \text{number of } \#\text{'s in the string})$. By the above choices of $b_1(e)$ and $b_2(c)$, we favor specific rules over more general rules that can be activated by a particular state. When $c \in M_c(z_{at})$, classifier $c$ makes a bid of $b_2(c)S_c^a(t)$.
 
 Only winning classifiers pay their bids by having them deducted from their strengths. The bid of the winning exchange classifier at $t$ is paid to the winning consumption classifier at $t - 1$, which is the classifier that is to be credited with setting the time $t$ state to $z_{at}$. The bid of the winning consumption classifier at $t$ is paid to the winning exchange classifier at time $t$, which is to be credited with setting the post-exchange state at $t$ at $x_{at}^+$, thereby giving the winning consumption classifier a chance to bid.
 
@@ -385,13 +374,6 @@ Note: A question mark denotes sequential equilibrium strategies for events of ze
   - Holding good 2
 ```
 
-```{figure} figures/fig3_type_i_fundamental.png
-:name: fig-type-i-fundamental
-:width: 80%
-
-Flow diagram for type I agent behavior in fundamental equilibrium.
-```
-
 ### 4.2 Kiyotaki and Wright's 'Speculative Equilibrium'
 
 Kiyotaki and Wright show that for their model A the trading pattern associated with a fundamental equilibrium is not the only possible one in equilibrium. They show that there can occur a *speculative equilibrium* with a trading pattern depicted in {numref}`fig-speculative`.
@@ -435,13 +417,6 @@ In the speculative equilibrium, {numref}`tbl-type-i-speculative` depicts the flo
 ```
 
 Note: The asterisk (*) denotes the speculative move that distinguishes this from the fundamental equilibrium.
-
-```{figure} figures/fig3b_type_i_speculative.png
-:name: fig-type-i-speculative
-:width: 80%
-
-Flow diagram for type I agent behavior in speculative equilibrium.
-```
 
 In {ref}`sec-simulations` we shall provide an example of a simulated classifier economy where {eq}`eq-fundamental-condition` is not satisfied ($u_1$ is too high), but where nevertheless when agents start with a complete set of classifiers (with homogeneous strengths), the classifier systems converge to the fundamental equilibrium and not to the speculative equilibrium. Before turning to these simulations, we define some notions of stability that are designed to distinguish alternative senses in which a set of classifier systems may be said to converge.
 
