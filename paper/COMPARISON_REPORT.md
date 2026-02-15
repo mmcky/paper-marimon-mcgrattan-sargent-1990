@@ -11,7 +11,7 @@
 
 ## Executive Summary
 
-The MyST conversion captures the core narrative, mathematical framework, and structure of the original paper. The prose text is **highly faithful** to the original across Sections 1–6 and Section 8. All 17 equations are present and correctly typeset. All 11 figures are referenced.
+The MyST conversion captures the core narrative, mathematical framework, and structure of the original paper. The prose text is **highly faithful** to the original across Sections 1–6 and Section 8. All 17 equations are present and correctly typeset. All 10 figures are referenced.
 
 Following the `fix/paper-conversion-quality` PR, the conversion now includes all missing simulation tables, formal definitions, classifier notation, footnotes, and references.
 

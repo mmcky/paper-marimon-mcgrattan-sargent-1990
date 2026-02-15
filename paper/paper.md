@@ -333,7 +333,7 @@ We denote by $\Pi_t$ the entire set of probabilities defined in {eq}`eq-probabil
   - $(0, 0, 0)$
 ```
 
-The $(i,j)$ entry in {numref}`tbl-economy-a1-joint-exchange` is the triple $(\pi_i^e(j1), \pi_i^e(j2), \pi_i^e(j3))$, representing the probability that a type $i$ agent holds $j$, meets $k$, and trades.
+The $(i,j)$ entry in {numref}`tbl-economy-a1-joint-exchange` is the triple $(\pi_i^e(j1), \pi_i^e(j2), \pi_i^e(j3))$, representing the probability that a type $i$ agent holds $j$, meets an agent with $k$, and trades. Note that $\pi_i^e(jk)$ here denotes the *joint* holding-meeting-trading probability, where $j$ indexes the good held and $k$ the good of the trading partner; this differs from the conditional exchange probability $\pi_{it}^e(kj)$ defined in {eq}`eq-probabilities`, which conditions on holding $k$ and denotes exchanging $k$ for $j$.
 
 ```{list-table} Equilibrium exchange strategies for Economy A1
 :header-rows: 1
