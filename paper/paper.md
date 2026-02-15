@@ -311,6 +311,30 @@ We denote by $\Pi_t$ the entire set of probabilities defined in {eq}`eq-probabil
   - 0
 ```
 
+```{list-table} Joint exchange probabilities $\pi_i^e(jk)$ in the stationary equilibrium of Economy A1
+:header-rows: 1
+:name: tbl-economy-a1-joint-exchange
+
+* - $\pi_i^e(jk)$
+  - $j=1$
+  - $j=2$
+  - $j=3$
+* - $i=1$
+  - $(0, 0, 0)$
+  - $(0.167, [0,0.333], 0)$
+  - $(0, 0, 0)$
+* - $i=2$
+  - $([0,0.25], 0.167, 0)$
+  - $(0, 0, 0)$
+  - $(0.167, 0, [0,0.083])$
+* - $i=3$
+  - $([0,0.5], 0, 0.167)$
+  - $(0, 0, 0)$
+  - $(0, 0, 0)$
+```
+
+The $(i,j)$ entry in {numref}`tbl-economy-a1-joint-exchange` is the triple $(\pi_i^e(j1), \pi_i^e(j2), \pi_i^e(j3))$, representing the probability that a type $i$ agent holds $j$, meets an agent with $k$, and trades. Note that $\pi_i^e(jk)$ here denotes the *joint* holding-meeting-trading probability, where $j$ indexes the good held and $k$ the good of the trading partner; this differs from the conditional exchange probability $\pi_{it}^e(kj)$ defined in {eq}`eq-probabilities`, which conditions on holding $k$ and denotes exchanging $k$ for $j$.
+
 ```{list-table} Equilibrium exchange strategies for Economy A1
 :header-rows: 1
 :name: tbl-economy-a1-exchange
@@ -320,7 +344,7 @@ We denote by $\Pi_t$ the entire set of probabilities defined in {eq}`eq-probabil
   - $j=2$
   - $j=3$
 * - $i=1$
-  - $(1,0,1),0,0)?$
+  - $([0,1],0,0)?$
   - $(1,[0,1],0)$
   - $(1,1,[0,1])?$
 * - $i=2$
@@ -356,6 +380,25 @@ Note: A question mark denotes sequential equilibrium strategies for events of ze
   - 0
   - 1
 ```
+
+{numref}`tbl-economy-a1-consumption` shows that in any stationary equilibrium, each type of agent consumes only its own desired good.
+
+We now describe how the strategies that support Kiyotaki and Wright's 'fundamental equilibrium' can be represented as a classifier system. For the classifiers we introduce the following additional notation. Let $e^i_{k,j,d}$ denote the exchange classifier for a type $i$ agent that reads 'If I am storing good $k$ and I meet an agent with good $j$, then my exchange decision is $d$'; $d \in \{0, 1\}$. Similarly, specific consumption classifiers for type $i$ agents are of the form $c^i_{k,d}$ for 'If, at the end of the exchange subperiod, I am storing good $k$, then my consumption action is $d$'. For more general rules, we use the subindex $-j$ to denote 'not good $j$' and $\#$ to denote 'any good'. That is, $e^1_{2,-1,0}$ is the classifier for type I agents that reads 'If I am storing good 2 and I meet an agent not carrying good 1, then do not trade', and $c^1_{\#,0}$ is a classifier for type I that reads 'No matter what I am storing at the end of the exchange subperiod, do not consume'.
+
+We can simplify the study of classifier systems by considering only a small complete set of rules. For type I agents these rules are: $e^1_{2,1,1}$; $e^1_{2,-1,0}$; $e^1_{3,1,1}$; $e^1_{3,-1,0}$; $c^1_{1,1}$; $c^1_{-1,0}$. If $\{e^1_{2,1,1}; e^1_{2,-1,0}; c^1_{1,1}; c^1_{-1,0}\}$ are the only classifiers being used by agents of type I, we can say that type I agents support the fundamental equilibrium. We can also describe classifiers for type II and type III agents that support the fundamental equilibrium. These are, for type II: $e^2_{3,1,1}$; $e^2_{3,2,1}$; $e^2_{3,-1,0}$; $e^2_{1,-2,0}$; $c^2_{2,1}$; $c^2_{-2,0}$; and for type III: $e^3_{1,3,1}$; $e^3_{1,-3,0}$; $c^3_{3,1}$; $c^3_{-3,0}$.
+
+It is useful to define formally the sense in which these fixed lists of classifiers support Kiyotaki and Wright's fundamental equilibrium. Let $D_a$ be a fixed set of classifiers (exchange and consumption classifiers) for agent $a$. Let the set $D_a$ have no redundancies in the sense that for every state $z_{at}$, $D_a$ uniquely determines actions. Then the fixed set of classifiers $D_a$ represents a strategy for agent $a$ defined on $z_{at}$. We use the following definition of optimality for a fixed set of classifiers:
+
+**Definition.** *Given the probability distributions $\Pi$ and fixed sets of classifiers of the other agents $D_{a'}$, for all $a' \neq a$, a fixed set of classifiers $D_a$ is said to be optimal for agent $a$ if there exists no other set $\tilde{D}_a$ which yields higher long-run average utility for agent $a$.*
+
+A stationary Nash equilibrium can then be defined as follows:
+
+**Definition.** *A stationary Nash equilibrium is a set of probability distributions $\Pi$ and fixed sets of classifiers $D_a$, $a = 1, \ldots, A$, such that:*
+
+1. *Given $\Pi$ and $D_{a'}$, for $a' \neq a$, $D_a$ is optimal for agent $a$.*
+2. *$\{D_a, a = 1, \ldots, A\}$ and the random matching technology imply that $\Pi_t = \Pi$ for all $t$.*
+
+*This definition is just an alternative representation of Kiyotaki and Wright's definition in terms of fixed lists of classifiers.*
 
 {numref}`tbl-type-i-fundamental` illustrates the sequence of events under the circumstance that the only active (i.e., auction-winning) classifiers are those that support the fundamental equilibrium for agents of type I. A natural question is whether the classifier systems of the three types of agents will actually converge to a situation in which the fundamental equilibrium of Kiyotaki and Wright is supported. Before introducing some concepts that will help us think about this question, we shall briefly describe another kind of equilibrium of Kiyotaki and Wright's model and the kind of classifier system that could support it.
 
@@ -576,7 +619,9 @@ Notes: Utility levels $u_i$ are set equal for $i = 1, 2, 3$. CS denotes 'classif
   - $b_{11} = 0.025, b_{12} = 0.025, b_{21} = 0.25, b_{22} = 0.25$
 ```
 
-Economy A1.1 (Economy A1 with complete enumeration of classifiers) shows that the distribution of holdings rapidly converges to the stationary equilibrium distributions. Similarly, the exchange and consumption strategies implemented by the system of winning classifiers virtually coincide with the equilibrium strategies.
+Economy A1.1 (Economy A1 with complete enumeration of classifiers) shows that the distribution of holdings rapidly converges to the stationary equilibrium distributions. Similarly, the exchange and consumption strategies implemented by the system of winning classifiers virtually coincide with the equilibrium strategies. In {numref}`tbl-economy-a11-holdings`, and in all subsequent tables of empirical frequencies, the frequencies reported are ten-period moving averages ending at the indicated time periods.[^fn11]
+
+[^fn11]: When '—' appears in the table, it means that the event in question occurred so rarely in our simulation that no reliable frequency can be computed.
 
 ```{list-table} Frequency with which $i$ holds $j$ at $t=500$ and $t=1000$ for Economy A1.1
 :header-rows: 1
@@ -612,6 +657,176 @@ Economy A1.1 (Economy A1 with complete enumeration of classifiers) shows that th
   - 0
 ```
 
+```{list-table} Exchange frequency $\pi_{it}^e(jk)$ at $t=500$ and $t=1000$ for Economy A1.1
+:header-rows: 1
+:name: tbl-economy-a11-exchange-freq
+
+* - $\pi_{it}^e(jk)$
+  - $j=1$
+  - $j=2$
+  - $j=3$
+* - $i=1$ ($t=500$)
+  - $(0,0,0)$
+  - $(0.16,0,0)$
+  - $(0,0,0)$
+* - $i=2$ ($t=500$)
+  - $(0.26,0.16,0)$
+  - $(0,0,0)$
+  - $(0.17,0,0)$
+* - $i=3$ ($t=500$)
+  - $(0.52,0,0.17)$
+  - $(0,0,0)$
+  - $(0,0,0)$
+* - $i=1$ ($t=1000$)
+  - $(0,0,0)$
+  - $(0.17,0,0)$
+  - $(0,0,0)$
+* - $i=2$ ($t=1000$)
+  - $(0.27,0.17,0)$
+  - $(0,0,0)$
+  - $(0.19,0,0)$
+* - $i=3$ ($t=1000$)
+  - $(0.51,0,0.19)$
+  - $(0,0,0)$
+  - $(0,0,0)$
+```
+
+```{list-table} Winning classifier actions $\tilde{\pi}_{it}^e(jk|j)$ at $t=1000$ for Economy A1.1
+:header-rows: 1
+:name: tbl-economy-a11-winning
+
+* - $\tilde{\pi}_{it}^e(jk|j)$
+  - $j=1$
+  - $j=2$
+  - $j=3$
+* - $i=1$
+  - —
+  - $(1,0,0)$
+  - —
+* - $i=2$
+  - $(1,1,0)$
+  - —
+  - $(1,1,0)$
+* - $i=3$
+  - $(1,0,1)$
+  - —
+  - —
+```
+
+```{list-table} Highest-strength consumption classifiers for type I at $t=1000$, Economy A1.1
+:header-rows: 1
+:name: tbl-economy-a11-cs-type1-cons
+
+* - Iteration
+  - Classifier
+  - Strength
+* - 1000
+  - 1 0 0 1
+  - 45.8
+* -
+  - \# \# 0 0
+  - −0.47
+* -
+  - 0 \# \# 1
+  - −9.16
+```
+
+```{list-table} Highest-strength exchange classifiers for type I at $t=1000$, Economy A1.1
+:header-rows: 1
+:name: tbl-economy-a11-cs-type1-exch
+
+* - Iteration
+  - Classifier
+  - Strength
+* - 1000
+  - 0 \# \# 1 0 0 1
+  - 11.22
+* -
+  - 0 \# \# 0 1 0 0
+  - −0.08
+* -
+  - \# \# 0 0 0 1 0
+  - −0.08
+```
+
+```{list-table} Highest-strength consumption classifiers for type II at $t=1000$, Economy A1.1
+:header-rows: 1
+:name: tbl-economy-a11-cs-type2-cons
+
+* - Iteration
+  - Classifier
+  - Strength
+* - 1000
+  - 1 0 0 0
+  - 0.0089
+* -
+  - 0 1 0 1
+  - 49.04
+* -
+  - \# 0 \# 0
+  - −10.90
+```
+
+```{list-table} Highest-strength exchange classifiers for type II at $t=1000$, Economy A1.1
+:header-rows: 1
+:name: tbl-economy-a11-cs-type2-exch
+
+* - Iteration
+  - Classifier
+  - Strength
+* - 1000
+  - \# \# 0 \# \# 0 1
+  - 4.86
+* -
+  - \# \# 0 \# 0 \# 0
+  - 0.002
+* -
+  - 0 0 1 1 0 0 1
+  - 0.002
+* -
+  - 0 \# \# 0 1 0 1
+  - 12.72
+* -
+  - 0 \# \# 0 \# \# 0
+  - −1.79
+```
+
+```{list-table} Highest-strength consumption classifiers for type III at $t=1000$, Economy A1.1
+:header-rows: 1
+:name: tbl-economy-a11-cs-type3-cons
+
+* - Iteration
+  - Classifier
+  - Strength
+* - 1000
+  - \# 0 \# 0
+  - −0.024
+* -
+  - \# \# 0 0
+  - −0.412
+* -
+  - 0 0 1 1
+  - 31.62
+```
+
+```{list-table} Highest-strength exchange classifiers for type III at $t=1000$, Economy A1.1
+:header-rows: 1
+:name: tbl-economy-a11-cs-type3-exch
+
+* - Iteration
+  - Classifier
+  - Strength
+* - 1000
+  - \# 0 \# \# 0 \# 1
+  - −0.01
+* -
+  - \# 0 \# 0 1 0 0
+  - −0.01
+* -
+  - \# 0 \# 0 0 1 1
+  - 7.78
+```
+
 ```{figure} figures/fig6_economy_a11.png
 :name: fig-economy-a11
 :width: 80%
@@ -643,7 +858,9 @@ Distribution of holdings for Economy A1.1.
   - $f_g(t) = 1/2\sqrt{t}, p_1 = 0.2, p_2 = 0.7, p_3 = 0.2, p_4 = 0.5, S = 0, N_e = 8, N_c = 4$
 ```
 
-Economy A1.2 is identical to Economy A1.1, except that we use a randomly generated list of rules initially, and rely on a genetic algorithm to inject new rules into the classifier's system.
+Economy A1.2 is identical to Economy A1.1, except that we use a randomly generated list of rules initially, and rely on a genetic algorithm to inject new rules into the classifier's system.[^fn12]
+
+[^fn12]: More standard Holland algorithms were first tried without much success, prompting us to produce the modified algorithm described in {ref}`sec-genetic-algorithm`.
 
 ```{list-table} Frequency with which $i$ holds $j$ at $t=1000$ and $t=2000$ for Economy A1.2
 :header-rows: 1
@@ -679,6 +896,292 @@ Economy A1.2 is identical to Economy A1.1, except that we use a randomly generat
   - 0
 ```
 
+```{list-table} Exchange frequency $\pi_{it}^e(jk)$ at $t=1000$ and $t=2000$ for Economy A1.2
+:header-rows: 1
+:name: tbl-economy-a12-exchange-freq
+
+* - $\pi_{it}^e(jk)$
+  - $j=1$
+  - $j=2$
+  - $j=3$
+* - $i=1$ ($t=1000$)
+  - $(0,0,0)$
+  - $(0.08,0.14,0.01)$
+  - $(0,0,0)$
+* - $i=2$ ($t=1000$)
+  - $(0,0.08,0)$
+  - $(0,0,0)$
+  - $(0.28,0.01,0.09)$
+* - $i=3$ ($t=1000$)
+  - $(0,0,0.28)$
+  - $(0,0,0)$
+  - $(0,0,0)$
+* - $i=1$ ($t=2000$)
+  - $(0,0,0)$
+  - $(0.09,0.19,0.03)$
+  - $(0,0,0)$
+* - $i=2$ ($t=2000$)
+  - $(0,0.08,0)$
+  - $(0,0,0)$
+  - $(0.2,0.03,0.06)$
+* - $i=3$ ($t=2000$)
+  - $(0,0.01,0.2)$
+  - $(0,0,0)$
+  - $(0,0,0)$
+```
+
+```{list-table} Winning classifier actions $\tilde{\pi}_{it}^e(jk|j)$ at $t=1000$ and $t=2000$ for Economy A1.2
+:header-rows: 1
+:name: tbl-economy-a12-winning
+
+* - $\tilde{\pi}_{it}^e(jk|j)$ ($t=1000$)
+  - $j=1$
+  - $j=2$
+  - $j=3$
+* - $i=1$
+  - $(0,\text{—},\text{—})$
+  - $(1,1,0)$
+  - $(1,1,0)$
+* - $i=2$
+  - $(0,1,0)$
+  - $(\text{—},\text{—},\text{—})$
+  - $(1,0,1)$
+* - $i=3$
+  - $(0,0,1)$
+  - $(\text{—},\text{—},1)$
+  - $(\text{—},\text{—},1)$
+* - $\tilde{\pi}_{it}^e(jk|j)$ ($t=2000$)
+  - $j=1$
+  - $j=2$
+  - $j=3$
+* - $i=1$
+  - $(\text{—},\text{—},\text{—})$
+  - $(1,0,1)$
+  - $(1,1,1)$
+* - $i=2$
+  - $(0,1,1)$
+  - $(\text{—},\text{—},\text{—})$
+  - $(1,1,1)$
+* - $i=3$
+  - $(0,1,1)$
+  - $(\text{—},\text{—},1)$
+  - —
+```
+
+```{list-table} Consumption frequency $\pi_{it}^c(j|j)$ at $t=1000$ and $t=2000$ for Economy A1.2
+:header-rows: 1
+:name: tbl-economy-a12-consumption-freq
+
+* - $\pi_{it}^c(j|j)$
+  - $j=1$
+  - $j=2$
+  - $j=3$
+* - $i=1$ ($t=1000$)
+  - 1
+  - 0.011
+  - 0.049
+* - $i=2$ ($t=1000$)
+  - 0.45
+  - 1
+  - 0.366
+* - $i=3$ ($t=1000$)
+  - 0.033
+  - —
+  - 1
+* - $i=1$ ($t=2000$)
+  - 1
+  - 0
+  - 0.69
+* - $i=2$ ($t=2000$)
+  - 0.23
+  - 1
+  - 0.641
+* - $i=3$ ($t=2000$)
+  - 0.84
+  - 1
+  - 1
+```
+
+```{list-table} Highest-strength consumption classifiers for type I, Economy A1.2
+:header-rows: 1
+:name: tbl-economy-a12-cs-type1-cons
+
+* - Iteration
+  - Classifier
+  - Strength
+* - 1000
+  - 1 0 0 1
+  - 38.11
+* -
+  - 0 1 \# 0
+  - −0.44
+* -
+  - 0 0 1 1
+  - −4.26
+* - 2000
+  - 1 0 0 1
+  - 41.65
+* -
+  - 0 1 0 0
+  - −0.43
+* -
+  - 0 0 1 0
+  - −8.86
+```
+
+```{list-table} Highest-strength exchange classifiers for type I, Economy A1.2
+:header-rows: 1
+:name: tbl-economy-a12-cs-type1-exch
+
+* - Iteration
+  - Classifier
+  - Strength
+* - 1000
+  - 0 1 0 1 0 0 1
+  - 8.27
+* -
+  - 0 1 0 0 1 0 1
+  - −0.09
+* -
+  - 0 1 0 0 0 1 0
+  - −0.10
+* - 2000
+  - 0 1 0 1 0 0 1
+  - 9.05
+* -
+  - 0 1 0 0 1 0 0
+  - −0.10
+* -
+  - 0 1 0 0 0 1 1
+  - −0.10
+```
+
+```{list-table} Highest-strength consumption classifiers for type II, Economy A1.2
+:header-rows: 1
+:name: tbl-economy-a12-cs-type2-cons
+
+* - Iteration
+  - Classifier
+  - Strength
+* - 1000
+  - \# \# 0 0
+  - 1.88
+* -
+  - 0 \# 0 1
+  - 11.48
+* -
+  - 0 0 1 1
+  - −9.29
+* - 2000
+  - \# \# 0 0
+  - 8.05
+* -
+  - 0 \# 0 1
+  - 38.40
+* -
+  - 0 0 1 1
+  - −9.01
+```
+
+```{list-table} Highest-strength exchange classifiers for type II, Economy A1.2
+:header-rows: 1
+:name: tbl-economy-a12-cs-type2-exch
+
+* - Iteration
+  - Classifier
+  - Strength
+* - 1000
+  - 1 0 0 1 0 0 0
+  - 0.29
+* -
+  - 1 0 0 0 1 0 1
+  - 1.67
+* -
+  - 1 0 0 0 0 1 0
+  - 0.28
+* -
+  - 0 0 1 \# \# 0 1
+  - 2.23
+* -
+  - 0 \# 1 0 1 0 0
+  - 4.08
+* -
+  - 0 0 1 0 0 1 1
+  - −2.08
+* - 2000
+  - 1 0 0 1 0 0 0
+  - 1.32
+* -
+  - 1 0 0 0 1 0 1
+  - 6.15
+* -
+  - 1 0 0 0 0 1 0
+  - 1.25
+* -
+  - 0 0 1 1 0 0 1
+  - 1.34
+* -
+  - 0 \# 1 0 1 0 1
+  - 2.98
+* -
+  - 0 0 1 0 0 1 1
+  - −1.99
+```
+
+```{list-table} Highest-strength consumption classifiers for type III, Economy A1.2
+:header-rows: 1
+:name: tbl-economy-a12-cs-type3-cons
+
+* - Iteration
+  - Classifier
+  - Strength
+* - 1000
+  - 1 0 0 0
+  - 0.00
+* -
+  - 0 0 1 1
+  - 30.94
+* - 2000
+  - 1 0 0 1
+  - 8.97
+* -
+  - 0 0 1 1
+  - 30.55
+```
+
+```{list-table} Highest-strength exchange classifiers for type III, Economy A1.2
+:header-rows: 1
+:name: tbl-economy-a12-cs-type3-exch
+
+* - Iteration
+  - Classifier
+  - Strength
+* - 1000
+  - 1 0 0 \# \# \# 0
+  - 0.28
+* -
+  - 1 0 0 0 \# \# 0
+  - 1.77
+* -
+  - 1 \# \# 0 \# 1 1
+  - 7.39
+* - 2000
+  - 1 0 0 1 \# 0 0
+  - 0.14
+* -
+  - 1 0 0 0 1 0 1
+  - 0.42
+* -
+  - 1 \# \# 0 \# 1 1
+  - 7.25
+```
+
+As we can see from {numref}`fig-economy-a12` and the above tables, the distribution of holdings for agents of type I and III rapidly converge to their equilibrium levels. Type II agents only hold goods 1 and 3 as predicted but it takes longer to converge to the equilibrium values. The exchange decisions are the correct ones (even in period 1000), except for a couple of events of very small probability (type I agents trade good 2 for 3 and type III agents trade good 1 for 2).
+
+Consumption decisions are basically correct, except that II consumes 3 and III consumes 1. Overeating has been a minor problem in several of our economies. In most such cases that we have encountered, such wrong behavior has been associated with low-frequency states for which it is difficult for the classifier system to acquire the experience required to reward better classifiers and 'right' actions.
+
+In summary, both with complete enumeration and without it, our simulations of Economy A1 seem to be converging to the stationary equilibrium, although this convergence is slower when initial classifiers are randomly generated and new classifiers are synthesized.
+
 ```{figure} figures/fig7_economy_a12.png
 :name: fig-economy-a12
 :width: 80%
@@ -708,7 +1211,73 @@ Distribution of holdings for Economy A1.2.
   - $b_{11} = 0.025, b_{12} = 0.025, b_{21} = 0.25, b_{22} = 0.25$
 ```
 
-Economy A2 differs from Economy A1 only in that agents receive 500 utils from consuming their desired good instead of 100. With this change of parameters, for high enough discount factors the unique stationary equilibrium of Kiyotaki and Wright's economy is the so-called speculative equilibrium.
+Economy A2 differs from Economy A1 only in that agents receive 500 utils from consuming their desired good instead of 100. With this change of parameters, for high enough discount factors the unique stationary equilibrium of Kiyotaki and Wright's economy is the so-called speculative equilibrium. The probabilities that characterize the speculative equilibrium are summarized in {numref}`tbl-economy-a2-spec-holdings`.
+
+```{list-table} Speculative equilibrium: probability that $i$ holds $j$, $\pi_i^h(j)$, for Economy A2
+:header-rows: 1
+:name: tbl-economy-a2-spec-holdings
+
+* - $\pi_i^h(j)$
+  - $j=1$
+  - $j=2$
+  - $j=3$
+* - $i=1$
+  - 0
+  - 0.707
+  - 0.293
+* - $i=2$
+  - 0.586
+  - 0
+  - 0.414
+* - $i=3$
+  - 1
+  - 0
+  - 0
+```
+
+```{list-table} Speculative equilibrium: joint exchange probability $\pi_i^e(jk)$ for Economy A2
+:header-rows: 1
+:name: tbl-economy-a2-spec-exchange
+
+* - $\pi_i^e(jk)$
+  - $j=1$
+  - $j=2$
+  - $j=3$
+* - $i=1$
+  - $(0,0,0)$
+  - $(0.138,[0,0.167],0.097)$
+  - $(0.097,0,[0,0.029])$
+* - $i=2$
+  - $([0,0.269],0.138,0.057)$
+  - $(0,0,0)$
+  - $(0.138,0.098,[0,0.098])$
+* - $i=3$
+  - $([0,0.528],0,0.235)$
+  - $(0,0,0)$
+  - $(0,0,0)$
+```
+
+```{list-table} Speculative equilibrium exchange strategies $\tilde{\pi}_i^e(jk|j)$ for Economy A2
+:header-rows: 1
+:name: tbl-economy-a2-spec-strategies
+
+* - $\tilde{\pi}_i^e(jk|j)$
+  - $j=1$
+  - $j=2$
+  - $j=3$
+* - $i=1$
+  - $([0,1],0,0)?$
+  - $(1,[0,1],1)$
+  - $(1,0,[0,1])$
+* - $i=2$
+  - $([0,1],1,0)$
+  - $(0,[0,1],0)?$
+  - $(1,1,[0,1])$
+* - $i=3$
+  - $([0,1],0,1)$
+  - $(1,[0,1],1)?$
+  - $(0,0,[0,1])?$
+```
 
 ```{list-table} Frequency with which $i$ holds $j$ at $t=500$ and $t=1000$ for Economy A2.1
 :header-rows: 1
@@ -744,9 +1313,91 @@ Economy A2 differs from Economy A1 only in that agents receive 500 utils from co
   - 0
 ```
 
-Our simulation depicts a pattern of holdings characteristic of a fundamental equilibrium, not a speculative one. This raises the issue of whether our artificially intelligent agents are too impatient.
+```{list-table} Exchange frequency $\pi_{it}^e(jk)$ at $t=500$ and $t=1000$ for Economy A2.1
+:header-rows: 1
+:name: tbl-economy-a21-exchange-freq
 
-*Patience requires experience.* The transfer system inside the classifier system is designed to converge to a set of long-run average strengths. In the limit, the artificially intelligent agents should behave as long-run average payoff maximizers, since the steady-state strengths weight payoffs by their relative frequencies. It takes time, however, for optimal rules to achieve the desired strengths. The behavior of our artificially intelligent agents can be very myopic at the beginning. In economies, such as Economy A2, in which the nature of the equilibrium changes with the discount rate, this early myopia might have a perverse effect in diverting the economy towards a low discount-factor stationary equilibrium, such as the fundamental equilibrium. The underlying algorithm has to provide enough experimentation to avoid an early 'lock in'. The present algorithm seems defective in that it has too little experimentation to support the speculative equilibrium even in the long simulations we have run.
+* - $\pi_{it}^e(jk)$
+  - $j=1$
+  - $j=2$
+  - $j=3$
+* - $i=1$ ($t=500$)
+  - $(0,0,0)$
+  - $(0.16,0.17,0.15)$
+  - $(0,0,0)$
+* - $i=2$ ($t=500$)
+  - $(0,0.16,0)$
+  - $(0,0,0)$
+  - $(0.17,0.15,0.04)$
+* - $i=3$ ($t=500$)
+  - $(0.34,0,0.17)$
+  - $(0,0,0)$
+  - $(0,0,0)$
+* - $i=1$ ($t=1000$)
+  - $(0,0,0)$
+  - $(0.18,0.13,0.19)$
+  - $(0,0,0)$
+* - $i=2$ ($t=1000$)
+  - $(0,0.18,0)$
+  - $(0,0,0)$
+  - $(0.18,0.19,0.04)$
+* - $i=3$ ($t=1000$)
+  - $(0.34,0,0.18)$
+  - $(0,0,0)$
+  - $(0,0,0)$
+```
+
+```{list-table} Winning classifier actions $\tilde{\pi}_{it}^e(jk|j)$ at $t=500$ and $t=1000$ for Economy A2.1
+:header-rows: 1
+:name: tbl-economy-a21-winning
+
+* - $\tilde{\pi}_{it}^e(jk|j)$ ($t=500$)
+  - $j=1$
+  - $j=2$
+  - $j=3$
+* - $i=1$
+  - $(0,0,0)$
+  - $(1,0,1)$
+  - $(0,0,0)$
+* - $i=2$
+  - $(0,1,0)$
+  - $(0,1,0)$
+  - $(1,1,0)$
+* - $i=3$
+  - $(1,0,1)$
+  - $(1,1,1)$
+  - $(1,0,1)$
+* - $\tilde{\pi}_{it}^e(jk|j)$ ($t=1000$)
+  - $j=1$
+  - $j=2$
+  - $j=3$
+* - $i=1$
+  - $(0,0,0)$
+  - $(1,0,1)$
+  - $(0,0,0)$
+* - $i=2$
+  - $(0,1,0)$
+  - $(0,1,0)$
+  - $(1,1,0)$
+* - $i=3$
+  - $(1,0,1)$
+  - $(1,1,1)$
+  - $(1,0,1)$
+```
+
+{numref}`tbl-economy-a21-holdings` depicts a pattern of holdings characteristic of a fundamental equilibrium, not a speculative one. Compare with the theoretical predictions of {numref}`tbl-economy-a2-spec-holdings`–{numref}`tbl-economy-a2-spec-exchange`. Recall that a crucial difference between a speculative and a fundamental equilibrium is that in the former, type I agents are willing to exchange good 2 for good 3, while in the latter they are not. {numref}`tbl-economy-a21-winning` shows that type I agents *are* willing to exchange good 2 for 3, i.e., $\tilde{\pi}_{it}^e(jk|2) = (1,0,1)$ for $i=\text{I}$. Then how is it that the distribution of holding patterns fails to support a speculative equilibrium? The answer is to be found in the consumption classifiers of type I agents, which are too general (have too many $\#$ signs) to distinguish among goods stored. It happens that the winning classifiers embody levels of generality that result in overconsumption of good 3 and a failure to transmit the information from the consumption classifier to the exchange classifier that would be required to support a speculative equilibrium.[^fn13]
+
+[^fn13]: To conserve space, these classifiers are not reported here. They are contained in a longer version of this paper which is available from the authors as a working paper.
+
+We shall only briefly summarize the results for Economy A2.2 with random generation of initial classifiers, and refer the reader to the working paper for tables giving the numerical results. After 1000 iterations the economy had not converged to a steady state. Trading patterns were closer to the fundamental equilibrium than to the speculative equilibrium in period 1000. (The reverse was true in period 500.) However, the classifier system of type I agents did distinguish between storage of different goods for consumption, and the classifier $c^1_{\#,0}$ was slowly gaining strength over time. Nevertheless, our simulations provided no support for a hope that the economy would converge to the speculative equilibrium if it were to last longer.
+
+While the results for Economy A2 are fairly inconclusive, they illustrate two interesting points. First, they expose some deficiencies of the genetic algorithm which we have used (we return to this in {ref}`sec-conclusions`). Second, they raise the issue of whether our artificially intelligent agents are too impatient.
+
+*Patience requires experience.* The transfer system inside the classifier system is designed to converge to a set of long-run average strengths. In the limit, the artificially intelligent agents should behave as long-run average payoff maximizers, since the steady-state strengths weight payoffs by their relative frequencies. It takes time, however, for optimal rules to achieve the desired strengths. The behavior of our artificially intelligent agents can be very myopic at the beginning. In economies, such as Economy A2, in which the nature of the equilibrium changes with the discount rate, this early myopia might have a perverse effect in diverting the economy towards a low discount-factor stationary equilibrium, such as the fundamental equilibrium. The underlying algorithm has to provide enough experimentation to avoid an early 'lock in'.[^fn14][^fn15] The present algorithm seems defective in that it has too little experimentation to support the speculative equilibrium even in the long simulations we have run.
+
+[^fn14]: A fundamental equilibrium exists for Economy A2 only if the discount factor is sufficiently low.
+
+[^fn15]: Marimon and Miller (1989) report that in their experiments with the genetic algorithm 25 out of 30 runs of Economy A2 converged to the speculative equilibrium.
 
 ### 7.3 Economy B
 
@@ -770,7 +1421,7 @@ Our simulation depicts a pattern of holdings characteristic of a fundamental equ
   - $b_{11} = 0.25, b_{12} = 0.25, b_{21} = 0.25, b_{22} = 0.25$
 ```
 
-Economy B has a different production pattern than Economy A (I produces 3, II produces 1, and III produces 2). For the specified parameters two stationary equilibria are possible: fundamental and speculative.
+Economy B has a different production pattern than Economy A (I produces 3, II produces 1, and III produces 2). For the specified parameters two stationary equilibria are possible: fundamental and speculative. Stability tests based on classifier systems are potentially useful as selection criteria in economies with multiple equilibria. {numref}`tbl-economy-b-fundamental-holdings` and {numref}`tbl-economy-b-speculative-holdings` summarize the trading patterns for the fundamental and the speculative equilibrium, respectively.
 
 ```{figure} figures/fig8_economy_b.png
 :name: fig-economy-b
@@ -779,9 +1430,405 @@ Economy B has a different production pattern than Economy A (I produces 3, II pr
 Exchange patterns in Economy B: Fundamental Equilibrium (left) and Speculative Equilibrium (right).
 ```
 
+```{list-table} Fundamental equilibrium: probability that $i$ holds $j$, $\pi_i^h(j)$, for Economy B
+:header-rows: 1
+:name: tbl-economy-b-fundamental-holdings
+
+* - $\pi_i^h(j)$
+  - $j=1$
+  - $j=2$
+  - $j=3$
+* - $i=1$
+  - 0
+  - 0.293
+  - 0.707
+* - $i=2$
+  - 1
+  - 0
+  - 0
+* - $i=3$
+  - 0.586
+  - 0.414
+  - 0
+```
+
+```{list-table} Fundamental equilibrium: joint exchange probability $\pi_i^e(jk)$ for Economy B
+:header-rows: 1
+:name: tbl-economy-b-fundamental-exchange
+
+* - $\pi_i^e(jk)$
+  - $j=1$
+  - $j=2$
+  - $j=3$
+* - $i=1$
+  - $(0,0,0)$
+  - $(0.098,[0,0.069],0)$
+  - $(0.138,0.098,[0,0.167])$
+* - $i=2$
+  - $([0,0.529],0.236,0)$
+  - $(0,0,0)$
+  - $(0,0,0)$
+* - $i=3$
+  - $([0,0.310],0,0.138)$
+  - $(0.138,[0,0.098],0.098)$
+  - $(0,0,0)$
+```
+
+```{list-table} Fundamental equilibrium exchange strategies $\tilde{\pi}_i^e(jk|j)$ for Economy B
+:header-rows: 1
+:name: tbl-economy-b-fundamental-strategies
+
+* - $\tilde{\pi}_i^e(jk|j)$
+  - $j=1$
+  - $j=2$
+  - $j=3$
+* - $i=1$
+  - $([0,1],0,0)?$
+  - $(1,[0,1],0)$
+  - $(1,1,[0,1])$
+* - $i=2$
+  - $([0,1],1,0)$
+  - $(0,[0,1],0)?$
+  - $(1,1,[0,1])?$
+* - $i=3$
+  - $([0,1],0,1)$
+  - $(1,[0,1],1)$
+  - $(0,0,[0,1])?$
+```
+
+```{list-table} Speculative equilibrium: probability that $i$ holds $j$, $\pi_i^h(j)$, for Economy B
+:header-rows: 1
+:name: tbl-economy-b-speculative-holdings
+
+* - $\pi_i^h(j)$
+  - $j=1$
+  - $j=2$
+  - $j=3$
+* - $i=1$
+  - 0
+  - 0.586
+  - 0.414
+* - $i=2$
+  - 0.707
+  - 0
+  - 0.293
+* - $i=3$
+  - 0
+  - 1
+  - 0
+```
+
+```{list-table} Speculative equilibrium: joint exchange probability $\pi_i^e(jk)$ for Economy B
+:header-rows: 1
+:name: tbl-economy-b-speculative-exchange
+
+* - $\pi_i^e(jk)$
+  - $j=1$
+  - $j=2$
+  - $j=3$
+* - $i=1$
+  - $(0,0,0)$
+  - $(0.138,[0,0.310],0)$
+  - $(0.098,0.138,[0,0.098])$
+* - $i=2$
+  - $([0,0.167],0.138,0.098)$
+  - $(0,0,0)$
+  - $(0,0.098,[0,0.069])$
+* - $i=3$
+  - $(0,0,0)$
+  - $(0,[0,0.529],0.138)$
+  - $(0,0,0)$
+```
+
+```{list-table} Speculative equilibrium exchange strategies $\tilde{\pi}_i^e(jk|j)$ for Economy B
+:header-rows: 1
+:name: tbl-economy-b-speculative-strategies
+
+* - $\tilde{\pi}_i^e(jk|j)$
+  - $j=1$
+  - $j=2$
+  - $j=3$
+* - $i=1$
+  - $([0,1],0,0)?$
+  - $(1,[0,1],0)$
+  - $(1,1,[0,1])$
+* - $i=2$
+  - $([0,1],1,1)$
+  - $(0,[0,1],0)?$
+  - $(0,1,[0,1])$
+* - $i=3$
+  - $([0,1],0,1)?$
+  - $(0,[0,1],1)$
+  - $(0,0,[0,1])?$
+```
+
 Economy B.1 displays an interesting pattern of evolution. At iteration 500 the distribution of holdings and, especially, the trading patterns correspond to the speculative equilibrium. However, the economy moves away from this state and by iteration 1000 has practically converged to the fundamental equilibrium.
 
-Economy B.2 with random initial classifiers had not converged after 2000 periods. Nevertheless, the economy seems to be moving towards the fundamental equilibrium. These two simulations for Economy B provide examples in which the classifier systems seem to select the fundamental equilibrium over the speculative equilibrium. Furthermore, the results for Economy B.1 indicate that this is not the result of myopic behavior.
+```{list-table} Frequency with which $i$ holds $j$ at $t=500$ and $t=1000$ for Economy B.1
+:header-rows: 1
+:name: tbl-economy-b1-holdings
+
+* - $\pi_{it}^h(j)$
+  - $j=1$
+  - $j=2$
+  - $j=3$
+* - $i=1$ ($t=500$)
+  - 0
+  - 0.464
+  - 0.536
+* - $i=2$ ($t=500$)
+  - 0.994
+  - 0
+  - 0.006
+* - $i=3$ ($t=500$)
+  - 0
+  - 1
+  - 0
+* - $i=1$ ($t=1000$)
+  - 0
+  - 0.28
+  - 0.72
+* - $i=2$ ($t=1000$)
+  - 0.994
+  - 0
+  - 0.006
+* - $i=3$ ($t=1000$)
+  - 0.526
+  - 0.474
+  - 0
+```
+
+```{list-table} Exchange frequency $\pi_{it}^e(jk)$ at $t=500$ and $t=1000$ for Economy B.1
+:header-rows: 1
+:name: tbl-economy-b1-exchange-freq
+
+* - $\pi_{it}^e(jk)$
+  - $j=1$
+  - $j=2$
+  - $j=3$
+* - $i=1$ ($t=500$)
+  - $(0,0,0)$
+  - $(0.16,0.05,0.01)$
+  - $(0.01,0.19,0.04)$
+* - $i=2$ ($t=500$)
+  - $(0,0.16,0.01)$
+  - $(0,0,0)$
+  - $(0,0,0)$
+* - $i=3$ ($t=500$)
+  - $(0,0,0)$
+  - $(0,0,0.18)$
+  - $(0,0,0)$
+* - $i=1$ ($t=1000$)
+  - $(0,0,0)$
+  - $(0.08,0.02,0.01)$
+  - $(0.15,0.11,0.07)$
+* - $i=2$ ($t=1000$)
+  - $(0.41,0.25,0.01)$
+  - $(0,0,0)$
+  - $(0,0,0)$
+* - $i=3$ ($t=1000$)
+  - $(0.11,0.01,0.15)$
+  - $(0.18,0.03,0.10)$
+  - $(0,0,0)$
+```
+
+```{list-table} Winning classifier actions $\tilde{\pi}_{it}^e(jk|j)$ at $t=500$ and $t=1000$ for Economy B.1
+:header-rows: 1
+:name: tbl-economy-b1-winning
+
+* - $\tilde{\pi}_{it}^e(jk|j)$ ($t=500$)
+  - $j=1$
+  - $j=2$
+  - $j=3$
+* - $i=1$
+  - $(1,0,0)$
+  - $(1,1,1)$
+  - $(1,1,1)$
+* - $i=2$
+  - $(0,1,0)$
+  - $(1,1,0)$
+  - $(1,1,1)$
+* - $i=3$
+  - $(0,0,1)$
+  - $(0,0,1)$
+  - $(0,0,0)$
+* - $\tilde{\pi}_{it}^e(jk|j)$ ($t=1000$)
+  - $j=1$
+  - $j=2$
+  - $j=3$
+* - $i=1$
+  - $(1,0,0)$
+  - $(1,0,0)$
+  - $(1,1,1)$
+* - $i=2$
+  - $(1,1,1)$
+  - $(1,1,0)$
+  - $(1,1,0)$
+* - $i=3$
+  - $(1,0,1)$
+  - $(1,1,1)$
+  - $(0,0,0)$
+```
+
+```{list-table} Consumption frequency $\pi_{it}^c(j|j)$ at $t=500$ for Economy B.1
+:header-rows: 1
+:name: tbl-economy-b1-consumption-freq
+
+* - $\pi_{it}^c(j|j)$
+  - $j=1$
+  - $j=2$
+  - $j=3$
+* - $i=1$
+  - 1
+  - 0.07
+  - 0.508
+* - $i=2$
+  - 0.009
+  - 1
+  - 0.998
+* - $i=3$
+  - 0.050
+  - 0.632
+  - 1
+```
+
+Economy B.2 with random initial classifiers had not converged after 2000 periods. Nevertheless, the economy seems to be moving towards the fundamental equilibrium.
+
+```{list-table} Parameter values used for Economy B.2
+:header-rows: 1
+:name: tbl-economy-b2-params
+
+* - Parameter
+  - Value
+* - No. of agents
+  - $A_i = 50$
+* - No. of classifiers
+  - $E_a = 72, C_a = 12$
+* - Storage costs
+  - $s_1 = 1, s_2 = 4, s_3 = 9$
+* - Utility
+  - $u_i = 100, \forall i$
+* - Initial strengths
+  - $S_{e\tau_e^a(0)}^a = 0, S_{c\tau_c^a(0)}^a = 0$
+* - Bids
+  - $b_{11} = 0.025, b_{12} = 0.025, b_{21} = 0.25, b_{22} = 0.25$
+* - Specialization
+  - $f_s(t) = 1/2\sqrt{t}, p_s = 0.01$
+* - Generalization
+  - $f_g(t) = 1/2\sqrt{t}, p_1 = 0.2, p_2 = 0.7, p_3 = 0.2, p_4 = 0.5, S = 0, N_e = 8, N_c = 4$
+```
+
+```{list-table} Frequency with which $i$ holds $j$ at $t=1000$ and $t=2000$ for Economy B.2
+:header-rows: 1
+:name: tbl-economy-b2-holdings
+
+* - $\pi_{it}^h(j)$
+  - $j=1$
+  - $j=2$
+  - $j=3$
+* - $i=1$ ($t=1000$)
+  - 0
+  - 0.434
+  - 0.566
+* - $i=2$ ($t=1000$)
+  - 0.89
+  - 0
+  - 0.11
+* - $i=3$ ($t=1000$)
+  - 0.088
+  - 0.912
+  - 0
+* - $i=1$ ($t=2000$)
+  - 0
+  - 0.354
+  - 0.646
+* - $i=2$ ($t=2000$)
+  - 0.996
+  - 0
+  - 0.004
+* - $i=3$ ($t=2000$)
+  - 0.268
+  - 0.732
+  - 0
+```
+
+```{list-table} Exchange frequency $\pi_{it}^e(jk)$ at $t=1000$ and $t=2000$ for Economy B.2
+:header-rows: 1
+:name: tbl-economy-b2-exchange-freq
+
+* - $\pi_{it}^e(jk)$
+  - $j=1$
+  - $j=2$
+  - $j=3$
+* - $i=1$ ($t=1000$)
+  - $(0,0,0)$
+  - $(0.14,0.08,0.02)$
+  - $(0.18,0.18,0.05)$
+* - $i=2$ ($t=1000$)
+  - $(0.14,0.41,0.19)$
+  - $(0,0,0)$
+  - $(0.03,0.05,0.1)$
+* - $i=3$ ($t=1000$)
+  - $(0.01,0,0.02)$
+  - $(0.26,0.16,0.20)$
+  - $(0,0,0)$
+* - $i=1$ ($t=2000$)
+  - $(0,0,0)$
+  - $(0.14,0.04,0.01)$
+  - $(0.06,0.16,0.07)$
+* - $i=2$ ($t=2000$)
+  - $(0.13,0.36,0)$
+  - $(0,0,0)$
+  - $(0,0,0)$
+* - $i=3$ ($t=2000$)
+  - $(0.04,0,0.06)$
+  - $(0.22,0.12,0.16)$
+  - $(0,0,0)$
+```
+
+```{list-table} Winning classifier actions $\tilde{\pi}_{it}^e(jk|j)$ at $t=1000$ and $t=2000$ for Economy B.2
+:header-rows: 1
+:name: tbl-economy-b2-winning
+
+* - $\tilde{\pi}_{it}^e(jk|j)$ ($t=1000$)
+  - $j=1$
+  - $j=2$
+  - $j=3$
+* - $i=1$
+  - $(\text{—},0,\text{—})?$
+  - $(1,1,1)$
+  - $(1,1,0)$
+* - $i=2$
+  - $(1,1,1)$
+  - $(\text{—},\text{—},\text{—})$
+  - $(1,1,1)$
+* - $i=3$
+  - $(0,1,1)$
+  - $(\text{—},\text{—},1)$
+  - —
+* - $\tilde{\pi}_{it}^e(jk|j)$ ($t=2000$)
+  - $j=1$
+  - $j=2$
+  - $j=3$
+* - $i=1$
+  - $(\text{—},1,\text{—})?$
+  - $(1,1,0)$
+  - $(1,1,0)$
+* - $i=2$
+  - $(1,0,1)$
+  - $(\text{—},\text{—},\text{—})$
+  - $(1,1,1)$
+* - $i=3$
+  - $(1,0,1)$
+  - $(1,\text{—},1)$
+  - —
+```
+
+In particular, with the exception of a zero-frequency event (II is willing to trade 1 for 3) the trading patterns in Economy B.2 correspond to the fundamental equilibrium.
+
+These two simulations for Economy B provide examples in which the classifier systems seem to select the fundamental equilibrium over the speculative equilibrium.[^fn16] Furthermore, the results for Economy B.1 indicate that this is not the result of myopic behavior.
+
+[^fn16]: In Marimon and Miller (1989) 30 out of 30 experiments resulted in convergence to the fundamental equilibrium.
 
 ### 7.4 Economy C (Fiat Money)
 
@@ -813,6 +1860,86 @@ In Economy C a new good, good 0, with the characteristics of 'fiat money' is int
 
 Fiat money is introduced into the system by forcing some agents to store good 0 in period 0. In particular, 48 units of good 0 are randomly allocated to 48 agents. To avoid fluctuations in the quantity of money, agents are not allowed to consume good 0. A modified setup, not pursued here, would give agents the opportunity to learn not to eat money.
 
+The production technologies are as in Economy A (see {numref}`tbl-economies`). {numref}`tbl-economy-c-eq-holdings` provides the probabilities that characterize the unique (fundamental) equilibrium of Economy C. The equilibrium trading patterns are depicted in {numref}`fig-economy-c`.
+
+```{list-table} Fundamental equilibrium: probability that $i$ holds $j$, $\pi_i^h(j)$, for Economy C
+:header-rows: 1
+:name: tbl-economy-c-eq-holdings
+
+* - $\pi_i^h(j)$
+  - $i=1$
+  - $i=2$
+  - $i=3$
+* - $j=1$
+  - 0
+  - 0.26
+  - 0.62
+* - $j=2$
+  - 0.74
+  - 0
+  - 0
+* - $j=3$
+  - 0
+  - 0.42
+  - 0
+* - $j=0$
+  - 0.26
+  - 0.32
+  - 0.38
+```
+
+```{list-table} Fundamental equilibrium: joint exchange probability $\pi_i^e(jk)$ for Economy C
+:header-rows: 1
+:name: tbl-economy-c-eq-exchange
+
+* - $\pi_i^e(jk)$
+  - $i=1$
+  - $i=2$
+  - $i=3$
+* - $j=1$
+  - $(0,0,0,0)$
+  - $([0,0.08],0.064,0,0.023)$
+  - $([0,0.18],0,0.087,0.034)$
+* - $j=2$
+  - $(0.064,[0,0.08],0,0.079)$
+  - $(0,0,0,0)$
+  - $(0,0,0,0)$
+* - $j=3$
+  - $(0,0,0,0)$
+  - $(0.087,0,[0,0.06],0.053)$
+  - $(0,0,0,0)$
+* - $j=0$
+  - $(0.076,0,0,[0,0.08])$
+  - $(0,0.079,0,[0,0.1])$
+  - $(0,0,0.053,[0,0.12])$
+```
+
+```{list-table} Fundamental equilibrium exchange strategies $\tilde{\pi}_i^e(jk|j)$ for Economy C
+:header-rows: 1
+:name: tbl-economy-c-eq-strategies
+
+* - $\tilde{\pi}_i^e(jk|j)$
+  - $i=1$
+  - $i=2$
+  - $i=3$
+* - $j=1$
+  - $(\text{—},0,0,0)?$
+  - $(\text{—},1,0,1)$
+  - $(\text{—},0,1,1)$
+* - $j=2$
+  - $(1,\text{—},0,1)$
+  - $(0,\text{—},0,0)?$
+  - $(1,\text{—},1,1)?$
+* - $j=3$
+  - $(1,1,\text{—},1)?$
+  - $(1,1,\text{—},1)$
+  - $(0,0,\text{—},0)?$
+* - $j=0$
+  - $(1,0,0,\text{—})$
+  - $(0,1,0,\text{—})$
+  - $(0,0,1,\text{—})$
+```
+
 ```{figure} figures/fig9_economy_c.png
 :name: fig-economy-c
 :width: 60%
@@ -820,7 +1947,149 @@ Fiat money is introduced into the system by forcing some agents to store good 0 
 Exchange pattern in Economy C.
 ```
 
-The economy converges remarkably fast to the fundamental equilibrium. Given the complexity of the exchange patterns with fiat money, the results for Economy C indicate the ability of our artificially intelligent agents to set up complex social arrangements like fiat money.
+```{list-table} Frequency with which $i$ holds $j$ at $t=750$ and $t=1250$ for Economy C
+:header-rows: 1
+:name: tbl-economy-c-holdings
+
+* - $\pi_{it}^h(j)$
+  - $i=1$
+  - $i=2$
+  - $i=3$
+* - $j=1$ ($t=750$)
+  - 0
+  - 0.18
+  - 0.58
+* - $j=2$ ($t=750$)
+  - 0.68
+  - 0
+  - 0.01
+* - $j=3$ ($t=750$)
+  - 0
+  - 0.58
+  - 0
+* - $j=0$ ($t=750$)
+  - 0.32
+  - 0.23
+  - 0.41
+* - $j=1$ ($t=1250$)
+  - 0
+  - 0.18
+  - 0.77
+* - $j=2$ ($t=1250$)
+  - 0.54
+  - 0
+  - 0.01
+* - $j=3$ ($t=1250$)
+  - 0
+  - 0.53
+  - 0
+* - $j=0$ ($t=1250$)
+  - 0.46
+  - 0.28
+  - 0.21
+```
+
+```{list-table} Exchange frequency $\pi_{it}^e(jk)$ at $t=750$ for Economy C
+:header-rows: 1
+:name: tbl-economy-c-exchange-freq-750
+
+* - $\pi_{it}^e(jk)$
+  - $i=1$
+  - $i=2$
+  - $i=3$
+* - $j=1$
+  - $(0,0,0,0)$
+  - $(0,0.052,0.004,0.008)$
+  - $(0.008,0.008,0.112,0.06)$
+* - $j=2$
+  - $(0.06,0,0,0.062)$
+  - $(0,0,0,0)$
+  - $(0,0,0.002,0.004)$
+* - $j=3$
+  - $(0,0,0,0)$
+  - $(0.116,0.002,0.052,0.048)$
+  - $(0,0,0,0)$
+* - $j=0$
+  - $(0.064,0,0,0)$
+  - $(0,0.058,0,0)$
+  - $(0.004,0.008,0.048,0.044)$
+```
+
+```{list-table} Exchange frequency $\pi_{it}^e(jk)$ at $t=1250$ for Economy C
+:header-rows: 1
+:name: tbl-economy-c-exchange-freq-1250
+
+* - $\pi_{it}^e(jk)$
+  - $i=1$
+  - $i=2$
+  - $i=3$
+* - $j=1$
+  - $(0,0,0,0)$
+  - $(0.016,0.028,0.002,0.028)$
+  - $(0,0.016,0.028,0.002)$
+* - $j=2$
+  - $(0.044,0,0,0.066)$
+  - $(0,0,0,0)$
+  - $(0,0,0,0)$
+* - $j=3$
+  - $(0,0,0,0)$
+  - $(0.014,0,0.044,0.044)$
+  - $(0,0,0,0)$
+* - $j=0$
+  - $(0.06,0,0,0)$
+  - $(0,0.066,0,0)$
+  - $(0,0,0.044,0)$
+```
+
+```{list-table} Winning classifier actions $\tilde{\pi}_{it}^e(jk|j)$ at $t=750$ and $t=1250$ for Economy C
+:header-rows: 1
+:name: tbl-economy-c-winning
+
+* - $\tilde{\pi}_{it}^e(jk|j)$ ($t=750$)
+  - $i=1$
+  - $i=2$
+  - $i=3$
+* - $j=1$
+  - $(\text{—},\text{—},\text{—},\text{—})$
+  - $(1,1,0,1)$
+  - $(0,0,1,0)$
+* - $j=2$
+  - $(1,0,0,1)$
+  - $(\text{—},\text{—},\text{—},\text{—})$
+  - $(0,0,1,1)$
+* - $j=3$
+  - $(0,0,0,0)$
+  - $(1,1,0,1)$
+  - $(0,0,0,1)$
+* - $j=0$
+  - $(1,0,0,0)$
+  - $(0,1,0,0)$
+  - $(0,0,1,1)$
+* - $\tilde{\pi}_{it}^e(jk|j)$ ($t=1250$)
+  - $i=1$
+  - $i=2$
+  - $i=3$
+* - $j=1$
+  - $(\text{—},\text{—},\text{—},\text{—})$
+  - $(1,1,1,1)$
+  - $(0,0,1,0)$
+* - $j=2$
+  - $(1,0,0,1)$
+  - $(\text{—},\text{—},\text{—},\text{—})$
+  - $(0,0,0,0)$
+* - $j=3$
+  - $(0,1,0,0)$
+  - $(1,1,0,1)$
+  - $(\text{—},\text{—},\text{—},\text{—})$
+* - $j=0$
+  - $(1,0,0,0)$
+  - $(0,1,0,0)$
+  - $(0,0,1,0)$
+```
+
+The economy converges remarkably fast to the fundamental equilibrium. Given the complexity of the exchange patterns with fiat money, the results for Economy C indicate the ability of our artificially intelligent agents to set up complex social arrangements like fiat money.[^fn17]
+
+[^fn17]: A version of Economy C with the storage costs of Economy A did not converge, probably because the low cost of storing good 1 (0.1) made this good too good a substitute for fiat money. These results for Economy C have been successfully replicated in Marimon and Miller (1989).
 
 ### 7.5 Economy D (Five Goods, Five Types)
 
@@ -848,7 +2117,7 @@ The economy converges remarkably fast to the fundamental equilibrium. Given the 
   - $f_g(t) = 1/2\sqrt{t}, p_1 = 0.2, p_2 = 0.7, p_3 = 0.2, p_4 = 0.5, S = 0, N_e = 8, N_c = 4$
 ```
 
-In Economy D we enhance complexity by considering five goods and five types. The production technologies are described by {numref}`fig-economy-d-production`. That is, type I produces good 3, type II produces good 4, type III produces good 5, type IV produces good 1, and type V produces good 2. As before, each type of agent only derives utility from consuming the good of the same number. Storage costs are ranked in increasing order. For this economy we do not start with any characterization of a stationary equilibrium. With enough work, one could obtain an analytic solution for the fundamental equilibrium for such an economy, but here our purpose is to let our artificially intelligent agents suggest to us what an equilibrium might be.
+In Economy D we enhance complexity by considering five goods and five types. The production technologies are described by {numref}`fig-economy-d-production`. That is, type I produces good 3, type II produces good 4, type III produces good 5, type IV produces good 1, and type V produces good 2. As before, each type of agent only derives utility from consuming the good of the same number. Storage costs are ranked in increasing order. For this economy we do not start with any characterization of a stationary equilibrium. With enough work, one could obtain an analytic solution for the fundamental equilibrium for such an economy, but here our purpose is to let our artificially intelligent agents suggest to us what an equilibrium might be. Given this suggestion, we could then presumably verify whether it is an equilibrium.
 
 ```{figure} figures/fig10_economy_d_production.png
 :name: fig-economy-d-production
@@ -857,7 +2126,259 @@ In Economy D we enhance complexity by considering five goods and five types. The
 Production patterns in Economy D; an arrow shows that the agent at the origin of the arrow produces the good at the point of the arrow.
 ```
 
-From the simulation results, we can see that the trading patterns nearly seem to describe a fundamental equilibrium in which agents are only willing to trade for commodities of lower cost than the one currently in storage, except that they always accept the commodity of their type. These fundamental trading patterns are shown in {numref}`fig-economy-d-exchange`.
+```{list-table} Frequency with which $i$ holds $j$ at $t=500$ for Economy D
+:header-rows: 1
+:name: tbl-economy-d-holdings-500
+
+* - $\pi_{it}^h(j)$
+  - $j=1$
+  - $j=2$
+  - $j=3$
+  - $j=4$
+  - $j=5$
+* - $i=1$
+  - 0
+  - 0.336
+  - 0.626
+  - 0.032
+  - 0.006
+* - $i=2$
+  - 0.322
+  - 0
+  - 0.038
+  - 0.614
+  - 0.026
+* - $i=3$
+  - 0.118
+  - 0.180
+  - 0
+  - 0.054
+  - 0.648
+* - $i=4$
+  - 0.922
+  - 0.044
+  - 0.002
+  - 0
+  - 0.032
+* - $i=5$
+  - 0.210
+  - 0.720
+  - 0.038
+  - 0.032
+  - 0
+```
+
+```{list-table} Frequency with which $i$ holds $j$ at $t=1750$ for Economy D
+:header-rows: 1
+:name: tbl-economy-d-holdings-1750
+
+* - $\pi_{it}^h(j)$
+  - $j=1$
+  - $j=2$
+  - $j=3$
+  - $j=4$
+  - $j=5$
+* - $i=1$
+  - 0
+  - 0.832
+  - 0.158
+  - 0.004
+  - 0.006
+* - $i=2$
+  - 0.096
+  - 0
+  - 0.004
+  - 0.870
+  - 0.030
+* - $i=3$
+  - 0.048
+  - 0.418
+  - 0
+  - 0.052
+  - 0.482
+* - $i=4$
+  - 0.988
+  - 0.008
+  - 0.002
+  - 0
+  - 0.002
+* - $i=5$
+  - 0
+  - 0.974
+  - 0.024
+  - 0.002
+  - 0
+```
+
+```{list-table} Exchange frequency $\pi_{it}^e(jk)$ at $t=500$ for Economy D
+:header-rows: 1
+:name: tbl-economy-d-exchange-freq-500
+
+* - $\pi_{it}^e(jk)$
+  - $j=1$
+  - $j=2$
+  - $j=3$
+  - $j=4$
+  - $j=5$
+* - $i=1$
+  - $(0,0,0,0,0)$
+  - $(0.03,0.02,0.01,0.01,0)$
+  - $(0.06,0.05,0.03,0,0)$
+  - $(0.01,0,0,0,0)$
+  - $(0,0,0,0,0)$
+* - $i=2$
+  - $(0.08,0.11,0.04,0.01,0.02)$
+  - $(0,0,0,0,0)$
+  - $(0,0,0,0,0)$
+  - $(0.17,0.04,0.01,0.03,0.03)$
+  - $(0,0,0,0,0)$
+* - $i=3$
+  - $(0.04,0,0.02,0.02,0)$
+  - $(0.03,0,0.01,0.02,0.01)$
+  - $(0,0,0,0,0)$
+  - $(0.01,0,0,0.01,0)$
+  - $(0.09,0.09,0.01,0.03,0.03)$
+* - $i=4$
+  - $(0.24,0.04,0,0.14,0.03)$
+  - $(0,0,0,0,0.01)$
+  - $(0,0,0,0,0)$
+  - $(0,0,0,0,0)$
+  - $(0,0,0,0,0)$
+* - $i=5$
+  - $(0.03,0,0,0.03,0.03)$
+  - $(0.09,0.02,0.03,0,0.08)$
+  - $(0,0,0,0.01,0.01)$
+  - $(0.01,0,0,0,0)$
+  - $(0,0,0,0,0)$
+```
+
+```{list-table} Exchange frequency $\pi_{it}^e(jk)$ at $t=1750$ for Economy D
+:header-rows: 1
+:name: tbl-economy-d-exchange-freq-1750
+
+* - $\pi_{it}^e(jk)$
+  - $j=1$
+  - $j=2$
+  - $j=3$
+  - $j=4$
+  - $j=5$
+* - $i=1$
+  - $(0,0,0,0,0)$
+  - $(0.03,0.17,0.01,0.01,0)$
+  - $(0,0.05,0,0,0)$
+  - $(0,0,0,0,0)$
+  - $(0,0,0,0,0)$
+* - $i=2$
+  - $(0.01,0.04,0,0,0)$
+  - $(0,0,0,0,0)$
+  - $(0,0,0,0,0)$
+  - $(0.18,0.04,0,0.10,0.03)$
+  - $(0,0,0,0,0)$
+* - $i=3$
+  - $(0.01,0.01,0,0.01,0)$
+  - $(0.01,0.05,0.02,0.04,0.02)$
+  - $(0,0,0,0,0)$
+  - $(0.01,0,0,0,0)$
+  - $(0,0.1,0,0.03,0.03)$
+* - $i=4$
+  - $(0.09,0.03,0,0.19,0)$
+  - $(0,0,0,0,0)$
+  - $(0,0,0,0,0)$
+  - $(0,0,0,0,0)$
+  - $(0,0,0,0,0)$
+* - $i=5$
+  - $(0,0,0,0,0)$
+  - $(0.03,0.26,0.04,0,0.07)$
+  - $(0.01,0,0,0,0)$
+  - $(0,0,0,0,0)$
+  - $(0,0,0,0,0)$
+```
+
+```{list-table} Winning classifier actions $\tilde{\pi}_{it}^e(jk|j)$ at $t=500$ for Economy D
+:header-rows: 1
+:name: tbl-economy-d-winning-500
+
+* - $\tilde{\pi}_{it}^e(jk|j)$
+  - $j=1$
+  - $j=2$
+  - $j=3$
+  - $j=4$
+  - $j=5$
+* - $i=1$
+  - $(1,\text{—},\text{—},\text{—},0)$
+  - $(1,1,1,0,0)$
+  - $(1,0,1,0,0)$
+  - $(1,1,1,1,\text{—})$
+  - $(0,\text{—},\text{—},0,1)$
+* - $i=2$
+  - $(1,1,1,1,0)$
+  - $(1,1,1,\text{—},\text{—})$
+  - $(1,1,1,0,0)$
+  - $(1,1,1,0,0)$
+  - $(1,1,1,1,\text{—})$
+* - $i=3$
+  - $(1,0,1,1,0)$
+  - $(1,0,1,1,1)$
+  - $(1,\text{—},1,1,\text{—})$
+  - $(1,\text{—},1,1,1)$
+  - $(1,1,1,1,0)$
+* - $i=4$
+  - $(1,0,0,1,1)$
+  - $(1,\text{—},0,1,1)$
+  - $(1,\text{—},1,1,\text{—})$
+  - $(1,\text{—},1,1,\text{—})$
+  - $(0,1,1,1,\text{—})$
+* - $i=5$
+  - $(1,0,0,1,1)$
+  - $(1,0,0,0,1)$
+  - $(1,0,0,1,1)$
+  - $(1,1,1,1,1)$
+  - $(\text{—},\text{—},\text{—},\text{—},1)$
+```
+
+```{list-table} Winning classifier actions $\tilde{\pi}_{it}^e(jk|j)$ at $t=1750$ for Economy D
+:header-rows: 1
+:name: tbl-economy-d-winning-1750
+
+* - $\tilde{\pi}_{it}^e(jk|j)$
+  - $j=1$
+  - $j=2$
+  - $j=3$
+  - $j=4$
+  - $j=5$
+* - $i=1$
+  - $(1,\text{—},\text{—},\text{—},0)$
+  - $(1,1,0,1,0)$
+  - $(1,1,0,0,0)$
+  - $(1,1,1,1,1)$
+  - $(0,1,1,1,0)$
+* - $i=2$
+  - $(1,1,1,0,0)$
+  - $(\text{—},\text{—},\text{—},\text{—},\text{—})$
+  - $(1,1,0,\text{—},1)$
+  - $(1,1,1,0,0)$
+  - $(1,1,1,1,1)$
+* - $i=3$
+  - $(1,0,1,1,\text{—})$
+  - $(0,1,1,0,0)$
+  - $(\text{—},\text{—},\text{—},\text{—},\text{—})$
+  - $(0,0,1,0,\text{—})$
+  - $(1,1,1,1,0)$
+* - $i=4$
+  - $(0,0,0,1,0)$
+  - $(1,0,1,1,0)$
+  - $(0,0,0,1,0)$
+  - $(\text{—},\text{—},\text{—},\text{—},\text{—})$
+  - $(1,1,1,1,1)$
+* - $i=5$
+  - $(1,0,\text{—},0,1)$
+  - $(1,1,1,0,1)$
+  - $(0,1,0,1,1)$
+  - $(1,0,\text{—},1,1)$
+  - $(\text{—},\text{—},\text{—},\text{—},\text{—})$
+```
+
+From the simulation results, we can see that the trading patterns nearly seem to describe a fundamental equilibrium in which agents are only willing to trade for commodities of lower cost than the one currently in storage, except that they always accept the commodity of their type. These fundamental trading patterns are shown in {numref}`fig-economy-d-exchange`. Some speculative moves can be detected. An example of this is that agents of type II accept (from I) good 3 for good 1 in order to trade 3 for 2 with type III. We do not pursue here a full analysis of partially speculative equilibria for this economy.
 
 ```{figure} figures/fig11_economy_d_exchange.png
 :name: fig-economy-d-exchange
@@ -869,7 +2390,7 @@ Exchange patterns in Economy D exhibited by classifier systems.
 (sec-conclusions)=
 ## 8. Conclusions
 
-The work described above is presented as the first steps of our project to use the classifier systems of Holland to model learning in multi-agent environments. Classifier systems have previously been applied to solve some complex optimization problems [see *Machine Learning* (1988)]. Our application has involved some extensions to handle the fact that ours is a multi-agent environment in which agents are solving Markovian dynamic decision problems.
+The work described above is presented as the first steps of our project to use the classifier systems of Holland to model learning in multi-agent environments. Classifier systems have previously been applied to solve some complex optimization problems [see {cite}`machinelearning1988`]. Our application has involved some extensions to handle the fact that ours is a multi-agent environment in which agents are solving Markovian dynamic decision problems.
 
 The work described in this paper has accomplished two objectives that are parts of our broader project. First, our simulations have demonstrated by example that multi-agent systems of classifiers can exhibit interesting behavior, and can eventually learn to play Nash-Markov equilibria. Second, the process of making classifier systems cope with the Kiyotaki-Wright environment has prompted us to formalize a variety of concepts and definitions that our subsequent work shall build on. These definitions will facilitate formal analyses of systems of multi-agent classifier systems, which we intend to pursue.
 
