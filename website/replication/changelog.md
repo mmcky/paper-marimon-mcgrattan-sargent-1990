@@ -1,4 +1,9 @@
-# Changelog
+# Changelog: Companion Notebook 1
+
+**Subject:** Change history for `jupyter/companion-notebook-1.ipynb`  
+**Paper:** "Money as a Medium of Exchange in an Economy with Artificially Intelligent Agents," *Journal of Economic Dynamics and Control*, 14, 329–373.
+
+---
 
 ## 2026-02-10
 

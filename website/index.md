@@ -23,7 +23,7 @@ The key ingredients of the paper are:
 
 The paper simulates 8 economies with varying parameters and demonstrates convergence to Nash-Markov equilibria, including the emergence of fiat money in Economy C.
 
-**[Read the full paper text →](../paper/paper.md)** | **[PDF → MyST conversion notes →](../paper/COMPARISON_REPORT.md)**
+**[Read the full paper text →](../paper/paper.md)** | **[PDF → MyST conversion notes →](../paper/2026-02-16-pdf-to-myst-comparison.md)**
 
 ## Python Replication
 
@@ -37,8 +37,8 @@ Full replication of all **8 economies** (A1.1, A1.2, A2.1, A2.2, B.1, B.2, C, D)
 
 Supporting documentation:
 
-- [Quality Assessment Report](replication/quality-assessment.md) — Detailed fidelity assessment against the paper
-- [Comparison with DeepSeek Implementation](replication/deepseek-comparison.md) — How our replication compares to an alternative implementation
+- [Quality Assessment Report](replication/2026-02-16-quality-assessment.md) — Detailed fidelity assessment against the paper
+- [Comparison with DeepSeek Implementation](replication/2026-02-16-deepseek-comparison.md) — How our replication compares to an alternative implementation
 - [Changelog](replication/changelog.md) — History of changes to the companion notebook
 
 ## Experiments
@@ -49,4 +49,4 @@ Supporting documentation:
 An alternative approach using AlphaGo-style methods (MCTS + policy-value networks) to learn trading strategies in the Kiyotaki-Wright economy.
 :::
 
-- [AlphaGo Implementations Comparison](experiments/alphago-comparison.md) — Detailed comparison of two AlphaGo-style implementations
+- [AlphaGo Implementations Comparison](experiments/2026-02-09-alphago-comparison.md) — Detailed comparison of two AlphaGo-style implementations

@@ -1,11 +1,8 @@
 # Comparison Report: Original PDF vs. MyST Markdown
 
-**Paper**: *Money as a Medium of Exchange in an Economy with Artificially Intelligent Agents*
-**Authors**: Ramon Marimon, Ellen McGrattan, Thomas J. Sargent (1990)
-**Source PDF**: `Marimon_McGrattan_Sargent_1990.pdf` (extracted via `marker-pdf`)
-**MyST Output**: `paper/paper.md`
-**Date of Analysis**: 16 February 2026
-**Last Updated**: 16 February 2026 (post-PR `fix/paper-conversion-quality`)
+**Date:** 2026-02-16  
+**Subject:** Fidelity assessment of `paper/paper.md` against original PDF, converted via `marker-pdf`  
+**Paper:** "Money as a Medium of Exchange in an Economy with Artificially Intelligent Agents," *Journal of Economic Dynamics and Control*, 14, 329–373.
 
 ---
 

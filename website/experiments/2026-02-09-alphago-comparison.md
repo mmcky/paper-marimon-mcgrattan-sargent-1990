@@ -1,9 +1,8 @@
-# Detailed Comparison: AlphaGo-Style Notebooks
+# Comparison Report: AlphaGo-Style Notebooks
 
-## `companion-notebook-2-alphago.ipynb` vs. Tom's `kiyotaki_wright_alphago.ipynb`
-
-This document provides a detailed comparison of the two AlphaGo-style implementations
-for the Kiyotaki-Wright economy.
+**Date:** 2026-02-09  
+**Subject:** Comparison of `jupyter/companion-notebook-2-alphago.ipynb` with Tom's `jupyter/tom/kiyotaki_wright_alphago.ipynb`  
+**Paper:** "Money as a Medium of Exchange in an Economy with Artificially Intelligent Agents," *Journal of Economic Dynamics and Control*, 14, 329–373.
 
 ---
 
@@ -366,6 +365,4 @@ vs. speculative contest is the central question of the paper.
    - Reporting confidence intervals on equilibrium classifications
    - Systematic hyperparameter sensitivity analysis
 
----
 
-*Generated: 9 February 2026*

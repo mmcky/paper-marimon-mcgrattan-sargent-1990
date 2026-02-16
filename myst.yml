@@ -21,15 +21,15 @@ project:
       title: Paper Text
     - title: Paper Conversion Notes
       children:
-        - file: paper/COMPARISON_REPORT.md
+        - file: paper/2026-02-16-pdf-to-myst-comparison.md
           title: "PDF to MyST Comparison Report"
     - title: Python Replication
       children:
         - file: jupyter/companion-notebook-1.ipynb
           title: "Companion Notebook 1: Classifier Systems"
-        - file: website/replication/quality-assessment.md
+        - file: website/replication/2026-02-16-quality-assessment.md
           title: "Quality Assessment Report"
-        - file: website/replication/deepseek-comparison.md
+        - file: website/replication/2026-02-16-deepseek-comparison.md
           title: "Comparison with DeepSeek Implementation"
         - file: website/replication/changelog.md
           title: "Changelog"
@@ -37,7 +37,7 @@ project:
       children:
         - file: jupyter/companion-notebook-2-alphago.ipynb
           title: "Companion Notebook 2: AlphaGo Approach"
-        - file: website/experiments/alphago-comparison.md
+        - file: website/experiments/2026-02-09-alphago-comparison.md
           title: "AlphaGo Implementations Comparison"
 
 site:

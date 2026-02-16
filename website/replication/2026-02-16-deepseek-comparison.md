@@ -1,16 +1,8 @@
-# Comparison: Our Notebook vs. DeepSeek Notebook
+# Comparison Report: Companion Notebook 1 vs. DeepSeek Notebook
 
-## Replicating Marimon, McGrattan, and Sargent (1990)
-
-This document compares two Jupyter notebook implementations that aim to replicate
-the computational experiments from:
-
-> Marimon, R., McGrattan, E., & Sargent, T. J. (1990). "Money as a Medium of
-> Exchange in an Economy with Artificially Intelligent Agents." *Journal of
-> Economic Dynamics and Control*, 14, 329-373.
-
-- **Our notebook**: `jupyter/marimon_mcgrattan_sargent_1990.ipynb`
-- **DeepSeek notebook**: `MMS_deepseek.ipynb` (provided externally)
+**Date:** 2026-02-16  
+**Subject:** Comparison of `jupyter/companion-notebook-1.ipynb` with Tom's DeepSeek implementation `jupyter/tom/MMS_deepseek.ipynb`  
+**Paper:** "Money as a Medium of Exchange in an Economy with Artificially Intelligent Agents," *Journal of Economic Dynamics and Control*, 14, 329–373.
 
 ---
 
@@ -28,7 +20,7 @@ the computational experiments from:
 - **Complete enumeration** (72 trade + 12 consume classifiers) for Economies
   A1/A2/B, random initialization for A1.2 and C — matching the paper's two
   approaches
-- Reproduces **all five economies**: A1.1, A1.2, A2.1, B.1, and C (fiat money)
+- Reproduces **all eight economies**: A1.1, A1.2, A2.1, A2.2, B.1, B.2, C, and D
 
 **DeepSeek's notebook** takes significant shortcuts:
 
@@ -107,12 +99,15 @@ learning episodes to converge.
 
 ## 5. Results Quality
 
-**Our notebook** produces results matching the paper:
+**Our notebook** produces results matching the paper across all eight economies:
 
 - **A1.1**: Type 1 holds 100% Good 2, Type 3 holds 100% Good 1 — matches Table 4
-- **A2.1**: Fundamental equilibrium despite high $u$ — matches the paper's key
-  finding (Section 7.2)
-- **Economy C**: Agents learn to accept fiat money
+- **A1.2**: Fundamental equilibrium with GA-driven exploration — matches Section 5b
+- **A2.1**: Fundamental equilibrium despite high $u$ — matches the paper's key finding (Section 7.2)
+- **A2.2**: Speculative equilibrium emerges with GA — matches Table 1
+- **B.1/B.2**: Model B production structure — matches Sections 6a–6b
+- **Economy C**: Agents learn to accept fiat money — matches Section 7
+- **Economy D**: Five goods, five agent types — the paper's most complex economy (Section 8)
 
 **DeepSeek** acknowledges its own limitations: "Average absolute difference" is
 reported but with only 100 periods and 10 agents, the results are noisy and don't
@@ -151,10 +146,12 @@ clearly demonstrate convergence.
 
 ## Summary
 
-Our notebook is a substantially more faithful and complete replication. DeepSeek's
-version is more of a *sketch* — it captures the general idea but takes shortcuts
-on every core mechanism (strength updates, GA, scale, shared classifiers) that
-materially affect whether the results actually replicate the paper's findings.
+Our notebook is a substantially more faithful and complete replication covering
+all eight economies from the paper (A1.1, A1.2, A2.1, A2.2, B.1, B.2, C, D),
+including the five-good Economy D which is the paper's most complex demonstration.
+DeepSeek's version is more of a *sketch* — it captures the general idea but takes
+shortcuts on every core mechanism (strength updates, GA, scale, shared classifiers)
+that materially affect whether the results actually replicate the paper's findings.
 
 The 10-agent, 100-period setup with pre-seeded "rational" initial strengths means
 the DeepSeek simulation is largely running on its initial conditions rather than
