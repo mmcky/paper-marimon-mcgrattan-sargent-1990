@@ -18,8 +18,8 @@ project:
   toc:
     - file: website/index.md
     - file: paper/paper.md
-      title: Paper Text
-    - title: Paper Conversion Notes
+      title: Paper
+    - title: Paper -> Conversion Notes
       children:
         - file: paper/2026-02-16-pdf-to-myst-comparison.md
           title: "PDF to MyST Comparison Report"

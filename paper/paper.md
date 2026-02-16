@@ -13,6 +13,10 @@ bibliography: references.bib
 acknowledgments: This research began with visits by Marimon and Sargent to the Santa Fe Institute. We thank Brian Arthur and John Holland for several helpful discussions about genetic algorithms at the Santa Fe Institute. We also thank Randall Wright and Nancy Stokey for helpful comments on an earlier draft. Sargent's research was supported by a grant from the National Science Foundation to the National Bureau of Economic Research. Marimon's research was supported by a grant from the National Science Foundation and by the National Fellows Program at the Hoover Institution. This paper is an abbreviated version of a Hoover Institution working paper with the same title, which is available from the authors upon request.
 exports:
   - format: typst
+    id: paper-pdf
+downloads:
+  - id: paper-pdf
+    title: Download PDF
 ---
 
 +++ {"part": "abstract"}

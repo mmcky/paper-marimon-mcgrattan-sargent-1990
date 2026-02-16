@@ -12,7 +12,7 @@ The paper studies how artificially intelligent agents using Holland's classifier
 
 ## The Paper
 
-The [original PDF](../original/Marimon_McGrattan_Sargent_1990.pdf) has been converted to a [MyST Markdown version](../paper/paper.md) — a modern, web-native format with cross-references, proper equation numbering, and navigable structure. The conversion captures ~93% of the original content including all 17 equations, 66 tables, 10 figures, 17 footnotes, and 21 references.
+The [original PDF](../original/Marimon_McGrattan_Sargent_1990.pdf) has been converted to a [MyST Markdown version](../paper/paper.md) — a modern, web-native format with cross-references, proper equation numbering, and navigable structure. The conversion captures [~93% of the original content](../paper/2026-02-16-pdf-to-myst-comparison.md) including all 17 equations, 66 tables, 10 figures, 17 footnotes, and 21 references.
 
 The key ingredients of the paper are:
 
