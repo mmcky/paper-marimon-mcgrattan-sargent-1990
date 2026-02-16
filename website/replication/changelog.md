@@ -5,6 +5,31 @@
 
 ---
 
+## 2026-02-18
+
+### Bug Fixes
+
+- **Economy C GA parameters:** Fixed `ga_pcross=0.01, ga_pmutation=0.2` → `ga_pcross=0.6, ga_pmutation=0.01`. Confirmed as a bug by reading the original MATLAB code: `class003.m` calls `winitial` with no overrides, and `winitial.m` sets `pcrosst=0.6, pmutationt=0.01` universally for all economies.
+
+### Algorithm Improvements
+
+- **GA rewritten to replicate `ga3.m`:** Complete rewrite of `apply_genetic_algorithm()` to faithfully replicate the MATLAB `ga3.m` algorithm:
+  - Two-stage parent selection: usage-weighted pre-selection ($p_2 = 0.7$), then fitness-proportional roulette wheel
+  - Single-point crossover (was two-point) matching MATLAB
+  - Ternary cyclic mutation (was random choice) matching MATLAB
+  - Crowding-based replacement via `cankill` filtering (was weakest replacement) matching MATLAB `crowdin3.m`
+  - N_pairs now computed from `round(propselect * n_classifiers * 0.5)` (7 trade pairs, 1 consume pair for 72/12 classifiers)
+- **Creation operator fixed:** New `create_classifier_replacing_weakest()` replaces the most redundant or weakest classifier (matching MATLAB `create.m`), maintaining constant population size. Previously, classifiers were appended, growing the population unboundedly.
+- **EconomyConfig extended:** Added GA parameters: `ga_propselect` ($p_1=0.2$), `ga_propused` ($p_2=0.7$), `ga_crowdfactor_trade` (8), `ga_crowdfactor_consume` (4), `ga_crowdsubpop` (0.5), `ga_uratio` (0.0, 0.2)
+- **GA parameters propagated:** `KiyotakiWrightSimulation`, `FiatMoneySimulation`, and `FiveGoodSimulation` now pass all GA parameters through to `apply_genetic_algorithm()`
+
+### New Features
+
+- **A1.2 classifier strength tables:** Added `print_classifier_strengths()` calls for all 3 agent types at both t=1000 and t=2000, replicating paper Tables 20–27
+- **Data-driven Wicksell triangles:** New `plot_wicksell_triangle()` function reads actual exchange counts from simulation history and draws exchange pattern diagrams with arrow thickness proportional to exchange frequency. Called for all 8 economies with appropriate layout (triangle for 3-type, pentagon for 5-type).
+
+---
+
 ## 2026-02-17
 
 ### Bug Fixes
