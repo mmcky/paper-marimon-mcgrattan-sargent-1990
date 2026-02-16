@@ -10,6 +10,19 @@ This project provides a Python replication of the classifier system simulations 
 
 The paper studies how artificially intelligent agents using Holland's classifier systems learn to use commodity money in a Kiyotaki-Wright economy. Agents are endowed with production technologies and must trade to obtain their desired consumption goods. Through a bucket brigade payment system and genetic algorithms, agents learn which goods to accept in trade — and commodity money emerges endogenously.
 
+## The Paper
+
+The paper explores whether artificially intelligent agents can learn to adopt a commodity as money — a medium of exchange — in a decentralized trading environment. The key ingredients are:
+
+- **Kiyotaki-Wright (1989) economy**: Multiple agent types with different production technologies, indivisible goods, and random pairwise matching
+- **Holland classifier systems**: Trinary-encoded rules (0, 1, #) that compete via an auction mechanism to make trade and consumption decisions
+- **Bucket brigade**: A payment system (Equations 10–11) that propagates rewards backward through the chain of classifiers responsible for successful outcomes
+- **Genetic algorithm**: Periodic evolution of classifier populations through crossover and mutation to discover better trading strategies
+
+The paper simulates 8 economies with varying parameters and demonstrates convergence to Nash-Markov equilibria, including the emergence of fiat money in Economy C.
+
+**[Read the full paper text →](../paper/paper.md)**
+
 ## Companion Notebooks
 
 The core replication is contained in two Jupyter notebooks:
@@ -30,17 +43,6 @@ An alternative approach using AlphaGo-style methods to learn trading strategies 
 :::
 
 ::::
-
-## The Paper
-
-The paper explores whether artificially intelligent agents can learn to adopt a commodity as money — a medium of exchange — in a decentralized trading environment. The key ingredients are:
-
-- **Kiyotaki-Wright (1989) economy**: Multiple agent types with different production technologies, indivisible goods, and random pairwise matching
-- **Holland classifier systems**: Trinary-encoded rules (0, 1, #) that compete via an auction mechanism to make trade and consumption decisions
-- **Bucket brigade**: A payment system (Equations 10–11) that propagates rewards backward through the chain of classifiers responsible for successful outcomes
-- **Genetic algorithm**: Periodic evolution of classifier populations through crossover and mutation to discover better trading strategies
-
-The paper simulates 8 economies with varying parameters and demonstrates convergence to Nash-Markov equilibria, including the emergence of fiat money in Economy C.
 
 ## Additional Documentation
 

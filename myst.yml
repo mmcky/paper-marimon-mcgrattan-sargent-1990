@@ -15,11 +15,6 @@ project:
     - Kiyotaki-Wright
   bibliography:
     - paper/references.bib
-  downloads:
-    - file: jupyter/companion-notebook-1.ipynb
-      title: Download Notebook 1
-    - file: jupyter/companion-notebook-2-alphago.ipynb
-      title: Download Notebook 2
   toc:
     - file: docs/index.md
     - title: Companion Notebooks
