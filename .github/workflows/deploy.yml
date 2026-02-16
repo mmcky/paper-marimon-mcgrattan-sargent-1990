@@ -36,8 +36,15 @@ jobs:
           node-version: 18.x
       - name: Install MyST Markdown
         run: npm install -g mystmd
+      - name: Install Typst
+        uses: typst-community/setup-typst@v4
       - name: Build HTML Assets
         run: myst build --html
+      - name: Build PDF
+        run: myst build paper/paper.md --pdf
+      - name: Copy PDF to site
+        run: |
+          cp _build/exports/paper_typst/paper.pdf _build/html/paper.pdf
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
