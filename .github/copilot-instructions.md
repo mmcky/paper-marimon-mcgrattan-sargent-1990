@@ -8,21 +8,18 @@ The companion notebooks in `jupyter/` implement the Kiyotaki-Wright model with H
 
 ## Shell Scripting Rules
 
-**Never use inline heredocs or complex shell escaping in zsh.** Zsh heredocs are fragile and frequently break with special characters, quotes, and escape sequences.
+**Never pipe heredocs directly into interpreters in zsh** (e.g., `python3 << 'EOF'`). These break with special characters, quotes, and nested escaping.
 
-Instead:
-1. Write temporary scripts to `.tmp/` (gitignored)
-2. Execute the script file
-3. Clean up when done
+Instead, write multi-line content to a temporary file, execute it, and clean up:
 
 ```bash
-# BAD — fragile heredoc
+# BAD — piping heredoc directly into interpreter
 python3 << 'EOF'
 import json
 # ... code with quotes, special chars ...
 EOF
 
-# GOOD — write to .tmp, execute, clean up
+# GOOD — write to temp file, execute, clean up
 cat > .tmp/script.py << 'EOF'
 import json
 # ... code with quotes, special chars ...
@@ -31,7 +28,7 @@ python3 .tmp/script.py
 rm .tmp/script.py
 ```
 
-The `.tmp/` directory is gitignored and exists for this purpose.
+Using heredocs to write files (via `cat >`) is fine — the problem is piping them directly into commands. The `.tmp/` directory is gitignored and exists for this purpose.
 
 ## Notebook Editing
 
