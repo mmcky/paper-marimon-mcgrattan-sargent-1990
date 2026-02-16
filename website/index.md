@@ -23,7 +23,7 @@ The key ingredients of the paper are:
 
 The paper simulates 8 economies with varying parameters and demonstrates convergence to Nash-Markov equilibria, including the emergence of fiat money in Economy C.
 
-**[Read the full paper text →](../paper/paper.md)** | **[PDF → MyST conversion notes →](../paper/2026-02-16-pdf-to-myst-comparison.md)** | **[Download PDF](../paper.pdf)**
+**[Read the full paper text →](../paper/paper.md)** | **[PDF → MyST conversion notes →](../paper/2026-02-16-pdf-to-myst-comparison.md)** | **[Download PDF](https://mmcky.github.io/paper-marimon-mcgrattan-sargent-1990/paper.pdf)**
 
 ## Python Replication
 
