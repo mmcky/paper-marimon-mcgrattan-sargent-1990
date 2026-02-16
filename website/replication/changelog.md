@@ -5,6 +5,30 @@
 
 ---
 
+## 2026-02-17
+
+### Bug Fixes
+
+- **Economy D IndexError:** Fixed crash in `print_5good_exchange_freq()`, `print_5good_holdings()`, and `print_5good_winning_actions()` when called with negative `t_idx` — negative indices now correctly converted to positive before slicing
+
+### New Features
+
+- **Time-indexed analysis:** `print_exchange_frequency()` and `print_consumption_frequency()` now accept a `t_idx` parameter for querying exchange/consumption frequencies at any historical time point, not just the final period
+- **Classifier strength tables:** Added `print_classifier_strengths()` function showing top-N classifiers with condition strings, actions, strengths, usage counts, and specificity — replicating paper Tables 10–15
+- **Enhanced `print_full_analysis()`:** Now accepts `t_idx` for time-specific full-analysis snapshots; uses historical holdings distributions when querying past time points
+- **Intermediate reporting standardized:** Economies A1.2, A2.1, A2.2, B.1, and B.2 now report full analysis (holdings, exchange freq, consumption freq, winning actions) at intermediate time points using `print_full_analysis()` with `t_idx`, replacing ad-hoc manual holdings-only reporting
+
+### Algorithm Improvements
+
+- **Diversification operator activated:** `apply_diversification()` now called in `get_trade_decision()` and `get_consume_decision()` for all three agent classes (`ClassifierAgent`, `FiatMoneyAgent`, `FiveGoodAgent`). Paper Section 6 specifies diversification is "used each time the classifier system is called upon" to ensure both actions are represented among matching classifiers
+- **Specialization operator implemented:** Added `apply_specialization()` implementing the paper's Section 6 specialization operator — probabilistically converts `#` wildcards to specific bit values with frequency $f_s(t) = 1/(2\sqrt{t})$. Integrated into all three simulation loops (`KiyotakiWrightSimulation`, `FiatMoneySimulation`, `FiveGoodSimulation`)
+
+### Documentation
+
+- **Economy C GA parameters:** Added investigative comment noting that `ga_pcross=0.01, ga_pmutation=0.2` appear swapped vs the standard `pcross=0.6, pmutation=0.01` used in other economies — flagged for verification against the original MATLAB code
+
+---
+
 ## 2026-02-16
 
 ### Bug Fixes
