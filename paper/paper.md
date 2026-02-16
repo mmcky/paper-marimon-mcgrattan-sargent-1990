@@ -12,7 +12,7 @@ venue: Journal of Economic Dynamics and Control 14 (1990) 329-373
 bibliography: references.bib
 acknowledgments: This research began with visits by Marimon and Sargent to the Santa Fe Institute. We thank Brian Arthur and John Holland for several helpful discussions about genetic algorithms at the Santa Fe Institute. We also thank Randall Wright and Nancy Stokey for helpful comments on an earlier draft. Sargent's research was supported by a grant from the National Science Foundation to the National Bureau of Economic Research. Marimon's research was supported by a grant from the National Science Foundation and by the National Fellows Program at the Hoover Institution. This paper is an abbreviated version of a Hoover Institution working paper with the same title, which is available from the authors upon request.
 exports:
-  - format: pdf
+  - format: typst
 ---
 
 +++ {"part": "abstract"}
@@ -137,7 +137,7 @@ We now describe each of these elements as applied to the Kiyotaki-Wright environ
   - Not good 3
 ```
 
-The coding is written in the trinary alphabet $(1, 0, \#)$, where $\#$ means 'don't care'. For the trading decision, the code is in the binary alphabet $(1, 0)$, where 1 means trade, while 0 means don't trade.
+The coding is written in the trinary alphabet $(1, 0, \text{\#})$, where $\text{\#}$ means 'don't care'. For the trading decision, the code is in the binary alphabet $(1, 0)$, where 1 means trade, while 0 means don't trade.
 
 To illustrate how the codes in {numref}`tbl-encoding` are applied to encode particular trading classifiers, we consider the following two classifiers:
 
@@ -164,7 +164,7 @@ $$ (eq-auction-winner)
 
 We denote the action (trade or no trade) taken by classifier $e_t(z_{at})$ as $\lambda_{at}$. Equations {eq}`eq-matched-classifiers` and {eq}`eq-auction-winner` describe the 'auction system' by which the highest strength rule that applies in a given state is given the right to decide for agent $a$ at $t$.
 
-Because the trade and consumption classifier systems will be making payments to one another, we have to describe the consumption classifier system before describing the accounting system that updates strengths of the trade classifier system. The consumption classifier system is a collection of trinary strings of length 4. The first three positions encode $x_{at}^+$ using the same code that was described in {numref}`tbl-encoding`. The condition part of the strings is written in terms of the trinary alphabet $(0, 1, \#)$. The fourth position of a consumption string is the 'action' part, taking values of 1 (meaning consume) and 0 (meaning don't consume).
+Because the trade and consumption classifier systems will be making payments to one another, we have to describe the consumption classifier system before describing the accounting system that updates strengths of the trade classifier system. The consumption classifier system is a collection of trinary strings of length 4. The first three positions encode $x_{at}^+$ using the same code that was described in {numref}`tbl-encoding`. The condition part of the strings is written in terms of the trinary alphabet $(0, 1, \text{\#})$. The fourth position of a consumption string is the 'action' part, taking values of 1 (meaning consume) and 0 (meaning don't consume).
 
 We let consumption classifier strings be indexed by $c \in \{1, 2, \ldots, C_a\}$. The strength assigned to classifier $c$ of agent $a$ is $S_c^a(t)$. By virtue of eq. {eq}`eq-post-trade`, the state $x_{at}^+$ can be expressed in terms of $z_{at} = (x_{at}, x_{\rho_t(a)t})$. Therefore it suffices to denote the set of 'matched' classifiers by $M_c(z_{at})$, where
 
@@ -224,7 +224,7 @@ b_2(c) &= b_{21} + b_{22}\sigma_c
 \end{aligned}
 $$ (eq-bid-functions)
 
-where $b_{11}$ and $b_{12}$ are positive constants adding up to less than one, and $\sigma_e$ is a fraction which is proportional to the specificity of a particular classifier. In particular, we choose $\sigma_e = 1/(1 + \text{number of } \#\text{'s in the string})$. Similarly, we define a function $b_2(c)$ with $\sigma_c = 1/(1 + \text{number of } \#\text{'s in the string})$. By the above choices of $b_1(e)$ and $b_2(c)$, we favor specific rules over more general rules that can be activated by a particular state. When $c \in M_c(z_{at})$, classifier $c$ makes a bid of $b_2(c)S_c^a(t)$.
+where $b_{11}$ and $b_{12}$ are positive constants adding up to less than one, and $\sigma_e$ is a fraction which is proportional to the specificity of a particular classifier. In particular, we choose $\sigma_e = 1/(1 + \text{number of \#'s in the string})$. Similarly, we define a function $b_2(c)$ with $\sigma_c = 1/(1 + \text{number of \#'s in the string})$. By the above choices of $b_1(e)$ and $b_2(c)$, we favor specific rules over more general rules that can be activated by a particular state. When $c \in M_c(z_{at})$, classifier $c$ makes a bid of $b_2(c)S_c^a(t)$.
 
 Only winning classifiers pay their bids by having them deducted from their strengths. The bid of the winning exchange classifier at $t$ is paid to the winning consumption classifier at $t - 1$, which is the classifier that is to be credited with setting the time $t$ state to $z_{at}$. The bid of the winning consumption classifier at $t$ is paid to the winning exchange classifier at time $t$, which is to be credited with setting the post-exchange state at $t$ at $x_{at}^+$, thereby giving the winning consumption classifier a chance to bid.
 
@@ -246,7 +246,7 @@ $$ (eq-external-payoff)
 
 There are several features of {eq}`eq-strength-consumption` and {eq}`eq-strength-exchange` that bear emphasizing. First, these are recursive formulas that make $S_{c\tau_c^a(t)}^a$ and $S_{e\tau_e^a(t)}^a$ averages of past payoffs (external rewards plus bids received from other classifiers) minus payments (bids made to other classifiers). Use of cumulative average net payoffs in this way (as opposed to total payoffs) is a departure from the existing literature on classifiers. Second, notice how the term $\sum_e I_e^a(t) b_1(e) S_{e\tau_e^a(t)}^a$ expresses the condition that only the winning exchange classifier at $t$ pays the winning consumption classifier at $t - 1$. Third, notice how the use of the counters $\tau_e^a(t)$ and $\tau_c^a(t)$ causes changes to be made only to the strengths attached to the winning classifiers.
 
-```{figure} figures/fig1_classifier_flow.png
+```{figure} figures/fig1_classifier_flow.jpg
 :name: fig-classifier-flow
 :width: 80%
 
@@ -268,7 +268,7 @@ In {ref}`sec-simulations`, we shall be interested in recording various frequency
 
 For their model A, Kiyotaki and Wright define as the *fundamental equilibrium* the trading pattern defined by the triangle depicted in {numref}`fig-fundamental`. In this trading pattern, good 1, which has the lowest storage cost, serves as the general medium of exchange. In terms of storage, agents of type I only store good 2, which they exchange only for good 1; agents of type III only store good 1, which they exchange only for good 3; and agents of type II half of the time store good 1, which they exchange for good 2, and half of the time good 3, which they exchange for good 1.
 
-```{figure} figures/fig2_fundamental_equilibrium.png
+```{figure} figures/fig2_fundamental_equilibrium.jpg
 :name: fig-fundamental
 :width: 60%
 
@@ -385,7 +385,7 @@ Note: A question mark denotes sequential equilibrium strategies for events of ze
 
 {numref}`tbl-economy-a1-consumption` shows that in any stationary equilibrium, each type of agent consumes only its own desired good.
 
-We now describe how the strategies that support Kiyotaki and Wright's 'fundamental equilibrium' can be represented as a classifier system. For the classifiers we introduce the following additional notation. Let $e^i_{k,j,d}$ denote the exchange classifier for a type $i$ agent that reads 'If I am storing good $k$ and I meet an agent with good $j$, then my exchange decision is $d$'; $d \in \{0, 1\}$. Similarly, specific consumption classifiers for type $i$ agents are of the form $c^i_{k,d}$ for 'If, at the end of the exchange subperiod, I am storing good $k$, then my consumption action is $d$'. For more general rules, we use the subindex $-j$ to denote 'not good $j$' and $\#$ to denote 'any good'. That is, $e^1_{2,-1,0}$ is the classifier for type I agents that reads 'If I am storing good 2 and I meet an agent not carrying good 1, then do not trade', and $c^1_{\#,0}$ is a classifier for type I that reads 'No matter what I am storing at the end of the exchange subperiod, do not consume'.
+We now describe how the strategies that support Kiyotaki and Wright's 'fundamental equilibrium' can be represented as a classifier system. For the classifiers we introduce the following additional notation. Let $e^i_{k,j,d}$ denote the exchange classifier for a type $i$ agent that reads 'If I am storing good $k$ and I meet an agent with good $j$, then my exchange decision is $d$'; $d \in \{0, 1\}$. Similarly, specific consumption classifiers for type $i$ agents are of the form $c^i_{k,d}$ for 'If, at the end of the exchange subperiod, I am storing good $k$, then my consumption action is $d$'. For more general rules, we use the subindex $-j$ to denote 'not good $j$' and $\text{\#}$ to denote 'any good'. That is, $e^1_{2,-1,0}$ is the classifier for type I agents that reads 'If I am storing good 2 and I meet an agent not carrying good 1, then do not trade', and $c^1_{\text{\#},0}$ is a classifier for type I that reads 'No matter what I am storing at the end of the exchange subperiod, do not consume'.
 
 We can simplify the study of classifier systems by considering only a small complete set of rules. For type I agents these rules are: $e^1_{2,1,1}$; $e^1_{2,-1,0}$; $e^1_{3,1,1}$; $e^1_{3,-1,0}$; $c^1_{1,1}$; $c^1_{-1,0}$. If $\{e^1_{2,1,1}; e^1_{2,-1,0}; c^1_{1,1}; c^1_{-1,0}\}$ are the only classifiers being used by agents of type I, we can say that type I agents support the fundamental equilibrium. We can also describe classifiers for type II and type III agents that support the fundamental equilibrium. These are, for type II: $e^2_{3,1,1}$; $e^2_{3,2,1}$; $e^2_{3,-1,0}$; $e^2_{1,-2,0}$; $c^2_{2,1}$; $c^2_{-2,0}$; and for type III: $e^3_{1,3,1}$; $e^3_{1,-3,0}$; $c^3_{3,1}$; $c^3_{-3,0}$.
 
@@ -423,7 +423,7 @@ A stationary Nash equilibrium can then be defined as follows:
 
 Kiyotaki and Wright show that for their model A the trading pattern associated with a fundamental equilibrium is not the only possible one in equilibrium. They show that there can occur a *speculative equilibrium* with a trading pattern depicted in {numref}`fig-speculative`.
 
-```{figure} figures/fig4_speculative_equilibrium.png
+```{figure} figures/fig4_speculative_equilibrium.jpg
 :name: fig-speculative
 :width: 60%
 
@@ -515,17 +515,17 @@ The process of adding new rules and deleting old ones is accomplished by adding 
 
 **Diversification**: The *diversification* operation is designed to inject sufficient diversity into the range of actions called for by different classifiers in a given situation. For the exchange classifier, this step occurs at the stage at which $z_{at}$ has been observed and the set $M_e(z_{at})$ has been constructed. Recall that $M_e(z_{at})$ is the set of exchange classifiers whose condition parts match $z_{at}$. If all $e \in M_e(z_{at})$ have the same action (0 or 1), the diversification operation creates a classifier encoding the specific state $z_{at}$ and an action opposite to that taken by the other classifiers in $M_e(z_{at})$. The strength of the winning classifier is assigned to this new classifier. This new classifier is added to the system, while simultaneously a 'weak' classifier from the set $M_e(z_{at})$ is deleted from the system. The weakness of a classifier is measured in terms of a combination of strength and cumulated number of times the classifier has won the bidding in the past. The diversification operation is used each time the classifier system is called upon. Notice that if this step were to be added to a complete enumeration system, it would have no effect on the population of rules because sufficient diversity is present from the beginning.
 
-**Specialization**: The *specialization* operation is called randomly with a probability that we choose to be diminishing over time. The random variable governing specialization calls this step into action just after the winning bid has been determined. The winning classifier is checked to determine whether there are any $\#$'s in its condition part. A new classifier is synthesized by exposing each $\#$ in the condition part to a probability of being switched to a 0 or a 1, whichever one specifically encodes the particular $z_{at}$ that was just observed or matched. This new and (probably) more specific rule is then used to replace a weak rule from the set $e \in M_e(z_{at})$ [or $c \in M_c(z_{at})$ in the case of the consumption classifier], where weakness is measured by a combination of strengths and cumulative number of times the auction has been won.
+**Specialization**: The *specialization* operation is called randomly with a probability that we choose to be diminishing over time. The random variable governing specialization calls this step into action just after the winning bid has been determined. The winning classifier is checked to determine whether there are any $\text{\#}$'s in its condition part. A new classifier is synthesized by exposing each $\text{\#}$ in the condition part to a probability of being switched to a 0 or a 1, whichever one specifically encodes the particular $z_{at}$ that was just observed or matched. This new and (probably) more specific rule is then used to replace a weak rule from the set $e \in M_e(z_{at})$ [or $c \in M_c(z_{at})$ in the case of the consumption classifier], where weakness is measured by a combination of strengths and cumulative number of times the auction has been won.
 
 **Generalization**: The fourth step, which we call *generalization*, is a version of a 'genetic algorithm'. This step is called randomly, according to a probability that we specify to be declining through time. At a point when the step is called, the process is initiated by generating two distinct populations of classifiers: 'potential parents' and 'potential exterminants'. The potential parents are chosen to be a population of classifiers of specified size. They are chosen according to a 'fitness criterion' that weights strength and cumulative number of times that the classifier won the auction. The potential exterminants are chosen to be a population of specified size, whose members are of low fitness as measured by a fitness criterion weighting strengths and cumulative victories in past bidding.
 
 From the population of potential parents, a specified number of pairs of parents are randomly drawn to engage in 'mating' for the purpose of creating children. How a pair of parents mates can be illustrated for two exchange classifiers, which are bit strings of length 7, as depicted in {numref}`fig-mating`.
 
-The pair mates in two steps. First the pair draws two random integers uniformly distributed on $[1, 7]$. The two integers signify the positions between bits depicted in {numref}`fig-mating`. Next, a Bernoulli random variable with probability 0.5 is drawn, assuming values of 'in' or 'out'. If 'in' is drawn, we focus on the bits *between* the two lines, i.e., the bits inside the randomly drawn interval. If 'out' is drawn, we focus on the bits *outside* the randomly drawn interval. Within the interval of focus, we complete the mating process via the following version of genetic crossover. For each of the parent strings in the area of focus, we change to a $\#$ any bits for which the parent strings disagree. (Here, $\#$ agrees with either 0 or 1, while 0 disagrees with 1). This process produces two children. The children are each assigned strengths that are the average of their parents' strengths. The children are introduced into the population of classifiers. For each child added to the population, a randomly selected individual from the population of 'potential exterminants' is deleted from the population.
+The pair mates in two steps. First the pair draws two random integers uniformly distributed on $[1, 7]$. The two integers signify the positions between bits depicted in {numref}`fig-mating`. Next, a Bernoulli random variable with probability 0.5 is drawn, assuming values of 'in' or 'out'. If 'in' is drawn, we focus on the bits *between* the two lines, i.e., the bits inside the randomly drawn interval. If 'out' is drawn, we focus on the bits *outside* the randomly drawn interval. Within the interval of focus, we complete the mating process via the following version of genetic crossover. For each of the parent strings in the area of focus, we change to a $\text{\#}$ any bits for which the parent strings disagree. (Here, $\text{\#}$ agrees with either 0 or 1, while 0 disagrees with 1). This process produces two children. The children are each assigned strengths that are the average of their parents' strengths. The children are introduced into the population of classifiers. For each child added to the population, a randomly selected individual from the population of 'potential exterminants' is deleted from the population.
 
 This completes our description of the algorithm to be used for updating the classifier system when we deal with an incomplete enumeration classifier system. In the simulations to be reported in {ref}`sec-simulations`, we shall employ both complete and incomplete enumeration classifier systems.
 
-```{figure} figures/fig5_mating_process.png
+```{figure} figures/fig5_mating_process.jpg
 :name: fig-mating
 :width: 70%
 
@@ -829,7 +829,7 @@ Economy A1.1 (Economy A1 with complete enumeration of classifiers) shows that th
   - 7.78
 ```
 
-```{figure} figures/fig6_economy_a11.png
+```{figure} figures/fig6_economy_a11.jpg
 :name: fig-economy-a11
 :width: 80%
 
@@ -1184,7 +1184,7 @@ Consumption decisions are basically correct, except that II consumes 3 and III c
 
 In summary, both with complete enumeration and without it, our simulations of Economy A1 seem to be converging to the stationary equilibrium, although this convergence is slower when initial classifiers are randomly generated and new classifiers are synthesized.
 
-```{figure} figures/fig7_economy_a12.png
+```{figure} figures/fig7_economy_a12.jpg
 :name: fig-economy-a12
 :width: 80%
 
@@ -1387,11 +1387,11 @@ Economy A2 differs from Economy A1 only in that agents receive 500 utils from co
   - $(1,0,1)$
 ```
 
-{numref}`tbl-economy-a21-holdings` depicts a pattern of holdings characteristic of a fundamental equilibrium, not a speculative one. Compare with the theoretical predictions of {numref}`tbl-economy-a2-spec-holdings`–{numref}`tbl-economy-a2-spec-exchange`. Recall that a crucial difference between a speculative and a fundamental equilibrium is that in the former, type I agents are willing to exchange good 2 for good 3, while in the latter they are not. {numref}`tbl-economy-a21-winning` shows that type I agents *are* willing to exchange good 2 for 3, i.e., $\tilde{\pi}_{it}^e(jk|2) = (1,0,1)$ for $i=\text{I}$. Then how is it that the distribution of holding patterns fails to support a speculative equilibrium? The answer is to be found in the consumption classifiers of type I agents, which are too general (have too many $\#$ signs) to distinguish among goods stored. It happens that the winning classifiers embody levels of generality that result in overconsumption of good 3 and a failure to transmit the information from the consumption classifier to the exchange classifier that would be required to support a speculative equilibrium.[^fn13]
+{numref}`tbl-economy-a21-holdings` depicts a pattern of holdings characteristic of a fundamental equilibrium, not a speculative one. Compare with the theoretical predictions of {numref}`tbl-economy-a2-spec-holdings`–{numref}`tbl-economy-a2-spec-exchange`. Recall that a crucial difference between a speculative and a fundamental equilibrium is that in the former, type I agents are willing to exchange good 2 for good 3, while in the latter they are not. {numref}`tbl-economy-a21-winning` shows that type I agents *are* willing to exchange good 2 for 3, i.e., $\tilde{\pi}_{it}^e(jk|2) = (1,0,1)$ for $i=\text{I}$. Then how is it that the distribution of holding patterns fails to support a speculative equilibrium? The answer is to be found in the consumption classifiers of type I agents, which are too general (have too many $\text{\#}$ signs) to distinguish among goods stored. It happens that the winning classifiers embody levels of generality that result in overconsumption of good 3 and a failure to transmit the information from the consumption classifier to the exchange classifier that would be required to support a speculative equilibrium.[^fn13]
 
 [^fn13]: To conserve space, these classifiers are not reported here. They are contained in a longer version of this paper which is available from the authors as a working paper.
 
-We shall only briefly summarize the results for Economy A2.2 with random generation of initial classifiers, and refer the reader to the working paper for tables giving the numerical results. After 1000 iterations the economy had not converged to a steady state. Trading patterns were closer to the fundamental equilibrium than to the speculative equilibrium in period 1000. (The reverse was true in period 500.) However, the classifier system of type I agents did distinguish between storage of different goods for consumption, and the classifier $c^1_{\#,0}$ was slowly gaining strength over time. Nevertheless, our simulations provided no support for a hope that the economy would converge to the speculative equilibrium if it were to last longer.
+We shall only briefly summarize the results for Economy A2.2 with random generation of initial classifiers, and refer the reader to the working paper for tables giving the numerical results. After 1000 iterations the economy had not converged to a steady state. Trading patterns were closer to the fundamental equilibrium than to the speculative equilibrium in period 1000. (The reverse was true in period 500.) However, the classifier system of type I agents did distinguish between storage of different goods for consumption, and the classifier $c^1_{\text{\#},0}$ was slowly gaining strength over time. Nevertheless, our simulations provided no support for a hope that the economy would converge to the speculative equilibrium if it were to last longer.
 
 While the results for Economy A2 are fairly inconclusive, they illustrate two interesting points. First, they expose some deficiencies of the genetic algorithm which we have used (we return to this in {ref}`sec-conclusions`). Second, they raise the issue of whether our artificially intelligent agents are too impatient.
 
@@ -1425,7 +1425,7 @@ While the results for Economy A2 are fairly inconclusive, they illustrate two in
 
 Economy B has a different production pattern than Economy A (I produces 3, II produces 1, and III produces 2). For the specified parameters two stationary equilibria are possible: fundamental and speculative. Stability tests based on classifier systems are potentially useful as selection criteria in economies with multiple equilibria. {numref}`tbl-economy-b-fundamental-holdings` and {numref}`tbl-economy-b-speculative-holdings` summarize the trading patterns for the fundamental and the speculative equilibrium, respectively.
 
-```{figure} figures/fig8_economy_b.png
+```{figure} figures/fig8_economy_b.jpg
 :name: fig-economy-b
 :width: 80%
 
@@ -1942,7 +1942,7 @@ The production technologies are as in Economy A (see {numref}`tbl-economies`). {
   - $(0,0,1,\text{—})$
 ```
 
-```{figure} figures/fig9_economy_c.png
+```{figure} figures/fig9_economy_c.jpg
 :name: fig-economy-c
 :width: 60%
 
@@ -2121,7 +2121,7 @@ The economy converges remarkably fast to the fundamental equilibrium. Given the 
 
 In Economy D we enhance complexity by considering five goods and five types. The production technologies are described by {numref}`fig-economy-d-production`. That is, type I produces good 3, type II produces good 4, type III produces good 5, type IV produces good 1, and type V produces good 2. As before, each type of agent only derives utility from consuming the good of the same number. Storage costs are ranked in increasing order. For this economy we do not start with any characterization of a stationary equilibrium. With enough work, one could obtain an analytic solution for the fundamental equilibrium for such an economy, but here our purpose is to let our artificially intelligent agents suggest to us what an equilibrium might be. Given this suggestion, we could then presumably verify whether it is an equilibrium.
 
-```{figure} figures/fig10_economy_d_production.png
+```{figure} figures/fig10_economy_d_production.jpg
 :name: fig-economy-d-production
 :width: 60%
 
@@ -2382,7 +2382,7 @@ Production patterns in Economy D; an arrow shows that the agent at the origin of
 
 From the simulation results, we can see that the trading patterns nearly seem to describe a fundamental equilibrium in which agents are only willing to trade for commodities of lower cost than the one currently in storage, except that they always accept the commodity of their type. These fundamental trading patterns are shown in {numref}`fig-economy-d-exchange`. Some speculative moves can be detected. An example of this is that agents of type II accept (from I) good 3 for good 1 in order to trade 3 for 2 with type III. We do not pursue here a full analysis of partially speculative equilibria for this economy.
 
-```{figure} figures/fig11_economy_d_exchange.png
+```{figure} figures/fig11_economy_d_exchange.jpg
 :name: fig-economy-d-exchange
 :width: 80%
 
