@@ -16,19 +16,29 @@ project:
   bibliography:
     - paper/references.bib
   toc:
-    - file: docs/index.md
-    - title: Companion Notebooks
-      children:
-        - file: jupyter/companion-notebook-1.ipynb
-          title: "Notebook 1: Classifier Systems"
-        - file: jupyter/companion-notebook-2-alphago.ipynb
-          title: "Notebook 2: AlphaGo Approach"
-    - title: Documentation
-      children:
-        - file: docs/algorithm.md
-        - file: docs/readme.md
+    - file: website/index.md
     - file: paper/paper.md
       title: Paper Text
+    - title: Paper Conversion Notes
+      children:
+        - file: paper/COMPARISON_REPORT.md
+          title: "PDF to MyST Comparison Report"
+    - title: Python Replication
+      children:
+        - file: jupyter/companion-notebook-1.ipynb
+          title: "Companion Notebook 1: Classifier Systems"
+        - file: website/replication/quality-assessment.md
+          title: "Quality Assessment Report"
+        - file: website/replication/deepseek-comparison.md
+          title: "Comparison with DeepSeek Implementation"
+        - file: website/replication/changelog.md
+          title: "Changelog"
+    - title: Experiments
+      children:
+        - file: jupyter/companion-notebook-2-alphago.ipynb
+          title: "Companion Notebook 2: AlphaGo Approach"
+        - file: website/experiments/alphago-comparison.md
+          title: "AlphaGo Implementations Comparison"
 
 site:
   template: article-theme

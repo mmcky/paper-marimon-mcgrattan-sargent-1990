@@ -43,9 +43,11 @@ Using heredocs to write files (via `cat >`) is fine — the problem is piping th
 |------|-------------|
 | `jupyter/companion-notebook-1.ipynb` | Main replication notebook (8 economies: A1.1, A1.2, A2.1, A2.2, B.1, B.2, C, D) |
 | `jupyter/companion-notebook-2-alphago.ipynb` | AlphaGo-style approach |
-| `paper/paper.md` | Extracted paper text for reference |
+| `paper/paper.md` | MyST Markdown version of the paper |
 | `paper/references.bib` | Bibliography |
-| `src/` | Modular Python source (classifier, GA, simulation) |
+| `original/Marimon_McGrattan_Sargent_1990.pdf` | Original paper PDF |
+| `original/matlab/` | Original MATLAB code (McGrattan, 1989) |
+| `src/` | Python port of original MATLAB (work in progress) |
 
 ## Paper Reference
 

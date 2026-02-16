@@ -27,11 +27,11 @@ import sys
 import numpy as np
 
 # Add src to path
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'src'))
 
-from src.config import WicksellConfig
-from src.classifier_simulation import ClassifierSimulation
-from src.visualization import (
+from config import WicksellConfig
+from classifier_simulation import ClassifierSimulation
+from visualization import (
     FigureStyle,
     plot_holdings_multi_type,
     plot_exchange_pattern,
