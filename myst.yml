@@ -1,6 +1,7 @@
 version: 1
 project:
-  title: "Genetic Algorithms for Classifier Systems: Wicksell's Model of Commodity Money"
+  title: "Money as a Medium of Exchange in an Economy with Artificially Intelligent Agents"
+  subtitle: "Replication of Marimon, McGrattan & Sargent (1990)"
   authors:
     - name: Ramon Marimon
     - name: Ellen McGrattan
@@ -11,16 +12,30 @@ project:
     - classifier systems
     - commodity money
     - agent-based simulation
+    - Kiyotaki-Wright
   bibliography:
     - paper/references.bib
+  downloads:
+    - file: jupyter/companion-notebook-1.ipynb
+      title: Download Notebook 1
+    - file: jupyter/companion-notebook-2-alphago.ipynb
+      title: Download Notebook 2
   toc:
     - file: docs/index.md
-    - file: docs/readme.md
-    - file: docs/algorithm.md
+    - title: Companion Notebooks
+      children:
+        - file: jupyter/companion-notebook-1.ipynb
+          title: "Notebook 1: Classifier Systems"
+        - file: jupyter/companion-notebook-2-alphago.ipynb
+          title: "Notebook 2: AlphaGo Approach"
+    - title: Documentation
+      children:
+        - file: docs/algorithm.md
+        - file: docs/readme.md
     - file: paper/paper.md
+      title: Paper Text
 
 site:
   template: article-theme
   options:
-    favicon: favicon.ico
     base_url: /paper-marimon-mcgrattan-sargent-1990
