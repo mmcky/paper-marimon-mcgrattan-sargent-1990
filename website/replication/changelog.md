@@ -5,6 +5,28 @@
 
 ---
 
+## 2026-02-16
+
+### Bug Fixes
+
+- **Classifier strength update denominators (Eqs 10–11):** Exchange classifier now uses $\tau_e$ (`n_used` before increment); consumption classifier uses $\tau_c - 1$ (`n_used` before increment) — matching the paper's exact formulation
+- **Consumption of wrong goods (Eq 12):** Agents can now attempt consumption of any held good, receiving $u_i(k) = 0$ for $k \neq i$, rather than being blocked from consuming
+- **Economy B.2 bid parameters:** Corrected `bid_trade` from `(0.25, 0.25)` to `(0.025, 0.025)` to match paper Table 2
+- **Economy C and D:** Applied the same strength-update and consumption fixes to `FiatMoneyAgent`/`FiatMoneySimulation` and `FiveGoodAgent`/`FiveGoodSimulation`
+
+### New Features
+
+- **Frequency tracking:** All three simulation classes (KW, FiatMoney, FiveGood) now track exchange and consumption frequency per period
+- **Analysis functions:** Added `print_exchange_frequency()`, `print_consumption_frequency()`, `print_winning_classifier_actions()`, and `print_full_analysis()` for detailed result inspection
+- **Intermediate reporting:** Results now reported at time points matching the paper's tables (e.g., $t = 500, 1000$ for A1.1; $t = 1000, 2000$ for A1.2)
+- **Economy-specific analysis:** Custom analysis functions for FiatMoney (4-good) and FiveGood (5-good) economies
+
+### Housekeeping
+
+- Fixed section numbering to be sequential (1–15)
+
+---
+
 ## 2026-02-10
 
 ### companion-notebook-1.ipynb
