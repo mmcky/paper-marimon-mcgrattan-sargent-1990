@@ -17,10 +17,10 @@ project:
     - paper/references.bib
   toc:
     - file: website/index.md
-    - file: paper/paper.md
-      title: Paper
-    - title: Paper -> Conversion Notes
+    - title: Paper
       children:
+        - file: paper/paper.md
+          title: "Full Paper Text"
         - file: paper/2026-02-16-pdf-to-myst-comparison.md
           title: "PDF to MyST Comparison Report"
     - title: Python Replication
