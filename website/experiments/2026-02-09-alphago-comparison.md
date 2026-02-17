@@ -1,7 +1,7 @@
 # Comparison Report: AlphaGo-Style Notebooks
 
 **Date:** 2026-02-09  
-**Subject:** Comparison of `jupyter/companion-notebook-2-alphago.ipynb` with Tom's `jupyter/tom/kiyotaki_wright_alphago.ipynb`  
+**Subject:** Comparison of `website/experiments/companion-notebook-2-alphago.ipynb` with Tom's `tom/kiyotaki_wright_alphago.ipynb`  
 **Paper:** "Money as a Medium of Exchange in an Economy with Artificially Intelligent Agents," *Journal of Economic Dynamics and Control*, 14, 329–373.
 
 ---

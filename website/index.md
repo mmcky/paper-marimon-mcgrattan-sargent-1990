@@ -30,7 +30,7 @@ The paper simulates 8 economies with varying parameters and demonstrates converg
 The primary companion notebook replicates all 8 economies from the paper using Python (NumPy, Matplotlib):
 
 :::{card} Companion Notebook 1: Classifier Systems
-:link: /jupyter/companion-notebook-1.ipynb
+:link: /website/replication/companion-notebook-1.ipynb
 
 Full replication of all **8 economies** (A1.1, A1.2, A2.1, A2.2, B.1, B.2, C, D) using Holland classifier systems with bucket brigade strength updates and genetic algorithms. All code is self-contained — no external dependencies.
 :::
@@ -44,7 +44,7 @@ Supporting documentation:
 ## Experiments
 
 :::{card} Companion Notebook 2: AlphaGo Approach
-:link: /jupyter/companion-notebook-2-alphago.ipynb
+:link: /website/experiments/companion-notebook-2-alphago.ipynb
 
 An alternative approach using AlphaGo-style methods (MCTS + policy-value networks) to learn trading strategies in the Kiyotaki-Wright economy.
 :::

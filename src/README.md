@@ -50,4 +50,4 @@ result = simple_genetic_algorithm(config)
 
 ## Relationship to Companion Notebook
 
-The self-contained [companion notebook](../jupyter/companion-notebook-1.ipynb) is the primary replication effort and does not depend on this `src/` code. This module-based implementation is a separate, parallel effort to create reusable Python components from the original MATLAB.
+The self-contained [companion notebook](../website/replication/companion-notebook-1.ipynb) is the primary replication effort and does not depend on this `src/` code. This module-based implementation is a separate, parallel effort to create reusable Python components from the original MATLAB.

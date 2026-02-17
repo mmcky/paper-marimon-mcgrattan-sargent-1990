@@ -68,7 +68,7 @@ myst build --pdf
 
 ```bash
 pip install -r requirements.txt
-jupyter lab jupyter/companion-notebook-1.ipynb
+jupyter lab website/replication/companion-notebook-1.ipynb
 ```
 
 ## Running Tests

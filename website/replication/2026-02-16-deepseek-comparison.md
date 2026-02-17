@@ -1,7 +1,7 @@
 # Comparison Report: Companion Notebook 1 vs. DeepSeek Notebook
 
 **Date:** 2026-02-16  
-**Subject:** Comparison of `jupyter/companion-notebook-1.ipynb` with Tom's DeepSeek implementation `jupyter/tom/MMS_deepseek.ipynb`  
+**Subject:** Comparison of `website/replication/companion-notebook-1.ipynb` with Tom's DeepSeek implementation `tom/MMS_deepseek.ipynb`  
 **Paper:** "Money as a Medium of Exchange in an Economy with Artificially Intelligent Agents," *Journal of Economic Dynamics and Control*, 14, 329–373.
 
 ---
