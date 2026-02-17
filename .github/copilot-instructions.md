@@ -41,8 +41,8 @@ Using heredocs to write files (via `cat >`) is fine — the problem is piping th
 
 | Path | Description |
 |------|-------------|
-| `jupyter/companion-notebook-1.ipynb` | Main replication notebook (8 economies: A1.1, A1.2, A2.1, A2.2, B.1, B.2, C, D) |
-| `jupyter/companion-notebook-2-alphago.ipynb` | AlphaGo-style approach |
+| `website/replication/companion-notebook-1.ipynb` | Main replication notebook (8 economies: A1.1, A1.2, A2.1, A2.2, B.1, B.2, C, D) |
+| `website/experiments/companion-notebook-2-alphago.ipynb` | AlphaGo-style approach |
 | `paper/paper.md` | MyST Markdown version of the paper |
 | `paper/references.bib` | Bibliography |
 | `original/Marimon_McGrattan_Sargent_1990.pdf` | Original paper PDF |

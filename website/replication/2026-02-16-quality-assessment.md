@@ -2,7 +2,7 @@
 
 **Date:** 2026-02-16  
 **Updated:** 2026-02-18 — Items 1–8, 11, 13 addressed in [PR #5](https://github.com/mmcky/paper-marimon-mcgrattan-sargent-1990/pull/5)  
-**Subject:** Fidelity assessment of `jupyter/companion-notebook-1.ipynb` relative to Marimon, McGrattan & Sargent (1990)  
+**Subject:** Fidelity assessment of `website/replication/companion-notebook-1.ipynb` relative to Marimon, McGrattan & Sargent (1990)  
 **Paper:** "Money as a Medium of Exchange in an Economy with Artificially Intelligent Agents," *Journal of Economic Dynamics and Control*, 14, 329–373.
 
 ---

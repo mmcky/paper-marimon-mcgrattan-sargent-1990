@@ -25,7 +25,7 @@ project:
           title: "PDF to MyST Comparison Report"
     - title: Python Replication
       children:
-        - file: jupyter/companion-notebook-1.ipynb
+        - file: website/replication/companion-notebook-1.ipynb
           title: "Companion Notebook 1: Classifier Systems"
         - file: website/replication/2026-02-16-quality-assessment.md
           title: "Quality Assessment Report"
@@ -35,7 +35,7 @@ project:
           title: "Changelog"
     - title: Experiments
       children:
-        - file: jupyter/companion-notebook-2-alphago.ipynb
+        - file: website/experiments/companion-notebook-2-alphago.ipynb
           title: "Companion Notebook 2: AlphaGo Approach"
         - file: website/experiments/2026-02-09-alphago-comparison.md
           title: "AlphaGo Implementations Comparison"
