@@ -1,6 +1,7 @@
 # Assessment Report: Companion Notebook 1
 
 **Date:** 2026-02-16  
+**Updated:** 2026-02-18 — Items 1–8, 11, 13 addressed in [PR #5](https://github.com/mmcky/paper-marimon-mcgrattan-sargent-1990/pull/5)  
 **Subject:** Fidelity assessment of `jupyter/companion-notebook-1.ipynb` relative to Marimon, McGrattan & Sargent (1990)  
 **Paper:** "Money as a Medium of Exchange in an Economy with Artificially Intelligent Agents," *Journal of Economic Dynamics and Control*, 14, 329–373.
 
@@ -33,11 +34,11 @@ The companion notebook provides a substantial Python replication of all eight ec
 | Issue | Paper Reference | Notebook Status | Severity |
 |---|---|---|---|
 | **Bid function unused for selection** | Footnote 5 mentions "highest bidder"; Eq (9) defines bid = (b₁ + b₂σ_e) × S | `Classifier.bid()` defined but never called for auction; selection uses raw `strength` | **Low** — Eq (7) formally uses argmax S_e, not argmax bid. Under complete enumeration all classifiers have the same specificity so bid ranking ≡ strength ranking. Under random classifiers it could matter slightly. |
-| **Specialization operator not implemented** | Section 6: randomly switches # to the specific bit | Not present in notebook | **Medium** — Specialization helps refine overly-general classifiers. Its absence may slow convergence in random-classifier economies. |
-| **Diversification defined but never called** | Section 6: ensures both actions represented for a state | `apply_diversification()` exists in Cell 12 but is never invoked in any simulation loop | **Medium** — Without diversification, random-start economies may lack action diversity for some states, causing lock-in. |
-| **Creation operator partial** | Section 6: create new classifier when M_e(z) is empty | Implemented inline in `get_trade_decision` / `get_consume_decision` (creates a new classifier when no matches found) but does not delete a weak classifier to keep count constant | **Low** — List grows unboundedly in theory, though in practice the GA trims weak classifiers. |
-| **GA parameters mapping** | Paper tables specify p₁=0.2, p₂=0.7, p₃=0.2, p₄=0.5, S=0, N_e=8, N_c=4 | Notebook uses `pcross`, `pmutation`, `n_pairs`. No direct mapping from p₁–p₄. | **Medium** — The notebook's GA is a simplified version: fitness-proportional parent selection, two-point crossover with generalization, per-bit mutation, weakest replacement. The paper's fitness weighting (p₁, p₂ for parent/exterminant selection) and specific pair counts (N_e=8, N_c=4) are not replicated precisely. |
-| **Economy C GA parameters anomaly** | Paper Eq (9): same bid structure for all economies | `ga_pcross=0.01, ga_pmutation=0.2` — all other economies use pcross=0.6, pmut=0.01 | **High** — This effectively inverts crossover and mutation rates for Economy C compared to all other economies. The paper parameter table for Economy C lists the same generalization parameters (p₁–p₄) as other economies, suggesting no intentional difference. This may significantly affect Economy C convergence behavior. |
+| **Specialization operator not implemented** | Section 6: randomly switches # to the specific bit | ✅ **Implemented** — `apply_specialization()` with $f_s(t) = 1/(2\sqrt{t})$ added to all simulation loops | ~~**Medium**~~ **Resolved** |
+| **Diversification defined but never called** | Section 6: ensures both actions represented for a state | ✅ **Activated** — `apply_diversification()` now called in all agent decision methods | ~~**Medium**~~ **Resolved** |
+| **Creation operator partial** | Section 6: create new classifier when M_e(z) is empty | ✅ **Fixed** — `create_classifier_replacing_weakest()` replaces most redundant or weakest classifier, matching MATLAB `create.m`. Population size now constant. | ~~**Low**~~ **Resolved** |
+| **GA parameters mapping** | Paper tables specify p₁=0.2, p₂=0.7, p₃=0.6, p₄=0.01, N_e, N_c from formula | ✅ **Refined** — GA now replicates `ga3.m`: two-stage parent selection (usage-weighted pre-selection p₂=0.7, then fitness-proportional), single-point crossover, ternary cyclic mutation, crowding-based replacement with `cankill` filtering. `EconomyConfig` extended with `ga_propselect`, `ga_propused`, `ga_crowdfactor_trade/consume`, `ga_crowdsubpop`, `ga_uratio`. N_pairs computed from `round(propselect * n_classifiers * 0.5)`. | ~~**Medium**~~ **Resolved** |
+| **Economy C GA parameters anomaly** | Paper Eq (9): same bid structure for all economies | ✅ **Fixed** — Changed to `ga_pcross=0.6, ga_pmutation=0.01`, matching MATLAB `winitial.m` (universal params, no overrides in `class003.m`). The previous values (0.01/0.2) were confirmed as a bug by reading the original MATLAB code. | ~~**High**~~ **Resolved** |
 
 ### 1.3 Code Architecture Issues
 
@@ -60,12 +61,12 @@ The companion notebook provides a substantial Python replication of all eight ec
 | Table 7 | Holdings π_i^h(j) at t=500, t=1000 | `print_holdings_table()` at t=500 and t=1000 | ✅ Reported |
 | Table 8 | Exchange frequency π_i^e(jk) at t=500, t=1000 | `print_exchange_frequency()` at t=500 and t=1000 | ✅ Reported |
 | Table 9 | Winning actions π̃_i^e(jk\|j) at t=1000 | `print_winning_classifier_actions()` at t=1000 | ✅ Reported |
-| Tables 10–15 | Individual classifier strings and strengths for all 3 types | Not reported | ❌ Missing |
+| Tables 10–15 | Individual classifier strings and strengths for all 3 types | ✅ `print_classifier_strengths()` added for all 3 types | ✅ Reported |
 | Figure 6 | Distribution of holdings over time | `plot_holdings_distribution()` | ✅ Reported |
 
 **Qualitative Result:** Paper shows rapid convergence to fundamental equilibrium (Good 1 as medium of exchange). Notebook produces same qualitative convergence. ✅
 
-**Gap:** The paper provides 6 tables of individual classifier content (condition strings, actions, strengths) for all three agent types. These reveal *why* agents converge — which rules dominate and which are suppressed. The notebook's `display_top_classifiers()` function (Cell 59) partially addresses this but is only called once for Economy A1.1 and is not integrated into the main analysis.
+✅ **Updated:** Classifier strength tables now reported via `print_classifier_strengths()` for all 3 agent types.
 
 ### 2.2 Economy A1.2 (Random + GA, Fundamental Equilibrium)
 
@@ -74,13 +75,14 @@ The companion notebook provides a substantial Python replication of all eight ec
 | Paper Table | Content | Notebook | Status |
 |---|---|---|---|
 | Table 16 | Holdings at t=1000, t=2000 | Reported at t=1000 (manual) and t=2000 (`print_full_analysis`) | ✅ |
-| Table 17 | Exchange freq at t=1000, t=2000 | Only reported at t=2000 | ⚠️ Missing t=1000 |
-| Table 18 | Winning actions at t=1000, t=2000 | Only reported at t=2000 | ⚠️ Missing t=1000 |
+| Table 17 | Exchange freq at t=1000, t=2000 | ✅ Reported at t=1000 and t=2000 via `print_full_analysis(t_idx=999)` | ✅ |
+| Table 18 | Winning actions at t=1000, t=2000 | ✅ Reported at t=1000 and t=2000 via `print_full_analysis(t_idx=999)` | ✅ |
 | Table 19 | Consumption freq at t=2000 | `print_consumption_frequency()` at t=2000 | ✅ |
-| Tables 20–27 | Classifier strings/strengths at t=1000, t=2000 | Not reported | ❌ Missing |
+| Tables 20–27 | Classifier strings/strengths at t=1000, t=2000 | ✅ `print_classifier_strengths()` at t=1000 and t=2000 | ✅ Reported |
 | Figure 7 | Holdings distribution over time | `plot_holdings_distribution()` | ✅ |
 
-**Gap:** The paper reports exchange frequency and winning actions at *both* t=1000 and t=2000. The notebook only reports these at t=2000, missing the mid-simulation snapshot that shows convergence progress.
+✅ **Updated:** Exchange frequency and winning actions now reported at both t=1000 and t=2000 via `print_full_analysis(t_idx=999)`.  
+✅ **Updated:** Classifier strength tables (Tables 20–27) now reported at t=1000 and t=2000 via `print_classifier_strengths()`.
 
 ### 2.3 Economy A2.1 (Complete Enumeration, High Utility)
 
@@ -89,8 +91,8 @@ The companion notebook provides a substantial Python replication of all eight ec
 | Paper Table | Content | Notebook | Status |
 |---|---|---|---|
 | Holdings at t=500, t=1000 | π_i^h(j) | Reported at t=500 (manual) and t=1000 | ✅ |
-| Exchange freq at t=500, t=1000 | π_i^e(jk) | Only at t=1000 | ⚠️ Missing t=500 |
-| Winning actions at t=500, t=1000 | π̃_i^e(jk\|j) | Only at t=1000 | ⚠️ Missing t=500 |
+| Exchange freq at t=500, t=1000 | π_i^e(jk) | ✅ Reported at t=500 and t=1000 via `print_full_analysis(t_idx=499)` | ✅ |
+| Winning actions at t=500, t=1000 | π̃_i^e(jk\|j) | ✅ Reported at t=500 and t=1000 via `print_full_analysis(t_idx=499)` | ✅ |
 
 **Qualitative Result:** The paper finds convergence to *fundamental* equilibrium despite the unique theoretical equilibrium being speculative. This is attributed to overly general consumption classifiers in type I agents. The notebook reports this finding but does not display the consumption classifiers that explain the failure to support speculative equilibrium. The paper notes that "the classifier $c^1_{\#,0}$ was slowly gaining strength" which requires classifier-level inspection not currently available.
 
@@ -108,11 +110,11 @@ Note: `bid_trade=(0.25, 0.25)` — correctly 10× larger than other economies, m
 | Paper Table | Content | Notebook | Status |
 |---|---|---|---|
 | Holdings at t=500, t=1000 | π_i^h(j) | Reported at t=500 (manual) and t=1000 | ✅ |
-| Exchange freq at t=500, t=1000 | π_i^e(jk) | Only at t=1000 | ⚠️ Missing t=500 |
-| Winning actions at t=500, t=1000 | π̃_i^e(jk\|j) | Only at t=1000 | ⚠️ Missing t=500 |
-| Consumption freq at t=500 | π_i^c(j\|j) | Only at t=1000 | ⚠️ Wrong time period |
+| Exchange freq at t=500, t=1000 | π_i^e(jk) | ✅ Reported at t=500 and t=1000 via `print_full_analysis(t_idx=499)` | ✅ |
+| Winning actions at t=500, t=1000 | π̃_i^e(jk\|j) | ✅ Reported at t=500 and t=1000 via `print_full_analysis(t_idx=499)` | ✅ |
+| Consumption freq at t=500 | π_i^c(j\|j) | ✅ Reported at t=500 via `print_full_analysis(t_idx=499)` | ✅ |
 
-**Key Finding in Paper:** Economy B.1 shows speculative equilibrium at t=500 that transitions to fundamental by t=1000. This dynamic transition is the most interesting result for this economy. The notebook reports t=500 holdings manually but omits the exchange frequency and winning actions at t=500 that demonstrate the speculative patterns.
+**Key Finding in Paper:** Economy B.1 shows speculative equilibrium at t=500 that transitions to fundamental by t=1000. This dynamic transition is the most interesting result for this economy. ✅ **Updated:** The notebook now reports full analysis at both t=500 and t=1000, including exchange frequency, winning actions, and consumption frequency.
 
 ### 2.6 Economy B.2 (Alternative Production, Random + GA)
 
@@ -122,18 +124,18 @@ Note: `bid_trade=(0.025, 0.025)` — correctly different from B.1.
 | Paper Table | Content | Notebook | Status |
 |---|---|---|---|
 | Holdings at t=1000, t=2000 | π_i^h(j) | Reported at t=1000 and t=2000 | ✅ |
-| Exchange freq at t=1000, t=2000 | π_i^e(jk) | Only at t=2000 | ⚠️ Missing t=1000 |
-| Winning actions at t=1000, t=2000 | π̃_i^e(jk\|j) | Only at t=2000 | ⚠️ Missing t=1000 |
+| Exchange freq at t=1000, t=2000 | π_i^e(jk) | ✅ Reported at t=1000 and t=2000 via `print_full_analysis(t_idx=999)` | ✅ |
+| Winning actions at t=1000, t=2000 | π̃_i^e(jk\|j) | ✅ Reported at t=1000 and t=2000 via `print_full_analysis(t_idx=999)` | ✅ |
 
 ### 2.7 Economy C (Fiat Money)
 
-**Parameters:** Mostly match paper. ⚠️  
+**Parameters:** All match paper. ✅  
 - Storage costs: ✅ `[9, 14, 29, 0]`
 - Utility: ✅ 100
 - Classifiers: ✅ E_a=150, C_a=20
 - Bids: ✅ bid_trade=(0.025, 0.025), bid_consume=(0.025, 0.25)
 - Fiat money: ✅ 48 units injected
-- **GA params: ⚠️ `pcross=0.01, pmutation=0.2`** — appears inverted vs. standard values
+- ~~**GA params: ⚠️ `pcross=0.01, pmutation=0.2`** — appears inverted vs. standard values~~ ✅ **Fixed:** Now `pcross=0.6, pmutation=0.01` matching MATLAB `winitial.m`
 
 | Paper Table | Content | Notebook | Status |
 |---|---|---|---|
@@ -160,7 +162,7 @@ Note: `bid_trade=(0.025, 0.025)` — correctly different from B.1.
 | Figure 10 | Production structure diagram | Implemented in Cell 54 | ✅ |
 | Figure 11 | Exchange pattern diagram | Implemented in Cell 54 | ✅ |
 
-**Runtime Bug:** Cell 51 (Economy D results) crashes with `IndexError` in `print_5good_exchange_freq()` when called with a negative time index (`t_idx=-1`). The function computes `t_idx + 1 = 0`, causing `n = min(window, 0) = 0`, which produces an empty slice and a scalar `avg_counts` that fails on multi-dimensional indexing. Cells 52–54 are not executed as a result.
+~~**Runtime Bug:**~~ ✅ **Fixed.** The `IndexError` in `print_5good_exchange_freq()`, `print_5good_holdings()`, and `print_5good_winning_actions()` for negative `t_idx` values has been resolved. Functions now convert negative indices to valid positive indices.
 
 **Extra content:** The notebook extends the paper by running Economy D for 3000 periods (paper only reports to t=1750) and includes a trading pattern analysis that checks whether agent strategies follow fundamental equilibrium logic. This is a valuable addition.
 
@@ -170,14 +172,14 @@ Note: `bid_trade=(0.025, 0.025)` — correctly different from B.1.
 
 | Economy | Holdings | Exchange Freq | Winning Actions | Consump. Freq | Classifier Strengths | Figures |
 |---|---|---|---|---|---|---|
-| A1.1 | ✅ t=500,1000 | ✅ t=500,1000 | ✅ t=1000 | ✅ (extra) | ❌ 6 tables missing | ✅ Fig 6 |
-| A1.2 | ✅ t=1000,2000 | ⚠️ t=2000 only | ⚠️ t=2000 only | ✅ t=2000 | ❌ 8 tables missing | ✅ Fig 7 |
-| A2.1 | ✅ t=500,1000 | ⚠️ t=1000 only | ⚠️ t=1000 only | ✅ (extra) | N/A | ✅ |
+| A1.1 | ✅ t=500,1000 | ✅ t=500,1000 | ✅ t=1000 | ✅ (extra) | ✅ All 3 types | ✅ Fig 6 |
+| A1.2 | ✅ t=1000,2000 | ✅ t=1000,2000 | ✅ t=1000,2000 | ✅ t=2000 | ✅ t=1000,2000 | ✅ Fig 7 |
+| A2.1 | ✅ t=500,1000 | ✅ t=500,1000 | ✅ t=500,1000 | ✅ (extra) | N/A | ✅ |
 | A2.2 | ✅ t=1000,2000 | ✅ t=2000 | ✅ t=2000 | ✅ t=2000 | N/A | ✅ |
-| B.1 | ✅ t=500,1000 | ⚠️ t=1000 only | ⚠️ t=1000 only | ⚠️ t=1000 (paper: 500) | N/A | ✅ Fig 8 |
-| B.2 | ✅ t=1000,2000 | ⚠️ t=2000 only | ⚠️ t=2000 only | ✅ t=2000 | N/A | ✅ |
+| B.1 | ✅ t=500,1000 | ✅ t=500,1000 | ✅ t=500,1000 | ✅ t=500 | N/A | ✅ Fig 8 |
+| B.2 | ✅ t=1000,2000 | ✅ t=1000,2000 | ✅ t=1000,2000 | ✅ t=2000 | N/A | ✅ |
 | C | ✅ t=750,1250 | ✅ t=750,1250 | ✅ t=750,1250 | Not in paper | N/A | ✅ Fig 9 |
-| D | ✅ t=500,1750 | ✅ t=500,1750 | ✅ t=500,1750 | Not in paper | N/A | ⚠️ Bug |
+| D | ✅ t=500,1750 | ✅ t=500,1750 | ✅ t=500,1750 | Not in paper | N/A | ✅ Fixed |
 
 **Legend:** ✅ = matches paper, ⚠️ = partial/incomplete, ❌ = missing
 
@@ -187,25 +189,25 @@ Note: `bid_trade=(0.025, 0.025)` — correctly different from B.1.
 
 ### Priority 1 — Bug Fixes (Blocking)
 
-1. **Fix Economy D results cell (Cell 51):** The `print_5good_exchange_freq()` function fails with negative indices. The function should handle `t_idx=-1` by converting to a valid positive index: `t_idx = t_idx % len(sim.history['exchange_counts'])`.
+1. ~~**Fix Economy D results cell (Cell 51):**~~ ✅ **Done.** Negative index handling added to `print_5good_holdings()`, `print_5good_exchange_freq()`, and `print_5good_winning_actions()`.
 
 ### Priority 2 — Algorithm Improvements (High Impact)
 
-2. **Implement specialization operator:** The paper describes a specialization step that probabilistically converts `#` wildcards in winning classifiers to specific bits (0 or 1). This is called with diminishing probability `f_s(t) = 1/(2√t)`. Without it, classifiers remain overly general, which the paper identifies as the cause of Economy A2.1's failure to reach speculative equilibrium.
+2. ~~**Implement specialization operator:**~~ ✅ **Done.** `apply_specialization()` implemented with $f_s(t) = 1/(2\sqrt{t})$ and integrated into all three simulation classes.
 
-3. **Activate diversification:** `apply_diversification()` is defined but never called. Integrate it into the simulation loop immediately after state matching, as described in Section 6: "This diversification operation is used each time the classifier system is called upon."
+3. ~~**Activate diversification:**~~ ✅ **Done.** `apply_diversification()` now called in `get_trade_decision()` and `get_consume_decision()` for all three agent classes.
 
-4. **Investigate Economy C GA parameters:** Verify whether `ga_pcross=0.01, ga_pmutation=0.2` is intentional or inverted. The paper's parameter tables list the same p₁–p₄ values for Economy C as other economies. If intentional, add a comment explaining the rationale.
+4. ~~**Investigate Economy C GA parameters:**~~ ✅ **Done.** Confirmed as a bug by reading original MATLAB code (`class003.m` calls `winitial` with no overrides; `winitial.m` sets `pcrosst=0.6, pmutationt=0.01` universally). Fixed to `ga_pcross=0.6, ga_pmutation=0.01`.
 
-5. **Refine GA parameter mapping:** The paper specifies p₁=0.2, p₂=0.7 for parent/exterminant selection fitness weighting, N_e=8 exchange pairs and N_c=4 consumption pairs. The notebook currently uses n_pairs=4 for exchange and n_pairs=2 for consumption. Map these parameters more precisely to the paper's specification.
+5. ~~**Refine GA parameter mapping:**~~ ✅ **Done.** GA rewritten to replicate `ga3.m` from MATLAB: two-stage parent selection (usage-weighted pre-selection p₂=0.7, then fitness-proportional roulette wheel), single-point crossover (not two-point), ternary cyclic mutation, crowding-based replacement via `cankill` set. `EconomyConfig` extended with all GA parameters. N_pairs now computed from `round(propselect * n_classifiers * 0.5)`, giving 7 trade pairs and 1 consume pair for 72/12 classifiers.
 
 ### Priority 3 — Missing Outputs (Medium Impact)
 
-6. **Add intermediate-time reporting for A1.2, A2.1, B.1, B.2:** These economies should report exchange frequency and winning actions at *both* time snapshots the paper provides. This requires calling `print_exchange_frequency()` and `print_winning_classifier_actions()` at the midpoint time. For Economy B.1, also report consumption frequency at t=500 (not t=1000) to match the paper.
+6. ~~**Add intermediate-time reporting for A1.2, A2.1, B.1, B.2:**~~ ✅ **Done.** All economies now use `print_full_analysis(t_idx=...)` for both time snapshots. Economy B.1 consumption frequency corrected to t=500.
 
-7. **Add classifier strength tables for A1.1:** The paper provides Tables 10–15 showing individual classifier strings and strengths. Implement a function that displays the top N classifiers (sorted by strength) with their trinary condition string, action, strength value, and usage count. The `display_top_classifiers()` function in Cell 59 is a start but needs to be generalized and called systematically.
+7. ~~**Add classifier strength tables for A1.1:**~~ ✅ **Done.** `print_classifier_strengths()` function implemented and called for all 3 agent types in Economy A1.1.
 
-8. **Add classifier strength tables for A1.2:** The paper provides 8 tables (trade + consume classifiers for all 3 types at t=1000 and t=2000). These are essential for understanding how randomly-generated classifiers evolve under the GA.
+8. ~~**Add classifier strength tables for A1.2:**~~ ✅ **Done.** `print_classifier_strengths()` now called for all 3 agent types at both t=1000 and t=2000, replicating paper Tables 20–27.
 
 ### Priority 4 — Code Quality (Maintenance)
 
@@ -213,13 +215,13 @@ Note: `bid_trade=(0.025, 0.025)` — correctly different from B.1.
 
 10. **Extend `EconomyConfig` to cover C and D:** Add fields for `n_fiat` (fiat money count), `n_bits` (encoding width), and `ga_params` dictionary. This enables a single summary function that can compare all 8 economies from their configs.
 
-11. **Populate classifier count constraint:** When creating a classifier on an empty match set (creation operator), delete a weak classifier to maintain a constant population size, as specified in the paper.
+11. ~~**Populate classifier count constraint:**~~ ✅ **Done.** `create_classifier_replacing_weakest()` replaces most redundant (or weakest) classifier when no match found, matching MATLAB `create.m`. Population size is now constant across all agent classes.
 
 ### Priority 5 — Enhanced Analysis (Low Priority, High Value)
 
 12. **Add convergence diagnostics:** The paper discusses convergence criteria in Section 5. Implement a convergence metric (e.g., rolling window standard deviation of holdings distribution) and report whether each economy has converged by its final period.
 
-13. **Add Wicksell triangle visualization for all 3-good economies:** The `plot_exchange_pattern()` function (Cell 61) visualizes exchange patterns as a Wicksell triangle diagram. Currently only used once — should be called for each 3-good economy to match the paper's Figures 6–8.
+13. ~~**Add Wicksell triangle visualization for all 3-good economies:**~~ ✅ **Done.** Data-driven `plot_wicksell_triangle()` function reads actual exchange counts from simulation history and draws arrows with thickness proportional to exchange frequency. Called for all 8 economies (A1.1, A1.2, A2.1, A2.2, B.1, B.2, C, D) with appropriate layout (triangle for 3-type, pentagon for 5-type).
 
 14. **Add side-by-side comparison with paper values:** For each table output, display the paper's values alongside the notebook's simulation values. This would make discrepancies immediately visible. Since the simulations are stochastic, exact matches are not expected, but qualitative patterns should align.
 
@@ -252,11 +254,11 @@ The paper uses continuous numbering for all tables and figures. Below is the map
 | Table 7 | A1.1 holdings | A1.1 | Cell 21 |
 | Table 8 | A1.1 exchange freq | A1.1 | Cell 21 |
 | Table 9 | A1.1 winning actions | A1.1 | Cell 21 |
-| Tables 10–15 | A1.1 classifier strengths | A1.1 | ❌ Not implemented |
+| Tables 10–15 | A1.1 classifier strengths | A1.1 | ✅ `print_classifier_strengths()` |
 | Figure 6 | A1.1 holdings plot | A1.1 | Cell 21–22 |
 | Table 16 | A1.2 parameters | A1.2 | Cell 25 |
 | Tables 17–19 | A1.2 holdings/exchange/winning | A1.2 | Cell 26 |
-| Table 20–27 | A1.2 classifier strengths | A1.2 | ❌ Not implemented |
+| Table 20–27 | A1.2 classifier strengths | A1.2 | ✅ `print_classifier_strengths()` at t=1000 and t=2000 |
 | Figure 7 | A1.2 holdings plot | A1.2 | Cell 26 |
 | Table 28 | A2.1 parameters | A2.1 | Cell 29 |
 | A2 equilibrium tables | Speculative equilibrium probs | A2 theory | Cell 28 (markdown) |
