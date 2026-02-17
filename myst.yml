@@ -27,8 +27,10 @@ project:
       children:
         - file: jupyter/companion-notebook-1.ipynb
           title: "Companion Notebook 1: Classifier Systems"
-        - file: website/replication/2026-02-16-quality-assessment.md
+        - file: website/replication/2026-02-17-quality-assessment.md
           title: "Quality Assessment Report"
+        - file: website/replication/2026-02-16-quality-assessment.md
+          title: "Quality Assessment Report (2026-02-16)"
         - file: website/replication/2026-02-16-deepseek-comparison.md
           title: "Comparison with DeepSeek Implementation"
         - file: website/replication/changelog.md
