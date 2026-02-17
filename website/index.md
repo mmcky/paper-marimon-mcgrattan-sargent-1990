@@ -37,7 +37,8 @@ Full replication of all **8 economies** (A1.1, A1.2, A2.1, A2.2, B.1, B.2, C, D)
 
 Supporting documentation:
 
-- [Quality Assessment Report](replication/2026-02-16-quality-assessment.md) — Detailed fidelity assessment against the paper
+- [Quality Assessment Report](replication/2026-02-17-quality-assessment.md) — Detailed fidelity assessment against the paper (latest)
+- [Quality Assessment Report (2026-02-16)](replication/2026-02-16-quality-assessment.md) — Previous assessment
 - [Comparison with DeepSeek Implementation](replication/2026-02-16-deepseek-comparison.md) — How our replication compares to an alternative implementation
 - [Changelog](replication/changelog.md) — History of changes to the companion notebook
 
